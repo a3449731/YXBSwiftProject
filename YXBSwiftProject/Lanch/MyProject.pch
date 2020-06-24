@@ -1,0 +1,28 @@
+//
+//  MyProject.pch
+//  MyProject
+//
+//  Created by YangXiaoBin on 2019/11/11.
+//  Copyright © 2019 YangXiaoBin. All rights reserved.
+//
+
+#ifndef MyProject_pch
+#define MyProject_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "YXBColorDefine.h"
+#import "YXBDeviceDefine.h"
+#import "YXBTransitionDefine.h"
+#import "YXBPublicDefine.h"
+#import <Masonry/Masonry.h>
+#import <QMUIKit/QMUIKit.h>
+#import <QMUIConfiguration.h>
+#import <UINavigationController+FDFullscreenPopGesture.h>
+#import <MJRefresh/MJRefresh.h>
+#import "YXBThemeManager.h"
+
+//#import "YXBSwiftProject-Swift.h"
+
+#endif /* MyProject_pch */
