@@ -23,20 +23,23 @@
     } else {
         NSString *message = [self.responseJSONObject valueForKey:@"msg"];
 //        message = [NSString stringWithFormat:@"%@\n%@",self.currentRequest,message];
-        ShowToast(message);
+        if (message && ![message yxb_isNull]) {
+            ShowToast(message);
+        }
+        
         return NO;
     }
 }
 
 - (void)requestCompleteFilter {
-    NSLog(@"%@",self);
-    NSLog(@"%@",self.responseJSONObject);
+    YXBLOG(@"%@",self);
+    YXBLOG(@"%@",self.responseJSONObject);
 }
 
 - (void)requestFailedFilter {
-    NSLog(@"%@",self);
-    NSLog(@"%@",self.responseJSONObject);
-    NSLog(@"%@",self.response.MIMEType);
+    YXBLOG(@"%@",self);
+    YXBLOG(@"%@",self.responseJSONObject);
+    YXBLOG(@"%@",self.response.MIMEType);
 }
 
 

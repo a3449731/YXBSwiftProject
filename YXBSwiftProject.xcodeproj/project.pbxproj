@@ -20,7 +20,6 @@
 		0C14A091249B648D005FE48A /* WCQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A054249B648D005FE48A /* WCQRCodeVC.m */; };
 		0C14A092249B648D005FE48A /* CDDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C14A056249B648D005FE48A /* CDDetailHeaderView.xib */; };
 		0C14A093249B648D005FE48A /* YXBUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A057249B648D005FE48A /* YXBUnicode.m */; };
-		0C14A094249B648D005FE48A /* YXBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A059249B648D005FE48A /* YXBTextField.m */; };
 		0C14A095249B648D005FE48A /* CDDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A05A249B648D005FE48A /* CDDetailHeaderView.m */; };
 		0C14A096249B648D005FE48A /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A05C249B648D005FE48A /* ChineseToPinyin.m */; };
 		0C14A097249B648D005FE48A /* YXBCheckRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A05E249B648D005FE48A /* YXBCheckRegular.m */; };
@@ -55,7 +54,6 @@
 		0C14A0E6249B69C2005FE48A /* YXBFormTopBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A0D1249B69C2005FE48A /* YXBFormTopBottomCell.m */; };
 		0C14A0E7249B69C2005FE48A /* YXBFormLeftRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A0D2249B69C2005FE48A /* YXBFormLeftRightCell.m */; };
 		0C14A0E8249B69C2005FE48A /* YXBFormImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A0DA249B69C2005FE48A /* YXBFormImageCell.m */; };
-		0C14A0E9249B69C2005FE48A /* YXBFormButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A0DB249B69C2005FE48A /* YXBFormButtonCell.m */; };
 		0C14A0EA249B69C2005FE48A /* YXBFormLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A0DC249B69C2005FE48A /* YXBFormLabelCell.m */; };
 		0C14A0EB249B69C2005FE48A /* YXBFormButtonValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A0DD249B69C2005FE48A /* YXBFormButtonValueCell.m */; };
 		0C14A0EC249B69C2005FE48A /* YXBFormLeftRightBgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A0DE249B69C2005FE48A /* YXBFormLeftRightBgCell.m */; };
@@ -64,6 +62,45 @@
 		0C4387EE249B51DB008DBD78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4387E7249B51DB008DBD78 /* LaunchScreen.storyboard */; };
 		0C4387F0249B51DB008DBD78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4387EA249B51DB008DBD78 /* AppDelegate.swift */; };
 		0C4387F2249B51DB008DBD78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C4387ED249B51DB008DBD78 /* Assets.xcassets */; };
+		0C47C79824E51714006945B9 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C79724E51714006945B9 /* UIView+Utils.swift */; };
+		0C47C79A24E5175D006945B9 /* UIEdgeInsets+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C79924E5175D006945B9 /* UIEdgeInsets+Convenience.swift */; };
+		0C47C79C24E51786006945B9 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C79B24E51786006945B9 /* NSObject+ClassName.swift */; };
+		0C47C79E24E517C8006945B9 /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C79D24E517C8006945B9 /* String+Subscript.swift */; };
+		0C47C7A224E51F1E006945B9 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C7A124E51F1E006945B9 /* Toast.swift */; };
+		0C47C7A324E52230006945B9 /* DigitalKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C78024E4EF4A006945B9 /* DigitalKeyboard.swift */; };
+		0C47C7A424E52242006945B9 /* PaymentkeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C78124E4EF4A006945B9 /* PaymentkeyboardView.swift */; };
+		0C47C7A524E52242006945B9 /* PaymentKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C47C77E24E4EF4A006945B9 /* PaymentKeyboardView.xib */; };
+		0C47C7A624E52397006945B9 /* TableViewCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C78324E4EF4B006945B9 /* TableViewCellItem.swift */; };
+		0C47C7A724E523A0006945B9 /* PaymentPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C77F24E4EF4A006945B9 /* PaymentPasswordView.swift */; };
+		0C47C7A824E523A0006945B9 /* PaymentPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C47C77D24E4EF4A006945B9 /* PaymentPasswordView.xib */; };
+		0C47C7A924E523A0006945B9 /* PaymentSureInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C78424E4EF4B006945B9 /* PaymentSureInfoView.swift */; };
+		0C47C7AA24E523A0006945B9 /* PaymentSureInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C47C78224E4EF4B006945B9 /* PaymentSureInfoView.xib */; };
+		0C47C7AC24E52477006945B9 /* GlobalFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C7AB24E52477006945B9 /* GlobalFuncs.swift */; };
+		0C47C7B324E540D8006945B9 /* YXBPaymentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C7B224E540D8006945B9 /* YXBPaymentManager.m */; };
+		0C47C7B724E54A81006945B9 /* YXBPaymentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C7B624E54A81006945B9 /* YXBPaymentModel.m */; };
+		0C47C7B924E54D1C006945B9 /* PayPwdInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C7B824E54D1C006945B9 /* PayPwdInput.swift */; };
+		0C47C7BB24E55074006945B9 /* BaseCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C7BA24E55074006945B9 /* BaseCellItem.swift */; };
+		0C47C7BD24E5648E006945B9 /* Appdelegate+AliPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C7BC24E5648E006945B9 /* Appdelegate+AliPay.swift */; };
+		0CC0C75D24E3DE2F001AE32D /* ForceUpdateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C75A24E3DE2F001AE32D /* ForceUpdateView.m */; };
+		0CC0C75E24E3DE2F001AE32D /* ForceUpdateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC0C75C24E3DE2F001AE32D /* ForceUpdateView.xib */; };
+		0CC0C77B24E3DE6E001AE32D /* MessageAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C76024E3DE6E001AE32D /* MessageAPI.m */; };
+		0CC0C77C24E3DE6E001AE32D /* GetConfigAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C76124E3DE6E001AE32D /* GetConfigAPI.m */; };
+		0CC0C77D24E3DE6E001AE32D /* MyRankAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C76524E3DE6E001AE32D /* MyRankAPI.m */; };
+		0CC0C77E24E3DE6E001AE32D /* GetVersionAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C76624E3DE6E001AE32D /* GetVersionAPI.m */; };
+		0CC0C77F24E3DE6E001AE32D /* AcountAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C76824E3DE6E001AE32D /* AcountAPI.m */; };
+		0CC0C78024E3DE6E001AE32D /* NoticeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C76A24E3DE6E001AE32D /* NoticeAPI.m */; };
+		0CC0C78124E3DE6E001AE32D /* UploadImageAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C76B24E3DE6E001AE32D /* UploadImageAPI.m */; };
+		0CC0C78224E3DE6E001AE32D /* PersonalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C76F24E3DE6E001AE32D /* PersonalModel.m */; };
+		0CC0C78324E3DE6E001AE32D /* MemberModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C77024E3DE6E001AE32D /* MemberModel.m */; };
+		0CC0C78424E3DE6E001AE32D /* VersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C77224E3DE6E001AE32D /* VersionModel.m */; };
+		0CC0C78524E3DE6E001AE32D /* LevelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C77324E3DE6E001AE32D /* LevelModel.m */; };
+		0CC0C78624E3DE6E001AE32D /* BannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C77424E3DE6E001AE32D /* BannerModel.m */; };
+		0CC0C78724E3DE6E001AE32D /* AcountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C77824E3DE6E001AE32D /* AcountModel.m */; };
+		0CC0C78A24E3DEAC001AE32D /* NoticeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C78824E3DEAB001AE32D /* NoticeModel.m */; };
+		0CC0C79024E3DF60001AE32D /* JYDTPriceNuberButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C78E24E3DF5F001AE32D /* JYDTPriceNuberButton.m */; };
+		0CC0C79324E3EDD7001AE32D /* YXBInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C79224E3EDD7001AE32D /* YXBInputView.m */; };
+		0CC0C79A24E401D2001AE32D /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C79924E401D2001AE32D /* UIViewController+Navigation.swift */; };
+		0CC0C79C24E40216001AE32D /* CATransaction+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C79B24E40216001AE32D /* CATransaction+Animation.swift */; };
 		0CE5358A249B74F100FE14FB /* AppDelegate+YXBTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE53589249B74F100FE14FB /* AppDelegate+YXBTheme.swift */; };
 		47B916A06310008C757E1B7A /* libPods-YXBSwiftProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */; };
 /* End PBXBuildFile section */
@@ -101,13 +138,11 @@
 		0C14A056249B648D005FE48A /* CDDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDDetailHeaderView.xib; sourceTree = "<group>"; };
 		0C14A057249B648D005FE48A /* YXBUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBUnicode.m; sourceTree = "<group>"; };
 		0C14A058249B648D005FE48A /* YXBTapAreaButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBTapAreaButton.h; sourceTree = "<group>"; };
-		0C14A059249B648D005FE48A /* YXBTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBTextField.m; sourceTree = "<group>"; };
 		0C14A05A249B648D005FE48A /* CDDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDetailHeaderView.m; sourceTree = "<group>"; };
 		0C14A05B249B648D005FE48A /* LYLWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLWKWebView.h; sourceTree = "<group>"; };
 		0C14A05C249B648D005FE48A /* ChineseToPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyin.m; sourceTree = "<group>"; };
 		0C14A05D249B648D005FE48A /* WCQRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCQRCodeVC.h; sourceTree = "<group>"; };
 		0C14A05E249B648D005FE48A /* YXBCheckRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBCheckRegular.m; sourceTree = "<group>"; };
-		0C14A05F249B648D005FE48A /* YXBTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBTextField.h; sourceTree = "<group>"; };
 		0C14A060249B648D005FE48A /* YXBTapAreaButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBTapAreaButton.m; sourceTree = "<group>"; };
 		0C14A061249B648D005FE48A /* LYLWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLWKWebView.m; sourceTree = "<group>"; };
 		0C14A062249B648D005FE48A /* ChineseToPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyin.h; sourceTree = "<group>"; };
@@ -170,12 +205,10 @@
 		0C14A0D3249B69C2005FE48A /* YXBFormImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBFormImageCell.h; sourceTree = "<group>"; };
 		0C14A0D4249B69C2005FE48A /* YXBFormButtonValueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBFormButtonValueCell.h; sourceTree = "<group>"; };
 		0C14A0D5249B69C2005FE48A /* YXBFormLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBFormLabelCell.h; sourceTree = "<group>"; };
-		0C14A0D6249B69C2005FE48A /* YXBFormButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBFormButtonCell.h; sourceTree = "<group>"; };
 		0C14A0D7249B69C2005FE48A /* YXBFormLeftRightBgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBFormLeftRightBgCell.h; sourceTree = "<group>"; };
 		0C14A0D8249B69C2005FE48A /* YXBFormLeftRightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBFormLeftRightCell.h; sourceTree = "<group>"; };
 		0C14A0D9249B69C2005FE48A /* YXBFormTopBottomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBFormTopBottomCell.h; sourceTree = "<group>"; };
 		0C14A0DA249B69C2005FE48A /* YXBFormImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBFormImageCell.m; sourceTree = "<group>"; };
-		0C14A0DB249B69C2005FE48A /* YXBFormButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBFormButtonCell.m; sourceTree = "<group>"; };
 		0C14A0DC249B69C2005FE48A /* YXBFormLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBFormLabelCell.m; sourceTree = "<group>"; };
 		0C14A0DD249B69C2005FE48A /* YXBFormButtonValueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBFormButtonValueCell.m; sourceTree = "<group>"; };
 		0C14A0DE249B69C2005FE48A /* YXBFormLeftRightBgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBFormLeftRightBgCell.m; sourceTree = "<group>"; };
@@ -187,6 +220,66 @@
 		0C4387E7249B51DB008DBD78 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C4387EA249B51DB008DBD78 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C4387ED249B51DB008DBD78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C47C77B24E4EF4A006945B9 /* PaymentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentService.swift; sourceTree = "<group>"; };
+		0C47C77D24E4EF4A006945B9 /* PaymentPasswordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentPasswordView.xib; sourceTree = "<group>"; };
+		0C47C77E24E4EF4A006945B9 /* PaymentKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentKeyboardView.xib; sourceTree = "<group>"; };
+		0C47C77F24E4EF4A006945B9 /* PaymentPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentPasswordView.swift; sourceTree = "<group>"; };
+		0C47C78024E4EF4A006945B9 /* DigitalKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalKeyboard.swift; sourceTree = "<group>"; };
+		0C47C78124E4EF4A006945B9 /* PaymentkeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentkeyboardView.swift; sourceTree = "<group>"; };
+		0C47C78224E4EF4B006945B9 /* PaymentSureInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentSureInfoView.xib; sourceTree = "<group>"; };
+		0C47C78324E4EF4B006945B9 /* TableViewCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellItem.swift; sourceTree = "<group>"; };
+		0C47C78424E4EF4B006945B9 /* PaymentSureInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentSureInfoView.swift; sourceTree = "<group>"; };
+		0C47C79724E51714006945B9 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
+		0C47C79924E5175D006945B9 /* UIEdgeInsets+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Convenience.swift"; sourceTree = "<group>"; };
+		0C47C79B24E51786006945B9 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
+		0C47C79D24E517C8006945B9 /* String+Subscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Subscript.swift"; sourceTree = "<group>"; };
+		0C47C7A124E51F1E006945B9 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		0C47C7AB24E52477006945B9 /* GlobalFuncs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFuncs.swift; sourceTree = "<group>"; };
+		0C47C7B124E540D8006945B9 /* YXBPaymentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXBPaymentManager.h; sourceTree = "<group>"; };
+		0C47C7B224E540D8006945B9 /* YXBPaymentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXBPaymentManager.m; sourceTree = "<group>"; };
+		0C47C7B424E5457B006945B9 /* YXBPaymentProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXBPaymentProtocol.h; sourceTree = "<group>"; };
+		0C47C7B524E54A81006945B9 /* YXBPaymentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXBPaymentModel.h; sourceTree = "<group>"; };
+		0C47C7B624E54A81006945B9 /* YXBPaymentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXBPaymentModel.m; sourceTree = "<group>"; };
+		0C47C7B824E54D1C006945B9 /* PayPwdInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PayPwdInput.swift; path = PayPwdInput/PayPwdInput.swift; sourceTree = "<group>"; };
+		0C47C7BA24E55074006945B9 /* BaseCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCellItem.swift; sourceTree = "<group>"; };
+		0C47C7BC24E5648E006945B9 /* Appdelegate+AliPay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Appdelegate+AliPay.swift"; sourceTree = "<group>"; };
+		0CC0C75A24E3DE2F001AE32D /* ForceUpdateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForceUpdateView.m; sourceTree = "<group>"; };
+		0CC0C75B24E3DE2F001AE32D /* ForceUpdateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForceUpdateView.h; sourceTree = "<group>"; };
+		0CC0C75C24E3DE2F001AE32D /* ForceUpdateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForceUpdateView.xib; sourceTree = "<group>"; };
+		0CC0C76024E3DE6E001AE32D /* MessageAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageAPI.m; sourceTree = "<group>"; };
+		0CC0C76124E3DE6E001AE32D /* GetConfigAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetConfigAPI.m; sourceTree = "<group>"; };
+		0CC0C76224E3DE6E001AE32D /* AcountAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcountAPI.h; sourceTree = "<group>"; };
+		0CC0C76324E3DE6E001AE32D /* UploadImageAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadImageAPI.h; sourceTree = "<group>"; };
+		0CC0C76424E3DE6E001AE32D /* NoticeAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeAPI.h; sourceTree = "<group>"; };
+		0CC0C76524E3DE6E001AE32D /* MyRankAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRankAPI.m; sourceTree = "<group>"; };
+		0CC0C76624E3DE6E001AE32D /* GetVersionAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetVersionAPI.m; sourceTree = "<group>"; };
+		0CC0C76724E3DE6E001AE32D /* GetConfigAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetConfigAPI.h; sourceTree = "<group>"; };
+		0CC0C76824E3DE6E001AE32D /* AcountAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcountAPI.m; sourceTree = "<group>"; };
+		0CC0C76924E3DE6E001AE32D /* MessageAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAPI.h; sourceTree = "<group>"; };
+		0CC0C76A24E3DE6E001AE32D /* NoticeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeAPI.m; sourceTree = "<group>"; };
+		0CC0C76B24E3DE6E001AE32D /* UploadImageAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadImageAPI.m; sourceTree = "<group>"; };
+		0CC0C76C24E3DE6E001AE32D /* GetVersionAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetVersionAPI.h; sourceTree = "<group>"; };
+		0CC0C76D24E3DE6E001AE32D /* MyRankAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRankAPI.h; sourceTree = "<group>"; };
+		0CC0C76F24E3DE6E001AE32D /* PersonalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalModel.m; sourceTree = "<group>"; };
+		0CC0C77024E3DE6E001AE32D /* MemberModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberModel.m; sourceTree = "<group>"; };
+		0CC0C77124E3DE6E001AE32D /* AcountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcountModel.h; sourceTree = "<group>"; };
+		0CC0C77224E3DE6E001AE32D /* VersionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionModel.m; sourceTree = "<group>"; };
+		0CC0C77324E3DE6E001AE32D /* LevelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelModel.m; sourceTree = "<group>"; };
+		0CC0C77424E3DE6E001AE32D /* BannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerModel.m; sourceTree = "<group>"; };
+		0CC0C77524E3DE6E001AE32D /* MemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberModel.h; sourceTree = "<group>"; };
+		0CC0C77624E3DE6E001AE32D /* PersonalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalModel.h; sourceTree = "<group>"; };
+		0CC0C77724E3DE6E001AE32D /* VersionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionModel.h; sourceTree = "<group>"; };
+		0CC0C77824E3DE6E001AE32D /* AcountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcountModel.m; sourceTree = "<group>"; };
+		0CC0C77924E3DE6E001AE32D /* BannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerModel.h; sourceTree = "<group>"; };
+		0CC0C77A24E3DE6E001AE32D /* LevelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelModel.h; sourceTree = "<group>"; };
+		0CC0C78824E3DEAB001AE32D /* NoticeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeModel.m; sourceTree = "<group>"; };
+		0CC0C78924E3DEAB001AE32D /* NoticeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeModel.h; sourceTree = "<group>"; };
+		0CC0C78E24E3DF5F001AE32D /* JYDTPriceNuberButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYDTPriceNuberButton.m; sourceTree = "<group>"; };
+		0CC0C78F24E3DF60001AE32D /* JYDTPriceNuberButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYDTPriceNuberButton.h; sourceTree = "<group>"; };
+		0CC0C79124E3EDD7001AE32D /* YXBInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBInputView.h; sourceTree = "<group>"; };
+		0CC0C79224E3EDD7001AE32D /* YXBInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBInputView.m; sourceTree = "<group>"; };
+		0CC0C79924E401D2001AE32D /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		0CC0C79B24E40216001AE32D /* CATransaction+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATransaction+Animation.swift"; sourceTree = "<group>"; };
 		0CE53589249B74F100FE14FB /* AppDelegate+YXBTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+YXBTheme.swift"; sourceTree = "<group>"; };
 		4F245EC0B5961F5373ECB312 /* Pods-YXBSwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXBSwiftProject.release.xcconfig"; path = "Target Support Files/Pods-YXBSwiftProject/Pods-YXBSwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXBSwiftProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,6 +326,8 @@
 			isa = PBXGroup;
 			children = (
 				0C14A044249B648D005FE48A /* Config */,
+				0CC0C75F24E3DE6E001AE32D /* CommonAPI */,
+				0CC0C76E24E3DE6E001AE32D /* CommonModel */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -251,6 +346,7 @@
 		0C14A049249B648D005FE48A /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				0C47C7AB24E52477006945B9 /* GlobalFuncs.swift */,
 				0C14A04A249B648D005FE48A /* YXBCodeSnipped.h */,
 				0C14A051249B648D005FE48A /* YXBColorDefine.h */,
 				0C14A04B249B648D005FE48A /* YXBConstDefine.h */,
@@ -265,21 +361,27 @@
 		0C14A053249B648D005FE48A /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				0C47C7A124E51F1E006945B9 /* Toast.swift */,
 				0C14A063249B648D005FE48A /* CDDetailHeaderView.h */,
 				0C14A05A249B648D005FE48A /* CDDetailHeaderView.m */,
 				0C14A056249B648D005FE48A /* CDDetailHeaderView.xib */,
 				0C14A062249B648D005FE48A /* ChineseToPinyin.h */,
 				0C14A05C249B648D005FE48A /* ChineseToPinyin.m */,
+				0CC0C75B24E3DE2F001AE32D /* ForceUpdateView.h */,
+				0CC0C75A24E3DE2F001AE32D /* ForceUpdateView.m */,
+				0CC0C75C24E3DE2F001AE32D /* ForceUpdateView.xib */,
+				0CC0C78F24E3DF60001AE32D /* JYDTPriceNuberButton.h */,
+				0CC0C78E24E3DF5F001AE32D /* JYDTPriceNuberButton.m */,
 				0C14A05B249B648D005FE48A /* LYLWKWebView.h */,
 				0C14A061249B648D005FE48A /* LYLWKWebView.m */,
 				0C14A05D249B648D005FE48A /* WCQRCodeVC.h */,
 				0C14A054249B648D005FE48A /* WCQRCodeVC.m */,
 				0C14A055249B648D005FE48A /* YXBCheckRegular.h */,
 				0C14A05E249B648D005FE48A /* YXBCheckRegular.m */,
+				0CC0C79124E3EDD7001AE32D /* YXBInputView.h */,
+				0CC0C79224E3EDD7001AE32D /* YXBInputView.m */,
 				0C14A058249B648D005FE48A /* YXBTapAreaButton.h */,
 				0C14A060249B648D005FE48A /* YXBTapAreaButton.m */,
-				0C14A05F249B648D005FE48A /* YXBTextField.h */,
-				0C14A059249B648D005FE48A /* YXBTextField.m */,
 				0C14A057249B648D005FE48A /* YXBUnicode.m */,
 			);
 			path = Extention;
@@ -288,6 +390,12 @@
 		0C14A064249B648D005FE48A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				0C47C79724E51714006945B9 /* UIView+Utils.swift */,
+				0C47C79924E5175D006945B9 /* UIEdgeInsets+Convenience.swift */,
+				0C47C79D24E517C8006945B9 /* String+Subscript.swift */,
+				0CC0C79B24E40216001AE32D /* CATransaction+Animation.swift */,
+				0CC0C79924E401D2001AE32D /* UIViewController+Navigation.swift */,
+				0C47C79B24E51786006945B9 /* NSObject+ClassName.swift */,
 				0C14A06D249B648D005FE48A /* NSArray+IGListDiffable.h */,
 				0C14A066249B648D005FE48A /* NSArray+IGListDiffable.m */,
 				0C14A06C249B648D005FE48A /* NSArray+YXBAdd.h */,
@@ -361,6 +469,7 @@
 		0C14A0C1249B69C2005FE48A /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				0C47C77A24E4EF4A006945B9 /* PaymentService */,
 				0C14A0C2249B69C2005FE48A /* JXCategoryView */,
 				0C14A0D0249B69C2005FE48A /* XLForm */,
 			);
@@ -390,8 +499,6 @@
 		0C14A0D0249B69C2005FE48A /* XLForm */ = {
 			isa = PBXGroup;
 			children = (
-				0C14A0D6249B69C2005FE48A /* YXBFormButtonCell.h */,
-				0C14A0DB249B69C2005FE48A /* YXBFormButtonCell.m */,
 				0C14A0D4249B69C2005FE48A /* YXBFormButtonValueCell.h */,
 				0C14A0DD249B69C2005FE48A /* YXBFormButtonValueCell.m */,
 				0C14A0D3249B69C2005FE48A /* YXBFormImageCell.h */,
@@ -478,6 +585,7 @@
 				0C4387EA249B51DB008DBD78 /* AppDelegate.swift */,
 				0C14A0F7249B6FF6005FE48A /* YXBSwiftProject-Bridging-Header.h */,
 				0CE53589249B74F100FE14FB /* AppDelegate+YXBTheme.swift */,
+				0C47C7BC24E5648E006945B9 /* Appdelegate+AliPay.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -488,6 +596,79 @@
 				0C4387ED249B51DB008DBD78 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		0C47C77A24E4EF4A006945B9 /* PaymentService */ = {
+			isa = PBXGroup;
+			children = (
+				0C47C77B24E4EF4A006945B9 /* PaymentService.swift */,
+				0C47C7B424E5457B006945B9 /* YXBPaymentProtocol.h */,
+				0C47C7B124E540D8006945B9 /* YXBPaymentManager.h */,
+				0C47C7B224E540D8006945B9 /* YXBPaymentManager.m */,
+				0C47C7B524E54A81006945B9 /* YXBPaymentModel.h */,
+				0C47C7B624E54A81006945B9 /* YXBPaymentModel.m */,
+				0C47C7B824E54D1C006945B9 /* PayPwdInput.swift */,
+				0C47C77C24E4EF4A006945B9 /* PayPwdInput */,
+			);
+			path = PaymentService;
+			sourceTree = "<group>";
+		};
+		0C47C77C24E4EF4A006945B9 /* PayPwdInput */ = {
+			isa = PBXGroup;
+			children = (
+				0C47C78024E4EF4A006945B9 /* DigitalKeyboard.swift */,
+				0C47C78124E4EF4A006945B9 /* PaymentkeyboardView.swift */,
+				0C47C77E24E4EF4A006945B9 /* PaymentKeyboardView.xib */,
+				0C47C77F24E4EF4A006945B9 /* PaymentPasswordView.swift */,
+				0C47C77D24E4EF4A006945B9 /* PaymentPasswordView.xib */,
+				0C47C78424E4EF4B006945B9 /* PaymentSureInfoView.swift */,
+				0C47C78224E4EF4B006945B9 /* PaymentSureInfoView.xib */,
+				0C47C7BA24E55074006945B9 /* BaseCellItem.swift */,
+				0C47C78324E4EF4B006945B9 /* TableViewCellItem.swift */,
+			);
+			path = PayPwdInput;
+			sourceTree = "<group>";
+		};
+		0CC0C75F24E3DE6E001AE32D /* CommonAPI */ = {
+			isa = PBXGroup;
+			children = (
+				0CC0C76224E3DE6E001AE32D /* AcountAPI.h */,
+				0CC0C76824E3DE6E001AE32D /* AcountAPI.m */,
+				0CC0C76724E3DE6E001AE32D /* GetConfigAPI.h */,
+				0CC0C76124E3DE6E001AE32D /* GetConfigAPI.m */,
+				0CC0C76C24E3DE6E001AE32D /* GetVersionAPI.h */,
+				0CC0C76624E3DE6E001AE32D /* GetVersionAPI.m */,
+				0CC0C76924E3DE6E001AE32D /* MessageAPI.h */,
+				0CC0C76024E3DE6E001AE32D /* MessageAPI.m */,
+				0CC0C76D24E3DE6E001AE32D /* MyRankAPI.h */,
+				0CC0C76524E3DE6E001AE32D /* MyRankAPI.m */,
+				0CC0C76424E3DE6E001AE32D /* NoticeAPI.h */,
+				0CC0C76A24E3DE6E001AE32D /* NoticeAPI.m */,
+				0CC0C76324E3DE6E001AE32D /* UploadImageAPI.h */,
+				0CC0C76B24E3DE6E001AE32D /* UploadImageAPI.m */,
+			);
+			path = CommonAPI;
+			sourceTree = "<group>";
+		};
+		0CC0C76E24E3DE6E001AE32D /* CommonModel */ = {
+			isa = PBXGroup;
+			children = (
+				0CC0C77124E3DE6E001AE32D /* AcountModel.h */,
+				0CC0C77824E3DE6E001AE32D /* AcountModel.m */,
+				0CC0C77924E3DE6E001AE32D /* BannerModel.h */,
+				0CC0C77424E3DE6E001AE32D /* BannerModel.m */,
+				0CC0C77A24E3DE6E001AE32D /* LevelModel.h */,
+				0CC0C77324E3DE6E001AE32D /* LevelModel.m */,
+				0CC0C77524E3DE6E001AE32D /* MemberModel.h */,
+				0CC0C77024E3DE6E001AE32D /* MemberModel.m */,
+				0CC0C78924E3DEAB001AE32D /* NoticeModel.h */,
+				0CC0C78824E3DEAB001AE32D /* NoticeModel.m */,
+				0CC0C77624E3DE6E001AE32D /* PersonalModel.h */,
+				0CC0C76F24E3DE6E001AE32D /* PersonalModel.m */,
+				0CC0C77724E3DE6E001AE32D /* VersionModel.h */,
+				0CC0C77224E3DE6E001AE32D /* VersionModel.m */,
+			);
+			path = CommonModel;
 			sourceTree = "<group>";
 		};
 		4F30B239741F943657DA9A6F /* Frameworks */ = {
@@ -569,7 +750,11 @@
 			files = (
 				0C4387DC249B4EF6008DBD78 /* Preview Assets.xcassets in Resources */,
 				0C14A0E1249B69C2005FE48A /* lufei.png in Resources */,
+				0C47C7A524E52242006945B9 /* PaymentKeyboardView.xib in Resources */,
 				0C14A092249B648D005FE48A /* CDDetailHeaderView.xib in Resources */,
+				0C47C7A824E523A0006945B9 /* PaymentPasswordView.xib in Resources */,
+				0CC0C75E24E3DE2F001AE32D /* ForceUpdateView.xib in Resources */,
+				0C47C7AA24E523A0006945B9 /* PaymentSureInfoView.xib in Resources */,
 				0C4387EE249B51DB008DBD78 /* LaunchScreen.storyboard in Resources */,
 				0C4387F2249B51DB008DBD78 /* Assets.xcassets in Resources */,
 			);
@@ -624,53 +809,86 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC0C78424E3DE6E001AE32D /* VersionModel.m in Sources */,
+				0CC0C77F24E3DE6E001AE32D /* AcountAPI.m in Sources */,
+				0CC0C78124E3DE6E001AE32D /* UploadImageAPI.m in Sources */,
+				0CC0C78724E3DE6E001AE32D /* AcountModel.m in Sources */,
+				0CC0C77B24E3DE6E001AE32D /* MessageAPI.m in Sources */,
 				0C14A0B5249B652D005FE48A /* YXBLanchManager.m in Sources */,
+				0C47C7BB24E55074006945B9 /* BaseCellItem.swift in Sources */,
 				0C14A08D249B648D005FE48A /* MyRequst.m in Sources */,
 				0C14A0A3249B648D005FE48A /* YXBUIHelper.m in Sources */,
 				0C14A085249B648D005FE48A /* YXBCell.m in Sources */,
 				0C14A0A2249B648D005FE48A /* YXBThemeManager.m in Sources */,
+				0C47C7B324E540D8006945B9 /* YXBPaymentManager.m in Sources */,
 				0C14A09D249B648D005FE48A /* UIImage+YXBAdd.m in Sources */,
 				0C14A0E0249B69C2005FE48A /* YXBPageContentViewController.m in Sources */,
 				0C14A09C249B648D005FE48A /* NSArray+YXBAdd.m in Sources */,
+				0C47C79C24E51786006945B9 /* NSObject+ClassName.swift in Sources */,
 				0C14A0E3249B69C2005FE48A /* YXBPageContentCollectionViewController.m in Sources */,
+				0CC0C78324E3DE6E001AE32D /* MemberModel.m in Sources */,
 				0C14A097249B648D005FE48A /* YXBCheckRegular.m in Sources */,
 				0C14A096249B648D005FE48A /* ChineseToPinyin.m in Sources */,
 				0C14A0EA249B69C2005FE48A /* YXBFormLabelCell.m in Sources */,
+				0CC0C78024E3DE6E001AE32D /* NoticeAPI.m in Sources */,
 				0C14A0A6249B648D005FE48A /* UserManager.m in Sources */,
 				0C14A0E5249B69C2005FE48A /* YXBPageTableViewController.m in Sources */,
 				0C14A0DF249B69C2005FE48A /* YXBPageViewController.m in Sources */,
 				0C14A0BF249B65EA005FE48A /* SPHomeViewController.m in Sources */,
+				0C47C7B724E54A81006945B9 /* YXBPaymentModel.m in Sources */,
 				0C14A084249B648D005FE48A /* YXBBaseModel.m in Sources */,
+				0C47C7AC24E52477006945B9 /* GlobalFuncs.swift in Sources */,
+				0C47C7A424E52242006945B9 /* PaymentkeyboardView.swift in Sources */,
+				0CC0C75D24E3DE2F001AE32D /* ForceUpdateView.m in Sources */,
 				0C14A0B7249B652D005FE48A /* LanchPageModel.m in Sources */,
 				0C14A095249B648D005FE48A /* CDDetailHeaderView.m in Sources */,
 				0C14A0EC249B69C2005FE48A /* YXBFormLeftRightBgCell.m in Sources */,
 				0C14A089249B648D005FE48A /* YXBCollectionCell.m in Sources */,
-				0C14A0E9249B69C2005FE48A /* YXBFormButtonCell.m in Sources */,
+				0C47C7A724E523A0006945B9 /* PaymentPasswordView.swift in Sources */,
+				0C47C79A24E5175D006945B9 /* UIEdgeInsets+Convenience.swift in Sources */,
+				0C47C7A624E52397006945B9 /* TableViewCellItem.swift in Sources */,
 				0C14A091249B648D005FE48A /* WCQRCodeVC.m in Sources */,
+				0CC0C78A24E3DEAC001AE32D /* NoticeModel.m in Sources */,
 				0C14A0A1249B648D005FE48A /* QMUIConfigurationTemplateDark.m in Sources */,
+				0CC0C79324E3EDD7001AE32D /* YXBInputView.m in Sources */,
+				0C47C79824E51714006945B9 /* UIView+Utils.swift in Sources */,
 				0C14A0E2249B69C2005FE48A /* PagingViewTableHeaderView.m in Sources */,
 				0C14A0E6249B69C2005FE48A /* YXBFormTopBottomCell.m in Sources */,
+				0CC0C79A24E401D2001AE32D /* UIViewController+Navigation.swift in Sources */,
+				0C47C7A224E51F1E006945B9 /* Toast.swift in Sources */,
+				0CC0C79C24E40216001AE32D /* CATransaction+Animation.swift in Sources */,
+				0CC0C78524E3DE6E001AE32D /* LevelModel.m in Sources */,
 				0C4387F0249B51DB008DBD78 /* AppDelegate.swift in Sources */,
 				0C14A0A4249B648D005FE48A /* QMUIConfigurationTemplateWhite.m in Sources */,
 				0C14A0E4249B69C2005FE48A /* YXBPageContentTableViewController.m in Sources */,
 				0C14A09F249B648D005FE48A /* NSObject+YXBAdd.m in Sources */,
 				0C14A0E8249B69C2005FE48A /* YXBFormImageCell.m in Sources */,
+				0C47C7BD24E5648E006945B9 /* Appdelegate+AliPay.swift in Sources */,
+				0CC0C77C24E3DE6E001AE32D /* GetConfigAPI.m in Sources */,
+				0C47C79E24E517C8006945B9 /* String+Subscript.swift in Sources */,
+				0CC0C78224E3DE6E001AE32D /* PersonalModel.m in Sources */,
 				0C14A0EB249B69C2005FE48A /* YXBFormButtonValueCell.m in Sources */,
-				0C14A094249B648D005FE48A /* YXBTextField.m in Sources */,
+				0C47C7A324E52230006945B9 /* DigitalKeyboard.swift in Sources */,
 				0C14A08B249B648D005FE48A /* YXBSection.m in Sources */,
 				0C14A08A249B648D005FE48A /* YXBHeaderView.m in Sources */,
 				0C14A08F249B648D005FE48A /* YXBConstDefine.m in Sources */,
 				0C14A086249B648D005FE48A /* YXBButtonCell.m in Sources */,
+				0CC0C79024E3DF60001AE32D /* JYDTPriceNuberButton.m in Sources */,
 				0C14A0A5249B648D005FE48A /* QMUIConfigurationTemplate.m in Sources */,
 				0C14A0B6249B652D005FE48A /* YXBNavigationController.m in Sources */,
+				0C47C7B924E54D1C006945B9 /* PayPwdInput.swift in Sources */,
+				0CC0C78624E3DE6E001AE32D /* BannerModel.m in Sources */,
 				0C14A0B4249B652D005FE48A /* TabBarViewController.m in Sources */,
 				0C14A093249B648D005FE48A /* YXBUnicode.m in Sources */,
 				0C14A0B3249B652D005FE48A /* LanchAPI.m in Sources */,
+				0CC0C77D24E3DE6E001AE32D /* MyRankAPI.m in Sources */,
+				0CC0C77E24E3DE6E001AE32D /* GetVersionAPI.m in Sources */,
 				0C14A08E249B648D005FE48A /* YXBNetConfiger.m in Sources */,
 				0C14A0A0249B648D005FE48A /* UIButton+YXBAdd.m in Sources */,
 				0C14A0E7249B69C2005FE48A /* YXBFormLeftRightCell.m in Sources */,
 				0C14A099249B648D005FE48A /* LYLWKWebView.m in Sources */,
 				0CE5358A249B74F100FE14FB /* AppDelegate+YXBTheme.swift in Sources */,
+				0C47C7A924E523A0006945B9 /* PaymentSureInfoView.swift in Sources */,
 				0C14A09E249B648D005FE48A /* NSLayoutConstraint+AutoScale.m in Sources */,
 				0C14A09A249B648D005FE48A /* UIView+Xib.m in Sources */,
 				0C14A09B249B648D005FE48A /* NSArray+IGListDiffable.m in Sources */,

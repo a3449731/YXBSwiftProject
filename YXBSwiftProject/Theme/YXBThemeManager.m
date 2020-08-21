@@ -67,7 +67,13 @@ NSString *const YXBThemeIndetifierDark = @"Dark";
     self = [super init];
     if (self) {
         [self creatBackgroundColor];
+        [self creatTintColor];
         [self creatTextColor];
+        [self creatSubTextColor];
+        [self creatDescriptionTextColor];
+        [self creatTipTextColor];
+        [self creatPlaceholderColor];
+        [self creatSeparatorColor];
     }
     return self;
 }
@@ -95,6 +101,33 @@ NSString *const YXBThemeIndetifierDark = @"Dark";
         UIColor *color = theme.themeBackgroundColor;
         return color;
     }];
+    
+    self.backgroundColor_light = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeBackgroundColor_light;
+        return color;
+    }];
+    
+    self.backgroundColor_HighLight = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeBackgroundColor_HighLight;
+        return color;
+    }];
+}
+
+- (void)creatTintColor {
+    self.tintColor = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeTintColor;
+        return color;
+    }];
+    
+    self.tintColor_light = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeTintColor_light;
+        return color;
+    }];
+    
+    self.tintColor_HighLight = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeTintColor_HighLight;
+        return color;
+    }];
 }
 
 - (void)creatTextColor {
@@ -102,6 +135,144 @@ NSString *const YXBThemeIndetifierDark = @"Dark";
         UIColor *color = theme.themeTitleTextColor;
         return color;
     }];
+    
+    self.titleTextColor_light = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeTitleTextColor_light;
+        return color;
+    }];
+    
+    self.titleTextColor_HighLight = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeTitleTextColor_HighLight;
+        return color;
+    }];
 }
+
+- (void)creatSubTextColor {
+    self.subTextColor = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeSubTextColor;
+        return color;
+    }];
+    
+    self.subTextColor_light = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeSubTextColor_light;
+        return color;
+    }];
+    
+    self.subTextColor_HighLight = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeSubTextColor_HighLight;
+        return color;
+    }];
+}
+
+- (void)creatDescriptionTextColor {
+    self.descriptionTextColor = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeDescriptionTextColor;
+        return color;
+    }];
+    
+    self.descriptionTextColor_light = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeDescriptionTextColor_light;
+        return color;
+    }];
+    
+    self.descriptionTextColor_HighLight = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeDescriptionTextColor_HighLight;
+        return color;
+    }];
+}
+
+- (void)creatTipTextColor {
+    self.tipTextColor = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeTipTextColor;
+        return color;
+    }];
+    
+    self.tipTextColor_light = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeTipTextColor_light;
+        return color;
+    }];
+    
+    self.tipTextColor_HighLight = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeTipTextColor_HighLight;
+        return color;
+    }];
+}
+
+- (void)creatPlaceholderColor {
+    self.placeholderColor = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themePlaceholderColor;
+        return color;
+    }];
+    
+    self.placeholderColor_light = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themePlaceholderColor_light;
+        return color;
+    }];
+    
+    self.placeholderColor_HighLight = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themePlaceholderColor_HighLight;
+        return color;
+    }];
+}
+
+- (void)creatSeparatorColor {
+    self.separatorColor = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeSeparatorColor;
+        return color;
+    }];
+    
+    self.separatorColor_light = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeSeparatorColor_light;
+        return color;
+    }];
+    
+    self.separatorColor_HighLight = [UIColor qmui_colorWithThemeProvider:^UIColor * _Nonnull(__kindof QMUIThemeManager * _Nonnull manager, __kindof NSObject<NSCopying> * _Nullable identifier, __kindof NSObject<YXBThemeProtocol> * _Nullable theme) {
+        UIColor *color = theme.themeSeparatorColor_HighLight;
+        return color;
+    }];
+}
+
+- (UIImage *)themeImage:(NSString *)imageName {
+    // 用来判断主题，链信没有引入主题框架，所以就这么判断了。
+    UIImage *backImage = nil;
+    if ([self.currentThemeIdentifier isEqualToString:YXBThemeIndetifierWhite]) {
+        NSString *newName = [imageName stringByAppendingString:@"_themeWhite"];
+        backImage = [UIImage imageNamed:newName];
+    }
+    
+    if ([self.currentThemeIdentifier isEqualToString:YXBThemeIndetifierDark]) {
+        NSString *newName = [imageName stringByAppendingString:@"_themeDark"];
+        backImage = [UIImage imageNamed:newName];
+    }
+    
+    // 如果不存在主题图片 就取默认图片。
+    if (backImage == nil) {
+        backImage = [UIImage imageNamed:imageName];
+    }
+    
+    // 还是没图就去他妈的.
+    return backImage;
+}
+
+- (NSString *)themeImageName:(NSString *)imageName {
+    // 用来判断主题，链信没有引入主题框架，所以就这么判断了。
+    NSString *backImageName = nil;
+    if ([self.currentThemeIdentifier isEqualToString:YXBThemeIndetifierWhite]) {
+        backImageName = [imageName stringByAppendingString:@"_themeWhite"];
+    }
+    
+    if (([self.currentThemeIdentifier isEqualToString:YXBThemeIndetifierDark])) {
+        backImageName = [imageName stringByAppendingString:@"_themeDark"];
+    }
+    
+    // 如果不存在主题图片 就取默认图片。
+    if (backImageName == nil) {
+        backImageName = imageName;
+    }
+    
+    // 还是没图就去他妈的.
+    return backImageName;
+}
+
 
 @end

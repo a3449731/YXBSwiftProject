@@ -21,8 +21,11 @@
 #import <QMUIConfiguration.h>
 #import <UINavigationController+FDFullscreenPopGesture.h>
 #import <MJRefresh/MJRefresh.h>
+#import <Toast/UIView+Toast.h>
 #import "YXBThemeManager.h"
+#import "UserManager.h"
 
-//#import "YXBSwiftProject-Swift.h"
+#import "YXBSwiftProject-Swift.h"
+#import <AlipaySDK/AlipaySDK.h>
 
 #endif /* MyProject_pch */

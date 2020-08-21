@@ -33,7 +33,7 @@ NSString *const YXBFormRowDescriptorLeftRightBackgroundCell = @"YXBFormRowDescri
 - (void)creatUI {
     
     UIView *bgView= [[UIView alloc] init];
-    bgView.backgroundColor = YXBColorBG_gray;
+    bgView.backgroundColor = YXBColor_tint_highLight;
     bgView.layer.cornerRadius = 4;
     bgView.layer.masksToBounds = YES;
     [self.contentView addSubview:bgView];
@@ -46,7 +46,7 @@ NSString *const YXBFormRowDescriptorLeftRightBackgroundCell = @"YXBFormRowDescri
     
     self.titleLabel = [[UILabel alloc] init];
     self.titleLabel.font = [UIFont boldSystemFontOfSize:14];
-    self.titleLabel.textColor = YXBColorBlack;
+    self.titleLabel.textColor = YXBColor_descriptionText_highLight;
     [bgView addSubview:self.titleLabel];
     [self.titleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(0);
@@ -58,7 +58,7 @@ NSString *const YXBFormRowDescriptorLeftRightBackgroundCell = @"YXBFormRowDescri
     self.textField = [[UITextField alloc] init];
     self.textField.delegate = self;
     self.textField.font = [UIFont boldSystemFontOfSize:14];
-    self.textField.textColor = YXBColorBlack;
+    self.textField.textColor = YXBColor_descriptionText_highLight;
     [bgView addSubview:self.textField];
     [self.textField mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.titleLabel.mas_right).mas_offset(15);
@@ -81,7 +81,7 @@ NSString *const YXBFormRowDescriptorLeftRightBackgroundCell = @"YXBFormRowDescri
 - (void)update {
     [super update];
     // 设置占位符颜色
-    self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.textField.placeholder attributes:@{NSForegroundColorAttributeName:YXBColorGray}];
+    self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.textField.placeholder attributes:@{NSForegroundColorAttributeName:YXBColor_subText}];
     self.titleLabel.text = self.rowDescriptor.title;
     self.textField.text = self.rowDescriptor.value ? [self.rowDescriptor displayTextValue] : self.rowDescriptor.noValueDisplayText;
 }

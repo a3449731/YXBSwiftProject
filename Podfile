@@ -41,5 +41,26 @@ pod 'JXPagingView/Pager', '~> 2.0.0.0'
 pod 'XLForm', '~> 4.1.0'
 pod 'IQKeyboardManager', '~> 6.5.4'
 
+# 支付宝支付
+ pod 'AlipaySDK-iOS'
+
 pod 'Charts', :modular_headers => true # 选择静态库 还是动态库
+
+# swift库
+def swiftFoundation
+
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'R.swift'
+  #生物识别，指纹解锁、面部识别
+  pod 'BiometricAuthentication'
+  #加载框, Toast, TODO: 封装一层Toast调用
+  pod 'Toast-Swift', '~> 5.0.1'
+  #swift版Masonry
+  pod 'SnapKit'
+  
+end
+
+swiftFoundation()
+
 end

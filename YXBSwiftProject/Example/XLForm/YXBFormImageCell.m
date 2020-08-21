@@ -41,7 +41,7 @@ NSString *const YXBFormRowDescriptorTypeImageCell = @"YXBFormRowDescriptorTypeIm
     self.btnTip = [QMUIButton buttonWithType:UIButtonTypeCustom];
     self.btnTip.spacingBetweenImageAndTitle = 10;
     self.btnTip.userInteractionEnabled = NO;
-    [self.btnTip setTitleColor:RGBAColorWithHEXString(@"#161E25", 1) forState:UIControlStateNormal];
+    [self.btnTip setTitleColor:YXBColor_titleText forState:UIControlStateNormal];
     self.btnTip.titleLabel.font = [UIFont systemFontOfSize:14 weight:UIFontWeightMedium];
     [self.contentView addSubview:self.btnTip];
     [self.btnTip mas_makeConstraints:^(MASConstraintMaker *make) {

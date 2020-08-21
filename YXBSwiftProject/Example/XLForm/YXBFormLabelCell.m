@@ -31,7 +31,7 @@ NSString *const YXBFormRowDescriptorTypeLabelCell = @"YXBFormRowDescriptorTypeLa
 - (void)creatUI {
     self.titleLabel = [[UILabel alloc] init];
     self.titleLabel.font = [UIFont boldSystemFontOfSize:14];
-    self.titleLabel.textColor = YXBColorBlack;
+    self.titleLabel.textColor = YXBColor_descriptionText_highLight;
     [self.contentView addSubview:self.titleLabel];
     [self.titleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(0);

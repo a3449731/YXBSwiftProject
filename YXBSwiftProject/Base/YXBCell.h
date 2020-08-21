@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YXBCell : UICollectionViewCell
 
+@property (nonatomic) UIEdgeInsets separatorInset;
+@property (nonatomic, strong, nullable) UIColor *separatorColor;
+@property (nonatomic) UITableViewCellSeparatorStyle separatorStyle;
+
 - (void)cellForModel:(id)model;
 
 @end

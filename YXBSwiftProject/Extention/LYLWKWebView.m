@@ -13,7 +13,7 @@
 
 #import "LYLWKWebView.h"
 
-@interface LYLWKWebView ()<WKUIDelegate>
+@interface LYLWKWebView ()<WKUIDelegate, WKNavigationDelegate>
 
 
 @property(nonatomic,assign)CGFloat progress;
@@ -48,6 +48,7 @@
         WKWebView *WK_web = [[WKWebView alloc] initWithFrame:self.bounds configuration:configuration];
         self.webView = WK_web;
         WK_web.UIDelegate = self;
+        WK_web.navigationDelegate = self;
         WK_web.scrollView.bounces = NO;
         UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
         progressView.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, kProgressViewHeight);
@@ -123,10 +124,24 @@
     return nil;
 }
 
-
-
-
-
+#pragma mark - <WKNavigationDelegate>
+- (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
+    
+  //这个方法也可以计算出webView滚动视图滚动的高度
+    [webView evaluateJavaScript:@"document.body.scrollWidth"completionHandler:^(id _Nullable result,NSError * _Nullable error){
+        
+        CGFloat ratio =  CGRectGetWidth(webView.frame) /[result floatValue];
+        NSLog(@"scrollWidth高度：%.2f",[result floatValue]);
+        
+        [webView evaluateJavaScript:@"document.body.scrollHeight"completionHandler:^(id _Nullable result,NSError * _Nullable error){
+            CGFloat height = [result floatValue] * ratio;
+            NSLog(@"scrollHeight高度：%.2f",height);
+            if (self.webviewContentHeight) {
+                self.webviewContentHeight(height);
+            }
+        }];
+    }];
+}
 
 
 #pragma mark - <WKUIDelegate>
@@ -182,5 +197,6 @@
 -(void)dealloc
 {
     [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
+    self.webView = nil;
 }
 @end

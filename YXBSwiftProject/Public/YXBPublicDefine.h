@@ -9,10 +9,14 @@
 #ifndef YXBPublicDefine_h
 #define YXBPublicDefine_h
 
-#import <Toast/UIView+Toast.h>
+//#import <Toast/UIView+Toast.h> // 引入了toast_swift, -Swift.h与pch互相导入toast会引发问题. 所有把taost导入放到了pch中
+#import <DateTools/DateTools.h>
 #import <UIImage+QMUI.h>
+#import <QMUIKit/QMUIKit.h>
 #import "NSObject+YXBAdd.h"
 #import "YXBConstDefine.h"
+#import "GetVersionAPI.h"
+#import "ForceUpdateView.h"
 
 #define ShowToast(msg) [[UIApplication sharedApplication].keyWindow makeToast:msg duration:(MIN(5, MAX(0, msg.length * 0.06 + 0.5))) position:CSToastPositionCenter];
 
@@ -172,7 +176,7 @@ NS_INLINE NSString *stringDivideString(NSString *firstString, NSString *secondSt
     if (secondString.length == 0) {
         return @"0";
     }
-    if ([secondString isEqualToString:@"0"]) {
+    if ([secondString floatValue] == 0) {
         return @"0";
     }
     NSDecimalNumber *oneNumber = [NSDecimalNumber decimalNumberWithString:firstString];
@@ -202,38 +206,56 @@ NS_INLINE NSAttributedString *attributedStringWithHTMLString(NSString *text) {
 /// @param text 带标签的文本
 NS_INLINE NSString *HTMLStringWithXMLString(NSString *text) {
     if (text == nil || [text yxb_isNull]) {
-        return @"";
-    }
+            return @"";
+        }
+        
+        NSString *htmlstring =[NSString stringWithFormat:@"<html> \n"
+        "<head> \n"
+        "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no\">"
+        "<style type=\"text/css\"> \n"
+                               
+                               "body {"
+    //                           "font-family: Helvetica, Arial, sans-serif;"
+    //                           "font-size: 15px;"
+    //                           "line-height: 1.428571429;"
+//                               "color: #F6F6F6;"
+    //                           "background-color: #000000;"
+                               "}"
+                               
+                               "img {"
+                               "display: inline-block;"
+                               "max-width: 100%%;"
+                               "}"
+                               
+                               "ul, li, p, h1, h2, h3, dl, dt, dd {"
+                               "margin: 0;"
+                               "padding: 0;"
+                               "  }"
+        
+                               "  ul, li, dl, dt, dd {"
+                               " list-style: none;"
+                               "  }"
+        "</style> \n"
+        "</head> \n"
+        "<body>"
+        "<script type='text/javascript'>"
+    //    "window.onload = function(){\n"
+    //    "var $img = document.getElementsByTagName('img');\n"
+    //    "for(var p in  $img){\n"
+    //    " $img[p].style.width = '100%%';\n"
+    //    "$img[p].style.height ='auto'\n"
+    //    "}\n"
+    //    "}"
+        "</script>%@"
+        "</body>"
+        "</html>",text];
+        
+        return htmlstring;
     
-    NSString *htmlstring =[NSString stringWithFormat:@"<html> \n"
-    "<head> \n"
-    "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no\">"
-    "<style type=\"text/css\"> \n"
-    // "body {font-size:15px;}\n"
-    "ul, li, p, h1, h2, h3, dl, dt, dd {"
-    "margin: 0;"
-    "padding: 0;"
-    "  }"
-    
-    "  ul, li, dl, dt, dd {"
-    " list-style: none;"
-    "  }"
-    "</style> \n"
-    "</head> \n"
-    "<body>"
-    "<script type='text/javascript'>"
-    "window.onload = function(){\n"
-    "var $img = document.getElementsByTagName('img');\n"
-    "for(var p in  $img){\n"
-    " $img[p].style.width = '100%%';\n"
-    "$img[p].style.height ='auto'\n"
-    "}\n"
-    "}"
-    "</script>%@"
-    "</body>"
-    "</html>",text];
-    
-    return htmlstring;
+//    NSString *string = HTMLStringWithXMLString(model);
+//    // 当内容很少时, webview会给自己一个倔强的a高度，这个缺省值可能比真实高度要高出很多，强行置一下0,让document.body.scrollHeight计算出真实高度
+//    self.webView.webView.qmui_height = 0;
+//    [self.webView.webView loadHTMLString:string baseURL:nil];
 }
 
 // 手机号脱敏
@@ -248,38 +270,148 @@ NS_INLINE NSString *phoneDesensitization(NSString *phoneString, NSInteger fromIn
     return phoneString;
 }
 
-// 对头像制作加一个等级外边框
-NS_INLINE UIImage *headerImageLevelBorder(UIImage *image, NSString *memberLevel, CGSize headerSize, CGSize borderSize, CGPoint beginPosition) {
-    CGFloat scale = [UIScreen mainScreen].scale;
-    UIImage *headerImage = [image qmui_imageResizedInLimitedSize:CGSizeMake(headerSize.width * scale, headerSize.height * scale)];
-    UIImage *borderImage = [[UIImage imageNamed:@"JY_Grade_frame_icon09"] qmui_imageResizedInLimitedSize:CGSizeMake(borderSize.width * scale, borderSize.height * scale)];
-//    UIImage *newImage = [headerImage qmui_imageWithMaskImage:borderImage usingMaskImageMode:YES];
-    
-    UIImage *newImage = [headerImage qmui_imageWithImageAbove:borderImage atPoint:CGPointMake(beginPosition.x * scale, beginPosition.y * scale)];
-    
-    return newImage;
+// 拨号 打电话
+NS_INLINE void callPhoneNumber(NSString *phoneString) {
+    if (phoneString) {
+        NSMutableString *str=[[NSMutableString alloc] initWithFormat:@"telprompt://%@",phoneString];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str] options:@{} completionHandler:nil];
+    }
 }
 
-// 边框图片,根据等级返回
-NS_INLINE UIImage *levelBorderImage(NSString *memberLevel) {
-    UIImage *borderImage;
-    if ([memberLevel integerValue] == 1) {
-        borderImage = nil;
-    } else if ([memberLevel integerValue] == 2) {
-        borderImage = [UIImage imageNamed:@"JY_Grade_frame_icon01"];
-    } else if ([memberLevel integerValue] == 3) {
-        borderImage = [UIImage imageNamed:@"JY_Grade_frame_icon02"];
-    } else if ([memberLevel integerValue] == 4) {
-        borderImage = [UIImage imageNamed:@"JY_Grade_frame_icon03"];
-    } else if ([memberLevel integerValue] == 5) {
-        borderImage = [UIImage imageNamed:@"JY_Grade_frame_icon05"];
-    } else if ([memberLevel integerValue] == 6) {
-        borderImage = [UIImage imageNamed:@"JY_Grade_frame_icon06"];
+NS_INLINE NSString *compareCurrentTime(NSDate *compareDate) {
+    NSTimeInterval timeInterval = [compareDate timeIntervalSinceNow];
+    timeInterval = -timeInterval;
+    long temp = 0;
+    NSString *result;
+    if (timeInterval < 60) {
+        result = [NSString stringWithFormat:@"刚刚"];
+    } else if ((temp = timeInterval / 60) < 60) {
+        result = [NSString stringWithFormat:@"%ld分钟前",temp];
+    } else if ((temp = temp / 60) < 24) {
+        result = [NSString stringWithFormat:@"%ld小时前",temp];
+    } else if ((temp = temp / 24) < 30) {
+        result = [NSString stringWithFormat:@"%ld天前",temp];
+    } else if ((temp = temp / 30) < 12) {
+        result = [NSString stringWithFormat:@"%ld月前",temp];
     } else {
-        borderImage = nil;
+        temp = temp / 12;
+        result = [NSString stringWithFormat:@"%ld年前",temp];
     }
-    return borderImage;
+    return  result;
 }
+
+/// 计算时间过去了多久
+/// @param dateString 时间字符串,  如果是时间戳自行转换一下，注意后台的时间戳要除1000
+/// @param formatString 时间格式 例:yyyy-MM-dd HH:mm:ss
+/// @param timeZoneName 传nil的话 可能默认的是本机时区，美国@"America/New_York"  中国@"Asia/Shanghai"
+NS_INLINE NSString *timeAgoCovert(NSString *dateString, NSString *formatString, NSString *timeZoneName) {
+    NSTimeZone *timeZone = nil;
+    if (timeZoneName != nil) {
+       timeZone = [NSTimeZone timeZoneWithName:timeZoneName];
+    }
+    NSDate *inputDate = [NSDate dateWithString:dateString formatString:formatString timeZone:timeZone];
+    return compareCurrentTime(inputDate);
+}
+
+
+/// 检测版本更新
+NS_INLINE void checkAPPVersion() {
+    GetVersionAPI *network = [[GetVersionAPI alloc] init];
+    [network startWithCompletionBlockWithSuccess:^(__kindof GetVersionAPI * _Nonnull request) {
+        VersionModel *model = [request jsonForModel];
+        if (model == nil) {
+            return ;
+        }
+        
+        BOOL isLatest = ([model.versionNum compare:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]] < NSOrderedDescending);
+        if (isLatest) return;
+        
+        bool isForce = true;
+        NSString *updateLink = model.versionUrl;
+        
+        ForceUpdateView *updateView = [NSBundle.mainBundle loadNibNamed:@"ForceUpdateView" owner:nil options:nil].firstObject;
+        QMUIModalPresentationViewController *modalVC = QMUIModalPresentationViewController.new;
+        
+        updateView.lblTitle.text = [NSString stringWithFormat:@"发现新版本V%@", model.versionNum];
+        updateView.textContent.text = model.content;
+        
+        //            @weakify(modalVC);
+        updateView.btnClose.qmui_tapBlock = ^(__kindof UIControl *sender) {
+            [modalVC hideWithAnimated:true completion:nil];
+        };
+        updateView.btnClose.hidden = isForce;
+        
+        
+        updateView.btnUpdateNow.qmui_tapBlock = ^(__kindof UIControl *sender) {
+            NSURL *url = [NSURL URLWithString:updateLink];
+            if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                [[UIApplication sharedApplication] openURL:url];
+            }
+        };
+        
+        modalVC.contentView = updateView;
+        modalVC.modal = YES;
+        [QMUIModalPresentationViewController hideAllVisibleModalPresentationViewControllerIfCan];
+        [modalVC showWithAnimated:true completion:nil];
+        
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        
+    }];
+}
+
+
+//- (void)checkAPPVersion {
+//    GetVersionAPI *network = [[GetVersionAPI alloc] init];
+//    [network startWithCompletionBlockWithSuccess:^(__kindof GetVersionAPI * _Nonnull request) {
+//        VersionModel *model = [request jsonForModel];
+//        if (model == nil) {
+//            return ;
+//        }
+//
+//        BOOL isLatest = ([model.versionNum compare:APP_VERSION options:(NSNumericSearch)] < NSOrderedDescending);
+//        if (isLatest) return;
+//
+//        bool isForce = true;
+//        NSString *updateLink = model.versionUrl;
+//
+//        ForceUpdateView *updateView = [NSBundle.mainBundle loadNibNamed:@"ForceUpdateView" owner:nil options:nil].firstObject;
+//        QMUIModalPresentationViewController *modalVC = QMUIModalPresentationViewController.new;
+//
+//        updateView.lblTitle.text = [NSString stringWithFormat:@"发现新版本V%@", model.versionNum];
+//        updateView.textContent.text = model.content;
+//
+//        @weakify(modalVC);
+//        updateView.btnClose.qmui_tapBlock = ^(__kindof UIControl *sender) {
+//            [weak_modalVC hideWithAnimated:true completion:nil];
+//        };
+//        updateView.btnClose.hidden = isForce;
+//
+//        updateView.btnUpdateNow.qmui_tapBlock = ^(__kindof UIControl *sender) {
+//            NSURL *url = [NSURL URLWithString:updateLink];
+//            if ([[UIApplication sharedApplication] canOpenURL:url]) {
+//                [[UIApplication sharedApplication] openURL:url];
+//            }
+//        };
+//
+//        modalVC.contentView = updateView;
+//        modalVC.modal = YES;
+//        [QMUIModalPresentationViewController hideAllVisibleModalPresentationViewControllerIfCan];
+//        [modalVC showWithAnimated:true completion:nil];
+//
+//        //        UIAlertController * alertCon = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"有新版本更新，请点击确定重新下载！" preferredStyle:UIAlertControllerStyleAlert];
+//        //        UIAlertAction * ACAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        //            NSURL *url = [NSURL URLWithString:updateLink];
+//        //            if ([[UIApplication sharedApplication] canOpenURL:url]) {
+//        //                [[UIApplication sharedApplication] openURL:url];
+//        //            }
+//        //        }];
+//        //        [alertCon addAction:ACAction];
+//        //        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertCon animated:YES completion:nil];
+//
+//    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+//
+//    }];
+//}
 
 #endif /* YXBPublicDefine_h */
 
@@ -288,6 +420,8 @@ NS_INLINE UIImage *levelBorderImage(NSString *memberLevel) {
 JYDTHomeBuyViewController *vc = [[JYDTHomeBuyViewController alloc] init];
 CGRect frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 420, [UIScreen mainScreen].bounds.size.width, 420);
 QMUIModalPresentationViewController *modalVC = [QMUIModalPresentationViewController new];
+// 背景色
+modalVC.dimmingView.backgroundColor = [UIColorFromHex(#000000) colorWithAlphaComponent:0.6];
 modalVC.contentViewController = vc;
 modalVC.layoutBlock = ^(CGRect containerBounds, CGFloat keyboardHeight, CGRect contentViewDefaultFrame) {
     vc.view.qmui_frameApplyTransform = frame;
@@ -380,5 +514,49 @@ modalVC.modal = YES;
         NIMMessage *imageMessage = [NIMMessageMaker msgWithImage:colletImage];
         [[NIMSDK sharedSDK].chatManager sendMessage:imageMessage toSession:self.session error:nil];
     }
+}
+*/
+
+
+// 分享到微信
+/*
+-(void)share:(NSString *)url{
+    //分享的标题
+    NSString *textToShare = @"下载地址 Download address";
+    //分享的图片
+    UIImage *imageToShare = [UIImage imageNamed:@"图层4"];
+    //分享的url
+    NSURL *urlToShare = [NSURL URLWithString:url];
+    //在这里呢 如果想分享图片 就把图片添加进去  文字什么的通上
+    NSArray *activityItems = @[textToShare,imageToShare, urlToShare];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
+    //不出现在活动项目
+    activityVC.excludedActivityTypes = @[UIActivityTypePrint, UIActivityTypeCopyToPasteboard,UIActivityTypeAssignToContact,UIActivityTypeSaveToCameraRoll];
+    [self presentViewController:activityVC animated:YES completion:nil];
+    // 分享之后的回调
+    activityVC.completionWithItemsHandler = ^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
+        if (completed) {
+            NSLog(@"completed");
+            //分享 成功
+        } else  {
+            NSLog(@"cancelled");
+            //分享 取消
+        }
+    };
+}
+*/
+
+// IQKeyboardManager 键盘禁用 禁用键盘
+/*
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[IQKeyboardManager sharedManager] setEnable:NO];
+    [[IQKeyboardManager sharedManager] setEnableAutoToolbar:NO];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[IQKeyboardManager sharedManager] setEnable:YES];
+    [[IQKeyboardManager sharedManager] setEnableAutoToolbar:YES];
 }
 */

@@ -14,12 +14,14 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - AlipaySDK-iOS (15.7.4)
   - BGFMDB (2.0.13):
     - BGFMDB/BG (= 2.0.13)
     - BGFMDB/FMDB (= 2.0.13)
   - BGFMDB/BG (2.0.13):
     - BGFMDB/FMDB
   - BGFMDB/FMDB (2.0.13)
+  - BiometricAuthentication (3.1.2)
   - Charts (3.5.0):
     - Charts/Core (= 3.5.0)
   - Charts/Core (3.5.0)
@@ -355,15 +357,26 @@ PODS:
     - QMUIKit/QMUICore
     - QMUIKit/QMUILog
   - QMUIKit/QMUIWeakObjectContainer (4.1.3)
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
   - RRSwipeCell (0.1.1)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
   - SDCycleScrollView (1.80):
     - SDWebImage (>= 5.0.0)
   - SDWebImage (5.7.3):
     - SDWebImage/Core (= 5.7.3)
   - SDWebImage/Core (5.7.3)
   - SGQRCode (3.0.1)
+  - SnapKit (5.0.1)
   - SVProgressHUD (2.1.2)
   - Toast (3.1.0)
+  - Toast-Swift (5.0.1)
   - TZImagePickerController (3.2.9)
   - WMPageController (2.5.2)
   - XHLaunchAd (3.9.11):
@@ -378,7 +391,9 @@ PODS:
   - YYText (1.0.7)
 
 DEPENDENCIES:
+  - AlipaySDK-iOS
   - BGFMDB (~> 2.0.9)
+  - BiometricAuthentication
   - Charts
   - CYLTabBarController (~> 1.28.4)
   - DateTools (~> 2.0.0)
@@ -396,11 +411,16 @@ DEPENDENCIES:
   - MZFormSheetPresentationController (~> 2.4.3)
   - PPNumberButton (~> 0.8.0)
   - QMUIKit (~> 4.1.3)
+  - R.swift
   - RRSwipeCell (~> 0.1.1)
+  - RxCocoa
+  - RxSwift
   - SDCycleScrollView (~> 1.80)
   - SGQRCode (~> 3.0.1)
+  - SnapKit
   - SVProgressHUD (~> 2.1.2)
   - Toast (~> 3.1.0)
+  - Toast-Swift (~> 5.0.1)
   - TZImagePickerController (~> 3.2.7)
   - WMPageController (~> 2.5.2)
   - XHLaunchAd (~> 3.9.8)
@@ -413,7 +433,9 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - AlipaySDK-iOS
     - BGFMDB
+    - BiometricAuthentication
     - Charts
     - CYLTabBarController
     - DateTools
@@ -435,12 +457,19 @@ SPEC REPOS:
     - MZFormSheetPresentationController
     - PPNumberButton
     - QMUIKit
+    - R.swift
+    - R.swift.Library
     - RRSwipeCell
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SDCycleScrollView
     - SDWebImage
     - SGQRCode
+    - SnapKit
     - SVProgressHUD
     - Toast
+    - Toast-Swift
     - TZImagePickerController
     - WMPageController
     - XHLaunchAd
@@ -452,7 +481,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AlipaySDK-iOS: 8659cdb4403de7e5f26ad8b699864a9cbe53384c
   BGFMDB: 48e6823027232402a678acc7f71484b1fc9171d0
+  BiometricAuthentication: 36445f3ab77699489f91995bed887be89890afac
   Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
   CYLTabBarController: edd9fecba9afa3f2e9e44ed50ca6dde69941f25f
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
@@ -474,12 +505,19 @@ SPEC CHECKSUMS:
   MZFormSheetPresentationController: fbfdbad31884f16fac17fbe3c44c168306cc1095
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
   QMUIKit: 1063a99f90aedd6e2dd65026ce0df46e6785e67b
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   RRSwipeCell: 28eb4c1201a3f12ed66184b803492c512d6ceba4
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: 97351f6582ceca541ea294ba66a1fcb342a331c2
   SGQRCode: bf02d60e18d6660a9d75ff1c8b9b467f064f054e
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   TZImagePickerController: 1f92968aa0e98a06b9e2eccca8560acc19254257
   WMPageController: 0c7624d2b48e4f1ab92371688cf6744ed701575d
   XHLaunchAd: 9d4abeca598c4262e9df10dd3346b07b9fe40926
@@ -489,6 +527,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 05bd44800ded2c0e16b808c455b9b4af006726b6
+PODFILE CHECKSUM: 4cb47e4be4cec2a9e0d6c973c0b45035eb8c17fc
 
 COCOAPODS: 1.9.1

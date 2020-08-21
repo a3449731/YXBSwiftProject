@@ -18,11 +18,11 @@
     self = [super initWithRootViewController:rootViewController];
     if (self) {
         self.navigationBar.translucent = NO;
-        self.navigationBar.tintColor = YXBColorWhite;
+        self.navigationBar.tintColor = YXBColor_titleText;
         self.navigationBar.backgroundColor = [UIColor clearColor];
-        [self.navigationBar setBackgroundImage:UIImageWithColor(YXBColorBG_Black) forBarMetrics:(UIBarMetricsDefault)];
+        [self.navigationBar setBackgroundImage:UIImageWithColor(YXBColor_background) forBarMetrics:(UIBarMetricsDefault)];
         [self.navigationBar setShadowImage:[UIImage new]];
-        NSDictionary *att = @{NSForegroundColorAttributeName : YXBColorWhite,
+        NSDictionary *att = @{NSForegroundColorAttributeName : YXBColor_titleText,
         NSFontAttributeName : [UIFont fontWithName:@"Helvetica-Bold" size:17]};
         [self.navigationBar setTitleTextAttributes:att];
     }

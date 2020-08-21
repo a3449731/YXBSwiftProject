@@ -9,17 +9,6 @@
 #import "YXBNetConfiger.h"
 #import <AFNetworking/AFURLRequestSerialization.h>
 
-#ifdef DEBUG
-// Debug模式的代码...
-#define kServerAddress @"http://192.168.16.69:8088"
-
-#else
-
-// Release模式的代码...
-#define kServerAddress @"https://yxz.dysmgo.com"
-
-#endif
-
 @implementation YXBNetConfiger
 
 /// 配置请求头, cdn,公共参数
@@ -35,7 +24,13 @@
 - (NSString *)filterUrl:(NSString *)originUrl withRequest:(YTKBaseRequest *)request {
     NSMutableDictionary *publicParameter = [NSMutableDictionary dictionary];
     // 公共参数
-    [publicParameter setValue:@"12363748" forKey:@"token"];
+    PersonalModel *model = [UserManager sharedManager].personalInfo;
+    NSString *token = model.token;
+    if (token == nil || [token isEqualToString:@""]) {
+        // 随便写,为了触发token失效
+        token = @"12345";
+    }
+    [publicParameter setValue:token forKey:@"token"];
     
     return [YXBNetConfiger urlStringWithOriginUrlString:originUrl appendParameters:publicParameter];
 }

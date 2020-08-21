@@ -37,6 +37,15 @@ NS_ASSUME_NONNULL_END
 //    }
 //}
 
+//- (NSString * _Nullable)jsonForString {
+//    if ([self isValidRequestData]) {
+//        NSString *string = [NSString stringWithFormat:@"%@",[self.responseJSONObject valueForKey:@"data"]];
+//        return string;
+//    } else {
+//        return nil;
+//    }
+//}
+
 //- (void)hasMoreData:(YTKRequest *)request {
 //    if ([[request.responseJSONObject valueForKey:@"data"] isKindOfClass:[NSDictionary class]] && [[request.responseJSONObject valueForKey:@"data"] containsObjectForKey:@"hasNextPage"]) {
 //        NSString *newPage = [[request.responseJSONObject valueForKey:@"data"] valueForKey:@"hasNextPage"];

@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
+typedef void(^LXWkFinishNavigation)(CGFloat contentHeight);
+
 @interface LYLWKWebView : UIView
 
 @property(nonatomic,strong)WKWebView *webView;
 
 @property(nonatomic, strong)UIProgressView *progressView;
+
+@property (nonatomic, copy) LXWkFinishNavigation webviewContentHeight;
 
 @end

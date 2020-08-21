@@ -115,7 +115,7 @@ dispatch_resume(_timer);
 
 - (UIButton *)creatCodeButton {
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [button setTitleColor:YXBColorBlue forState:(UIControlStateNormal)];
+    [button setTitleColor:MLColorBlue forState:(UIControlStateNormal)];
     [button setTitle:@"获取验证码" forState:(UIControlStateNormal)];
     return button;
 }
@@ -140,12 +140,12 @@ dispatch_resume(_timer);
 #pragma mark ---------- 确认按钮 ----------------
 - (UIView *)creatTableFooter {
     UIView *view = [[UIView alloc] init];
-    view.backgroundColor = YXBColorBG_Black;
+    view.backgroundColor = MLColorBG_white;
     view.frame = CGRectMake(0, 0, kScreenWidth, 80);
     
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    button.backgroundColor = YXBColorBlue;
-    [button setTitleColor:YXBColorWhite forState:(UIControlStateNormal)];
+    button.backgroundColor = MLColorBlue;
+    [button setTitleColor:MLColorWhite forState:(UIControlStateNormal)];
     [button setTitle:@"确认" forState:(UIControlStateNormal)];
     button.layer.cornerRadius = 4;
     [view addSubview:button];
@@ -175,7 +175,7 @@ dispatch_resume(_timer);
     MJWeakSelf;
     QMUIDialogTextFieldViewController *dialogViewController = [[QMUIDialogTextFieldViewController alloc] init];
     dialogViewController.title = @"请输入安全密码";
-    dialogViewController.headerViewBackgroundColor = YXBColorWhite;
+    dialogViewController.headerViewBackgroundColor = MLColorWhite;
     [dialogViewController addTextFieldWithTitle:nil configurationHandler:^(QMUILabel *titleLabel, QMUITextField *textField, CALayer *separatorLayer) {
         textField.maximumTextLength = 6;
         textField.keyboardType = UIKeyboardTypeNumberPad;
@@ -537,7 +537,7 @@ atIndex:(NSInteger)index {
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UILabel *label = [[UILabel alloc] init];
     label.font = [UIFont systemFontOfSize:16];
-    label.textColor = YXBColorBlack;
+    label.textColor = MLColorBlack;
     label.text = @"    明细";
     label.frame = CGRectMake(0, 0, kScreenWidth, 60);
     return label;
@@ -585,7 +585,7 @@ atIndex:(NSInteger)index {
 }
 
 @end
-*/
+ */
 
 #program mark ---------- YXB_UICollection -----------------
 /*
@@ -683,7 +683,6 @@ atIndex:(NSInteger)index {
 @end
 */
  
- 
 #program mark ---------- YXB_UICollection_Page -----------------
 /*
 #import "MyTeamViewController.h"
@@ -754,6 +753,7 @@ atIndex:(NSInteger)index {
         [weakSelf.adapter reloadDataWithCompletion:nil];
         [weakSelf.collectionView.mj_header endRefreshing];
         [weakSelf.collectionView.mj_footer endRefreshing];
+        [weakSelf hasMoreData:request];
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         [weakSelf.collectionView.mj_header endRefreshing];
         [weakSelf.collectionView.mj_footer endRefreshing];
@@ -770,10 +770,22 @@ atIndex:(NSInteger)index {
         [weakSelf.adapter reloadDataWithCompletion:nil];
         [weakSelf.collectionView.mj_header endRefreshing];
         [weakSelf.collectionView.mj_footer endRefreshing];
+        [weakSelf hasMoreData:request];
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         [weakSelf.collectionView.mj_header endRefreshing];
         [weakSelf.collectionView.mj_footer endRefreshing];
     }];
+}
+
+- (void)hasMoreData:(YTKRequest *)request {
+    if ([[request.responseJSONObject valueForKey:@"data"] isKindOfClass:[NSDictionary class]] && [[request.responseJSONObject valueForKey:@"data"] containsObjectForKey:@"hasNextPage"]) {
+        NSString *newPage = [[request.responseJSONObject valueForKey:@"data"] valueForKey:@"hasNextPage"];
+        if (newPage && [newPage boolValue] == NO) {
+            [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+        } else {
+            [self.collectionView.mj_footer resetNoMoreData];
+        }
+    }
 }
 
 
@@ -823,6 +835,6 @@ atIndex:(NSInteger)index {
 }
 
 @end
-*/
- 
+ */
+
 #endif /* YXBCodeSnipped_h */

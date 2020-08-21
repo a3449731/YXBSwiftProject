@@ -82,6 +82,10 @@ extern NSString *const YXBThemeIndetifierDark;
 @property(nonatomic, strong, readonly) UIColor *separatorColor_light;
 @property(nonatomic, strong, readonly) UIColor *separatorColor_HighLight;
 
+- (UIImage *)themeImage:(NSString *)imageName;
+
+- (NSString *)themeImageName:(NSString *)imageName;
+
 @end
 
 NS_ASSUME_NONNULL_END

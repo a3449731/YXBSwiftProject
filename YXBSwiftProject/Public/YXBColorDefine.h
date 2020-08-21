@@ -11,44 +11,47 @@
 
 #import <UIKit/UIKit.h>
 
+#define YXBThemeImage(imageName) [YXBThemeManager.sharedManager themeImage:imageName]
+#define YXBThemeImageName(imageName) [YXBThemeManager.sharedManager themeImageName:imageName]
+
 ///color
 #define RGBColor(r,g,b)         [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 #define RGBAColor(r,g,b,a)      [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 #define UIColorFromHex(hex)  RGBAColorWithHEXString(@#hex, 1.0f)
 #define UIImageFromHex(hex)  UIImageWithColor(UIColorFromHex(hex))
 
-// 背景_灰
-#define YXBColorBG_gray UIColorFromHex(#F3F3F3)
 
-// 背景_白
-#define YXBColorBG_white UIColorFromHex(#FFFFFF)
+#define YXBColor_background                     YXBThemeManager.sharedInstance.backgroundColor
+#define YXBColor_background_light               YXBThemeManager.sharedInstance.backgroundColor_light
+#define YXBColor_background_highLight           YXBThemeManager.sharedInstance.backgroundColor_HighLight
 
-// 背景_黑
-#define YXBColorBG_Black UIColorFromHex(#1E2528)
+#define YXBColor_tint                           YXBThemeManager.sharedInstance.tintColor
+#define YXBColor_tint_light                     YXBThemeManager.sharedInstance.tintColor_light
+#define YXBColor_tint_highLight                 YXBThemeManager.sharedInstance.tintColor_HighLight
 
-// 黑色字体
-#define YXBColorBlack UIColorFromHex(#333333)
+#define YXBColor_titleText                      YXBThemeManager.sharedInstance.titleTextColor
+#define YXBColor_titleText_light                YXBThemeManager.sharedInstance.titleTextColor_light
+#define YXBColor_titleText_highLight            YXBThemeManager.sharedInstance.titleTextColor_HighLight
 
-// 灰色字体
-#define YXBColorGray UIColorFromHex(#A5A7BA)
+#define YXBColor_subText                        YXBThemeManager.sharedInstance.subTextColor
+#define YXBColor_subText_light                  YXBThemeManager.sharedInstance.subTextColor_light
+#define YXBColor_subText_highLight              YXBThemeManager.sharedInstance.subTextColor_HighLight
 
-// 灰色字体
-#define YXBColorGray_999 UIColorFromHex(#999999)
+#define YXBColor_descriptionText                YXBThemeManager.sharedInstance.descriptionTextColor
+#define YXBColor_descriptionText_light          YXBThemeManager.sharedInstance.descriptionTextColor_light
+#define YXBColor_descriptionText_highLight      YXBThemeManager.sharedInstance.descriptionTextColor_HighLight
 
-// 白色字体
-#define YXBColorWhite UIColorFromHex(#FFFFFF)
+#define YXBColor_tipText                        YXBThemeManager.sharedInstance.tipTextColor
+#define YXBColor_tipText_light                  YXBThemeManager.sharedInstance.tipTextColor_light
+#define YXBColor_tipText_highLight              YXBThemeManager.sharedInstance.tipTextColor_HighLight
 
-// 蓝色字体
-#define YXBColorBlue UIColorFromHex(#418efb)
+#define YXBColor_placeholder                    YXBThemeManager.sharedInstance.placeholderColor
+#define YXBColor_placeholder_light              YXBThemeManager.sharedInstance.placeholderColor_light
+#define YXBColor_placeholder_highLight          YXBThemeManager.sharedInstance.placeholderColor_HighLight
 
-// 红色字体
-#define YXBColorRed UIColorFromHex(#FF5551)
-
-// 绿色字体
-#define YXBColorGreen UIColorFromHex(#03D598)
-
-// 橙色
-#define YXBColorOrange UIColorFromHex(#F8B34B)
+#define YXBColor_separator                      YXBThemeManager.sharedInstance.separatorColor
+#define YXBColor_separator_light                YXBThemeManager.sharedInstance.separatorColor_light
+#define YXBColor_separator_highLight            YXBThemeManager.sharedInstance.separatorColor_HighLight
 
 
 //颜色转换图片

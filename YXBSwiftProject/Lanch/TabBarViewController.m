@@ -25,8 +25,8 @@
         self.delegate = self;
         [UITabBar appearance].translucent = NO;
         self.navigationController.navigationBar.hidden = YES;
-        self.tabBar.unselectedItemTintColor = YXBColorGray;
-        self.tabBar.tintColor = YXBColorBlack;
+        self.tabBar.unselectedItemTintColor = YXBColor_subText;
+        self.tabBar.tintColor = YXBColor_titleText;
     }
     return self;
 }

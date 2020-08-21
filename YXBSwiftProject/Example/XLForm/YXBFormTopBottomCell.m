@@ -37,7 +37,7 @@ NSString *const YXBFormRowDescriptorTypeTopBottomCell = @"YXBFormRowDescriptorTy
 - (void)creatUI {
     self.titleLabel = [[UILabel alloc] init];
     self.titleLabel.font = [UIFont boldSystemFontOfSize:14];
-    self.titleLabel.textColor = YXBColorBlack;
+    self.titleLabel.textColor = YXBColor_descriptionText_highLight;
     [self.contentView addSubview:self.titleLabel];
     [self.titleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(10);
@@ -49,7 +49,7 @@ NSString *const YXBFormRowDescriptorTypeTopBottomCell = @"YXBFormRowDescriptorTy
     self.textField = [[QMUITextField alloc] init];
     self.textField.delegate = self;
     self.textField.font = [UIFont systemFontOfSize:14];
-    self.textField.textColor = YXBColorBlack;
+    self.textField.textColor = YXBColor_descriptionText_highLight;
     [self.contentView addSubview:self.textField];
     [self.textField mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.titleLabel.mas_bottom).mas_equalTo(10);
@@ -65,7 +65,7 @@ NSString *const YXBFormRowDescriptorTypeTopBottomCell = @"YXBFormRowDescriptorTy
 - (void)update {
     [super update];
     // 设置占位符颜色
-    self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.textField.placeholder attributes:@{NSForegroundColorAttributeName:YXBColorGray}];
+    self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.textField.placeholder attributes:@{NSForegroundColorAttributeName:YXBColor_subText}];
     self.titleLabel.text = self.rowDescriptor.title;
     self.textField.text = self.rowDescriptor.value ? [self.rowDescriptor displayTextValue] : self.rowDescriptor.noValueDisplayText;
 }

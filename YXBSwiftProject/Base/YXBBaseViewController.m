@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = YXBColorBG_Black;
+    self.view.backgroundColor = YXBColor_background;
 }
 
 @end

@@ -30,5 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        // 支付宝回调
+        self.aliPayResultConsume(app, open: url, options: options)
+        
+        return true
+    }
+    
 }
