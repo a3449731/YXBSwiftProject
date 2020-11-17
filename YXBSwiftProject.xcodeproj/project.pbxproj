@@ -58,6 +58,8 @@
 		0C14A0EB249B69C2005FE48A /* YXBFormButtonValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A0DD249B69C2005FE48A /* YXBFormButtonValueCell.m */; };
 		0C14A0EC249B69C2005FE48A /* YXBFormLeftRightBgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A0DE249B69C2005FE48A /* YXBFormLeftRightBgCell.m */; };
 		0C14A0EF249B6A0D005FE48A /* YXBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C14A0EE249B6A0D005FE48A /* YXBBaseViewController.m */; };
+		0C277E9F253E999D00C33F56 /* CocoaSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C277E9D253E999D00C33F56 /* CocoaSecurity.m */; };
+		0C277EA2253E9A1D00C33F56 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C277EA1253E9A1D00C33F56 /* Base64.m */; };
 		0C4387DC249B4EF6008DBD78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C4387DB249B4EF6008DBD78 /* Preview Assets.xcassets */; };
 		0C4387EE249B51DB008DBD78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4387E7249B51DB008DBD78 /* LaunchScreen.storyboard */; };
 		0C4387F0249B51DB008DBD78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4387EA249B51DB008DBD78 /* AppDelegate.swift */; };
@@ -215,6 +217,10 @@
 		0C14A0ED249B6A0C005FE48A /* YXBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBBaseViewController.h; sourceTree = "<group>"; };
 		0C14A0EE249B6A0D005FE48A /* YXBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBBaseViewController.m; sourceTree = "<group>"; };
 		0C14A0F7249B6FF6005FE48A /* YXBSwiftProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YXBSwiftProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		0C277E9D253E999D00C33F56 /* CocoaSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaSecurity.m; sourceTree = "<group>"; };
+		0C277E9E253E999D00C33F56 /* CocoaSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaSecurity.h; sourceTree = "<group>"; };
+		0C277EA0253E9A1D00C33F56 /* Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		0C277EA1253E9A1D00C33F56 /* Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		0C4387CF249B4EF4008DBD78 /* YXBSwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXBSwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4387DB249B4EF6008DBD78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C4387E7249B51DB008DBD78 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -361,6 +367,10 @@
 		0C14A053249B648D005FE48A /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				0C277E9E253E999D00C33F56 /* CocoaSecurity.h */,
+				0C277E9D253E999D00C33F56 /* CocoaSecurity.m */,
+				0C277EA0253E9A1D00C33F56 /* Base64.h */,
+				0C277EA1253E9A1D00C33F56 /* Base64.m */,
 				0C47C7A124E51F1E006945B9 /* Toast.swift */,
 				0C14A063249B648D005FE48A /* CDDetailHeaderView.h */,
 				0C14A05A249B648D005FE48A /* CDDetailHeaderView.m */,
@@ -841,6 +851,7 @@
 				0C47C7A424E52242006945B9 /* PaymentkeyboardView.swift in Sources */,
 				0CC0C75D24E3DE2F001AE32D /* ForceUpdateView.m in Sources */,
 				0C14A0B7249B652D005FE48A /* LanchPageModel.m in Sources */,
+				0C277EA2253E9A1D00C33F56 /* Base64.m in Sources */,
 				0C14A095249B648D005FE48A /* CDDetailHeaderView.m in Sources */,
 				0C14A0EC249B69C2005FE48A /* YXBFormLeftRightBgCell.m in Sources */,
 				0C14A089249B648D005FE48A /* YXBCollectionCell.m in Sources */,
@@ -854,6 +865,7 @@
 				0C47C79824E51714006945B9 /* UIView+Utils.swift in Sources */,
 				0C14A0E2249B69C2005FE48A /* PagingViewTableHeaderView.m in Sources */,
 				0C14A0E6249B69C2005FE48A /* YXBFormTopBottomCell.m in Sources */,
+				0C277E9F253E999D00C33F56 /* CocoaSecurity.m in Sources */,
 				0CC0C79A24E401D2001AE32D /* UIViewController+Navigation.swift in Sources */,
 				0C47C7A224E51F1E006945B9 /* Toast.swift in Sources */,
 				0CC0C79C24E40216001AE32D /* CATransaction+Animation.swift in Sources */,
