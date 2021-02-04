@@ -12,6 +12,7 @@
 #import "YXBTransitionDefine.h"
 #import "YXBDeviceDefine.h"
 #import "NSArray+YXBAdd.h"
+#import "YXBColorDefine.h"
 
 // UI库
 #import <QMUIKit/QMUIKit.h>

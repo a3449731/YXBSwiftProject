@@ -11,6 +11,7 @@ import Foundation
 extension AppDelegate {
     
     func initYXBThemeConfig() {
+//        [YXBThemeManager sharedInstance].currentThemeIdentifier = YXBThemeIndetifierWhite;
         
         // 1. 先注册主题监听，在回调里将主题持久化存储，避免启动过程中主题发生变化时读取到错误的值
         NotificationCenter.default.addObserver(self, selector: #selector(self.handleThemeDidChangeNotification), name: NSNotification.Name.QMUIThemeDidChange, object: nil)
@@ -30,6 +31,8 @@ extension AppDelegate {
             }
             return nil
         }
+        
+        YXBThemeManager.sharedInstance().currentThemeIdentifier = YXBThemeIndetifierWhite
         
         // 3. 再针对 iOS 13 开启自动响应系统的 Dark Mode 切换
         // 如果不需要这个功能，则不需要这一段代码

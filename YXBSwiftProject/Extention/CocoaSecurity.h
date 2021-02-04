@@ -56,11 +56,13 @@
 + (CocoaSecurityResult *)aesEncrypt:(NSString *)data hexKey:(NSString *)key hexIv:(NSString *)iv;
 + (CocoaSecurityResult *)aesEncrypt:(NSString *)data key:(NSData *)key iv:(NSData *)iv;
 + (CocoaSecurityResult *)aesEncryptWithData:(NSData *)data key:(NSData *)key iv:(NSData *)iv;
++ (CocoaSecurityResult *)aesECBEncrypt:(NSString *)dataString key:(NSString *)key;
 #pragma mark AES Decrypt
 + (CocoaSecurityResult *)aesDecryptWithBase64:(NSString *)data key:(NSString *)key;
 + (CocoaSecurityResult *)aesDecryptWithBase64:(NSString *)data hexKey:(NSString *)key hexIv:(NSString *)iv;
 + (CocoaSecurityResult *)aesDecryptWithBase64:(NSString *)data key:(NSData *)key iv:(NSData *)iv;
 + (CocoaSecurityResult *)aesDecryptWithData:(NSData *)data key:(NSData *)key iv:(NSData *)iv;
++ (CocoaSecurityResult *)aesECBDecryptWithData:(NSString *)dataString key:(NSString *)key;
 
 #pragma mark - MD5
 + (CocoaSecurityResult *)md5:(NSString *)hashString;

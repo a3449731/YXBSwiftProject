@@ -30,6 +30,7 @@ pod 'PPNumberButton', '~> 0.8.0'
 pod 'MZFormSheetPresentationController', '~> 2.4.3'
 pod 'DateTools', '~> 2.0.0'
 pod 'BGFMDB', '~> 2.0.9'
+pod 'UICKeyChainStore', '~> 2.2.1' #钥匙串存储
 pod 'YYModel', '~> 1.0.4'
 pod 'YYText', '~> 1.0.7'
 pod 'YYCategories', '~> 1.0.4'

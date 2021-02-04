@@ -10,6 +10,7 @@
 #import "TabBarViewController.h"
 #import "YXBNavigationController.h"
 //#import "LoginViewController.h"
+#import <UICKeyChainStore/UICKeyChainStore.h>
 
 @interface UserManager ()
 
@@ -22,6 +23,7 @@
 @synthesize versionModel = _versionModel;
 @synthesize acoutModel = _acoutModel;
 @synthesize isOpenRichProtect = _isOpenRichProtect;
+@synthesize deviceID = _deviceID;
 
 + (instancetype)sharedManager {
     static UserManager *manager = nil;
@@ -123,6 +125,30 @@
 - (void)setIsOpenRichProtect:(BOOL)isOpenRichProtect {
     [[NSUserDefaults standardUserDefaults] setBool:isOpenRichProtect forKey:@"YXBisOpenRichProtect"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (NSString *)deviceID {
+    NSString *deviceID = [UICKeyChainStore stringForKey:@"YXBDeviceID"];
+    // 如果不存在 就生成一个uuid。并且存储起来
+    if (deviceID == nil || deviceID.length == 0) {
+        CFUUIDRef uuid = CFUUIDCreate(NULL);
+        CFStringRef string = CFUUIDCreateString(NULL, uuid);
+        CFRelease(uuid);
+        deviceID = (__bridge_transfer NSString *)string;
+        [UICKeyChainStore setString:deviceID forKey:@"YXBDeviceID"];
+    }
+    return deviceID;
+}
+
+- (void)setDeviceID:(NSString *)deviceID {
+    if (deviceID == nil || deviceID.length == 0) {
+        [UICKeyChainStore removeItemForKey:@"YXBDeviceID"];
+        // 置空结束方法
+        return;
+    }
+    if (_deviceID != deviceID) {
+        [UICKeyChainStore setString:deviceID forKey:@"YXBDeviceID"];
+    }
 }
 
 @end

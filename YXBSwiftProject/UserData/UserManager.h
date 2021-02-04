@@ -29,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) AcountModel *acoutModel;
 
 @property (nonatomic, assign) BOOL isOpenRichProtect; // 开启资产保护
+@property (nonatomic, copy) NSString *deviceID; // 设备id，使用keyChain存储。
 
 - (void)logoutApp;
 

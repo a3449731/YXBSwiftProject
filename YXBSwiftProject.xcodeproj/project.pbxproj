@@ -103,6 +103,8 @@
 		0CC0C79324E3EDD7001AE32D /* YXBInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C79224E3EDD7001AE32D /* YXBInputView.m */; };
 		0CC0C79A24E401D2001AE32D /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C79924E401D2001AE32D /* UIViewController+Navigation.swift */; };
 		0CC0C79C24E40216001AE32D /* CATransaction+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C79B24E40216001AE32D /* CATransaction+Animation.swift */; };
+		0CDB809B25B0444600B62976 /* TwoLineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDB809A25B0444600B62976 /* TwoLineButton.swift */; };
+		0CDB809D25B0489300B62976 /* TwoLineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDB809C25B0489300B62976 /* TwoLineLabel.swift */; };
 		0CE5358A249B74F100FE14FB /* AppDelegate+YXBTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE53589249B74F100FE14FB /* AppDelegate+YXBTheme.swift */; };
 		47B916A06310008C757E1B7A /* libPods-YXBSwiftProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */; };
 /* End PBXBuildFile section */
@@ -286,6 +288,8 @@
 		0CC0C79224E3EDD7001AE32D /* YXBInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBInputView.m; sourceTree = "<group>"; };
 		0CC0C79924E401D2001AE32D /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		0CC0C79B24E40216001AE32D /* CATransaction+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CATransaction+Animation.swift"; sourceTree = "<group>"; };
+		0CDB809A25B0444600B62976 /* TwoLineButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoLineButton.swift; sourceTree = "<group>"; };
+		0CDB809C25B0489300B62976 /* TwoLineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoLineLabel.swift; sourceTree = "<group>"; };
 		0CE53589249B74F100FE14FB /* AppDelegate+YXBTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+YXBTheme.swift"; sourceTree = "<group>"; };
 		4F245EC0B5961F5373ECB312 /* Pods-YXBSwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXBSwiftProject.release.xcconfig"; path = "Target Support Files/Pods-YXBSwiftProject/Pods-YXBSwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXBSwiftProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -372,6 +376,8 @@
 				0C277EA0253E9A1D00C33F56 /* Base64.h */,
 				0C277EA1253E9A1D00C33F56 /* Base64.m */,
 				0C47C7A124E51F1E006945B9 /* Toast.swift */,
+				0CDB809C25B0489300B62976 /* TwoLineLabel.swift */,
+				0CDB809A25B0444600B62976 /* TwoLineButton.swift */,
 				0C14A063249B648D005FE48A /* CDDetailHeaderView.h */,
 				0C14A05A249B648D005FE48A /* CDDetailHeaderView.m */,
 				0C14A056249B648D005FE48A /* CDDetailHeaderView.xib */,
@@ -855,10 +861,12 @@
 				0C14A095249B648D005FE48A /* CDDetailHeaderView.m in Sources */,
 				0C14A0EC249B69C2005FE48A /* YXBFormLeftRightBgCell.m in Sources */,
 				0C14A089249B648D005FE48A /* YXBCollectionCell.m in Sources */,
+				0CDB809B25B0444600B62976 /* TwoLineButton.swift in Sources */,
 				0C47C7A724E523A0006945B9 /* PaymentPasswordView.swift in Sources */,
 				0C47C79A24E5175D006945B9 /* UIEdgeInsets+Convenience.swift in Sources */,
 				0C47C7A624E52397006945B9 /* TableViewCellItem.swift in Sources */,
 				0C14A091249B648D005FE48A /* WCQRCodeVC.m in Sources */,
+				0CDB809D25B0489300B62976 /* TwoLineLabel.swift in Sources */,
 				0CC0C78A24E3DEAC001AE32D /* NoticeModel.m in Sources */,
 				0C14A0A1249B648D005FE48A /* QMUIConfigurationTemplateDark.m in Sources */,
 				0CC0C79324E3EDD7001AE32D /* YXBInputView.m in Sources */,

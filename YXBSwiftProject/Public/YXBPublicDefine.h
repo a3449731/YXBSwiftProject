@@ -258,6 +258,20 @@ NS_INLINE NSString *HTMLStringWithXMLString(NSString *text) {
 //    [self.webView.webView loadHTMLString:string baseURL:nil];
 }
 
+/*
+self.webView.webView.navigationDelegate = self;
+-(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    // 设置字体
+    //    NSString *fontFamilyStr = @"document.getElementsByTagName('body')[0].style.fontFamily='Arial';";
+    //    [webView evaluateJavaScript:fontFamilyStr completionHandler:nil];
+    //
+    //设置颜色
+//    [webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.webkitTextFillColor= '#FFFFFF'" completionHandler:nil];
+    //    //修改字体大小
+    //    [webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '200%'"completionHandler:nil];
+}
+ */
+
 // 手机号脱敏
 NS_INLINE NSString *phoneDesensitization(NSString *phoneString, NSInteger fromIndex, NSInteger length) {
     if (phoneString && phoneString.length > fromIndex + length) {
