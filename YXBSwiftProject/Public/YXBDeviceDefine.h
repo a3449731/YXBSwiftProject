@@ -71,9 +71,12 @@ NS_INLINE BOOL isIPhoneXSeries() {
         if ([UIScreen instancesRespondToSelector:@selector(currentMode)]) {
             CGSize size = UIScreen.mainScreen.currentMode.size;
             isIPhoneX =
-            CGSizeEqualToSize(size, CGSizeMake(1125, 2436)) ||  // X XS
+            CGSizeEqualToSize(size, CGSizeMake(1125, 2436)) ||  // X, XS
             CGSizeEqualToSize(size, CGSizeMake(1242, 2688)) ||  // XS Max
-            CGSizeEqualToSize(size, CGSizeMake( 828, 1792));    // XR
+            CGSizeEqualToSize(size, CGSizeMake( 828, 1792)) ||  // XR
+            CGSizeEqualToSize(size, CGSizeMake(1284, 2778)) ||  // 12 Pro Max
+            CGSizeEqualToSize(size, CGSizeMake(1170, 2532)) ||  // 12 Pro, 12
+            CGSizeEqualToSize(size, CGSizeMake(1080, 2340));    // 12 mini
         }
     });
     return isIPhoneX;
