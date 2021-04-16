@@ -373,6 +373,32 @@ NS_INLINE void checkAPPVersion() {
     }];
 }
 
+/* 声音长度不能超过30秒
+   声音文件必须是 PCM 或者是 IMA4(IMA/ADPCM) 格式。
+   必须是 .caf、.aif 、.wav的文件
+   不能控制播放进度
+   没有循环播放
+*/
+NS_INLINE void yxb_playSoundName(NSString *name) {
+    /// 静态库 path 的获取
+    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:nil];
+    if (!path) {
+        /// 动态库 path 的获取
+        path = [[NSBundle mainBundle] pathForResource:name ofType:nil];
+    }
+    NSURL *fileUrl = [NSURL fileURLWithPath:path];
+    
+    SystemSoundID soundID = 0;
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)(fileUrl), &soundID);
+    //    AudioServicesAddSystemSoundCompletion(soundID, NULL, NULL, soundCompleteCallback, NULL);
+    
+    // 播放soundID对应的音效
+    // 播放声音并震动，如果用户设置为静音就没声音，如果设置为震动就震动
+    AudioServicesPlayAlertSound(soundID);
+    // 仅播放声音，如果用户设置为静音就没声音
+    //AudioServicesPlaySystemSound(soundID);
+}
+
 
 //- (void)checkAPPVersion {
 //    GetVersionAPI *network = [[GetVersionAPI alloc] init];
@@ -465,6 +491,33 @@ modalVC.modal = YES;
  modalVC.contentView = dialogView;
  
  [modalVC showWithAnimated:true completion:nil];
+ 
+ */
+
+/*
+ MJWeakSelf;
+ // 不需要生成订单 直接使用余额支付
+ [PayPwdInput handlePayWithTitle:@"请输入支付密码" needSure:NO price:nil items:@[] payBlock:^(NSString * _Nonnull password, void (^ _Nonnull paySucceed)(BOOL)) {
+     
+     
+     FastOrderAPI *network = [[FastOrderAPI alloc] initWithGoodsId:dic[@"goodsId"] goodsNum:dic[@"num"] combinationId:dic[@"attributeId"] addressId:dic[@"addressId"] payPass:password];
+     [network startWithCompletionBlockWithSuccess:^(__kindof FastOrderAPI * _Nonnull request) {
+         
+         if ([request isValidRequestData]) {
+             // 告诉PayPwdInput支付是否成功，---> 收起PayPwdInput
+             paySucceed(YES);
+             // 前往订单中心后, 并销毁当前控制器
+             [weakSelf replaceWith:[MyOrderViewController new] animated:YES completion:nil];
+         }
+     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+         [SVProgressHUD dismiss];
+     }];
+     
+ } onCancel:^{
+     
+ } onFinish:^{
+     
+ }];
  
  */
 

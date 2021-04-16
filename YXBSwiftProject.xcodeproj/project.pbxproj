@@ -83,6 +83,7 @@
 		0C47C7B924E54D1C006945B9 /* PayPwdInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C7B824E54D1C006945B9 /* PayPwdInput.swift */; };
 		0C47C7BB24E55074006945B9 /* BaseCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C7BA24E55074006945B9 /* BaseCellItem.swift */; };
 		0C47C7BD24E5648E006945B9 /* Appdelegate+AliPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C7BC24E5648E006945B9 /* Appdelegate+AliPay.swift */; };
+		0CB9CF05260DDCFC00E82B13 /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C77B24E4EF4A006945B9 /* PaymentService.swift */; };
 		0CC0C75D24E3DE2F001AE32D /* ForceUpdateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C75A24E3DE2F001AE32D /* ForceUpdateView.m */; };
 		0CC0C75E24E3DE2F001AE32D /* ForceUpdateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC0C75C24E3DE2F001AE32D /* ForceUpdateView.xib */; };
 		0CC0C77B24E3DE6E001AE32D /* MessageAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C76024E3DE6E001AE32D /* MessageAPI.m */; };
@@ -912,6 +913,7 @@
 				0C14A08E249B648D005FE48A /* YXBNetConfiger.m in Sources */,
 				0C14A0A0249B648D005FE48A /* UIButton+YXBAdd.m in Sources */,
 				0C14A0E7249B69C2005FE48A /* YXBFormLeftRightCell.m in Sources */,
+				0CB9CF05260DDCFC00E82B13 /* PaymentService.swift in Sources */,
 				0C14A099249B648D005FE48A /* LYLWKWebView.m in Sources */,
 				0CE5358A249B74F100FE14FB /* AppDelegate+YXBTheme.swift in Sources */,
 				0C47C7A924E523A0006945B9 /* PaymentSureInfoView.swift in Sources */,

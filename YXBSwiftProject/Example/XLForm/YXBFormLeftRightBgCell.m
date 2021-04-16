@@ -10,10 +10,11 @@
 
 NSString *const YXBFormRowDescriptorLeftRightBackgroundCell = @"YXBFormRowDescriptorLeftRightBackgroundCell";
 
-@interface YXBFormLeftRightBgCell () <UITextFieldDelegate>
+@interface YXBFormLeftRightBgCell () <QMUITextFieldDelegate>
 
+@property (nonatomic, strong) UIView *bgView;
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, strong) QMUITextField *textField;
 @property (nonatomic, assign) UIKeyboardType keyboardType;
 
 @end
@@ -32,12 +33,12 @@ NSString *const YXBFormRowDescriptorLeftRightBackgroundCell = @"YXBFormRowDescri
 
 - (void)creatUI {
     
-    UIView *bgView= [[UIView alloc] init];
-    bgView.backgroundColor = YXBColor_tint_highLight;
-    bgView.layer.cornerRadius = 4;
-    bgView.layer.masksToBounds = YES;
-    [self.contentView addSubview:bgView];
-    [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.bgView= [[UIView alloc] init];
+    self.bgView.backgroundColor = YXBColor_background;
+    self.bgView.layer.cornerRadius = 4;
+    self.bgView.layer.masksToBounds = YES;
+    [self.contentView addSubview:self.bgView];
+    [self.bgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(15);
         make.right.mas_equalTo(-15);
         make.top.mas_equalTo(10);
@@ -47,7 +48,7 @@ NSString *const YXBFormRowDescriptorLeftRightBackgroundCell = @"YXBFormRowDescri
     self.titleLabel = [[UILabel alloc] init];
     self.titleLabel.font = [UIFont boldSystemFontOfSize:14];
     self.titleLabel.textColor = YXBColor_descriptionText_highLight;
-    [bgView addSubview:self.titleLabel];
+    [self.bgView addSubview:self.titleLabel];
     [self.titleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(0);
         make.left.mas_equalTo(12);
@@ -55,11 +56,11 @@ NSString *const YXBFormRowDescriptorLeftRightBackgroundCell = @"YXBFormRowDescri
         make.width.priorityLow();
     }];
     
-    self.textField = [[UITextField alloc] init];
+    self.textField = [[QMUITextField alloc] init];
     self.textField.delegate = self;
     self.textField.font = [UIFont boldSystemFontOfSize:14];
     self.textField.textColor = YXBColor_descriptionText_highLight;
-    [bgView addSubview:self.textField];
+    [self.bgView addSubview:self.textField];
     [self.textField mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.titleLabel.mas_right).mas_offset(15);
         make.right.mas_equalTo(-16);
@@ -84,6 +85,22 @@ NSString *const YXBFormRowDescriptorLeftRightBackgroundCell = @"YXBFormRowDescri
     self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.textField.placeholder attributes:@{NSForegroundColorAttributeName:YXBColor_subText}];
     self.titleLabel.text = self.rowDescriptor.title;
     self.textField.text = self.rowDescriptor.value ? [self.rowDescriptor displayTextValue] : self.rowDescriptor.noValueDisplayText;
+    
+    if (self.rowDescriptor.title == nil) {
+        [self.titleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(1);
+        }];
+        [self.textField mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(15);
+        }];
+    } else {
+        [self.titleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(80);
+        }];
+        [self.textField mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.titleLabel.mas_right).mas_offset(15);
+        }];
+    }
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

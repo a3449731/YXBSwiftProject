@@ -22,7 +22,7 @@ class PaymentPasswordView: UIView {
 
         containerView.layer.borderWidth = 1
         
-        containerView.layer.borderColor = UIColor.qmui_color(withHexString: "0xe5e5e5")?.cgColor
+        containerView.layer.borderColor = UIColor(hexString: "#e5e5e5")?.cgColor
         containerView.layer.masksToBounds = true
         containerView.layer.cornerRadius = 5
 

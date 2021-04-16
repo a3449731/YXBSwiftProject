@@ -41,13 +41,13 @@ class TwoLineLabel: UILabel {
     }
 
     /// @IBInspectable 对UIFont类型无效，系统可以，这个要再研究一下
-    var topFont: UIFont = .systemFont(ofSize: 18) {
+    @IBInspectable var topFont: UIFont = .systemFont(ofSize: 18) {
         didSet {
             updateText()
         }
     }
     
-    var bottomFont: UIFont = .systemFont(ofSize: 12) {
+    @IBInspectable var bottomFont: UIFont = .systemFont(ofSize: 12) {
         didSet {
             updateText()
         }

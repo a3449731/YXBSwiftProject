@@ -19,6 +19,10 @@ extern NSInteger const YXBAccuracyFour;
 extern NSInteger const YXBAccuracyEight;
 extern NSString *const YXBAccuracyAddString; // 补精度使用的字符串
 
+extern NSString * _Nullable const PaySuccessNotification;
+extern NSString * _Nullable const PayCancelNotification;
+extern NSString * _Nullable const PayFailNotification;
+
 @end
 
 NS_ASSUME_NONNULL_END

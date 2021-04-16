@@ -15,6 +15,9 @@ NSInteger const YXBAccuracyFour = 4;
 NSInteger const YXBAccuracyEight = 8;
 NSString *const YXBAccuracyAddString = @"0"; // 补精度使用的字符串
 
+NSString * const PaySuccessNotification = @"PaySuccessNotification";
+NSString * const PayCancelNotification = @"PayCancelNotification";
+NSString * const PayFailNotification = @"PayFailNotification";
 
 @implementation YXBConstDefine
 
