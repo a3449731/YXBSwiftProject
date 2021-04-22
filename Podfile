@@ -1,5 +1,5 @@
-source 'https://github.com/CocoaPods/Specs.git'
-#source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+#source 'https://github.com/CocoaPods/Specs.git'
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 
  platform :ios, '11.0'
 
@@ -12,7 +12,8 @@ target 'YXBSwiftProject' do
 pod 'XHLaunchAd', '~> 3.9.8' # 启动页 很完善
 pod 'EAIntroView', '~> 2.12.0' # 引导页 很不错
 pod 'CYLTabBarController', '~> 1.28.4'
-pod 'YTKNetwork', '~> 2.0.4' # 依赖AFNetworking3.0以上
+#pod 'YTKNetwork', '~> 2.0.4' # 依赖AFNetworking3.0以上, 3.0中含有UIWebView,无法上架
+pod 'YTKNetwork', '~> 3.0.5' # 依赖AFNetworking4.0以上
 pod 'SDCycleScrollView', '~> 1.80' # 依赖SDWebImage 5.0以上
 pod 'IGListKit', '~> 4.0.0'
 pod 'QMUIKit', '~> 4.1.3'

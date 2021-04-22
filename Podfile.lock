@@ -1,19 +1,11 @@
 PODS:
-  - AFNetworking (3.2.1):
-    - AFNetworking/NSURLSession (= 3.2.1)
-    - AFNetworking/Reachability (= 3.2.1)
-    - AFNetworking/Security (= 3.2.1)
-    - AFNetworking/Serialization (= 3.2.1)
-    - AFNetworking/UIKit (= 3.2.1)
-  - AFNetworking/NSURLSession (3.2.1):
+  - AFNetworking/NSURLSession (4.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.1)
-  - AFNetworking/Security (3.2.1)
-  - AFNetworking/Serialization (3.2.1)
-  - AFNetworking/UIKit (3.2.1):
-    - AFNetworking/NSURLSession
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
   - AlipaySDK-iOS (15.7.4)
   - BGFMDB (2.0.13):
     - BGFMDB/BG (= 2.0.13)
@@ -383,8 +375,8 @@ PODS:
   - XHLaunchAd (3.9.11):
     - FLAnimatedImage (~> 1.0.12)
   - XLForm (4.1.0)
-  - YTKNetwork (2.0.4):
-    - AFNetworking (~> 3.0)
+  - YTKNetwork (3.0.5):
+    - AFNetworking/NSURLSession (~> 4.0)
   - YYCategories (1.0.4):
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
@@ -427,14 +419,13 @@ DEPENDENCIES:
   - WMPageController (~> 2.5.2)
   - XHLaunchAd (~> 3.9.8)
   - XLForm (~> 4.1.0)
-  - YTKNetwork (~> 2.0.4)
+  - YTKNetwork (~> 3.0.5)
   - YYCategories (~> 1.0.4)
   - YYModel (~> 1.0.4)
   - YYText (~> 1.0.7)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - AFNetworking
     - AlipaySDK-iOS
     - BGFMDB
     - BiometricAuthentication
@@ -477,13 +468,15 @@ SPEC REPOS:
     - WMPageController
     - XHLaunchAd
     - XLForm
-    - YTKNetwork
     - YYCategories
     - YYModel
     - YYText
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - AFNetworking
+    - YTKNetwork
 
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   AlipaySDK-iOS: 8659cdb4403de7e5f26ad8b699864a9cbe53384c
   BGFMDB: 48e6823027232402a678acc7f71484b1fc9171d0
   BiometricAuthentication: 36445f3ab77699489f91995bed887be89890afac
@@ -526,11 +519,11 @@ SPEC CHECKSUMS:
   WMPageController: 0c7624d2b48e4f1ab92371688cf6744ed701575d
   XHLaunchAd: 9d4abeca598c4262e9df10dd3346b07b9fe40926
   XLForm: 7ee02761be8a369d1ad1bbffe738b97083d94f3e
-  YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
+  YTKNetwork: a2337af4b444b5d0a658122fa3d8a425e2425716
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 02947aaad92caa718ef844c2d4029614dc07b404
+PODFILE CHECKSUM: 4a31c43c7c3514a39ac040773bc815fc5e4f5ff2
 
 COCOAPODS: 1.9.1
