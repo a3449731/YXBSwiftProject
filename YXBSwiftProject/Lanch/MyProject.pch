@@ -28,6 +28,7 @@
 #import <SDWebImage/UIButton+WebCache.h>
 #import "YXBThemeManager.h"
 #import "UserManager.h"
+#import "NTVLocalized.h"
 
 #import "YXBSwiftProject-Swift.h"
 #import <AlipaySDK/AlipaySDK.h>

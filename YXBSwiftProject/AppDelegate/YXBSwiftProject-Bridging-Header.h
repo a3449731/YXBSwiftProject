@@ -13,6 +13,7 @@
 #import "YXBDeviceDefine.h"
 #import "NSArray+YXBAdd.h"
 #import "YXBColorDefine.h"
+#import "NTVLocalized.h"
 
 // UI库
 #import <QMUIKit/QMUIKit.h>
@@ -37,4 +38,7 @@
 // 控制器
 #import "TabBarViewController.h"
 
-
+#import "UserManager.h"
+#import "LoginViewController.h"
+#import "YXBNavigationController.h"
+#import <SVProgressHUD/SVProgressHUD.h>

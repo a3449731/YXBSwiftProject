@@ -17,6 +17,7 @@
 - (BOOL)isValidRequestData {
     if ([[self.responseJSONObject valueForKey:@"code"] intValue] == 300) {
         NSLog(@"需要重新登录");
+        [[UserManager sharedManager] loginFailed];
         return NO;
     } else if ([[self.responseJSONObject valueForKey:@"code"] intValue] == 0) {
         return YES;

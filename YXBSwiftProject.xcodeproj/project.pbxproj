@@ -83,6 +83,37 @@
 		0C47C7B924E54D1C006945B9 /* PayPwdInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C7B824E54D1C006945B9 /* PayPwdInput.swift */; };
 		0C47C7BB24E55074006945B9 /* BaseCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C7BA24E55074006945B9 /* BaseCellItem.swift */; };
 		0C47C7BD24E5648E006945B9 /* Appdelegate+AliPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C7BC24E5648E006945B9 /* Appdelegate+AliPay.swift */; };
+		0C76C14726312163005580D8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C76C13E26312163005580D8 /* Localizable.strings */; };
+		0C76C14826312163005580D8 /* NTVLocalized.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C14226312163005580D8 /* NTVLocalized.m */; };
+		0C76C14926312163005580D8 /* NSBundle+language.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C14326312163005580D8 /* NSBundle+language.m */; };
+		0C76C1AC26312467005580D8 /* RegisterAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C19426312467005580D8 /* RegisterAPI.m */; };
+		0C76C1AD26312467005580D8 /* CaptchaAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C19626312467005580D8 /* CaptchaAPI.m */; };
+		0C76C1AE26312467005580D8 /* LoginAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C19726312467005580D8 /* LoginAPI.m */; };
+		0C76C1AF26312467005580D8 /* ForgetPassAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C19826312467005580D8 /* ForgetPassAPI.m */; };
+		0C76C1B026312467005580D8 /* ModifyLoginPassAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C19D26312467005580D8 /* ModifyLoginPassAPI.m */; };
+		0C76C1B126312467005580D8 /* ModifyPayPassAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C19E26312467005580D8 /* ModifyPayPassAPI.m */; };
+		0C76C1B226312467005580D8 /* PSSLoginPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C1A026312467005580D8 /* PSSLoginPassViewController.m */; };
+		0C76C1B326312467005580D8 /* PSSPayPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C1A126312467005580D8 /* PSSPayPassViewController.m */; };
+		0C76C1B426312467005580D8 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C1A226312467005580D8 /* RegistViewController.m */; };
+		0C76C1B526312467005580D8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C1A526312467005580D8 /* LoginViewController.m */; };
+		0C76C1B626312467005580D8 /* YXBCaptchaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C1AA26312467005580D8 /* YXBCaptchaView.m */; };
+		0C76C1B726312467005580D8 /* ForgetSecretViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C1AB26312467005580D8 /* ForgetSecretViewController.m */; };
+		0C76C1BF2631247D005580D8 /* PopDXCaptchaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C76C1BA2631247D005580D8 /* PopDXCaptchaView.xib */; };
+		0C76C1C02631247D005580D8 /* DingxiangCaptchaSDKStatic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C76C1BB2631247D005580D8 /* DingxiangCaptchaSDKStatic.framework */; };
+		0C76C1C12631247D005580D8 /* DingxiangCaptcha.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C76C1BC2631247D005580D8 /* DingxiangCaptcha.bundle */; };
+		0C76C1C22631247D005580D8 /* PopDXCaptchaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C76C1BD2631247D005580D8 /* PopDXCaptchaView.m */; };
+		0C76C1C32631247D005580D8 /* DXRiskStatic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C76C1BE2631247D005580D8 /* DXRiskStatic.framework */; };
+		0C76C1C526312502005580D8 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C76C1C426312502005580D8 /* Accelerate.framework */; };
+		0C76C1C726312509005580D8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C76C1C626312509005580D8 /* CoreLocation.framework */; };
+		0C76C1C926312511005580D8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C76C1C826312511005580D8 /* CoreTelephony.framework */; };
+		0C76C1CB26312518005580D8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C76C1CA26312518005580D8 /* SystemConfiguration.framework */; };
+		0C76C1CD26312526005580D8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C76C1CC26312520005580D8 /* libc++.tbd */; };
+		0C76C1CF26312534005580D8 /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C76C1CE2631252E005580D8 /* libiconv.2.4.0.tbd */; };
+		0C76C1D126312545005580D8 /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C76C1D02631253B005580D8 /* libiconv.2.tbd */; };
+		0C76C1D326312556005580D8 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C76C1D226312550005580D8 /* libiconv.tbd */; };
+		0C76C1D526312567005580D8 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C76C1D226312550005580D8 /* libiconv.tbd */; };
+		0C76C1D626312574005580D8 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C76C1D42631255F005580D8 /* libresolv.tbd */; };
+		0C76C1D826312584005580D8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C76C1D72631257E005580D8 /* libz.tbd */; };
 		0CB9CF05260DDCFC00E82B13 /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47C77B24E4EF4A006945B9 /* PaymentService.swift */; };
 		0CC0C75D24E3DE2F001AE32D /* ForceUpdateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0C75A24E3DE2F001AE32D /* ForceUpdateView.m */; };
 		0CC0C75E24E3DE2F001AE32D /* ForceUpdateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC0C75C24E3DE2F001AE32D /* ForceUpdateView.xib */; };
@@ -253,6 +284,54 @@
 		0C47C7B824E54D1C006945B9 /* PayPwdInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PayPwdInput.swift; path = PayPwdInput/PayPwdInput.swift; sourceTree = "<group>"; };
 		0C47C7BA24E55074006945B9 /* BaseCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCellItem.swift; sourceTree = "<group>"; };
 		0C47C7BC24E5648E006945B9 /* Appdelegate+AliPay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Appdelegate+AliPay.swift"; sourceTree = "<group>"; };
+		0C76C13F26312163005580D8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		0C76C14026312163005580D8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0C76C14126312163005580D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0C76C14226312163005580D8 /* NTVLocalized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTVLocalized.m; sourceTree = "<group>"; };
+		0C76C14326312163005580D8 /* NSBundle+language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+language.m"; sourceTree = "<group>"; };
+		0C76C14426312163005580D8 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0C76C14526312163005580D8 /* NTVLocalized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTVLocalized.h; sourceTree = "<group>"; };
+		0C76C14626312163005580D8 /* NSBundle+language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+language.h"; sourceTree = "<group>"; };
+		0C76C19326312467005580D8 /* ModifyPayPassAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPayPassAPI.h; sourceTree = "<group>"; };
+		0C76C19426312467005580D8 /* RegisterAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAPI.m; sourceTree = "<group>"; };
+		0C76C19526312467005580D8 /* ModifyLoginPassAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyLoginPassAPI.h; sourceTree = "<group>"; };
+		0C76C19626312467005580D8 /* CaptchaAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptchaAPI.m; sourceTree = "<group>"; };
+		0C76C19726312467005580D8 /* LoginAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginAPI.m; sourceTree = "<group>"; };
+		0C76C19826312467005580D8 /* ForgetPassAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPassAPI.m; sourceTree = "<group>"; };
+		0C76C19926312467005580D8 /* ForgetPassAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPassAPI.h; sourceTree = "<group>"; };
+		0C76C19A26312467005580D8 /* CaptchaAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptchaAPI.h; sourceTree = "<group>"; };
+		0C76C19B26312467005580D8 /* LoginAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginAPI.h; sourceTree = "<group>"; };
+		0C76C19C26312467005580D8 /* RegisterAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAPI.h; sourceTree = "<group>"; };
+		0C76C19D26312467005580D8 /* ModifyLoginPassAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyLoginPassAPI.m; sourceTree = "<group>"; };
+		0C76C19E26312467005580D8 /* ModifyPayPassAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPayPassAPI.m; sourceTree = "<group>"; };
+		0C76C1A026312467005580D8 /* PSSLoginPassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSLoginPassViewController.m; sourceTree = "<group>"; };
+		0C76C1A126312467005580D8 /* PSSPayPassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSPayPassViewController.m; sourceTree = "<group>"; };
+		0C76C1A226312467005580D8 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
+		0C76C1A326312467005580D8 /* ForgetSecretViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetSecretViewController.h; sourceTree = "<group>"; };
+		0C76C1A426312467005580D8 /* YXBCaptchaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBCaptchaView.h; sourceTree = "<group>"; };
+		0C76C1A526312467005580D8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0C76C1A626312467005580D8 /* PSSPayPassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSPayPassViewController.h; sourceTree = "<group>"; };
+		0C76C1A726312467005580D8 /* PSSLoginPassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSLoginPassViewController.h; sourceTree = "<group>"; };
+		0C76C1A826312467005580D8 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
+		0C76C1A926312467005580D8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0C76C1AA26312467005580D8 /* YXBCaptchaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBCaptchaView.m; sourceTree = "<group>"; };
+		0C76C1AB26312467005580D8 /* ForgetSecretViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetSecretViewController.m; sourceTree = "<group>"; };
+		0C76C1B92631247D005580D8 /* PopDXCaptchaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopDXCaptchaView.h; sourceTree = "<group>"; };
+		0C76C1BA2631247D005580D8 /* PopDXCaptchaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopDXCaptchaView.xib; sourceTree = "<group>"; };
+		0C76C1BB2631247D005580D8 /* DingxiangCaptchaSDKStatic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DingxiangCaptchaSDKStatic.framework; sourceTree = "<group>"; };
+		0C76C1BC2631247D005580D8 /* DingxiangCaptcha.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DingxiangCaptcha.bundle; sourceTree = "<group>"; };
+		0C76C1BD2631247D005580D8 /* PopDXCaptchaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopDXCaptchaView.m; sourceTree = "<group>"; };
+		0C76C1BE2631247D005580D8 /* DXRiskStatic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DXRiskStatic.framework; sourceTree = "<group>"; };
+		0C76C1C426312502005580D8 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		0C76C1C626312509005580D8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0C76C1C826312511005580D8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		0C76C1CA26312518005580D8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0C76C1CC26312520005580D8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		0C76C1CE2631252E005580D8 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
+		0C76C1D02631253B005580D8 /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
+		0C76C1D226312550005580D8 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		0C76C1D42631255F005580D8 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		0C76C1D72631257E005580D8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		0CC0C75A24E3DE2F001AE32D /* ForceUpdateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForceUpdateView.m; sourceTree = "<group>"; };
 		0CC0C75B24E3DE2F001AE32D /* ForceUpdateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForceUpdateView.h; sourceTree = "<group>"; };
 		0CC0C75C24E3DE2F001AE32D /* ForceUpdateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForceUpdateView.xib; sourceTree = "<group>"; };
@@ -304,6 +383,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C76C1C02631247D005580D8 /* DingxiangCaptchaSDKStatic.framework in Frameworks */,
+				0C76C1CB26312518005580D8 /* SystemConfiguration.framework in Frameworks */,
+				0C76C1CD26312526005580D8 /* libc++.tbd in Frameworks */,
+				0C76C1C726312509005580D8 /* CoreLocation.framework in Frameworks */,
+				0C76C1D126312545005580D8 /* libiconv.2.tbd in Frameworks */,
+				0C76C1D626312574005580D8 /* libresolv.tbd in Frameworks */,
+				0C76C1C526312502005580D8 /* Accelerate.framework in Frameworks */,
+				0C76C1D526312567005580D8 /* libiconv.tbd in Frameworks */,
+				0C76C1CF26312534005580D8 /* libiconv.2.4.0.tbd in Frameworks */,
+				0C76C1D826312584005580D8 /* libz.tbd in Frameworks */,
+				0C76C1D326312556005580D8 /* libiconv.tbd in Frameworks */,
+				0C76C1C32631247D005580D8 /* DXRiskStatic.framework in Frameworks */,
+				0C76C1C926312511005580D8 /* CoreTelephony.framework in Frameworks */,
 				47B916A06310008C757E1B7A /* libPods-YXBSwiftProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +558,7 @@
 		0C14A0A7249B64D8005FE48A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0C76C19126312467005580D8 /* 登录注册 */,
 				0C14A0BB249B65B8005FE48A /* 首页 */,
 			);
 			path = Classes;
@@ -569,6 +662,7 @@
 				0C14A043249B648D005FE48A /* Network */,
 				0C14A07F249B648D005FE48A /* UserData */,
 				0C14A073249B648D005FE48A /* Theme */,
+				0C76C13C26312163005580D8 /* Third */,
 				0C4387EC249B51DB008DBD78 /* Assets */,
 				0C4387DA249B4EF6008DBD78 /* Preview Content */,
 			);
@@ -651,6 +745,87 @@
 			path = PayPwdInput;
 			sourceTree = "<group>";
 		};
+		0C76C13C26312163005580D8 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				0C76C1B82631247D005580D8 /* 顶象验证 */,
+				0C76C13D26312163005580D8 /* 语言切换 */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		0C76C13D26312163005580D8 /* 语言切换 */ = {
+			isa = PBXGroup;
+			children = (
+				0C76C13E26312163005580D8 /* Localizable.strings */,
+				0C76C14226312163005580D8 /* NTVLocalized.m */,
+				0C76C14326312163005580D8 /* NSBundle+language.m */,
+				0C76C14526312163005580D8 /* NTVLocalized.h */,
+				0C76C14626312163005580D8 /* NSBundle+language.h */,
+			);
+			path = "语言切换";
+			sourceTree = "<group>";
+		};
+		0C76C19126312467005580D8 /* 登录注册 */ = {
+			isa = PBXGroup;
+			children = (
+				0C76C19226312467005580D8 /* 接口 */,
+				0C76C19F26312467005580D8 /* 主页 */,
+			);
+			path = "登录注册";
+			sourceTree = "<group>";
+		};
+		0C76C19226312467005580D8 /* 接口 */ = {
+			isa = PBXGroup;
+			children = (
+				0C76C19A26312467005580D8 /* CaptchaAPI.h */,
+				0C76C19626312467005580D8 /* CaptchaAPI.m */,
+				0C76C19926312467005580D8 /* ForgetPassAPI.h */,
+				0C76C19826312467005580D8 /* ForgetPassAPI.m */,
+				0C76C19B26312467005580D8 /* LoginAPI.h */,
+				0C76C19726312467005580D8 /* LoginAPI.m */,
+				0C76C19526312467005580D8 /* ModifyLoginPassAPI.h */,
+				0C76C19D26312467005580D8 /* ModifyLoginPassAPI.m */,
+				0C76C19326312467005580D8 /* ModifyPayPassAPI.h */,
+				0C76C19E26312467005580D8 /* ModifyPayPassAPI.m */,
+				0C76C19C26312467005580D8 /* RegisterAPI.h */,
+				0C76C19426312467005580D8 /* RegisterAPI.m */,
+			);
+			path = "接口";
+			sourceTree = "<group>";
+		};
+		0C76C19F26312467005580D8 /* 主页 */ = {
+			isa = PBXGroup;
+			children = (
+				0C76C1A926312467005580D8 /* LoginViewController.h */,
+				0C76C1A526312467005580D8 /* LoginViewController.m */,
+				0C76C1A826312467005580D8 /* RegistViewController.h */,
+				0C76C1A226312467005580D8 /* RegistViewController.m */,
+				0C76C1A326312467005580D8 /* ForgetSecretViewController.h */,
+				0C76C1AB26312467005580D8 /* ForgetSecretViewController.m */,
+				0C76C1A726312467005580D8 /* PSSLoginPassViewController.h */,
+				0C76C1A026312467005580D8 /* PSSLoginPassViewController.m */,
+				0C76C1A626312467005580D8 /* PSSPayPassViewController.h */,
+				0C76C1A126312467005580D8 /* PSSPayPassViewController.m */,
+				0C76C1A426312467005580D8 /* YXBCaptchaView.h */,
+				0C76C1AA26312467005580D8 /* YXBCaptchaView.m */,
+			);
+			path = "主页";
+			sourceTree = "<group>";
+		};
+		0C76C1B82631247D005580D8 /* 顶象验证 */ = {
+			isa = PBXGroup;
+			children = (
+				0C76C1BC2631247D005580D8 /* DingxiangCaptcha.bundle */,
+				0C76C1BB2631247D005580D8 /* DingxiangCaptchaSDKStatic.framework */,
+				0C76C1BE2631247D005580D8 /* DXRiskStatic.framework */,
+				0C76C1B92631247D005580D8 /* PopDXCaptchaView.h */,
+				0C76C1BD2631247D005580D8 /* PopDXCaptchaView.m */,
+				0C76C1BA2631247D005580D8 /* PopDXCaptchaView.xib */,
+			);
+			path = "顶象验证";
+			sourceTree = "<group>";
+		};
 		0CC0C75F24E3DE6E001AE32D /* CommonAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -696,6 +871,16 @@
 		4F30B239741F943657DA9A6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C76C1D72631257E005580D8 /* libz.tbd */,
+				0C76C1D42631255F005580D8 /* libresolv.tbd */,
+				0C76C1D226312550005580D8 /* libiconv.tbd */,
+				0C76C1D02631253B005580D8 /* libiconv.2.tbd */,
+				0C76C1CE2631252E005580D8 /* libiconv.2.4.0.tbd */,
+				0C76C1CC26312520005580D8 /* libc++.tbd */,
+				0C76C1CA26312518005580D8 /* SystemConfiguration.framework */,
+				0C76C1C826312511005580D8 /* CoreTelephony.framework */,
+				0C76C1C626312509005580D8 /* CoreLocation.framework */,
+				0C76C1C426312502005580D8 /* Accelerate.framework */,
 				82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */,
 			);
 			name = Frameworks;
@@ -754,6 +939,9 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				ja,
+				ko,
 			);
 			mainGroup = 0C4387C6249B4EF4008DBD78;
 			productRefGroup = 0C4387D0249B4EF4008DBD78 /* Products */;
@@ -770,11 +958,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C76C1BF2631247D005580D8 /* PopDXCaptchaView.xib in Resources */,
 				0C4387DC249B4EF6008DBD78 /* Preview Assets.xcassets in Resources */,
 				0C14A0E1249B69C2005FE48A /* lufei.png in Resources */,
 				0C47C7A524E52242006945B9 /* PaymentKeyboardView.xib in Resources */,
+				0C76C1C12631247D005580D8 /* DingxiangCaptcha.bundle in Resources */,
 				0C14A092249B648D005FE48A /* CDDetailHeaderView.xib in Resources */,
 				0C47C7A824E523A0006945B9 /* PaymentPasswordView.xib in Resources */,
+				0C76C14726312163005580D8 /* Localizable.strings in Resources */,
 				0CC0C75E24E3DE2F001AE32D /* ForceUpdateView.xib in Resources */,
 				0C47C7AA24E523A0006945B9 /* PaymentSureInfoView.xib in Resources */,
 				0C4387EE249B51DB008DBD78 /* LaunchScreen.storyboard in Resources */,
@@ -840,12 +1031,15 @@
 				0C47C7BB24E55074006945B9 /* BaseCellItem.swift in Sources */,
 				0C14A08D249B648D005FE48A /* MyRequst.m in Sources */,
 				0C14A0A3249B648D005FE48A /* YXBUIHelper.m in Sources */,
+				0C76C1AC26312467005580D8 /* RegisterAPI.m in Sources */,
 				0C14A085249B648D005FE48A /* YXBCell.m in Sources */,
 				0C14A0A2249B648D005FE48A /* YXBThemeManager.m in Sources */,
 				0C47C7B324E540D8006945B9 /* YXBPaymentManager.m in Sources */,
+				0C76C1AE26312467005580D8 /* LoginAPI.m in Sources */,
 				0C14A09D249B648D005FE48A /* UIImage+YXBAdd.m in Sources */,
 				0C14A0E0249B69C2005FE48A /* YXBPageContentViewController.m in Sources */,
 				0C14A09C249B648D005FE48A /* NSArray+YXBAdd.m in Sources */,
+				0C76C1B226312467005580D8 /* PSSLoginPassViewController.m in Sources */,
 				0C47C79C24E51786006945B9 /* NSObject+ClassName.swift in Sources */,
 				0C14A0E3249B69C2005FE48A /* YXBPageContentCollectionViewController.m in Sources */,
 				0CC0C78324E3DE6E001AE32D /* MemberModel.m in Sources */,
@@ -864,6 +1058,8 @@
 				0CC0C75D24E3DE2F001AE32D /* ForceUpdateView.m in Sources */,
 				0C14A0B7249B652D005FE48A /* LanchPageModel.m in Sources */,
 				0C277EA2253E9A1D00C33F56 /* Base64.m in Sources */,
+				0C76C1B026312467005580D8 /* ModifyLoginPassAPI.m in Sources */,
+				0C76C1B726312467005580D8 /* ForgetSecretViewController.m in Sources */,
 				0C14A095249B648D005FE48A /* CDDetailHeaderView.m in Sources */,
 				0C14A0EC249B69C2005FE48A /* YXBFormLeftRightBgCell.m in Sources */,
 				0C14A089249B648D005FE48A /* YXBCollectionCell.m in Sources */,
@@ -871,23 +1067,29 @@
 				0CDF01EC25EF841100EE10C1 /* UIColor+YXBGradient.m in Sources */,
 				0C47C7A724E523A0006945B9 /* PaymentPasswordView.swift in Sources */,
 				0C47C79A24E5175D006945B9 /* UIEdgeInsets+Convenience.swift in Sources */,
+				0C76C1AF26312467005580D8 /* ForgetPassAPI.m in Sources */,
 				0C47C7A624E52397006945B9 /* TableViewCellItem.swift in Sources */,
 				0C14A091249B648D005FE48A /* WCQRCodeVC.m in Sources */,
+				0C76C14926312163005580D8 /* NSBundle+language.m in Sources */,
+				0C76C1B626312467005580D8 /* YXBCaptchaView.m in Sources */,
 				0CDB809D25B0489300B62976 /* TwoLineLabel.swift in Sources */,
 				0CC0C78A24E3DEAC001AE32D /* NoticeModel.m in Sources */,
 				0C14A0A1249B648D005FE48A /* QMUIConfigurationTemplateDark.m in Sources */,
 				0CC0C79324E3EDD7001AE32D /* YXBInputView.m in Sources */,
 				0C47C79824E51714006945B9 /* UIView+Utils.swift in Sources */,
+				0C76C1B426312467005580D8 /* RegistViewController.m in Sources */,
 				0C14A0E2249B69C2005FE48A /* PagingViewTableHeaderView.m in Sources */,
 				0C14A0E6249B69C2005FE48A /* YXBFormTopBottomCell.m in Sources */,
 				0C277E9F253E999D00C33F56 /* CocoaSecurity.m in Sources */,
 				0CC0C79A24E401D2001AE32D /* UIViewController+Navigation.swift in Sources */,
+				0C76C1C22631247D005580D8 /* PopDXCaptchaView.m in Sources */,
 				0C47C7A224E51F1E006945B9 /* Toast.swift in Sources */,
 				0CC0C79C24E40216001AE32D /* CATransaction+Animation.swift in Sources */,
 				0CC0C78524E3DE6E001AE32D /* LevelModel.m in Sources */,
 				0C4387F0249B51DB008DBD78 /* AppDelegate.swift in Sources */,
 				0C14A0A4249B648D005FE48A /* QMUIConfigurationTemplateWhite.m in Sources */,
 				0C14A0E4249B69C2005FE48A /* YXBPageContentTableViewController.m in Sources */,
+				0C76C1B326312467005580D8 /* PSSPayPassViewController.m in Sources */,
 				0C14A09F249B648D005FE48A /* NSObject+YXBAdd.m in Sources */,
 				0C14A0E8249B69C2005FE48A /* YXBFormImageCell.m in Sources */,
 				0C47C7BD24E5648E006945B9 /* Appdelegate+AliPay.swift in Sources */,
@@ -903,6 +1105,7 @@
 				0CC0C79024E3DF60001AE32D /* JYDTPriceNuberButton.m in Sources */,
 				0C14A0A5249B648D005FE48A /* QMUIConfigurationTemplate.m in Sources */,
 				0C14A0B6249B652D005FE48A /* YXBNavigationController.m in Sources */,
+				0C76C1B526312467005580D8 /* LoginViewController.m in Sources */,
 				0C47C7B924E54D1C006945B9 /* PayPwdInput.swift in Sources */,
 				0CC0C78624E3DE6E001AE32D /* BannerModel.m in Sources */,
 				0C14A0B4249B652D005FE48A /* TabBarViewController.m in Sources */,
@@ -914,6 +1117,7 @@
 				0C14A0A0249B648D005FE48A /* UIButton+YXBAdd.m in Sources */,
 				0C14A0E7249B69C2005FE48A /* YXBFormLeftRightCell.m in Sources */,
 				0CB9CF05260DDCFC00E82B13 /* PaymentService.swift in Sources */,
+				0C76C1AD26312467005580D8 /* CaptchaAPI.m in Sources */,
 				0C14A099249B648D005FE48A /* LYLWKWebView.m in Sources */,
 				0CE5358A249B74F100FE14FB /* AppDelegate+YXBTheme.swift in Sources */,
 				0C47C7A924E523A0006945B9 /* PaymentSureInfoView.swift in Sources */,
@@ -921,12 +1125,28 @@
 				0C14A09A249B648D005FE48A /* UIView+Xib.m in Sources */,
 				0C14A09B249B648D005FE48A /* NSArray+IGListDiffable.m in Sources */,
 				0C14A0EF249B6A0D005FE48A /* YXBBaseViewController.m in Sources */,
+				0C76C1B126312467005580D8 /* ModifyPayPassAPI.m in Sources */,
 				0C14A098249B648D005FE48A /* YXBTapAreaButton.m in Sources */,
 				0C14A088249B648D005FE48A /* YXBImageCell.m in Sources */,
+				0C76C14826312163005580D8 /* NTVLocalized.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0C76C13E26312163005580D8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C76C13F26312163005580D8 /* zh-Hans */,
+				0C76C14026312163005580D8 /* ja */,
+				0C76C14126312163005580D8 /* en */,
+				0C76C14426312163005580D8 /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0C4387E1249B4EF6008DBD78 /* Debug */ = {
@@ -1052,7 +1272,12 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"YXBSwiftProject/Preview Content\"";
 				DEVELOPMENT_TEAM = 99978K4746;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YXBSwiftProject/Third/顶象验证",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YXBSwiftProject/Lanch/MyProject.pch;
 				INFOPLIST_FILE = YXBSwiftProject/Lanch/Info.plist;
@@ -1078,7 +1303,12 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"YXBSwiftProject/Preview Content\"";
 				DEVELOPMENT_TEAM = 99978K4746;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YXBSwiftProject/Third/顶象验证",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YXBSwiftProject/Lanch/MyProject.pch;
 				INFOPLIST_FILE = YXBSwiftProject/Lanch/Info.plist;
