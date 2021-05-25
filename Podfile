@@ -42,6 +42,7 @@ pod 'JXCategoryView','~> 1.5.5'
 pod 'JXPagingView/Pager', '~> 2.0.0.0'
 pod 'XLForm', '~> 4.1.0'
 pod 'IQKeyboardManager', '~> 6.5.4'
+pod 'SocketRocket', '~> 0.5.1'
 
 # 支付宝支付
  pod 'AlipaySDK-iOS'
