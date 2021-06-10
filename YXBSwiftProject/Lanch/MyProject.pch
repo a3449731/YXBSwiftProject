@@ -21,7 +21,8 @@
 #import <QMUIConfiguration.h>
 #import <UINavigationController+FDFullscreenPopGesture.h>
 #import <MJRefresh/MJRefresh.h>
-#import <Toast/UIView+Toast.h>
+#import "UIView+Toast.h"
+//#import <Toast/UIView+Toast.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -32,5 +33,8 @@
 
 #import "YXBSwiftProject-Swift.h"
 #import <AlipaySDK/AlipaySDK.h>
+
+#import "KeyCenter.h"
+#import "AgoraEducation.h"
 
 #endif /* MyProject_pch */

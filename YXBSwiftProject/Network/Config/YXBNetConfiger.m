@@ -26,11 +26,11 @@
     // 公共参数
     PersonalModel *model = [UserManager sharedManager].personalInfo;
     NSString *token = model.token;
-    if (token == nil || [token isEqualToString:@""]) {
+//    if (token == nil || [token isEqualToString:@""]) {
         // 随便写,为了触发token失效
-        token = @"12345";
-    }
-    [publicParameter setValue:token forKey:@"token"];
+//        token = @"12345";
+//    }
+//    [publicParameter setValue:token forKey:@"token"];
     
     return [YXBNetConfiger urlStringWithOriginUrlString:originUrl appendParameters:publicParameter];
 }

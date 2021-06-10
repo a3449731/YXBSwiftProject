@@ -5,8 +5,8 @@ source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 
 target 'YXBSwiftProject' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_modular_headers!
-
+#  use_modular_headers!
+  use_frameworks!
   # Pods for YXBSwiftProject
 
 pod 'XHLaunchAd', '~> 3.9.8' # 启动页 很完善
@@ -20,7 +20,7 @@ pod 'QMUIKit', '~> 4.1.3'
 pod 'Masonry', '~> 1.1.0'
 pod 'MJRefresh','~> 3.1.12'
 pod 'DZNEmptyDataSet', '~> 1.8.1'
-pod 'Toast', '~> 3.1.0'
+#pod 'Toast', '~> 3.1.0' # 声网的本地框架中将 toast的源码拖进去了。
 pod 'SVProgressHUD', '~> 2.1.2'
 pod 'MBProgressHUD','~> 1.0.0'
 pod 'TZImagePickerController', '~> 3.2.7'
@@ -44,10 +44,33 @@ pod 'XLForm', '~> 4.1.0'
 pod 'IQKeyboardManager', '~> 6.5.4'
 pod 'SocketRocket', '~> 0.5.1'
 
-# 支付宝支付
- pod 'AlipaySDK-iOS'
 
+# 支付宝支付
+pod 'AlipaySDK-iOS'
+ 
 pod 'Charts', :modular_headers => true # 选择静态库 还是动态库
+
+
+# 声网，本地支持库，，内含依赖：
+def AgoraFoundation
+  #Installing AFNetworking 4.0.1
+  #Installing AgoraLog (0.0.1)
+  #Installing AgoraReplay (0.0.1)
+  #Installing AgoraReplayUI (0.0.1)
+  #Installing AgoraRtcEngine_iOS (2.9.0.107)  # 互动视频
+  #Installing AgoraRtm_iOS (1.4.1) # 云信令
+  #Installing AgoraWhiteBoard (0.0.1)
+  #Installing AliyunOSSiOS (2.10.8)
+  #Installing CocoaLumberjack (3.6.1)
+  #Installing EduSDK (0.0.1)
+  #Installing Whiteboard (2.9.14)  #白板
+  #Installing dsBridge (3.0.6)
+  pod 'AgoraLog', :path => 'Modules/AgoraLog/AgoraLog.podspec'
+  pod 'EduSDK', :path => 'Modules/EduSDK/EduSDK.podspec'
+  pod 'AgoraWhiteBoard', :path => 'Modules/AgoraWhiteBoard/AgoraWhiteBoard.podspec'
+  pod 'AgoraReplay', :path => 'Modules/AgoraReplay/AgoraReplay.podspec'
+  pod 'AgoraReplayUI', :path => 'Modules/AgoraReplayUI/AgoraReplayUI.podspec'
+end
 
 # swift库
 def swiftFoundation
@@ -65,5 +88,7 @@ def swiftFoundation
 end
 
 swiftFoundation()
+
+AgoraFoundation()
 
 end
