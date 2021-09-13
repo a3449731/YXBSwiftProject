@@ -40,7 +40,8 @@
 - (void)requestFailedFilter {
     YXBLOG(@"%@",self);
     YXBLOG(@"%@",self.responseJSONObject);
-    YXBLOG(@"%@",self.response.MIMEType);}
+    YXBLOG(@"%@",self.response.MIMEType);
+}
 
 
 @end

@@ -20,13 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.setupMainViewController()
         
-//        checkAPPVersion()
+        checkAPPVersion()
         
         return true
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
-//        checkAPPVersion()
+        checkAPPVersion()
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        OSETManager.configure(SZAdAppKey)
         
         // 检测版本
-//        checkAPPVersion();
+        checkAPPVersion();
         
     }
     
