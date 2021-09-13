@@ -63,15 +63,7 @@
 }
 
 - (void)butonAction:(UIButton *)button {
-//    [YXBThemeManager sharedInstance].currentThemeIdentifier = YXBThemeIndetifierDark;
-    
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    // 加载指定的控制器
-    UIViewController *VC = [storyboard instantiateViewControllerWithIdentifier:@"123"];
-    VC.modalPresentationStyle = UIModalPresentationFullScreen;
-    PRESENT(VC);
-//    PUSH(VC);
- 
+    [YXBThemeManager sharedInstance].currentThemeIdentifier = YXBThemeIndetifierDark;
 }
 
 - (void)whiteAction:(UIButton *)button {

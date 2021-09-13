@@ -208,6 +208,18 @@
 		2F9049AA2671E621008F6B86 /* EyeCareModeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9049622671E621008F6B86 /* EyeCareModeUtil.m */; };
 		2F9049AF2671EE0F008F6B86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9049AE2671EE0F008F6B86 /* Assets.xcassets */; };
 		2F9049B22671F45F008F6B86 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F9049B42671F45F008F6B86 /* Localizable.strings */; };
+		2FAD3BAE2667658D0052D569 /* SWWhiteBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD3BAD2667658D0052D569 /* SWWhiteBaseView.m */; };
+		2FAD3BB12667778A0052D569 /* SWWhiteTeacherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD3BB02667778A0052D569 /* SWWhiteTeacherView.m */; };
+		2FAD3BB4266777B00052D569 /* SWWhiteStudentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD3BB3266777B00052D569 /* SWWhiteStudentView.m */; };
+		2FAD3BBD26677FD40052D569 /* GJLiveStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD3BBC26677FD40052D569 /* GJLiveStudentViewController.m */; };
+		2FAD3BC026678BD10052D569 /* SWRoomStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD3BBF26678BD10052D569 /* SWRoomStudentViewController.m */; };
+		2FAD3BC32667914E0052D569 /* SWRoomBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD3BC22667914E0052D569 /* SWRoomBaseViewController.m */; };
+		2FF089E02668B7BC0099FFA9 /* SWRoomTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF089DF2668B7BC0099FFA9 /* SWRoomTeacherViewController.m */; };
+		2FF089E42668BD690099FFA9 /* YXBFileChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF089E32668BD690099FFA9 /* YXBFileChoose.m */; };
+		2FF089E72668E0F20099FFA9 /* GJLiveTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF089E62668E0F20099FFA9 /* GJLiveTeacherViewController.m */; };
+		2FFD67FD266A20AE00BF91EC /* PPTToImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFD67FC266A20AD00BF91EC /* PPTToImageTool.m */; };
+		2FFD67FF266A245B00BF91EC /* IOS.pptx in Resources */ = {isa = PBXBuildFile; fileRef = 2FFD67FE266A245B00BF91EC /* IOS.pptx */; };
+		2FFD6802266A31A400BF91EC /* SWWhitePPTPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFD6801266A31A400BF91EC /* SWWhitePPTPreviewViewController.m */; };
 		5AF0B5E03987484D52344B76 /* Pods_YXBSwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC05228249CA6130966523BF /* Pods_YXBSwiftProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -567,6 +579,29 @@
 		2F9049AE2671EE0F008F6B86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F9049B32671F45F008F6B86 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2F9049B52671F468008F6B86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2FAD3BAC2667658D0052D569 /* SWWhiteBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWWhiteBaseView.h; sourceTree = "<group>"; };
+		2FAD3BAD2667658D0052D569 /* SWWhiteBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWWhiteBaseView.m; sourceTree = "<group>"; };
+		2FAD3BAF2667778A0052D569 /* SWWhiteTeacherView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWWhiteTeacherView.h; sourceTree = "<group>"; };
+		2FAD3BB02667778A0052D569 /* SWWhiteTeacherView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWWhiteTeacherView.m; sourceTree = "<group>"; };
+		2FAD3BB2266777B00052D569 /* SWWhiteStudentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWWhiteStudentView.h; sourceTree = "<group>"; };
+		2FAD3BB3266777B00052D569 /* SWWhiteStudentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWWhiteStudentView.m; sourceTree = "<group>"; };
+		2FAD3BBB26677FD40052D569 /* GJLiveStudentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GJLiveStudentViewController.h; sourceTree = "<group>"; };
+		2FAD3BBC26677FD40052D569 /* GJLiveStudentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GJLiveStudentViewController.m; sourceTree = "<group>"; };
+		2FAD3BBE26678BD10052D569 /* SWRoomStudentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRoomStudentViewController.h; sourceTree = "<group>"; };
+		2FAD3BBF26678BD10052D569 /* SWRoomStudentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRoomStudentViewController.m; sourceTree = "<group>"; };
+		2FAD3BC12667914E0052D569 /* SWRoomBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRoomBaseViewController.h; sourceTree = "<group>"; };
+		2FAD3BC22667914E0052D569 /* SWRoomBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRoomBaseViewController.m; sourceTree = "<group>"; };
+		2FF089DE2668B7BC0099FFA9 /* SWRoomTeacherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRoomTeacherViewController.h; sourceTree = "<group>"; };
+		2FF089DF2668B7BC0099FFA9 /* SWRoomTeacherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRoomTeacherViewController.m; sourceTree = "<group>"; };
+		2FF089E22668BD690099FFA9 /* YXBFileChoose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXBFileChoose.h; sourceTree = "<group>"; };
+		2FF089E32668BD690099FFA9 /* YXBFileChoose.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXBFileChoose.m; sourceTree = "<group>"; };
+		2FF089E52668E0F20099FFA9 /* GJLiveTeacherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GJLiveTeacherViewController.h; sourceTree = "<group>"; };
+		2FF089E62668E0F20099FFA9 /* GJLiveTeacherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GJLiveTeacherViewController.m; sourceTree = "<group>"; };
+		2FFD67FB266A20AD00BF91EC /* PPTToImageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTToImageTool.h; sourceTree = "<group>"; };
+		2FFD67FC266A20AD00BF91EC /* PPTToImageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTToImageTool.m; sourceTree = "<group>"; };
+		2FFD67FE266A245B00BF91EC /* IOS.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = IOS.pptx; sourceTree = "<group>"; };
+		2FFD6800266A31A400BF91EC /* SWWhitePPTPreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWWhitePPTPreviewViewController.h; sourceTree = "<group>"; };
+		2FFD6801266A31A400BF91EC /* SWWhitePPTPreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWWhitePPTPreviewViewController.m; sourceTree = "<group>"; };
 		4F245EC0B5961F5373ECB312 /* Pods-YXBSwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXBSwiftProject.release.xcconfig"; path = "Target Support Files/Pods-YXBSwiftProject/Pods-YXBSwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		AC05228249CA6130966523BF /* Pods_YXBSwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YXBSwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1489,9 +1524,99 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2FAD3BB526677BD30052D569 /* 角色 */ = {
+			isa = PBXGroup;
+			children = (
+				2FAD3BB926677C800052D569 /* 老师端 */,
+				2FAD3BBA26677C8A0052D569 /* 观众端 */,
+			);
+			path = "角色";
+			sourceTree = "<group>";
+		};
+		2FAD3BB626677C1D0052D569 /* 接口 */ = {
+			isa = PBXGroup;
+			children = (
+				2F2238722664E52100E2A59E /* SWWhiteUUIDApi.h */,
+				2F2238732664E52100E2A59E /* SWWhiteUUIDApi.m */,
+				2F2238752664E53B00E2A59E /* SWWhiteRoomTokenApi.h */,
+				2F2238762664E53B00E2A59E /* SWWhiteRoomTokenApi.m */,
+			);
+			path = "接口";
+			sourceTree = "<group>";
+		};
+		2FAD3BB726677C2F0052D569 /* 模型 */ = {
+			isa = PBXGroup;
+			children = (
+				2F22387B2664E83B00E2A59E /* SWWhiteUUIDModel.h */,
+				2F22387C2664E83B00E2A59E /* SWWhiteUUIDModel.m */,
+				2F22387E2664EBCB00E2A59E /* SWWhiteRoomModel.h */,
+				2F22387F2664EBCB00E2A59E /* SWWhiteRoomModel.m */,
+			);
+			path = "模型";
+			sourceTree = "<group>";
+		};
+		2FAD3BB826677C420052D569 /* 界面 */ = {
+			isa = PBXGroup;
+			children = (
+				2FAD3BAC2667658D0052D569 /* SWWhiteBaseView.h */,
+				2FAD3BAD2667658D0052D569 /* SWWhiteBaseView.m */,
+				2FAD3BB2266777B00052D569 /* SWWhiteStudentView.h */,
+				2FAD3BB3266777B00052D569 /* SWWhiteStudentView.m */,
+				2FAD3BAF2667778A0052D569 /* SWWhiteTeacherView.h */,
+				2FAD3BB02667778A0052D569 /* SWWhiteTeacherView.m */,
+				2FFD6800266A31A400BF91EC /* SWWhitePPTPreviewViewController.h */,
+				2FFD6801266A31A400BF91EC /* SWWhitePPTPreviewViewController.m */,
+			);
+			path = "界面";
+			sourceTree = "<group>";
+		};
+		2FAD3BB926677C800052D569 /* 老师端 */ = {
+			isa = PBXGroup;
+			children = (
+				2FF089E52668E0F20099FFA9 /* GJLiveTeacherViewController.h */,
+				2FF089E62668E0F20099FFA9 /* GJLiveTeacherViewController.m */,
+			);
+			path = "老师端";
+			sourceTree = "<group>";
+		};
+		2FAD3BBA26677C8A0052D569 /* 观众端 */ = {
+			isa = PBXGroup;
+			children = (
+				2FAD3BBB26677FD40052D569 /* GJLiveStudentViewController.h */,
+				2FAD3BBC26677FD40052D569 /* GJLiveStudentViewController.m */,
+			);
+			path = "观众端";
+			sourceTree = "<group>";
+		};
+		2FF089E12668BD410099FFA9 /* 工具 */ = {
+			isa = PBXGroup;
+			children = (
+				2FFD67FE266A245B00BF91EC /* IOS.pptx */,
+				2FFD67FB266A20AD00BF91EC /* PPTToImageTool.h */,
+				2FFD67FC266A20AD00BF91EC /* PPTToImageTool.m */,
+				2FF089E22668BD690099FFA9 /* YXBFileChoose.h */,
+				2FF089E32668BD690099FFA9 /* YXBFileChoose.m */,
+			);
+			path = "工具";
+			sourceTree = "<group>";
+		};
+		2FFD67FA2669CD1600BF91EC /* 界面 */ = {
+			isa = PBXGroup;
+			children = (
+				2FAD3BC12667914E0052D569 /* SWRoomBaseViewController.h */,
+				2FAD3BC22667914E0052D569 /* SWRoomBaseViewController.m */,
+				2FAD3BBE26678BD10052D569 /* SWRoomStudentViewController.h */,
+				2FAD3BBF26678BD10052D569 /* SWRoomStudentViewController.m */,
+				2FF089DE2668B7BC0099FFA9 /* SWRoomTeacherViewController.h */,
+				2FF089DF2668B7BC0099FFA9 /* SWRoomTeacherViewController.m */,
+			);
+			path = "界面";
+			sourceTree = "<group>";
+		};
 		4F30B239741F943657DA9A6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F4BB068266F4293005211DC /* libAFNetworking.a */,
 				0C76C1D72631257E005580D8 /* libz.tbd */,
 				0C76C1D42631255F005580D8 /* libresolv.tbd */,
 				0C76C1D226312550005580D8 /* libiconv.tbd */,
@@ -1591,6 +1716,7 @@
 				0C14A092249B648D005FE48A /* CDDetailHeaderView.xib in Resources */,
 				2F90496E2671E621008F6B86 /* BCStudentVideoView.xib in Resources */,
 				2F9049852671E621008F6B86 /* EENavigationView.xib in Resources */,
+				2FFD67FF266A245B00BF91EC /* IOS.pptx in Resources */,
 				2F90496A2671E621008F6B86 /* Main.strings in Resources */,
 				0C47C7A824E523A0006945B9 /* PaymentPasswordView.xib in Resources */,
 				0CC0C75E24E3DE2F001AE32D /* ForceUpdateView.xib in Resources */,
@@ -1747,6 +1873,7 @@
 				2F9049A62671E621008F6B86 /* MainViewController.m in Sources */,
 				0CDB809B25B0444600B62976 /* TwoLineButton.swift in Sources */,
 				0CDF01EC25EF841100EE10C1 /* UIColor+YXBGradient.m in Sources */,
+				2FAD3BB4266777B00052D569 /* SWWhiteStudentView.m in Sources */,
 				2F9049782671E621008F6B86 /* MCTeacherVideoView.m in Sources */,
 				2F9049A12671E621008F6B86 /* SettingViewCell.m in Sources */,
 				0C47C7A724E523A0006945B9 /* PaymentPasswordView.swift in Sources */,
@@ -1784,6 +1911,7 @@
 				0C14A09F249B648D005FE48A /* NSObject+YXBAdd.m in Sources */,
 				0C14A0E8249B69C2005FE48A /* YXBFormImageCell.m in Sources */,
 				2F9049862671E621008F6B86 /* EEMessageView.m in Sources */,
+				2FAD3BC026678BD10052D569 /* SWRoomStudentViewController.m in Sources */,
 				0C47C7BD24E5648E006945B9 /* Appdelegate+AliPay.swift in Sources */,
 				0CC0C77C24E3DE6E001AE32D /* GetConfigAPI.m in Sources */,
 				0C47C79E24E517C8006945B9 /* String+Subscript.swift in Sources */,
@@ -1792,6 +1920,8 @@
 				0C14A0EB249B69C2005FE48A /* YXBFormButtonValueCell.m in Sources */,
 				0C47C7A324E52230006945B9 /* DigitalKeyboard.swift in Sources */,
 				0C14A08B249B648D005FE48A /* YXBSection.m in Sources */,
+				2F2238802664EBCB00E2A59E /* SWWhiteRoomModel.m in Sources */,
+				2F22387D2664E83B00E2A59E /* SWWhiteUUIDModel.m in Sources */,
 				2F90498D2671E621008F6B86 /* OTOStudentView.m in Sources */,
 				2F90499E2671E621008F6B86 /* HTTPConfiguration.m in Sources */,
 				2F9049812671E621008F6B86 /* TextMessageModel.m in Sources */,
@@ -1832,9 +1962,11 @@
 				0C14A09B249B648D005FE48A /* NSArray+IGListDiffable.m in Sources */,
 				0C14A0EF249B6A0D005FE48A /* YXBBaseViewController.m in Sources */,
 				2F9049942671E621008F6B86 /* UIView+Toast.m in Sources */,
+				2FF089E02668B7BC0099FFA9 /* SWRoomTeacherViewController.m in Sources */,
 				0C76C1B126312467005580D8 /* ModifyPayPassAPI.m in Sources */,
 				0C14A098249B648D005FE48A /* YXBTapAreaButton.m in Sources */,
 				0C14A088249B648D005FE48A /* YXBImageCell.m in Sources */,
+				2F2238772664E53B00E2A59E /* SWWhiteRoomTokenApi.m in Sources */,
 				2F9049992671E621008F6B86 /* ReplayModuleManager.m in Sources */,
 				0C76C14826312163005580D8 /* NTVLocalized.m in Sources */,
 			);
