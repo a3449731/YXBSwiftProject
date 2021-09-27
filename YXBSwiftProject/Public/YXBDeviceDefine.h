@@ -74,9 +74,9 @@ NS_INLINE BOOL isIPhoneXSeries() {
             CGSizeEqualToSize(size, CGSizeMake(1125, 2436)) ||  // X, XS
             CGSizeEqualToSize(size, CGSizeMake(1242, 2688)) ||  // XS Max
             CGSizeEqualToSize(size, CGSizeMake( 828, 1792)) ||  // XR
-            CGSizeEqualToSize(size, CGSizeMake(1284, 2778)) ||  // 12 Pro Max
-            CGSizeEqualToSize(size, CGSizeMake(1170, 2532)) ||  // 12 Pro, 12
-            CGSizeEqualToSize(size, CGSizeMake(1080, 2340));    // 12 mini
+            CGSizeEqualToSize(size, CGSizeMake(1284, 2778)) ||  // 12 Pro Max, 13 Pro Max,
+            CGSizeEqualToSize(size, CGSizeMake(1170, 2532)) ||  // 12 Pro, 12, 13 Pro, 13,
+            CGSizeEqualToSize(size, CGSizeMake(1080, 2340));    // 12 mini, 13 mini
         }
     });
     return isIPhoneX;
