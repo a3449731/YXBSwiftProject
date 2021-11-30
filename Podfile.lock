@@ -427,15 +427,6 @@ DEPENDENCIES:
   - YYText (~> 1.0.7)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Old-Specs:
-    - DZNEmptyDataSet
-    - EARestrictedScrollView
-    - FDFullscreenPopGesture
-    - FLAnimatedImage
-    - MBProgressHUD
-    - Toast
-    - YYModel
-    - YYText
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - AFNetworking
     - AlipaySDK-iOS
@@ -444,7 +435,11 @@ SPEC REPOS:
     - Charts
     - CYLTabBarController
     - DateTools
+    - DZNEmptyDataSet
     - EAIntroView
+    - EARestrictedScrollView
+    - FDFullscreenPopGesture
+    - FLAnimatedImage
     - HMSegmentedControl
     - IGListDiffKit
     - IGListKit
@@ -452,6 +447,7 @@ SPEC REPOS:
     - JXCategoryView
     - JXPagingView
     - Masonry
+    - MBProgressHUD
     - MJRefresh
     - MZAppearance
     - MZFormSheetPresentationController
@@ -469,6 +465,7 @@ SPEC REPOS:
     - SnapKit
     - SocketRocket
     - SVProgressHUD
+    - Toast
     - Toast-Swift
     - TZImagePickerController
     - UICKeyChainStore
@@ -477,6 +474,8 @@ SPEC REPOS:
     - XLForm
     - YTKNetwork
     - YYCategories
+    - YYModel
+    - YYText
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
@@ -530,4 +529,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 928fc0c9b41706131778d0a0b4112f15aa863673
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
