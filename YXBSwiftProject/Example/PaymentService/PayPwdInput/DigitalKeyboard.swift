@@ -27,7 +27,7 @@ class DigitalKeyboard: UIInputView {
     }
 
     private override init(frame _: CGRect, inputViewStyle: UIInputView.Style) {
-        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: keyboardHeight + QMUIHelper.safeAreaInsetsForDeviceWithNotch().bottom), inputViewStyle: inputViewStyle)
+        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: keyboardHeight + QMUIHelper.safeAreaInsetsForDeviceWithNotch.bottom), inputViewStyle: inputViewStyle)
     }
 
     public required init?(coder _: NSCoder) {

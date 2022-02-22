@@ -16,7 +16,7 @@ pod 'CYLTabBarController', '~> 1.28.4'
 pod 'YTKNetwork', '~> 3.0.5' # 依赖AFNetworking4.0以上
 pod 'SDCycleScrollView', '~> 1.80' # 依赖SDWebImage 5.0以上
 pod 'IGListKit', '~> 4.0.0'
-pod 'QMUIKit', '~> 4.1.3'
+pod 'QMUIKit'
 pod 'Masonry', '~> 1.1.0'
 pod 'MJRefresh','~> 3.1.12'
 pod 'DZNEmptyDataSet', '~> 1.8.1'
