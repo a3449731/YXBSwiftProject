@@ -139,6 +139,7 @@
 		0CDB809D25B0489300B62976 /* TwoLineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDB809C25B0489300B62976 /* TwoLineLabel.swift */; };
 		0CDF01EC25EF841100EE10C1 /* UIColor+YXBGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF01EB25EF841000EE10C1 /* UIColor+YXBGradient.m */; };
 		0CE5358A249B74F100FE14FB /* AppDelegate+YXBTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE53589249B74F100FE14FB /* AppDelegate+YXBTheme.swift */; };
+		2F0C906B27C48B520057108B /* YXBVerificationCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C906927C48B520057108B /* YXBVerificationCodeView.m */; };
 		2F8A332F265C99AB00A8639C /* XXGCDTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A332C265C99AB00A8639C /* XXGCDTimerManager.m */; };
 		2F8A3330265C99AB00A8639C /* YXBSocketCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A332D265C99AB00A8639C /* YXBSocketCenter.m */; };
 		47B916A06310008C757E1B7A /* libPods-YXBSwiftProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */; };
@@ -376,6 +377,8 @@
 		0CDF01EA25EF841000EE10C1 /* UIColor+YXBGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YXBGradient.h"; sourceTree = "<group>"; };
 		0CDF01EB25EF841000EE10C1 /* UIColor+YXBGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YXBGradient.m"; sourceTree = "<group>"; };
 		0CE53589249B74F100FE14FB /* AppDelegate+YXBTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+YXBTheme.swift"; sourceTree = "<group>"; };
+		2F0C906927C48B520057108B /* YXBVerificationCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBVerificationCodeView.m; sourceTree = "<group>"; };
+		2F0C906A27C48B520057108B /* YXBVerificationCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBVerificationCodeView.h; sourceTree = "<group>"; };
 		2F8A3329265C99AB00A8639C /* YXBSocketCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBSocketCenter.h; sourceTree = "<group>"; };
 		2F8A332A265C99AB00A8639C /* XXGCDTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXGCDTimerManager.h; sourceTree = "<group>"; };
 		2F8A332C265C99AB00A8639C /* XXGCDTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXGCDTimerManager.m; sourceTree = "<group>"; };
@@ -730,6 +733,8 @@
 				0C47C7B224E540D8006945B9 /* YXBPaymentManager.m */,
 				0C47C7B524E54A81006945B9 /* YXBPaymentModel.h */,
 				0C47C7B624E54A81006945B9 /* YXBPaymentModel.m */,
+				2F0C906A27C48B520057108B /* YXBVerificationCodeView.h */,
+				2F0C906927C48B520057108B /* YXBVerificationCodeView.m */,
 				0C47C7B824E54D1C006945B9 /* PayPwdInput.swift */,
 				0C47C77C24E4EF4A006945B9 /* PayPwdInput */,
 			);
@@ -1079,6 +1084,7 @@
 				0C14A0B7249B652D005FE48A /* LanchPageModel.m in Sources */,
 				0C277EA2253E9A1D00C33F56 /* Base64.m in Sources */,
 				0C76C1B026312467005580D8 /* ModifyLoginPassAPI.m in Sources */,
+				2F0C906B27C48B520057108B /* YXBVerificationCodeView.m in Sources */,
 				0C76C1B726312467005580D8 /* ForgetSecretViewController.m in Sources */,
 				0C14A095249B648D005FE48A /* CDDetailHeaderView.m in Sources */,
 				0C14A0EC249B69C2005FE48A /* YXBFormLeftRightBgCell.m in Sources */,
