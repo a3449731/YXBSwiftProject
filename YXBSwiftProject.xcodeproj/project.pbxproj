@@ -145,6 +145,7 @@
 		47B916A06310008C757E1B7A /* libPods-YXBSwiftProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */; };
 		687608A32AC2A376000EED59 /* AppDelegate+DebugTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 687608A02AC2A376000EED59 /* AppDelegate+DebugTool.m */; };
 		687608A42AC2A376000EED59 /* GJNetWorkHostUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 687608A12AC2A376000EED59 /* GJNetWorkHostUrl.m */; };
+		687608A72AC2BFCD000EED59 /* DebugToolSwiftBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 687608A62AC2BFCD000EED59 /* DebugToolSwiftBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -390,6 +391,8 @@
 		687608A02AC2A376000EED59 /* AppDelegate+DebugTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+DebugTool.m"; sourceTree = "<group>"; };
 		687608A12AC2A376000EED59 /* GJNetWorkHostUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJNetWorkHostUrl.m; sourceTree = "<group>"; };
 		687608A22AC2A376000EED59 /* AppDelegate+DebugTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DebugTool.h"; sourceTree = "<group>"; };
+		687608A52AC2BFCD000EED59 /* DebugToolSwiftBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugToolSwiftBridge.h; sourceTree = "<group>"; };
+		687608A62AC2BFCD000EED59 /* DebugToolSwiftBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugToolSwiftBridge.m; sourceTree = "<group>"; };
 		82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXBSwiftProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -718,6 +721,8 @@
 				0C14A0F7249B6FF6005FE48A /* YXBSwiftProject-Bridging-Header.h */,
 				0CE53589249B74F100FE14FB /* AppDelegate+YXBTheme.swift */,
 				0C47C7BC24E5648E006945B9 /* Appdelegate+AliPay.swift */,
+				687608A52AC2BFCD000EED59 /* DebugToolSwiftBridge.h */,
+				687608A62AC2BFCD000EED59 /* DebugToolSwiftBridge.m */,
 				687608A22AC2A376000EED59 /* AppDelegate+DebugTool.h */,
 				687608A02AC2A376000EED59 /* AppDelegate+DebugTool.m */,
 				6876089F2AC2A376000EED59 /* GJNetWorkHostUrl.h */,
@@ -1094,6 +1099,7 @@
 				0C76C1B226312467005580D8 /* PSSLoginPassViewController.m in Sources */,
 				0C47C79C24E51786006945B9 /* NSObject+ClassName.swift in Sources */,
 				0C14A0E3249B69C2005FE48A /* YXBPageContentCollectionViewController.m in Sources */,
+				687608A72AC2BFCD000EED59 /* DebugToolSwiftBridge.m in Sources */,
 				0CC0C78324E3DE6E001AE32D /* MemberModel.m in Sources */,
 				0C14A097249B648D005FE48A /* YXBCheckRegular.m in Sources */,
 				0C14A096249B648D005FE48A /* ChineseToPinyin.m in Sources */,

@@ -42,3 +42,5 @@
 #import "LoginViewController.h"
 #import "YXBNavigationController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
+
+#import "DebugToolSwiftBridge.h"

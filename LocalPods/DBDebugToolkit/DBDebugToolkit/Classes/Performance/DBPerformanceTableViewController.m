@@ -255,7 +255,7 @@ typedef NS_ENUM(NSUInteger, DBPerformanceTableViewSection) {
     switch (indexPath.section) {
         case DBPerformanceTableViewSectionWidget: {
             DBMenuSwitchTableViewCell *switchTableViewCell = [tableView dequeueReusableCellWithIdentifier:DBPerformanceTableViewControllerSwitchCellIdentifier];
-            switchTableViewCell.titleLabel.text = @"Show widget";
+            switchTableViewCell.titleLabel.text = @"展示组件";
             switchTableViewCell.valueSwitch.on = self.performanceToolkit.isWidgetShown;
             switchTableViewCell.delegate = self;
             return switchTableViewCell;

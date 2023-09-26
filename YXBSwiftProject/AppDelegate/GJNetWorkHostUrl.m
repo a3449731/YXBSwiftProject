@@ -22,13 +22,13 @@
 + (NSString *)selectHostWithType:(NSInteger)type {
     switch (type) {
         case kNetWorkTypeWithTest:
-            return @"https://api-test.renyihealth.com";
+            return @"https://api-test.测试环境";
         case kNetWorkTypeWithStage:
-            return @"https://api-stage.renyihealth.com";
+            return @"https://api-stage.预发环境";
         case kNetWorkTypeWithRelease:
-            return @"https://api.renyihealth.com";
+            return @"https://api.生产环境";
         default:
-            return @"https://api.renyihealth.com";
+            return @"https://api.默认环境";
     }
 }
 
