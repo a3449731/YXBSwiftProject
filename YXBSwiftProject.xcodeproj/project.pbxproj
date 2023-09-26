@@ -143,6 +143,8 @@
 		2F8A332F265C99AB00A8639C /* XXGCDTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A332C265C99AB00A8639C /* XXGCDTimerManager.m */; };
 		2F8A3330265C99AB00A8639C /* YXBSocketCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A332D265C99AB00A8639C /* YXBSocketCenter.m */; };
 		47B916A06310008C757E1B7A /* libPods-YXBSwiftProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */; };
+		687608A32AC2A376000EED59 /* AppDelegate+DebugTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 687608A02AC2A376000EED59 /* AppDelegate+DebugTool.m */; };
+		687608A42AC2A376000EED59 /* GJNetWorkHostUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 687608A12AC2A376000EED59 /* GJNetWorkHostUrl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -384,6 +386,10 @@
 		2F8A332C265C99AB00A8639C /* XXGCDTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXGCDTimerManager.m; sourceTree = "<group>"; };
 		2F8A332D265C99AB00A8639C /* YXBSocketCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBSocketCenter.m; sourceTree = "<group>"; };
 		4F245EC0B5961F5373ECB312 /* Pods-YXBSwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXBSwiftProject.release.xcconfig"; path = "Target Support Files/Pods-YXBSwiftProject/Pods-YXBSwiftProject.release.xcconfig"; sourceTree = "<group>"; };
+		6876089F2AC2A376000EED59 /* GJNetWorkHostUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJNetWorkHostUrl.h; sourceTree = "<group>"; };
+		687608A02AC2A376000EED59 /* AppDelegate+DebugTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+DebugTool.m"; sourceTree = "<group>"; };
+		687608A12AC2A376000EED59 /* GJNetWorkHostUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJNetWorkHostUrl.m; sourceTree = "<group>"; };
+		687608A22AC2A376000EED59 /* AppDelegate+DebugTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+DebugTool.h"; sourceTree = "<group>"; };
 		82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXBSwiftProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -712,6 +718,10 @@
 				0C14A0F7249B6FF6005FE48A /* YXBSwiftProject-Bridging-Header.h */,
 				0CE53589249B74F100FE14FB /* AppDelegate+YXBTheme.swift */,
 				0C47C7BC24E5648E006945B9 /* Appdelegate+AliPay.swift */,
+				687608A22AC2A376000EED59 /* AppDelegate+DebugTool.h */,
+				687608A02AC2A376000EED59 /* AppDelegate+DebugTool.m */,
+				6876089F2AC2A376000EED59 /* GJNetWorkHostUrl.h */,
+				687608A12AC2A376000EED59 /* GJNetWorkHostUrl.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -1121,6 +1131,7 @@
 				0C14A0A1249B648D005FE48A /* QMUIConfigurationTemplateDark.m in Sources */,
 				0CC0C79324E3EDD7001AE32D /* YXBInputView.m in Sources */,
 				0C47C79824E51714006945B9 /* UIView+Utils.swift in Sources */,
+				687608A32AC2A376000EED59 /* AppDelegate+DebugTool.m in Sources */,
 				0C76C1B426312467005580D8 /* RegistViewController.m in Sources */,
 				0C14A0E2249B69C2005FE48A /* PagingViewTableHeaderView.m in Sources */,
 				0C14A0E6249B69C2005FE48A /* YXBFormTopBottomCell.m in Sources */,
@@ -1135,6 +1146,7 @@
 				0C14A0E4249B69C2005FE48A /* YXBPageContentTableViewController.m in Sources */,
 				0C76C1B326312467005580D8 /* PSSPayPassViewController.m in Sources */,
 				0C14A09F249B648D005FE48A /* NSObject+YXBAdd.m in Sources */,
+				687608A42AC2A376000EED59 /* GJNetWorkHostUrl.m in Sources */,
 				0C14A0E8249B69C2005FE48A /* YXBFormImageCell.m in Sources */,
 				0C47C7BD24E5648E006945B9 /* Appdelegate+AliPay.swift in Sources */,
 				0CC0C77C24E3DE6E001AE32D /* GetConfigAPI.m in Sources */,
