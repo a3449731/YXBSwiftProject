@@ -44,10 +44,41 @@ pod 'XLForm', '~> 4.1.0'
 pod 'IQKeyboardManager', '~> 6.5.4'
 pod 'SocketRocket', '~> 0.5.1'
 
+# 友盟
+pod 'UMCommon'
+pod 'UMDevice'
+pod 'UMCCommonLog', :configurations => ['Debug'] # 仅debug模式下导入
+# 可选集成
+pod 'UMLink'   # 智能超链产品
+pod 'UMABTest'  # 统计产品中ABTest功能
+
+# 本地源码依赖库
+def loaclPods
+# 配置环境，测试下的
+pod 'DBDebugToolkit', :configurations => ['Debug'], :path => './LocalPods/DBDebugToolkit'
+pod 'SJBaseVideoPlayer', :path => './LocalPods/SJVideo/SJBaseVideoPlayer'
+pod 'SJUIKit', :path => './LocalPods/SJVideo/SJUIKit'
+pod 'SJVideoPlayer', :path => './LocalPods/SJVideo/SJVideoPlayer'
+#pod 'SVGAPlayer', :path => './LocalPods/SVGAPlayer'
+
+pod 'TXIMSDK_Plus_iOS', '~>6.6.3002' # 这个是线上版本
+pod 'TUICore', :path => './LocalPods/TUIKit/TUICore'
+pod 'TUIChat', :path => './LocalPods/TUIKit/TUIChat'
+pod 'TUIContact', :path => './LocalPods/TUIKit/TUIContact'
+pod 'TUIConversation', :path => './LocalPods/TUIKit/TUIConversation'
+pod 'TUIGroup', :path => './LocalPods/TUIKit/TUIGroup'
+pod 'TUIOfflinePush', :path => './LocalPods/TUIKit/TUIOfflinePush'
+end
+loaclPods()
+
+loaclPods()
+
 # 支付宝支付
  pod 'AlipaySDK-iOS'
+ 
+ pod 'ReactiveObjC'
 
-pod 'Charts', :modular_headers => true # 选择静态库 还是动态库
+#pod 'Charts'
 
 # swift库
 def swiftFoundation

@@ -14,13 +14,11 @@ PODS:
     - BGFMDB/FMDB
   - BGFMDB/FMDB (2.0.13)
   - BiometricAuthentication (3.1.2)
-  - Charts (3.5.0):
-    - Charts/Core (= 3.5.0)
-  - Charts/Core (3.5.0)
   - CYLTabBarController (1.28.5):
     - CYLTabBarController/Core (= 1.28.5)
   - CYLTabBarController/Core (1.28.5)
   - DateTools (2.0.0)
+  - DBDebugToolkit (0.4.0)
   - DZNEmptyDataSet (1.8.1)
   - EAIntroView (2.12.0):
     - EARestrictedScrollView (~> 1.1.0)
@@ -355,6 +353,7 @@ PODS:
   - R.swift (5.2.2):
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
+  - ReactiveObjC (3.1.1)
   - RRSwipeCell (0.1.1)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
@@ -368,13 +367,141 @@ PODS:
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
   - SGQRCode (3.0.1)
+  - SJBaseVideoPlayer (3.7.6):
+    - Masonry
+    - SJBaseVideoPlayer/AVPlayer (= 3.7.6)
+    - SJBaseVideoPlayer/Common (= 3.7.6)
+    - SJUIKit/AttributesFactory (>= 0.0.0.38)
+    - SJUIKit/ObserverHelper
+    - SJUIKit/Queues
+    - SJUIKit/SQLite3
+  - SJBaseVideoPlayer/AVPlayer (3.7.6):
+    - Masonry
+    - SJBaseVideoPlayer/Common
+    - SJUIKit/AttributesFactory (>= 0.0.0.38)
+    - SJUIKit/ObserverHelper
+    - SJUIKit/Queues
+    - SJUIKit/SQLite3
+  - SJBaseVideoPlayer/Common (3.7.6):
+    - Masonry
+    - SJBaseVideoPlayer/ResourceLoader
+    - SJUIKit/AttributesFactory (>= 0.0.0.38)
+    - SJUIKit/ObserverHelper
+    - SJUIKit/Queues
+    - SJUIKit/SQLite3
+  - SJBaseVideoPlayer/ResourceLoader (3.7.6):
+    - Masonry
+    - SJUIKit/AttributesFactory (>= 0.0.0.38)
+    - SJUIKit/ObserverHelper
+    - SJUIKit/Queues
+    - SJUIKit/SQLite3
+  - SJUIKit (0.0.0.59):
+    - SJUIKit/AsyncLoad (= 0.0.0.59)
+    - SJUIKit/AttributesFactory (= 0.0.0.59)
+    - SJUIKit/Base (= 0.0.0.59)
+    - SJUIKit/CornerMask (= 0.0.0.59)
+    - SJUIKit/Date (= 0.0.0.59)
+    - SJUIKit/ObserverHelper (= 0.0.0.59)
+    - SJUIKit/Other (= 0.0.0.59)
+    - SJUIKit/PageViewController (= 0.0.0.59)
+    - SJUIKit/Photo (= 0.0.0.59)
+    - SJUIKit/PlaybackListController (= 0.0.0.59)
+    - SJUIKit/Queues (= 0.0.0.59)
+    - SJUIKit/Refresh (= 0.0.0.59)
+    - SJUIKit/SQLite3 (= 0.0.0.59)
+    - SJUIKit/Thread (= 0.0.0.59)
+    - SJUIKit/UIMaker (= 0.0.0.59)
+  - SJUIKit/AsyncLoad (0.0.0.59):
+    - SJUIKit/CornerMask
+  - SJUIKit/AttributesFactory (0.0.0.59):
+    - SJUIKit/AttributesFactory/Deprecated (= 0.0.0.59)
+    - SJUIKit/AttributesFactory/UIKitText (= 0.0.0.59)
+  - SJUIKit/AttributesFactory/Deprecated (0.0.0.59)
+  - SJUIKit/AttributesFactory/UIKitText (0.0.0.59)
+  - SJUIKit/Base (0.0.0.59):
+    - SJUIKit/Base/Core (= 0.0.0.59)
+    - SJUIKit/ObserverHelper
+  - SJUIKit/Base/Core (0.0.0.59):
+    - SJUIKit/ObserverHelper
+  - SJUIKit/CornerMask (0.0.0.59):
+    - SJUIKit/ObserverHelper
+  - SJUIKit/Date (0.0.0.59)
+  - SJUIKit/ObserverHelper (0.0.0.59)
+  - SJUIKit/Other (0.0.0.59):
+    - SJUIKit/Date
+  - SJUIKit/PageViewController (0.0.0.59):
+    - SJUIKit/PageViewController/Core (= 0.0.0.59)
+  - SJUIKit/PageViewController/Core (0.0.0.59)
+  - SJUIKit/Photo (0.0.0.59)
+  - SJUIKit/PlaybackListController (0.0.0.59)
+  - SJUIKit/Queues (0.0.0.59)
+  - SJUIKit/Refresh (0.0.0.59):
+    - MJRefresh
+  - SJUIKit/SQLite3 (0.0.0.59):
+    - SJUIKit/SQLite3/Core (= 0.0.0.59)
+    - SJUIKit/SQLite3/Protocol (= 0.0.0.59)
+    - YYModel
+  - SJUIKit/SQLite3/Core (0.0.0.59):
+    - SJUIKit/SQLite3/Protocol
+    - YYModel
+  - SJUIKit/SQLite3/Protocol (0.0.0.59):
+    - YYModel
+  - SJUIKit/Thread (0.0.0.59)
+  - SJUIKit/UIMaker (0.0.0.59):
+    - SJUIKit/UIMaker/Core (= 0.0.0.59)
+  - SJUIKit/UIMaker/Core (0.0.0.59)
+  - SJVideoPlayer (3.4.2.2):
+    - SJVideoPlayer/Common (= 3.4.2.2)
+    - SJVideoPlayer/ControlLayers (= 3.4.2.2)
+    - SJVideoPlayer/ResourceLoader (= 3.4.2.2)
+  - SJVideoPlayer/Common (3.4.2.2):
+    - Masonry
+    - SJBaseVideoPlayer
+    - SJUIKit/AttributesFactory
+    - SJVideoPlayer/ResourceLoader
+  - SJVideoPlayer/ControlLayers (3.4.2.2):
+    - SJVideoPlayer/Common
+  - SJVideoPlayer/ResourceLoader (3.4.2.2)
   - SnapKit (5.0.1)
   - SocketRocket (0.5.1)
   - SVProgressHUD (2.1.2)
   - Toast (3.1.0)
   - Toast-Swift (5.0.1)
+  - TUIChat (6.6.3002):
+    - ReactiveObjC
+    - SDWebImage
+    - TUICore
+  - TUIContact (6.6.3002):
+    - ReactiveObjC
+    - TUICore
+  - TUIConversation (6.6.3002):
+    - ReactiveObjC
+    - TUICore
+  - TUICore (6.6.3002):
+    - SDWebImage
+    - TUICore/ImSDK_Plus (= 6.6.3002)
+  - TUICore/Base (6.6.3002):
+    - SDWebImage
+  - TUICore/ImSDK_Plus (6.6.3002):
+    - SDWebImage
+    - TUICore/Base
+    - TXIMSDK_Plus_iOS
+  - TUIGroup (6.6.3002):
+    - ReactiveObjC
+    - TUICore
+  - TUIOfflinePush (6.6.3002):
+    - TUICore
+  - TXIMSDK_Plus_iOS (6.6.3002)
   - TZImagePickerController (3.2.9)
   - UICKeyChainStore (2.2.1)
+  - UMABTest (1.0.1):
+    - UMCommon
+  - UMCCommonLog (2.0.2)
+  - UMCommon (7.4.2):
+    - UMDevice
+  - UMDevice (3.1.0)
+  - UMLink (1.2.0):
+    - UMCommon
   - WMPageController (2.5.2)
   - XHLaunchAd (3.9.11):
     - FLAnimatedImage (~> 1.0.12)
@@ -391,9 +518,9 @@ DEPENDENCIES:
   - AlipaySDK-iOS
   - BGFMDB (~> 2.0.9)
   - BiometricAuthentication
-  - Charts
   - CYLTabBarController (~> 1.28.4)
   - DateTools (~> 2.0.0)
+  - DBDebugToolkit (from `./LocalPods/DBDebugToolkit`)
   - DZNEmptyDataSet (~> 1.8.1)
   - EAIntroView (~> 2.12.0)
   - FDFullscreenPopGesture (~> 1.1)
@@ -409,18 +536,34 @@ DEPENDENCIES:
   - PPNumberButton (~> 0.8.0)
   - QMUIKit
   - R.swift
+  - ReactiveObjC
   - RRSwipeCell (~> 0.1.1)
   - RxCocoa
   - RxSwift
   - SDCycleScrollView (~> 1.80)
   - SGQRCode (~> 3.0.1)
+  - SJBaseVideoPlayer (from `./LocalPods/SJVideo/SJBaseVideoPlayer`)
+  - SJUIKit (from `./LocalPods/SJVideo/SJUIKit`)
+  - SJVideoPlayer (from `./LocalPods/SJVideo/SJVideoPlayer`)
   - SnapKit
   - SocketRocket (~> 0.5.1)
   - SVProgressHUD (~> 2.1.2)
   - Toast (~> 3.1.0)
   - Toast-Swift (~> 5.0.1)
+  - TUIChat (from `./LocalPods/TUIKit/TUIChat`)
+  - TUIContact (from `./LocalPods/TUIKit/TUIContact`)
+  - TUIConversation (from `./LocalPods/TUIKit/TUIConversation`)
+  - TUICore (from `./LocalPods/TUIKit/TUICore`)
+  - TUIGroup (from `./LocalPods/TUIKit/TUIGroup`)
+  - TUIOfflinePush (from `./LocalPods/TUIKit/TUIOfflinePush`)
+  - TXIMSDK_Plus_iOS (~> 6.6.3002)
   - TZImagePickerController (~> 3.2.7)
   - UICKeyChainStore (~> 2.2.1)
+  - UMABTest
+  - UMCCommonLog
+  - UMCommon
+  - UMDevice
+  - UMLink
   - WMPageController (~> 2.5.2)
   - XHLaunchAd (~> 3.9.8)
   - XLForm (~> 4.1.0)
@@ -435,7 +578,6 @@ SPEC REPOS:
     - AlipaySDK-iOS
     - BGFMDB
     - BiometricAuthentication
-    - Charts
     - CYLTabBarController
     - DateTools
     - DZNEmptyDataSet
@@ -458,6 +600,7 @@ SPEC REPOS:
     - QMUIKit
     - R.swift
     - R.swift.Library
+    - ReactiveObjC
     - RRSwipeCell
     - RxCocoa
     - RxRelay
@@ -470,8 +613,14 @@ SPEC REPOS:
     - SVProgressHUD
     - Toast
     - Toast-Swift
+    - TXIMSDK_Plus_iOS
     - TZImagePickerController
     - UICKeyChainStore
+    - UMABTest
+    - UMCCommonLog
+    - UMCommon
+    - UMDevice
+    - UMLink
     - WMPageController
     - XHLaunchAd
     - XLForm
@@ -480,14 +629,36 @@ SPEC REPOS:
     - YYModel
     - YYText
 
+EXTERNAL SOURCES:
+  DBDebugToolkit:
+    :path: "./LocalPods/DBDebugToolkit"
+  SJBaseVideoPlayer:
+    :path: "./LocalPods/SJVideo/SJBaseVideoPlayer"
+  SJUIKit:
+    :path: "./LocalPods/SJVideo/SJUIKit"
+  SJVideoPlayer:
+    :path: "./LocalPods/SJVideo/SJVideoPlayer"
+  TUIChat:
+    :path: "./LocalPods/TUIKit/TUIChat"
+  TUIContact:
+    :path: "./LocalPods/TUIKit/TUIContact"
+  TUIConversation:
+    :path: "./LocalPods/TUIKit/TUIConversation"
+  TUICore:
+    :path: "./LocalPods/TUIKit/TUICore"
+  TUIGroup:
+    :path: "./LocalPods/TUIKit/TUIGroup"
+  TUIOfflinePush:
+    :path: "./LocalPods/TUIKit/TUIOfflinePush"
+
 SPEC CHECKSUMS:
-  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   AlipaySDK-iOS: 8659cdb4403de7e5f26ad8b699864a9cbe53384c
   BGFMDB: 48e6823027232402a678acc7f71484b1fc9171d0
   BiometricAuthentication: 36445f3ab77699489f91995bed887be89890afac
-  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
   CYLTabBarController: edd9fecba9afa3f2e9e44ed50ca6dde69941f25f
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
+  DBDebugToolkit: 8f2b2a4f0a5d0a5279071dd462f5238941ccb32d
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   EAIntroView: 249559079ddfdbe80e5bcb755c04c3b964b2ac27
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
@@ -508,6 +679,7 @@ SPEC CHECKSUMS:
   QMUIKit: 67888be9aa0ee0b12b8a219fcea2eec900afd841
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   RRSwipeCell: 28eb4c1201a3f12ed66184b803492c512d6ceba4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
@@ -515,13 +687,28 @@ SPEC CHECKSUMS:
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SGQRCode: bf02d60e18d6660a9d75ff1c8b9b467f064f054e
+  SJBaseVideoPlayer: f15debaa8c1e27b63bdefc8caeec515e9c71d079
+  SJUIKit: a40111941e408cc17d4c1c23495aa92999e814b0
+  SJVideoPlayer: 497e20226ab7802fa86f311d7b381cc1c862e141
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  TUIChat: 7f2e062bdc84e59e77f4d85839a792bbcbb0e616
+  TUIContact: b7d3cc260596ba263d55aa47a7e25af473b33889
+  TUIConversation: cc3f85d96bfceb94c4f24527ab9491e08112dd27
+  TUICore: b6e557e053280752323fbdd0cc3e05d4b26b088e
+  TUIGroup: 3f5bab6504c3696d5a89dc235e4a94b62d2eba5f
+  TUIOfflinePush: 85005e455a4a4b47d496d33fdc90983ca4470e40
+  TXIMSDK_Plus_iOS: b725bdb1521efd26e12e12506a9de736e8ad4a6e
   TZImagePickerController: 1f92968aa0e98a06b9e2eccca8560acc19254257
   UICKeyChainStore: ba3bff2c762b12db1e516f395c837dd25298b05e
+  UMABTest: e35a7be1f4401640f780d95b403d98794d65c6aa
+  UMCCommonLog: bea707e50c85cef4b0eb47cc5c7226bb843245ca
+  UMCommon: 35b28c82a3a3be892f895628261edce11b6a9e3e
+  UMDevice: 9ef8045b59e0479cff7062915c879a1af46fa094
+  UMLink: d5047e2716c2571d120d890af0f7a41d1b5e5224
   WMPageController: 0c7624d2b48e4f1ab92371688cf6744ed701575d
   XHLaunchAd: 9d4abeca598c4262e9df10dd3346b07b9fe40926
   XLForm: 7ee02761be8a369d1ad1bbffe738b97083d94f3e
@@ -530,6 +717,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 42375b16b2a7c057b997a24f2df7cb5f28a5c7a9
+PODFILE CHECKSUM: c20f26a6f482e52ec053271466410c082f7731c8
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.12.1
