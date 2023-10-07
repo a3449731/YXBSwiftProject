@@ -83,7 +83,7 @@ loaclPods()
 # swift库
 def swiftFoundation
 
-  pod 'RxSwift'
+  pod 'RxSwift', '~> 6.6.0'
   pod 'RxCocoa'
   pod 'R.swift'
   #生物识别，指纹解锁、面部识别
@@ -92,6 +92,8 @@ def swiftFoundation
   pod 'Toast-Swift', '~> 5.0.1'
   #swift版Masonry
   pod 'SnapKit'
+  pod 'SwifterSwift'
+  pod 'Moya'
   
 end
 
