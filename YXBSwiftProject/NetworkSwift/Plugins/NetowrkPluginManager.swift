@@ -8,23 +8,26 @@
 import Moya
 
 // MARK: 插件枚举,用枚举舒适化更方便一点
-enum MyPluginEnum {
-    case auth
-    case log // 对应Moya自带的日志插件 NetworkLoggerPlugin
+enum MyPluginEnum: Equatable, Hashable {
+    case auth(token: String?)
+//    case log // 对应Moya自带的日志插件 NetworkLoggerPlugin
+    case logCustom  
     case progress // 对应Moya自带的网络加载转菊花 NetworkActivityPlugin
 
     var plugin: PluginType {
         switch self {
-        case .auth:
-            if let token = MyPluginEnum.token {
+        case .auth(let token):
+            if let token = token {
                 return AuthPlugin(token: token)
             } else {
                 fatalError("Error: Token not provided")
             }
-        case .log:
-            return NetworkLoggerPlugin.cteatLoggerPlugin()
+//        case .log:
+//            return NetworkLoggerPlugin.cteatLoggerPlugin()
+        case .logCustom:
+            return LogCustomPlugin()
         case .progress:
-            return NetworkActivityPlugin.cteatProgressPlugin()
+            return ProgressPlugin().cteatProgressPlugin()
         }
     }
 
@@ -45,7 +48,7 @@ enum MyPluginEnum {
 class NetowrkPluginManager {
     
     // 提供默认插件，
-    static var defaultPlugins: [MyPluginEnum] = [.log]
+    static var defaultPlugins: [MyPluginEnum] = [.progress]
     
     // 常用热修复插件
     static var hotPlugins: [MyPluginEnum] = []

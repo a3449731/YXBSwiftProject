@@ -12,22 +12,16 @@ import Foundation
 extension UIColor {
     // 标题颜色
     public class var titleColor: UIColor {
-        get {
-            UIColor.init(light: UIColor(rgb: 0x121212, alpha: 1), dark: UIColor(rgb: 0x121212, alpha: 1))
-        }
+        UIColor.init(light: UIColor(rgb: 0x222222, alpha: 1), dark: UIColor(rgb: 0x121212, alpha: 1))
     }
     
     // 副标题颜色
     public class var subTitleColor: UIColor {
-        get {
-            UIColor.init(light: UIColor(rgb: 0x121212, alpha: 1), dark: UIColor(rgb: 0x121212, alpha: 1))
-        }
+        UIColor.init(light: UIColor(rgb: 0x666666, alpha: 1), dark: UIColor(rgb: 0x121212, alpha: 1))
     }
     
     // 占位符颜色
     public class var placeHolderColor: UIColor {
-        get {
-            UIColor.init(light: UIColor(rgb: 0x121212, alpha: 1), dark: UIColor(rgb: 0x121212, alpha: 1))
-        }
+        UIColor.init(light: UIColor(rgb: 0xAAAAAA, alpha: 1), dark: UIColor(rgb: 0x121212, alpha: 1))
     }
 }

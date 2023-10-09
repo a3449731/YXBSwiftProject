@@ -166,6 +166,14 @@
 		68A7EBE02AD13C2F0094BDA6 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBDD2AD13C2F0094BDA6 /* Env.swift */; };
 		68A7EBE12AD13C2F0094BDA6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBDE2AD13C2F0094BDA6 /* NetworkManager.swift */; };
 		68A7EBE22AD13C2F0094BDA6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBDF2AD13C2F0094BDA6 /* NetworkError.swift */; };
+		68A7EBE42AD1538D0094BDA6 /* UIFont+PingFang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBE32AD1538D0094BDA6 /* UIFont+PingFang.swift */; };
+		68A7EBE62AD153A40094BDA6 /* UIFont+YXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBE52AD153A40094BDA6 /* UIFont+YXB.swift */; };
+		68A7EBE82AD279CD0094BDA6 /* WithDrawAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBE72AD279CD0094BDA6 /* WithDrawAPI.swift */; };
+		68A7EBEA2AD290590094BDA6 /* LogCustomPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBE92AD290590094BDA6 /* LogCustomPlugin.swift */; };
+		68A7EBF02AD3D60D0094BDA6 /* BindBankOCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBEF2AD3D60D0094BDA6 /* BindBankOCModel.swift */; };
+		68A7EBF22AD3E3270094BDA6 /* NetworkBasicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBF12AD3E3270094BDA6 /* NetworkBasicResponse.swift */; };
+		68A7EBF42AD3E4D10094BDA6 /* BindBankHandyJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBF32AD3E4D10094BDA6 /* BindBankHandyJsonModel.swift */; };
+		68A7EBF62AD3F8050094BDA6 /* LQWithdrawViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBF52AD3F8050094BDA6 /* LQWithdrawViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -433,6 +441,14 @@
 		68A7EBDD2AD13C2F0094BDA6 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		68A7EBDE2AD13C2F0094BDA6 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		68A7EBDF2AD13C2F0094BDA6 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		68A7EBE32AD1538D0094BDA6 /* UIFont+PingFang.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+PingFang.swift"; sourceTree = "<group>"; };
+		68A7EBE52AD153A40094BDA6 /* UIFont+YXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+YXB.swift"; sourceTree = "<group>"; };
+		68A7EBE72AD279CD0094BDA6 /* WithDrawAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithDrawAPI.swift; sourceTree = "<group>"; };
+		68A7EBE92AD290590094BDA6 /* LogCustomPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCustomPlugin.swift; sourceTree = "<group>"; };
+		68A7EBEF2AD3D60D0094BDA6 /* BindBankOCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindBankOCModel.swift; sourceTree = "<group>"; };
+		68A7EBF12AD3E3270094BDA6 /* NetworkBasicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBasicResponse.swift; sourceTree = "<group>"; };
+		68A7EBF32AD3E4D10094BDA6 /* BindBankHandyJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindBankHandyJsonModel.swift; sourceTree = "<group>"; };
+		68A7EBF52AD3F8050094BDA6 /* LQWithdrawViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQWithdrawViewModel.swift; sourceTree = "<group>"; };
 		82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXBSwiftProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -637,13 +653,17 @@
 				0C14A0BE249B65EA005FE48A /* SPHomeViewController.m */,
 				689BE4842AC446030024F4CE /* LQWithdrawVC.swift */,
 				689BE4862AC4475E0024F4CE /* LQLabelTextFieldView.swift */,
+				68A7EBE72AD279CD0094BDA6 /* WithDrawAPI.swift */,
+				68A7EBF52AD3F8050094BDA6 /* LQWithdrawViewModel.swift */,
 				689BE4882AC451EB0024F4CE /* MyUIFactory.swift */,
 				689BE48D2AC472F10024F4CE /* UIColor+YXB.swift */,
+				68A7EBE52AD153A40094BDA6 /* UIFont+YXB.swift */,
 				689BE48F2AC48BDC0024F4CE /* UIView+YXB.swift */,
 				689BE4972AC5C4A00024F4CE /* UIButton+YXB.swift */,
 				689BE4912AC572A70024F4CE /* UIView+Gradient.swift */,
 				689BE4932AC581780024F4CE /* YXBButton.swift */,
 				689BE4952AC5AE300024F4CE /* YXBCountDownButton.swift */,
+				68A7EBE32AD1538D0094BDA6 /* UIFont+PingFang.swift */,
 			);
 			path = "主页";
 			sourceTree = "<group>";
@@ -728,6 +748,7 @@
 				0C14A064249B648D005FE48A /* Category */,
 				0C14A0A7249B64D8005FE48A /* Classes */,
 				0C14A043249B648D005FE48A /* Network */,
+				68A7EBEB2AD3A1D40094BDA6 /* ModelSwift */,
 				68A7EBC92AD13B610094BDA6 /* NetworkSwift */,
 				0C14A07F249B648D005FE48A /* UserData */,
 				0C14A073249B648D005FE48A /* Theme */,
@@ -1012,8 +1033,19 @@
 				68A7EBD12AD13C1E0094BDA6 /* LogPlugin.swift */,
 				68A7EBD32AD13C1E0094BDA6 /* AuthPlugin.swift */,
 				68A7EBD42AD13C1E0094BDA6 /* ProgressPlugin.swift */,
+				68A7EBE92AD290590094BDA6 /* LogCustomPlugin.swift */,
 			);
 			path = Plugins;
+			sourceTree = "<group>";
+		};
+		68A7EBEB2AD3A1D40094BDA6 /* ModelSwift */ = {
+			isa = PBXGroup;
+			children = (
+				68A7EBEF2AD3D60D0094BDA6 /* BindBankOCModel.swift */,
+				68A7EBF32AD3E4D10094BDA6 /* BindBankHandyJsonModel.swift */,
+				68A7EBF12AD3E3270094BDA6 /* NetworkBasicResponse.swift */,
+			);
+			path = ModelSwift;
 			sourceTree = "<group>";
 		};
 		8CA9B65AF3EBC4F7A0A60761 /* Pods */ = {
@@ -1172,6 +1204,7 @@
 			files = (
 				0CC0C78424E3DE6E001AE32D /* VersionModel.m in Sources */,
 				0CC0C77F24E3DE6E001AE32D /* AcountAPI.m in Sources */,
+				68A7EBF62AD3F8050094BDA6 /* LQWithdrawViewModel.swift in Sources */,
 				0CC0C78124E3DE6E001AE32D /* UploadImageAPI.m in Sources */,
 				68A7EBD92AD13C1E0094BDA6 /* LogPlugin.swift in Sources */,
 				68A7EBD52AD13C1E0094BDA6 /* MyMoyaExmple.swift in Sources */,
@@ -1211,6 +1244,7 @@
 				0C14A0DF249B69C2005FE48A /* YXBPageViewController.m in Sources */,
 				0C14A0BF249B65EA005FE48A /* SPHomeViewController.m in Sources */,
 				0C47C7B724E54A81006945B9 /* YXBPaymentModel.m in Sources */,
+				68A7EBE62AD153A40094BDA6 /* UIFont+YXB.swift in Sources */,
 				0C14A084249B648D005FE48A /* YXBBaseModel.m in Sources */,
 				689BE4892AC451EB0024F4CE /* MyUIFactory.swift in Sources */,
 				68A7EBD82AD13C1E0094BDA6 /* APIServer.swift in Sources */,
@@ -1224,6 +1258,7 @@
 				0C76C1B026312467005580D8 /* ModifyLoginPassAPI.m in Sources */,
 				2F0C906B27C48B520057108B /* YXBVerificationCodeView.m in Sources */,
 				0C76C1B726312467005580D8 /* ForgetSecretViewController.m in Sources */,
+				68A7EBF42AD3E4D10094BDA6 /* BindBankHandyJsonModel.swift in Sources */,
 				0C14A095249B648D005FE48A /* CDDetailHeaderView.m in Sources */,
 				68A7EBD72AD13C1E0094BDA6 /* APIRouter.swift in Sources */,
 				0C14A0EC249B69C2005FE48A /* YXBFormLeftRightBgCell.m in Sources */,
@@ -1282,13 +1317,17 @@
 				68A7EBDC2AD13C1E0094BDA6 /* ProgressPlugin.swift in Sources */,
 				0C14A093249B648D005FE48A /* YXBUnicode.m in Sources */,
 				0C14A0B3249B652D005FE48A /* LanchAPI.m in Sources */,
+				68A7EBE42AD1538D0094BDA6 /* UIFont+PingFang.swift in Sources */,
+				68A7EBF02AD3D60D0094BDA6 /* BindBankOCModel.swift in Sources */,
 				68A7EBD62AD13C1E0094BDA6 /* APIParameters.swift in Sources */,
 				68A7EBE22AD13C2F0094BDA6 /* NetworkError.swift in Sources */,
 				0CC0C77D24E3DE6E001AE32D /* MyRankAPI.m in Sources */,
 				0CC0C77E24E3DE6E001AE32D /* GetVersionAPI.m in Sources */,
 				0C14A08E249B648D005FE48A /* YXBNetConfiger.m in Sources */,
 				0C14A0A0249B648D005FE48A /* UIButton+YXBAdd.m in Sources */,
+				68A7EBEA2AD290590094BDA6 /* LogCustomPlugin.swift in Sources */,
 				0C14A0E7249B69C2005FE48A /* YXBFormLeftRightCell.m in Sources */,
+				68A7EBF22AD3E3270094BDA6 /* NetworkBasicResponse.swift in Sources */,
 				0CB9CF05260DDCFC00E82B13 /* PaymentService.swift in Sources */,
 				0C76C1AD26312467005580D8 /* CaptchaAPI.m in Sources */,
 				0C14A099249B648D005FE48A /* LYLWKWebView.m in Sources */,
@@ -1296,6 +1335,7 @@
 				0C47C7A924E523A0006945B9 /* PaymentSureInfoView.swift in Sources */,
 				689BE48E2AC472F10024F4CE /* UIColor+YXB.swift in Sources */,
 				0C14A09E249B648D005FE48A /* NSLayoutConstraint+AutoScale.m in Sources */,
+				68A7EBE82AD279CD0094BDA6 /* WithDrawAPI.swift in Sources */,
 				0C14A09A249B648D005FE48A /* UIView+Xib.m in Sources */,
 				0C14A09B249B648D005FE48A /* NSArray+IGListDiffable.m in Sources */,
 				0C14A0EF249B6A0D005FE48A /* YXBBaseViewController.m in Sources */,

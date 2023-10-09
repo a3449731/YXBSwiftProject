@@ -7,6 +7,7 @@
 //
 
 #import "SPHomeViewController.h"
+#import "YXBSwiftProject-Swift.h"
 
 @interface SPHomeViewController ()
 
@@ -63,7 +64,9 @@
 }
 
 - (void)butonAction:(UIButton *)button {
-    [YXBThemeManager sharedInstance].currentThemeIdentifier = YXBThemeIndetifierDark;
+    LQWithdrawVC *vc = [[LQWithdrawVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];    
+//    [YXBThemeManager sharedInstance].currentThemeIdentifier = YXBThemeIndetifierDark;
 }
 
 - (void)whiteAction:(UIButton *)button {

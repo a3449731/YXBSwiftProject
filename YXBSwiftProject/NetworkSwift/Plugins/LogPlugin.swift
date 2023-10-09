@@ -8,6 +8,7 @@
 import Moya
 
 // MARK: 为了使用Moya自带的日志打印，进行的调整
+/*
 extension NetworkLoggerPlugin {
     
     static func cteatLoggerPlugin() -> NetworkLoggerPlugin {
@@ -100,3 +101,4 @@ extension NetworkLoggerPlugin {
         return nil
     }
 }
+*/

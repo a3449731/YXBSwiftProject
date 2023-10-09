@@ -79,9 +79,9 @@ struct SuiBianBa {
         let network = NetworkManager<CatAPI>()
         network.sendRequest(.getOneCat) { jsonString in
             
-            if let model = try? JSONDecoder().decode([CatModel].self, from: jsonString.data(using: .utf8)!) {
-                print("我的猫咪模型", model)
-            }
+//            if let model = try? JSONDecoder().decode([CatModel].self, from: jsonString.data(using: .utf8)!) {
+//                print("我的猫咪模型", model)
+//            }
             
         } failure: { error in
             print("我打印的错误:", error)
@@ -93,9 +93,9 @@ struct SuiBianBa {
         let network = NetworkManager<CatAPI>()
         network.sendRequest(.getTenCats(limit: 10)) { jsonString in
             
-            if let model = try? JSONDecoder().decode([CatModel].self, from: jsonString.data(using: .utf8)!) {
-                print("我的猫咪模型", model)
-            }
+//            if let model = try? JSONDecoder().decode([CatModel].self, from: jsonString.data(using: .utf8)!) {
+//                print("我的猫咪模型", model)
+//            }
             
         } failure: { error in
             print("我打印的错误:", error)

@@ -26,6 +26,7 @@ PODS:
   - EARestrictedScrollView (1.1.0)
   - FDFullscreenPopGesture (1.1)
   - FLAnimatedImage (1.0.12)
+  - HandyJSON (5.0.2)
   - HMSegmentedControl (1.5.5)
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
@@ -35,6 +36,7 @@ PODS:
   - JXPagingView/Pager (2.0.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
+  - MJExtension (3.4.1)
   - MJRefresh (3.1.17)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
@@ -43,6 +45,7 @@ PODS:
   - MZAppearance (1.1.6)
   - MZFormSheetPresentationController (2.4.3):
     - MZAppearance
+  - ObjectMapper (4.2.0)
   - PPNumberButton (0.8.0)
   - QMUIKit (4.3.0):
     - QMUIKit/QMUIComponents (= 4.3.0)
@@ -554,6 +557,7 @@ DEPENDENCIES:
   - DZNEmptyDataSet (~> 1.8.1)
   - EAIntroView (~> 2.12.0)
   - FDFullscreenPopGesture (~> 1.1)
+  - HandyJSON
   - HMSegmentedControl (~> 1.5.3)
   - IGListKit (~> 4.0.0)
   - IQKeyboardManager (~> 6.5.4)
@@ -561,9 +565,11 @@ DEPENDENCIES:
   - JXPagingView/Pager (~> 2.0.0.0)
   - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.0.0)
+  - MJExtension
   - MJRefresh (~> 3.1.12)
   - Moya
   - MZFormSheetPresentationController (~> 2.4.3)
+  - ObjectMapper
   - PPNumberButton (~> 0.8.0)
   - QMUIKit
   - R.swift
@@ -618,6 +624,7 @@ SPEC REPOS:
     - EARestrictedScrollView
     - FDFullscreenPopGesture
     - FLAnimatedImage
+    - HandyJSON
     - HMSegmentedControl
     - IGListDiffKit
     - IGListKit
@@ -626,10 +633,12 @@ SPEC REPOS:
     - JXPagingView
     - Masonry
     - MBProgressHUD
+    - MJExtension
     - MJRefresh
     - Moya
     - MZAppearance
     - MZFormSheetPresentationController
+    - ObjectMapper
     - PPNumberButton
     - QMUIKit
     - R.swift
@@ -700,6 +709,7 @@ SPEC CHECKSUMS:
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
@@ -708,10 +718,12 @@ SPEC CHECKSUMS:
   JXPagingView: da30adb74743852f7ef95fa894041953894ebd09
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
   MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   MZAppearance: 0c06d3fa9cc55142f1da14bc8631fbe8fd6e19d5
   MZFormSheetPresentationController: fbfdbad31884f16fac17fbe3c44c168306cc1095
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
   QMUIKit: 67888be9aa0ee0b12b8a219fcea2eec900afd841
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
@@ -755,6 +767,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 43e39c084ce00aaca6e6cc3a064dd46e59514deb
+PODFILE CHECKSUM: bad13e2e6b5df20031cf6ea29fd3f1f530352481
 
 COCOAPODS: 1.12.1

@@ -14,7 +14,7 @@ extension Array: MyBaseModelProtocol where Element: MyBaseModelProtocol {}
 //typealias FaildHandle = (_ faildModel : NetworkBasicResponse)->Void
 
 // 网络请求管理类
-class NetworkManager<T: TargetType> {
+class NetworkManager<T: APIService> {
     private let provider: NetworkProvider<T>
     
     init() {
@@ -25,7 +25,7 @@ class NetworkManager<T: TargetType> {
     func sendRequest(_ api: T,
                      defaultPlugins: [MyPluginEnum] = NetowrkPluginManager.defaultPlugins,
                      hotPlugins: [MyPluginEnum] = [],
-                     success: @escaping (String) -> Void,
+                     success: @escaping (Any) -> Void,
                      failure: ((Error) -> Void)? = nil) {
         
         privateSendRequest(api, defaultPlugins: defaultPlugins, hotPlugins: hotPlugins, success: success, failure: failure)
@@ -34,10 +34,10 @@ class NetworkManager<T: TargetType> {
     private func privateSendRequest(_ api: T,
                                     defaultPlugins: [MyPluginEnum] = [],
                                     hotPlugins: [MyPluginEnum] = [],
-                                    success: @escaping (_ jsonString: String) -> Void,
+                                    success: @escaping (_ objc: Any) -> Void,
                                     failure: ((Error) -> Void)?) {
         // 将插件合起来，去创建新的provider
-        let plugins = (defaultPlugins + hotPlugins).map { $0 }
+        let plugins = (defaultPlugins + hotPlugins + [.auth(token: ""), .logCustom]).map { $0 }
         provider.update(plugins: plugins)
         
         provider.request(api) { result in
@@ -45,16 +45,27 @@ class NetworkManager<T: TargetType> {
             case .success(let response):
                 do {
                     // 简单过滤下状态码和返回值
-                    guard let jsonString = String(data: response.data, encoding: String.Encoding.utf8) else {
-                        throw NetworkError.jsonError(url: response.request?.url?.absoluteString ?? "")
-                    }
-                    
                     guard 200...299 ~= response.statusCode else {
                         throw NetworkError.invalideCode(url: response.request?.url?.absoluteString ?? "")
                     }
                     
-                    success(jsonString)
+                    if let json = try JSONSerialization.jsonObject(with: response.data, options: []) as? [String: Any] {
+                        // 处理Dictionary类型的数据
+                        success(json)
+                    } else if let json = try JSONSerialization.jsonObject(with: response.data, options: []) as? [Any] {
+                        // 处理Array类型的数据
+                        success(json)
+                    } else if let json = try JSONSerialization.jsonObject(with: response.data, options: []) as? String {
+                        // 处理String类型的数据
+                        success(json)
+                    } else {
+                        // 非String、Array、Dictionary类型的数据，进行报错处理
+                        throw NetworkError.jsonError(url: response.request?.url?.absoluteString ?? "")
+                    }
                     
+                    //                    guard let jsonString = String(data: response.data, encoding: String.Encoding.utf8) else {
+//                        throw NetworkError.jsonError(url: response.request?.url?.absoluteString ?? "")
+//                    }                                        
                 } catch {
                     print(error.localizedDescription)
                     failure?(error)
@@ -67,7 +78,7 @@ class NetworkManager<T: TargetType> {
 }
 
 // 封装的MoyaProvider, 这里是真正的使用Moya配置插件，发送请求，
-private class NetworkProvider<T: TargetType> {
+private class NetworkProvider<T: APIService> {
     private var provider: MoyaProvider<T>
         
     init() {

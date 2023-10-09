@@ -94,6 +94,9 @@ def swiftFoundation
   pod 'SnapKit'
   pod 'SwifterSwift'
   pod 'Moya'
+  pod 'HandyJSON'
+  pod 'ObjectMapper'
+  pod 'MJExtension'
   
 end
 

@@ -9,9 +9,8 @@ import UIKit
 import Moya
 
 // MARK: 为了使用Moya自带的菊花插件，进行的调整
-extension NetworkActivityPlugin {
-    
-    static func cteatProgressPlugin() -> NetworkActivityPlugin  {
+struct ProgressPlugin {
+    func cteatProgressPlugin() -> NetworkActivityPlugin  {
         NetworkActivityPlugin { change, target in
             
             DispatchQueue.main.async {
@@ -25,6 +24,23 @@ extension NetworkActivityPlugin {
         }
     }
 }
+
+//extension NetworkActivityPlugin {
+//
+//    static func cteatProgressPlugin() -> NetworkActivityPlugin  {
+//        NetworkActivityPlugin { change, target in
+//
+//            DispatchQueue.main.async {
+//                switch change {
+//                case .began:
+//                    NetworkActivityIndicator.shared.incrementActivityCount()
+//                case .ended:
+//                    NetworkActivityIndicator.shared.decrementActivityCount()
+//                }
+//            }
+//        }
+//    }
+//}
 
 
 // 网络菊花，自动展示在window上

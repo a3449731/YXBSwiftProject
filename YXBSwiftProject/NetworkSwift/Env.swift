@@ -41,8 +41,8 @@ class Constants {
     
     var baseUrl: String {
         switch env {
-        case .production: return "https://api.thecatapi.com"
-        case .development: return ""
+        case .development: return "https://lanqi.whlqhy.site/test-api"
+        case .production: return "https://lanyu.whlqhy.online/prod-api"
         }
     }
     // 其他环境相关的常量属性
