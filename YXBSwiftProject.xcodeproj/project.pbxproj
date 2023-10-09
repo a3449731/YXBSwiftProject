@@ -149,7 +149,7 @@
 		689BE4852AC446030024F4CE /* LQWithdrawVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689BE4842AC446030024F4CE /* LQWithdrawVC.swift */; };
 		689BE4872AC4475E0024F4CE /* LQLabelTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689BE4862AC4475E0024F4CE /* LQLabelTextFieldView.swift */; };
 		689BE4892AC451EB0024F4CE /* MyUIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689BE4882AC451EB0024F4CE /* MyUIFactory.swift */; };
-		689BE48E2AC472F10024F4CE /* UIColor+YXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689BE48D2AC472F10024F4CE /* UIColor+YXB.swift */; };
+		689BE48E2AC472F10024F4CE /* UIColor+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689BE48D2AC472F10024F4CE /* UIColor+Const.swift */; };
 		689BE4902AC48BDC0024F4CE /* UIView+YXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689BE48F2AC48BDC0024F4CE /* UIView+YXB.swift */; };
 		689BE4922AC572A70024F4CE /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689BE4912AC572A70024F4CE /* UIView+Gradient.swift */; };
 		689BE4942AC581780024F4CE /* YXBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689BE4932AC581780024F4CE /* YXBButton.swift */; };
@@ -167,7 +167,7 @@
 		68A7EBE12AD13C2F0094BDA6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBDE2AD13C2F0094BDA6 /* NetworkManager.swift */; };
 		68A7EBE22AD13C2F0094BDA6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBDF2AD13C2F0094BDA6 /* NetworkError.swift */; };
 		68A7EBE42AD1538D0094BDA6 /* UIFont+PingFang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBE32AD1538D0094BDA6 /* UIFont+PingFang.swift */; };
-		68A7EBE62AD153A40094BDA6 /* UIFont+YXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBE52AD153A40094BDA6 /* UIFont+YXB.swift */; };
+		68A7EBE62AD153A40094BDA6 /* UIFont+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBE52AD153A40094BDA6 /* UIFont+Const.swift */; };
 		68A7EBE82AD279CD0094BDA6 /* WithDrawAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBE72AD279CD0094BDA6 /* WithDrawAPI.swift */; };
 		68A7EBEA2AD290590094BDA6 /* LogCustomPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBE92AD290590094BDA6 /* LogCustomPlugin.swift */; };
 		68A7EBF02AD3D60D0094BDA6 /* BindBankOCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBEF2AD3D60D0094BDA6 /* BindBankOCModel.swift */; };
@@ -424,7 +424,7 @@
 		689BE4842AC446030024F4CE /* LQWithdrawVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQWithdrawVC.swift; sourceTree = "<group>"; };
 		689BE4862AC4475E0024F4CE /* LQLabelTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQLabelTextFieldView.swift; sourceTree = "<group>"; };
 		689BE4882AC451EB0024F4CE /* MyUIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUIFactory.swift; sourceTree = "<group>"; };
-		689BE48D2AC472F10024F4CE /* UIColor+YXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+YXB.swift"; sourceTree = "<group>"; };
+		689BE48D2AC472F10024F4CE /* UIColor+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Const.swift"; sourceTree = "<group>"; };
 		689BE48F2AC48BDC0024F4CE /* UIView+YXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+YXB.swift"; sourceTree = "<group>"; };
 		689BE4912AC572A70024F4CE /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		689BE4932AC581780024F4CE /* YXBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBButton.swift; sourceTree = "<group>"; };
@@ -442,7 +442,7 @@
 		68A7EBDE2AD13C2F0094BDA6 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		68A7EBDF2AD13C2F0094BDA6 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		68A7EBE32AD1538D0094BDA6 /* UIFont+PingFang.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+PingFang.swift"; sourceTree = "<group>"; };
-		68A7EBE52AD153A40094BDA6 /* UIFont+YXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+YXB.swift"; sourceTree = "<group>"; };
+		68A7EBE52AD153A40094BDA6 /* UIFont+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Const.swift"; sourceTree = "<group>"; };
 		68A7EBE72AD279CD0094BDA6 /* WithDrawAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithDrawAPI.swift; sourceTree = "<group>"; };
 		68A7EBE92AD290590094BDA6 /* LogCustomPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCustomPlugin.swift; sourceTree = "<group>"; };
 		68A7EBEF2AD3D60D0094BDA6 /* BindBankOCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindBankOCModel.swift; sourceTree = "<group>"; };
@@ -653,8 +653,8 @@
 				0C14A0BD249B65EA005FE48A /* SPHomeViewController.h */,
 				0C14A0BE249B65EA005FE48A /* SPHomeViewController.m */,
 				689BE4882AC451EB0024F4CE /* MyUIFactory.swift */,
-				689BE48D2AC472F10024F4CE /* UIColor+YXB.swift */,
-				68A7EBE52AD153A40094BDA6 /* UIFont+YXB.swift */,
+				689BE48D2AC472F10024F4CE /* UIColor+Const.swift */,
+				68A7EBE52AD153A40094BDA6 /* UIFont+Const.swift */,
 				689BE48F2AC48BDC0024F4CE /* UIView+YXB.swift */,
 				689BE4972AC5C4A00024F4CE /* UIButton+YXB.swift */,
 				689BE4912AC572A70024F4CE /* UIView+Gradient.swift */,
@@ -1252,7 +1252,7 @@
 				0C14A0DF249B69C2005FE48A /* YXBPageViewController.m in Sources */,
 				0C14A0BF249B65EA005FE48A /* SPHomeViewController.m in Sources */,
 				0C47C7B724E54A81006945B9 /* YXBPaymentModel.m in Sources */,
-				68A7EBE62AD153A40094BDA6 /* UIFont+YXB.swift in Sources */,
+				68A7EBE62AD153A40094BDA6 /* UIFont+Const.swift in Sources */,
 				0C14A084249B648D005FE48A /* YXBBaseModel.m in Sources */,
 				689BE4892AC451EB0024F4CE /* MyUIFactory.swift in Sources */,
 				68A7EBD82AD13C1E0094BDA6 /* APIServer.swift in Sources */,
@@ -1341,7 +1341,7 @@
 				0C14A099249B648D005FE48A /* LYLWKWebView.m in Sources */,
 				0CE5358A249B74F100FE14FB /* AppDelegate+YXBTheme.swift in Sources */,
 				0C47C7A924E523A0006945B9 /* PaymentSureInfoView.swift in Sources */,
-				689BE48E2AC472F10024F4CE /* UIColor+YXB.swift in Sources */,
+				689BE48E2AC472F10024F4CE /* UIColor+Const.swift in Sources */,
 				0C14A09E249B648D005FE48A /* NSLayoutConstraint+AutoScale.m in Sources */,
 				68A7EBE82AD279CD0094BDA6 /* WithDrawAPI.swift in Sources */,
 				0C14A09A249B648D005FE48A /* UIView+Xib.m in Sources */,
