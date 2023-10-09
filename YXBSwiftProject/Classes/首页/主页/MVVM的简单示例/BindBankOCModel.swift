@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MJExtension
 
 // 使用MJExtension解析，这是备用方案，这样可以给暴露OC使用。只有当你的模型需要再OC中使用时候才考虑用MJExtension
 @objc(BindBankSwiftModel)
