@@ -649,12 +649,9 @@
 		0C14A0BC249B65C0005FE48A /* 主页 */ = {
 			isa = PBXGroup;
 			children = (
+				68A7EBF72AD410B30094BDA6 /* MVVM的简单示例 */,
 				0C14A0BD249B65EA005FE48A /* SPHomeViewController.h */,
 				0C14A0BE249B65EA005FE48A /* SPHomeViewController.m */,
-				689BE4842AC446030024F4CE /* LQWithdrawVC.swift */,
-				689BE4862AC4475E0024F4CE /* LQLabelTextFieldView.swift */,
-				68A7EBE72AD279CD0094BDA6 /* WithDrawAPI.swift */,
-				68A7EBF52AD3F8050094BDA6 /* LQWithdrawViewModel.swift */,
 				689BE4882AC451EB0024F4CE /* MyUIFactory.swift */,
 				689BE48D2AC472F10024F4CE /* UIColor+YXB.swift */,
 				68A7EBE52AD153A40094BDA6 /* UIFont+YXB.swift */,
@@ -1041,11 +1038,22 @@
 		68A7EBEB2AD3A1D40094BDA6 /* ModelSwift */ = {
 			isa = PBXGroup;
 			children = (
-				68A7EBEF2AD3D60D0094BDA6 /* BindBankOCModel.swift */,
-				68A7EBF32AD3E4D10094BDA6 /* BindBankHandyJsonModel.swift */,
 				68A7EBF12AD3E3270094BDA6 /* NetworkBasicResponse.swift */,
 			);
 			path = ModelSwift;
+			sourceTree = "<group>";
+		};
+		68A7EBF72AD410B30094BDA6 /* MVVM的简单示例 */ = {
+			isa = PBXGroup;
+			children = (
+				689BE4842AC446030024F4CE /* LQWithdrawVC.swift */,
+				689BE4862AC4475E0024F4CE /* LQLabelTextFieldView.swift */,
+				68A7EBE72AD279CD0094BDA6 /* WithDrawAPI.swift */,
+				68A7EBF52AD3F8050094BDA6 /* LQWithdrawViewModel.swift */,
+				68A7EBEF2AD3D60D0094BDA6 /* BindBankOCModel.swift */,
+				68A7EBF32AD3E4D10094BDA6 /* BindBankHandyJsonModel.swift */,
+			);
+			path = "MVVM的简单示例";
 			sourceTree = "<group>";
 		};
 		8CA9B65AF3EBC4F7A0A60761 /* Pods */ = {

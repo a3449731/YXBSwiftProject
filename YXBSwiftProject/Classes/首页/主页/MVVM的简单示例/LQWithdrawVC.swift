@@ -55,7 +55,7 @@ import RxSwift
     func bindData() {
         viewModel.hasZiliao
             .asDriver()
-            .map{ ($0 == 0) }
+            .map{ ($0 == 1) }
             .drive(lqView.rx.isHidden)
             .disposed(by: disposeBag)
         
