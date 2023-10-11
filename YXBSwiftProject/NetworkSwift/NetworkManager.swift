@@ -37,7 +37,11 @@ class NetworkManager<T: APIService> {
                                     success: @escaping (_ objc: Any) -> Void,
                                     failure: ((Error) -> Void)?) {
         // 将插件合起来，去创建新的provider
-        let plugins = (defaultPlugins + hotPlugins + [.auth(token: ""), .logCustom]).map { $0 }
+        var plugins = (defaultPlugins + hotPlugins + [.auth]).map { $0 }
+#if DEBUG
+        plugins.append(.logCustom)
+#endif
+        
         provider.update(plugins: plugins)
         
         provider.request(api) { result in

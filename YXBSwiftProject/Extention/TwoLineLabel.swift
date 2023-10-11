@@ -22,13 +22,13 @@ class TwoLineLabel: UILabel {
         }
     }
         
-    @IBInspectable var topColor: UIColor = YXBThemeManager.sharedInstance().titleTextColor {
+    @IBInspectable var topColor: UIColor = .titleColor {
         didSet {
             updateText()
         }
     }
     
-    @IBInspectable var bottomColor: UIColor = YXBThemeManager.sharedInstance().subTextColor {
+    @IBInspectable var bottomColor: UIColor = .subTitleColor {
         didSet {
             updateText()
         }

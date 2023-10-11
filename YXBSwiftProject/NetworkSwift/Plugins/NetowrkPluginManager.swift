@@ -9,19 +9,15 @@ import Moya
 
 // MARK: 插件枚举,用枚举舒适化更方便一点
 enum MyPluginEnum: Equatable, Hashable {
-    case auth(token: String?)
+    case auth
 //    case log // 对应Moya自带的日志插件 NetworkLoggerPlugin
     case logCustom  
     case progress // 对应Moya自带的网络加载转菊花 NetworkActivityPlugin
 
     var plugin: PluginType {
         switch self {
-        case .auth(let token):
-            if let token = token {
-                return AuthPlugin(token: token)
-            } else {
-                fatalError("Error: Token not provided")
-            }
+        case .auth:
+            return AuthPlugin()
 //        case .log:
 //            return NetworkLoggerPlugin.cteatLoggerPlugin()
         case .logCustom:

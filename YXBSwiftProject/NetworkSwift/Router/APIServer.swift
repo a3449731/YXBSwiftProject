@@ -60,7 +60,7 @@ extension APIService {
     var headers: [String: String]? {
         [
             "Accept": "*/*",
-            "Content-Type": "application/x-www-form-urlencoded; application/json; text/plain",            
+            "Content-Type": "application/json;",
         ]
     }
     

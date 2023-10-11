@@ -36,7 +36,7 @@ func jsonToModel<T: HandyJSON>(jsonData: Any) -> T {
 
 func jsonToArray<T: HandyJSON>(jsonData: Any) -> [T] {
     if let json = jsonData as? [String: Any],
-       let array = json["result"] as? [Any] {
+       let array = json["dataList"] as? [Any] {
         let modelArray: [T] = jsonToArray(array: array) ?? []
         return modelArray
     }

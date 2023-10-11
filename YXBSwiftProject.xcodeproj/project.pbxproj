@@ -174,6 +174,10 @@
 		68A7EBF22AD3E3270094BDA6 /* NetworkBasicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBF12AD3E3270094BDA6 /* NetworkBasicResponse.swift */; };
 		68A7EBF42AD3E4D10094BDA6 /* BindBankHandyJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBF32AD3E4D10094BDA6 /* BindBankHandyJsonModel.swift */; };
 		68A7EBF62AD3F8050094BDA6 /* LQWithdrawViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBF52AD3F8050094BDA6 /* LQWithdrawViewModel.swift */; };
+		68A7EC5A2AD65C390094BDA6 /* IM+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC592AD65C390094BDA6 /* IM+API.swift */; };
+		68A7EC612AD66C130094BDA6 /* MSSystemNoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC5E2AD66C130094BDA6 /* MSSystemNoticeViewModel.swift */; };
+		68A7EC622AD66C130094BDA6 /* MSSystemNoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC5F2AD66C130094BDA6 /* MSSystemNoticeModel.swift */; };
+		68A7EC632AD66C130094BDA6 /* MSSystemNoticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC602AD66C130094BDA6 /* MSSystemNoticeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -449,6 +453,10 @@
 		68A7EBF12AD3E3270094BDA6 /* NetworkBasicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBasicResponse.swift; sourceTree = "<group>"; };
 		68A7EBF32AD3E4D10094BDA6 /* BindBankHandyJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindBankHandyJsonModel.swift; sourceTree = "<group>"; };
 		68A7EBF52AD3F8050094BDA6 /* LQWithdrawViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQWithdrawViewModel.swift; sourceTree = "<group>"; };
+		68A7EC592AD65C390094BDA6 /* IM+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IM+API.swift"; sourceTree = "<group>"; };
+		68A7EC5E2AD66C130094BDA6 /* MSSystemNoticeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSSystemNoticeViewModel.swift; sourceTree = "<group>"; };
+		68A7EC5F2AD66C130094BDA6 /* MSSystemNoticeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSSystemNoticeModel.swift; sourceTree = "<group>"; };
+		68A7EC602AD66C130094BDA6 /* MSSystemNoticeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSSystemNoticeVC.swift; sourceTree = "<group>"; };
 		82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXBSwiftProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -649,6 +657,7 @@
 		0C14A0BC249B65C0005FE48A /* 主页 */ = {
 			isa = PBXGroup;
 			children = (
+				68A7EC5C2AD66B500094BDA6 /* MVVM示例 */,
 				68A7EBF72AD410B30094BDA6 /* MVVM的简单示例 */,
 				0C14A0BD249B65EA005FE48A /* SPHomeViewController.h */,
 				0C14A0BE249B65EA005FE48A /* SPHomeViewController.m */,
@@ -1056,6 +1065,25 @@
 			path = "MVVM的简单示例";
 			sourceTree = "<group>";
 		};
+		68A7EC5C2AD66B500094BDA6 /* MVVM示例 */ = {
+			isa = PBXGroup;
+			children = (
+				68A7EC592AD65C390094BDA6 /* IM+API.swift */,
+				68A7EC5D2AD66C130094BDA6 /* 系统IM消息 */,
+			);
+			path = "MVVM示例";
+			sourceTree = "<group>";
+		};
+		68A7EC5D2AD66C130094BDA6 /* 系统IM消息 */ = {
+			isa = PBXGroup;
+			children = (
+				68A7EC5E2AD66C130094BDA6 /* MSSystemNoticeViewModel.swift */,
+				68A7EC5F2AD66C130094BDA6 /* MSSystemNoticeModel.swift */,
+				68A7EC602AD66C130094BDA6 /* MSSystemNoticeVC.swift */,
+			);
+			path = "系统IM消息";
+			sourceTree = "<group>";
+		};
 		8CA9B65AF3EBC4F7A0A60761 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1228,6 +1256,7 @@
 				689BE4982AC5C4A00024F4CE /* UIButton+YXB.swift in Sources */,
 				0C14A085249B648D005FE48A /* YXBCell.m in Sources */,
 				0C14A0A2249B648D005FE48A /* YXBThemeManager.m in Sources */,
+				68A7EC612AD66C130094BDA6 /* MSSystemNoticeViewModel.swift in Sources */,
 				0C47C7B324E540D8006945B9 /* YXBPaymentManager.m in Sources */,
 				0C76C1AE26312467005580D8 /* LoginAPI.m in Sources */,
 				0C14A09D249B648D005FE48A /* UIImage+YXBAdd.m in Sources */,
@@ -1260,6 +1289,7 @@
 				0C47C7A424E52242006945B9 /* PaymentkeyboardView.swift in Sources */,
 				0CC0C75D24E3DE2F001AE32D /* ForceUpdateView.m in Sources */,
 				0C14A0B7249B652D005FE48A /* LanchPageModel.m in Sources */,
+				68A7EC5A2AD65C390094BDA6 /* IM+API.swift in Sources */,
 				68A7EBE12AD13C2F0094BDA6 /* NetworkManager.swift in Sources */,
 				0C277EA2253E9A1D00C33F56 /* Base64.m in Sources */,
 				689BE4872AC4475E0024F4CE /* LQLabelTextFieldView.swift in Sources */,
@@ -1307,6 +1337,7 @@
 				0C14A0E8249B69C2005FE48A /* YXBFormImageCell.m in Sources */,
 				0C47C7BD24E5648E006945B9 /* Appdelegate+AliPay.swift in Sources */,
 				0CC0C77C24E3DE6E001AE32D /* GetConfigAPI.m in Sources */,
+				68A7EC632AD66C130094BDA6 /* MSSystemNoticeVC.swift in Sources */,
 				0C47C79E24E517C8006945B9 /* String+Subscript.swift in Sources */,
 				0CC0C78224E3DE6E001AE32D /* PersonalModel.m in Sources */,
 				0C14A0EB249B69C2005FE48A /* YXBFormButtonValueCell.m in Sources */,
@@ -1316,6 +1347,7 @@
 				0C14A08F249B648D005FE48A /* YXBConstDefine.m in Sources */,
 				0C14A086249B648D005FE48A /* YXBButtonCell.m in Sources */,
 				0CC0C79024E3DF60001AE32D /* JYDTPriceNuberButton.m in Sources */,
+				68A7EC622AD66C130094BDA6 /* MSSystemNoticeModel.swift in Sources */,
 				0C14A0A5249B648D005FE48A /* QMUIConfigurationTemplate.m in Sources */,
 				0C14A0B6249B652D005FE48A /* YXBNavigationController.m in Sources */,
 				0C76C1B526312467005580D8 /* LoginViewController.m in Sources */,

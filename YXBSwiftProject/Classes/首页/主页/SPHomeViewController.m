@@ -70,7 +70,9 @@
 }
 
 - (void)whiteAction:(UIButton *)button {
-    [YXBThemeManager sharedInstance].currentThemeIdentifier = YXBThemeIndetifierWhite;
+    MSSystemNoticeVC *vc = [[MSSystemNoticeVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+//    [YXBThemeManager sharedInstance].currentThemeIdentifier = YXBThemeIndetifierWhite;
 }
 
 @end
