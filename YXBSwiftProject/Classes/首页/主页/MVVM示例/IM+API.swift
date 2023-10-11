@@ -7,12 +7,11 @@
 //
 
 import Moya
-import HandyJSON
 
 /// 消息相关的接口
 enum IMAPI {
     /// 系统通知列表
-    case systemMessageList(pageNo: Int)
+    case systemMessageList(pageNo: Int, pageSize: Int)
 }
 
 extension IMAPI: APIService {
@@ -28,11 +27,13 @@ extension IMAPI: APIService {
         var result: PE = ([:], nil)
         
         switch self {
-        case let .systemMessageList(pageNo):
-            result.parameters = ["pageNo": String(pageNo)]
+        case let .systemMessageList(pageNo, pageSize):
+            result.parameters = ["pageNo": String(pageNo),
+                                 "pageSize": String(pageSize)]
         default:
             return nil
         }
         return APIParameters(values: result.parameters, encoding: result.encoding)
     }
 }
+

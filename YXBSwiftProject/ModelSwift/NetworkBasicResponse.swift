@@ -50,3 +50,13 @@ private func jsonToModel<T: HandyJSON>(dic: [String: Any]) -> T? {
 private func jsonToArray<T: HandyJSON>(array: [Any]) -> [T]? {
     return array.compactMap { $0 as? [String: Any] }.compactMap { T.deserialize(from: $0) }
 }
+
+// 通过当前页返回的数据，判断是否还有下一页数据
+func hasNextPage(page: Int, size: Int, dic: [String: Any]) -> Bool {
+    if let totalCount = dic["totalCount"] as? Int,
+       let totalPage = dic["totalPage"] as? Int {
+        if page > totalPage { return false }
+        if page * size >= totalCount { return false }
+    }
+    return true
+}
