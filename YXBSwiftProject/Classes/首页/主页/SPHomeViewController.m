@@ -8,6 +8,7 @@
 
 #import "SPHomeViewController.h"
 #import "YXBSwiftProject-Swift.h"
+#import "MBProgressHUD+NH.h"
 
 @interface SPHomeViewController ()
 
@@ -52,6 +53,38 @@
         make.height.mas_equalTo(50);
     }];
     [whiteButton addTarget:self action:@selector(whiteAction:) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    
+    UIButton *playButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [playButton setTitle:@"礼物特效" forState:(UIControlStateNormal)];
+    //    UIColor *bwhiteButtonColor = [YXBThemeManager sharedInstance].backgroundColor;
+    [playButton setTitleColor: [YXBThemeManager sharedInstance].titleTextColor forState:(UIControlStateNormal)];
+    [self.view addSubview:playButton];
+    [playButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(200);
+        make.top.mas_equalTo(300);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(50);
+    }];
+    [playButton addTarget:self action:@selector(playAction:) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    UIImageView *imageView = [[UIImageView alloc] init];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"loading" withExtension:@"gif"];
+//    UIImage *image = [UIImage imageNamed:@"loading.gif"];
+//    imageView.image = image;
+    [imageView sd_setImageWithURL:url];
+    [self.view addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(100);
+        make.top.mas_equalTo(300);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(100);
+    }];
+    
+    [MBProgressHUD showGifToView:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideGifHUD];
+    });
 }
 
 - (void)setupTool {
@@ -71,6 +104,12 @@
 
 - (void)whiteAction:(UIButton *)button {
     MSSystemNoticeVC *vc = [[MSSystemNoticeVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+//    [YXBThemeManager sharedInstance].currentThemeIdentifier = YXBThemeIndetifierWhite;
+}
+
+- (void)playAction:(UIButton *)button {
+    PlayEffectsViewController *vc = [[PlayEffectsViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 //    [YXBThemeManager sharedInstance].currentThemeIdentifier = YXBThemeIndetifierWhite;
 }

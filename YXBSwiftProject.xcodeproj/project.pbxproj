@@ -178,6 +178,11 @@
 		68A7EC612AD66C130094BDA6 /* MSSystemNoticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC5E2AD66C130094BDA6 /* MSSystemNoticeViewModel.swift */; };
 		68A7EC622AD66C130094BDA6 /* MSSystemNoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC5F2AD66C130094BDA6 /* MSSystemNoticeModel.swift */; };
 		68A7EC632AD66C130094BDA6 /* MSSystemNoticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC602AD66C130094BDA6 /* MSSystemNoticeVC.swift */; };
+		68A7EC6B2AD780190094BDA6 /* PlayEffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC6A2AD780190094BDA6 /* PlayEffectsViewController.swift */; };
+		68A7EC6D2AD7834D0094BDA6 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC6C2AD7834D0094BDA6 /* ImageCache.swift */; };
+		68A7EC732AD8E5350094BDA6 /* Screen+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC722AD8E5350094BDA6 /* Screen+Const.swift */; };
+		68A7EC7C2AD8F5B20094BDA6 /* MBProgressHUD+NH.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC7B2AD8F5B20094BDA6 /* MBProgressHUD+NH.m */; };
+		68E334F72AD9128C008F537E /* loadinging.gif in Resources */ = {isa = PBXBuildFile; fileRef = 68E334F62AD9128C008F537E /* loadinging.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -457,6 +462,12 @@
 		68A7EC5E2AD66C130094BDA6 /* MSSystemNoticeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSSystemNoticeViewModel.swift; sourceTree = "<group>"; };
 		68A7EC5F2AD66C130094BDA6 /* MSSystemNoticeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSSystemNoticeModel.swift; sourceTree = "<group>"; };
 		68A7EC602AD66C130094BDA6 /* MSSystemNoticeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSSystemNoticeVC.swift; sourceTree = "<group>"; };
+		68A7EC6A2AD780190094BDA6 /* PlayEffectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayEffectsViewController.swift; sourceTree = "<group>"; };
+		68A7EC6C2AD7834D0094BDA6 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		68A7EC722AD8E5350094BDA6 /* Screen+Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Screen+Const.swift"; sourceTree = "<group>"; };
+		68A7EC7A2AD8F5B20094BDA6 /* MBProgressHUD+NH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NH.h"; sourceTree = "<group>"; };
+		68A7EC7B2AD8F5B20094BDA6 /* MBProgressHUD+NH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+NH.m"; sourceTree = "<group>"; };
+		68E334F62AD9128C008F537E /* loadinging.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loadinging.gif; sourceTree = "<group>"; };
 		82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXBSwiftProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -657,18 +668,23 @@
 		0C14A0BC249B65C0005FE48A /* 主页 */ = {
 			isa = PBXGroup;
 			children = (
+				68A7EC692AD77FD30094BDA6 /* 播放礼物特效示例 */,
 				68A7EC5C2AD66B500094BDA6 /* MVVM示例 */,
 				68A7EBF72AD410B30094BDA6 /* MVVM的简单示例 */,
 				0C14A0BD249B65EA005FE48A /* SPHomeViewController.h */,
 				0C14A0BE249B65EA005FE48A /* SPHomeViewController.m */,
+				68A7EC7A2AD8F5B20094BDA6 /* MBProgressHUD+NH.h */,
+				68A7EC7B2AD8F5B20094BDA6 /* MBProgressHUD+NH.m */,
 				689BE4882AC451EB0024F4CE /* MyUIFactory.swift */,
 				689BE48D2AC472F10024F4CE /* UIColor+Const.swift */,
 				68A7EBE52AD153A40094BDA6 /* UIFont+Const.swift */,
 				689BE48F2AC48BDC0024F4CE /* UIView+YXB.swift */,
 				689BE4972AC5C4A00024F4CE /* UIButton+YXB.swift */,
 				689BE4912AC572A70024F4CE /* UIView+Gradient.swift */,
+				68A7EC722AD8E5350094BDA6 /* Screen+Const.swift */,
 				689BE4932AC581780024F4CE /* YXBButton.swift */,
 				689BE4952AC5AE300024F4CE /* YXBCountDownButton.swift */,
+				68A7EC6C2AD7834D0094BDA6 /* ImageCache.swift */,
 				68A7EBE32AD1538D0094BDA6 /* UIFont+PingFang.swift */,
 			);
 			path = "主页";
@@ -811,6 +827,7 @@
 		0C4387EC249B51DB008DBD78 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				68E334F62AD9128C008F537E /* loadinging.gif */,
 				0C4387ED249B51DB008DBD78 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -1084,6 +1101,14 @@
 			path = "系统IM消息";
 			sourceTree = "<group>";
 		};
+		68A7EC692AD77FD30094BDA6 /* 播放礼物特效示例 */ = {
+			isa = PBXGroup;
+			children = (
+				68A7EC6A2AD780190094BDA6 /* PlayEffectsViewController.swift */,
+			);
+			path = "播放礼物特效示例";
+			sourceTree = "<group>";
+		};
 		8CA9B65AF3EBC4F7A0A60761 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1157,6 +1182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68E334F72AD9128C008F537E /* loadinging.gif in Resources */,
 				0C76C1BF2631247D005580D8 /* PopDXCaptchaView.xib in Resources */,
 				0C4387DC249B4EF6008DBD78 /* Preview Assets.xcassets in Resources */,
 				0C14A0E1249B69C2005FE48A /* lufei.png in Resources */,
@@ -1245,6 +1271,7 @@
 				68A7EBD92AD13C1E0094BDA6 /* LogPlugin.swift in Sources */,
 				68A7EBD52AD13C1E0094BDA6 /* MyMoyaExmple.swift in Sources */,
 				2F8A3330265C99AB00A8639C /* YXBSocketCenter.m in Sources */,
+				68A7EC732AD8E5350094BDA6 /* Screen+Const.swift in Sources */,
 				0CC0C78724E3DE6E001AE32D /* AcountModel.m in Sources */,
 				0CC0C77B24E3DE6E001AE32D /* MessageAPI.m in Sources */,
 				0C14A0B5249B652D005FE48A /* YXBLanchManager.m in Sources */,
@@ -1253,6 +1280,7 @@
 				0C14A08D249B648D005FE48A /* MyRequst.m in Sources */,
 				0C14A0A3249B648D005FE48A /* YXBUIHelper.m in Sources */,
 				0C76C1AC26312467005580D8 /* RegisterAPI.m in Sources */,
+				68A7EC6B2AD780190094BDA6 /* PlayEffectsViewController.swift in Sources */,
 				689BE4982AC5C4A00024F4CE /* UIButton+YXB.swift in Sources */,
 				0C14A085249B648D005FE48A /* YXBCell.m in Sources */,
 				0C14A0A2249B648D005FE48A /* YXBThemeManager.m in Sources */,
@@ -1350,10 +1378,12 @@
 				68A7EC622AD66C130094BDA6 /* MSSystemNoticeModel.swift in Sources */,
 				0C14A0A5249B648D005FE48A /* QMUIConfigurationTemplate.m in Sources */,
 				0C14A0B6249B652D005FE48A /* YXBNavigationController.m in Sources */,
+				68A7EC7C2AD8F5B20094BDA6 /* MBProgressHUD+NH.m in Sources */,
 				0C76C1B526312467005580D8 /* LoginViewController.m in Sources */,
 				0C47C7B924E54D1C006945B9 /* PayPwdInput.swift in Sources */,
 				0CC0C78624E3DE6E001AE32D /* BannerModel.m in Sources */,
 				0C14A0B4249B652D005FE48A /* TabBarViewController.m in Sources */,
+				68A7EC6D2AD7834D0094BDA6 /* ImageCache.swift in Sources */,
 				68A7EBDC2AD13C1E0094BDA6 /* ProgressPlugin.swift in Sources */,
 				0C14A093249B648D005FE48A /* YXBUnicode.m in Sources */,
 				0C14A0B3249B652D005FE48A /* LanchAPI.m in Sources */,

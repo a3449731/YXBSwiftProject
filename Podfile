@@ -1,7 +1,7 @@
 #source 'https://github.com/CocoaPods/Specs.git'
 source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 
- platform :ios, '11.0'
+ platform :ios, '12.0'
 
 target 'YXBSwiftProject' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -22,7 +22,7 @@ pod 'MJRefresh','~> 3.1.12'
 pod 'DZNEmptyDataSet', '~> 1.8.1'
 pod 'Toast', '~> 3.1.0'
 pod 'SVProgressHUD', '~> 2.1.2'
-pod 'MBProgressHUD','~> 1.0.0'
+pod 'MBProgressHUD','~> 1.1.0'
 pod 'TZImagePickerController', '~> 3.2.7'
 #pod 'IDMPhotoBrowser', '~> 1.11.3' #依赖SDWebImage 与SDCycleScrollView冲突,先导入SDCycleScrollView
 pod 'SGQRCode', '~> 3.0.1' # 扫码
@@ -43,6 +43,9 @@ pod 'JXPagingView/Pager', '~> 2.0.0.0'
 pod 'XLForm', '~> 4.1.0'
 pod 'IQKeyboardManager', '~> 6.5.4'
 pod 'SocketRocket', '~> 0.5.1'
+
+# 腾讯的VAP，用于播放礼物特效，支持lottie，gif,apng,webp,mp4,vap
+pod 'QGVAPlayer'
 
 # 友盟
 pod 'UMCommon'
@@ -97,6 +100,7 @@ def swiftFoundation
   pod 'HandyJSON'
   pod 'ObjectMapper'
   pod 'MJExtension'
+  pod 'Kingfisher'
   
 end
 

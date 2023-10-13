@@ -12,13 +12,27 @@ import Moya
 struct ProgressPlugin {
     func cteatProgressPlugin() -> NetworkActivityPlugin  {
         NetworkActivityPlugin { change, target in
-            
             DispatchQueue.main.async {
+                
+//                let hud = MBProgressHUD.showAdded(to: UIApplication.shared.currentUIWindow()!, animated: true)
+//                // 创建UIImageView来显示自定义的GIF图
+//                let gifImageView = UIImageView(frame: CGRect(x: 50, y: 50, width: 100, height: 100))
+//                let url = Bundle.main.url(forResource: "loading", withExtension: "gif")
+////                gifImageView.image = UIImage(named: "loading")
+//                gifImageView.sd_setImage(with: url)
+//                hud.customView = gifImageView
+//                // 设置模式为自定义视图
+//                hud.mode = .customView
+//                // 隐藏时是否从父视图移除
+//                hud.removeFromSuperViewOnHide = true
+////                // 隐藏MBProgressHUD
+////                hud.hide(animated: true, afterDelay: 3.0)
+                
                 switch change {
                 case .began:
-                    NetworkActivityIndicator.shared.incrementActivityCount()
+                    MBProgressHUD.showGif(to: UIApplication.shared.currentUIWindow())
                 case .ended:
-                    NetworkActivityIndicator.shared.decrementActivityCount()
+                    MBProgressHUD.hideGifHUD(for: UIApplication.shared.currentUIWindow())
                 }
             }
         }

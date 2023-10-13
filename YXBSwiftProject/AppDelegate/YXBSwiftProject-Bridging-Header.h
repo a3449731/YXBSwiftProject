@@ -17,6 +17,8 @@
 
 // UI库
 #import <QMUIKit/QMUIKit.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import "MBProgressHUD+NH.h"
 
 // 主题
 #import "YXBThemeManager.h"

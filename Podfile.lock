@@ -34,8 +34,9 @@ PODS:
   - IQKeyboardManager (6.5.5)
   - JXCategoryView (1.5.5)
   - JXPagingView/Pager (2.0.0)
+  - Kingfisher (7.9.1)
   - Masonry (1.1.0)
-  - MBProgressHUD (1.0.0)
+  - MBProgressHUD (1.1.0)
   - MJExtension (3.4.1)
   - MJRefresh (3.1.17)
   - Moya (15.0.0):
@@ -47,6 +48,7 @@ PODS:
     - MZAppearance
   - ObjectMapper (4.2.0)
   - PPNumberButton (0.8.0)
+  - QGVAPlayer (1.0.19)
   - QMUIKit (4.3.0):
     - QMUIKit/QMUIComponents (= 4.3.0)
     - QMUIKit/QMUICore (= 4.3.0)
@@ -563,14 +565,16 @@ DEPENDENCIES:
   - IQKeyboardManager (~> 6.5.4)
   - JXCategoryView (~> 1.5.5)
   - JXPagingView/Pager (~> 2.0.0.0)
+  - Kingfisher
   - Masonry (~> 1.1.0)
-  - MBProgressHUD (~> 1.0.0)
+  - MBProgressHUD (~> 1.1.0)
   - MJExtension
   - MJRefresh (~> 3.1.12)
   - Moya
   - MZFormSheetPresentationController (~> 2.4.3)
   - ObjectMapper
   - PPNumberButton (~> 0.8.0)
+  - QGVAPlayer
   - QMUIKit
   - R.swift
   - ReactiveObjC
@@ -631,6 +635,7 @@ SPEC REPOS:
     - IQKeyboardManager
     - JXCategoryView
     - JXPagingView
+    - Kingfisher
     - Masonry
     - MBProgressHUD
     - MJExtension
@@ -640,6 +645,7 @@ SPEC REPOS:
     - MZFormSheetPresentationController
     - ObjectMapper
     - PPNumberButton
+    - QGVAPlayer
     - QMUIKit
     - R.swift
     - R.swift.Library
@@ -716,8 +722,9 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JXCategoryView: 0293fcb356f10a5c2e679dac0a1a5f1899ee0c87
   JXPagingView: da30adb74743852f7ef95fa894041953894ebd09
+  Kingfisher: 1d14e9f59cbe19389f591c929000332bf70efd32
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
   MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
@@ -725,6 +732,7 @@ SPEC CHECKSUMS:
   MZFormSheetPresentationController: fbfdbad31884f16fac17fbe3c44c168306cc1095
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
+  QGVAPlayer: a0bca68c9bd6f1c8de5ac2d10ddf98be6038cce9
   QMUIKit: 67888be9aa0ee0b12b8a219fcea2eec900afd841
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
@@ -767,6 +775,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: bad13e2e6b5df20031cf6ea29fd3f1f530352481
+PODFILE CHECKSUM: 54682d5fc708c5ac90b7cce4b95529ab969589db
 
 COCOAPODS: 1.12.1
