@@ -183,6 +183,8 @@
 		68A7EC732AD8E5350094BDA6 /* Screen+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC722AD8E5350094BDA6 /* Screen+Const.swift */; };
 		68A7EC7C2AD8F5B20094BDA6 /* MBProgressHUD+NH.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC7B2AD8F5B20094BDA6 /* MBProgressHUD+NH.m */; };
 		68E334F72AD9128C008F537E /* loadinging.gif in Resources */ = {isa = PBXBuildFile; fileRef = 68E334F62AD9128C008F537E /* loadinging.gif */; };
+		68E334F92ADA7999008F537E /* refeshIcon.gif in Resources */ = {isa = PBXBuildFile; fileRef = 68E334F82ADA7999008F537E /* refeshIcon.gif */; };
+		68E334FB2ADA7B7B008F537E /* YXBGifRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E334FA2ADA7B7B008F537E /* YXBGifRefreshHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -468,6 +470,8 @@
 		68A7EC7A2AD8F5B20094BDA6 /* MBProgressHUD+NH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NH.h"; sourceTree = "<group>"; };
 		68A7EC7B2AD8F5B20094BDA6 /* MBProgressHUD+NH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+NH.m"; sourceTree = "<group>"; };
 		68E334F62AD9128C008F537E /* loadinging.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loadinging.gif; sourceTree = "<group>"; };
+		68E334F82ADA7999008F537E /* refeshIcon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = refeshIcon.gif; sourceTree = "<group>"; };
+		68E334FA2ADA7B7B008F537E /* YXBGifRefreshHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBGifRefreshHeader.swift; sourceTree = "<group>"; };
 		82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXBSwiftProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -675,6 +679,7 @@
 				0C14A0BE249B65EA005FE48A /* SPHomeViewController.m */,
 				68A7EC7A2AD8F5B20094BDA6 /* MBProgressHUD+NH.h */,
 				68A7EC7B2AD8F5B20094BDA6 /* MBProgressHUD+NH.m */,
+				68E334FA2ADA7B7B008F537E /* YXBGifRefreshHeader.swift */,
 				689BE4882AC451EB0024F4CE /* MyUIFactory.swift */,
 				689BE48D2AC472F10024F4CE /* UIColor+Const.swift */,
 				68A7EBE52AD153A40094BDA6 /* UIFont+Const.swift */,
@@ -827,6 +832,7 @@
 		0C4387EC249B51DB008DBD78 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				68E334F82ADA7999008F537E /* refeshIcon.gif */,
 				68E334F62AD9128C008F537E /* loadinging.gif */,
 				0C4387ED249B51DB008DBD78 /* Assets.xcassets */,
 			);
@@ -1184,6 +1190,7 @@
 			files = (
 				68E334F72AD9128C008F537E /* loadinging.gif in Resources */,
 				0C76C1BF2631247D005580D8 /* PopDXCaptchaView.xib in Resources */,
+				68E334F92ADA7999008F537E /* refeshIcon.gif in Resources */,
 				0C4387DC249B4EF6008DBD78 /* Preview Assets.xcassets in Resources */,
 				0C14A0E1249B69C2005FE48A /* lufei.png in Resources */,
 				0C47C7A524E52242006945B9 /* PaymentKeyboardView.xib in Resources */,
@@ -1359,6 +1366,7 @@
 				0C14A0A4249B648D005FE48A /* QMUIConfigurationTemplateWhite.m in Sources */,
 				689BE4962AC5AE300024F4CE /* YXBCountDownButton.swift in Sources */,
 				0C14A0E4249B69C2005FE48A /* YXBPageContentTableViewController.m in Sources */,
+				68E334FB2ADA7B7B008F537E /* YXBGifRefreshHeader.swift in Sources */,
 				0C76C1B326312467005580D8 /* PSSPayPassViewController.m in Sources */,
 				0C14A09F249B648D005FE48A /* NSObject+YXBAdd.m in Sources */,
 				687608A42AC2A376000EED59 /* GJNetWorkHostUrl.m in Sources */,

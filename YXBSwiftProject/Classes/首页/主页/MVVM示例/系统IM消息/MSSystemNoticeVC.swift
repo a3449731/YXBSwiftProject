@@ -80,7 +80,7 @@ import MJRefresh
 
     // MARK: - MJRefresh
     private func creatMJRefresh() {
-        tableview.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(refreshData))
+        tableview.mj_header = YXBGifRefreshHeader(refreshingTarget: self, refreshingAction: #selector(refreshData))
         tableview.mj_footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreData))
         // 双向绑定
         bindHasMoreData()

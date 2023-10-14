@@ -13,7 +13,7 @@ import RxCocoa
 class MSSystemNoticeViewModel {
     var modelArray: BehaviorRelay<[MSSystemNoticeModel]> = BehaviorRelay(value: [])
     var currentPage = 1
-    let size = 10
+    let size = 2
     // 观察是否有更多数据
     var hasMoreData: BehaviorRelay<Bool> = BehaviorRelay(value: true)
     
