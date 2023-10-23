@@ -13,6 +13,7 @@ enum MyPluginEnum: Equatable, Hashable {
 //    case log // 对应Moya自带的日志插件 NetworkLoggerPlugin
     case logCustom  
     case progress // 对应Moya自带的网络加载转菊花 NetworkActivityPlugin
+    case rsa // 加密
 
     var plugin: PluginType {
         switch self {
@@ -24,6 +25,8 @@ enum MyPluginEnum: Equatable, Hashable {
             return LogCustomPlugin()
         case .progress:
             return ProgressPlugin().cteatProgressPlugin()
+        case .rsa:
+            return RSAPlugin()
         }
     }
 

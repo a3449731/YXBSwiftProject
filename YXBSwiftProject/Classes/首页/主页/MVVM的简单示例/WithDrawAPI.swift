@@ -20,15 +20,20 @@ extension WithDrawAPI: APIService {
     }
     
     var parameters: APIParameters? {
-        // 需要的参数和，解析方法，解析方式可以为空。
-        typealias PE = (parameters: [String: Any], encoding: ParameterEncoding?)
-        var result: PE = ([:], nil)
-        
-        switch self {
-        
-        default:
-            return nil
+        get {
+            // 需要的参数和，解析方法，解析方式可以为空。
+            typealias PE = (parameters: [String: Any], encoding: ParameterEncoding?)
+            var result: PE = ([:], nil)
+            
+            switch self {
+            
+            default:
+                return nil
+            }
+            return APIParameters(values: result.parameters, encoding: result.encoding)
         }
-        return APIParameters(values: result.parameters, encoding: result.encoding)
+        set {
+//            self.parameters = newValue
+        }
     }
 }

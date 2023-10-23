@@ -9,6 +9,7 @@
 #import "SPHomeViewController.h"
 #import "YXBSwiftProject-Swift.h"
 #import "MBProgressHUD+NH.h"
+#import "SPHornalCollectionViewController.h"
 
 @interface SPHomeViewController ()
 
@@ -68,6 +69,20 @@
     }];
     [playButton addTarget:self action:@selector(playAction:) forControlEvents:(UIControlEventTouchUpInside)];
     
+    
+    UIButton *dressButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [dressButton setTitle:@"装扮中心" forState:(UIControlStateNormal)];
+    [dressButton setTitleColor: [YXBThemeManager sharedInstance].titleTextColor forState:(UIControlStateNormal)];
+    [self.view addSubview:dressButton];
+    [dressButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(100);
+        make.top.mas_equalTo(300);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(50);
+    }];
+    [dressButton addTarget:self action:@selector(dressAction:) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    
     UIImageView *imageView = [[UIImageView alloc] init];
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"loading" withExtension:@"gif"];
 //    UIImage *image = [UIImage imageNamed:@"loading.gif"];
@@ -112,6 +127,11 @@
     PlayEffectsViewController *vc = [[PlayEffectsViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 //    [YXBThemeManager sharedInstance].currentThemeIdentifier = YXBThemeIndetifierWhite;
+}
+
+- (void)dressAction:(UIButton *)button {
+    MSDressSegmentVC *vc = [[MSDressSegmentVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

@@ -44,6 +44,7 @@ pod 'XLForm', '~> 4.1.0'
 pod 'IQKeyboardManager', '~> 6.5.4'
 pod 'SocketRocket', '~> 0.5.1'
 
+pod 'SVGAPlayer'
 # 腾讯的VAP，用于播放礼物特效，支持lottie，gif,apng,webp,mp4,vap
 pod 'QGVAPlayer'
 
@@ -101,6 +102,9 @@ def swiftFoundation
   pod 'ObjectMapper'
   pod 'MJExtension'
   pod 'Kingfisher'
+  pod 'JXSegmentedView'   # JXCategoryView 的 swift 版本
+  # 下载资源的库。
+  pod 'Tiercel'
   
 end
 

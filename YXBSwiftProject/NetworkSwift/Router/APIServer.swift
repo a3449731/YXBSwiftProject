@@ -31,7 +31,7 @@ protocol APIService: TargetType {
     /// The headers to be used in the request.
     var headers: [String: String]? { get }
     
-    var parameters: APIParameters? { get }
+    var parameters: APIParameters? { get}
     /// API 路由和 HTTP 方法，不包含域名、服务名和版本号，
     ///
     /// 如一个 GET API 完整地址为 http://xx.com/message/v1/group/create
@@ -90,7 +90,9 @@ extension APIService {
     }
     
     var parameters: APIParameters? {
-        nil
+        get {
+            return nil
+        }
     }
     
     var identifier: String {

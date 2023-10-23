@@ -6,7 +6,7 @@
 //  Copyright © 2023 ShengChang. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIFont {
     public class var titleFont_16: UIFont {
@@ -17,7 +17,23 @@ extension UIFont {
         UIFont.pingFang(fontSize: 14, style: .medium)
     }
     
+    public class var titleFont_18: UIFont {
+        UIFont.pingFang(fontSize: 18, style: .medium)
+    }
+    
+    public class var titleFont_10: UIFont {
+        UIFont.pingFang(fontSize: 10, style: .medium)
+    }
+    
     public class var subTitleFont_14: UIFont {
         UIFont.pingFang(fontSize: 14, style: .medium)
+    }
+    
+    public class var subTitleFont_12: UIFont {
+        UIFont.pingFang(fontSize: 12, style: .medium)
+    }
+    
+    public class var subTitleFont_10: UIFont {
+        UIFont.pingFang(fontSize: 10, style: .medium)
     }
 }

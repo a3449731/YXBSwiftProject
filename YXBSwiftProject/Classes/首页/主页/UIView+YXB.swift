@@ -62,6 +62,48 @@ extension UIView {
     }
 }
 
+// MARK: 四个圆角，支持约束。
+extension UIView {
+    /// Set the corner radius of UIView only at the given corner.
+    /// Currently doesn't support `frame` property changes.
+    /// If you change the frame, you have to call this function again.
+    ///
+    /// - Parameters:
+    ///   - corners: Corners to apply radius.
+    ///   - radius: Radius value.
+    func cornerRadius(corners: UIRectCorner, radius: CGFloat) {
+        if #available(iOS 11, *) {
+            var cornerMask: CACornerMask = []
+            if corners.contains(.allCorners) {
+                cornerMask = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
+            } else {
+                if corners.contains(.bottomLeft) {
+                    cornerMask.update(with: .layerMinXMaxYCorner)
+                }
+                if corners.contains(.bottomRight) {
+                    cornerMask.update(with: .layerMaxXMaxYCorner)
+                }
+                if corners.contains(.topLeft) {
+                    cornerMask.update(with: .layerMinXMinYCorner)
+                }
+                if corners.contains(.topRight) {
+                    cornerMask.update(with: .layerMaxXMinYCorner)
+                }
+            }
+            
+            layer.cornerRadius = radius
+            layer.masksToBounds = true
+            layer.maskedCorners = cornerMask
+        } else {
+            let rectShape = CAShapeLayer()
+            rectShape.bounds = frame
+            rectShape.position = center
+            rectShape.path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
+            layer.mask = rectShape
+        }
+    }
+}
+
 
 // MARK: 渐变
 extension UIView {

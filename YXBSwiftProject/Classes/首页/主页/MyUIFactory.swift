@@ -41,7 +41,7 @@ struct MyUIFactory {
         if url != nil {
             imageView.sd_setImage(with: URL(string: url!), placeholderImage: (placeholderImage != nil) ? UIImage(named: placeholderImage!) : nil)
         } else {
-            imageView.image = UIImage(named: name ?? "")
+            imageView.image = (name == nil) ? nil : UIImage(named: name!)
         }
         imageView.contentMode = contentMode
         return imageView
@@ -62,6 +62,22 @@ struct MyUIFactory {
     static func commonButton(title: String?, titleColor: UIColor?, titleFont: UIFont?,
                              image: UIImage?, bgColor: UIColor? = nil) -> UIButton {
         let btn = UIButton(type: .custom)
+        btn.preventDoubleTap(interval: 1) // 防止重复点击
+        btn.setTitle(title, for: .normal)
+        btn.setImage(image, for: .normal)
+        btn.setTitleColor(titleColor, for: .normal)
+        if let font = titleFont {
+            btn.titleLabel?.font = font
+        }
+        btn.backgroundColor = bgColor
+        return btn
+    }
+    
+    
+    /// 创建GradientButton,这样创建节省一点代码行数,可以使用渐变色
+    static func commonGradientButton(title: String?, titleColor: UIColor?, titleFont: UIFont?,
+                             image: UIImage?, bgColor: UIColor? = nil) -> GradientButton {
+        let btn = GradientButton(type: .custom)
         btn.preventDoubleTap(interval: 1) // 防止重复点击
         btn.setTitle(title, for: .normal)
         btn.setImage(image, for: .normal)

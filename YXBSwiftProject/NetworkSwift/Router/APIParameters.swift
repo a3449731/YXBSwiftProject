@@ -8,7 +8,7 @@
 import Moya
 
 struct APIParameters {
-    let values: [String: Any]
+    var values: [String: Any]?
     let encoding: ParameterEncoding? // 假设此处的 ParameterEncoding 是 Moya 中的一种编码方式
 }
 

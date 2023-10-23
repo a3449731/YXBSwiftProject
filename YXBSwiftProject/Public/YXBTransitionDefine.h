@@ -59,6 +59,20 @@ NS_INLINE UIViewController * getCuttentViewController(){
     return vc;
 }
 
+NS_INLINE UIViewController * getCuttentVisibleViewController(){
+    UIViewController *vc = nil;
+    UIWindow *window = [UIApplication sharedApplication].windows.firstObject;
+    if ([window.rootViewController isKindOfClass:[UINavigationController class]]){
+        vc = [(UINavigationController *)window.rootViewController visibleViewController];
+    }else if ([window.rootViewController isKindOfClass:[UITabBarController class]]){
+        UITabBarController *tabVC = (UITabBarController*)window.rootViewController;
+        vc = [(UINavigationController *)[tabVC selectedViewController] visibleViewController];
+    }
+    else{
+        vc = window.rootViewController;
+    }
+    return vc;
+}
 
 NS_INLINE void InvalidateScrollViewAdjustBehavior(UIViewController *vc, UIScrollView *scrollView) {
     if (@available(iOS 11.0, *)) {

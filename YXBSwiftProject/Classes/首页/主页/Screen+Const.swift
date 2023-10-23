@@ -80,6 +80,7 @@ final class ScreenConst {
 
 extension UIApplication {
     
+    /// 找到当前展示的window
     func currentUIWindow() -> UIWindow? {
         if #available(iOS 13.0, *){
             let connectedScenes = UIApplication.shared.connectedScenes
@@ -95,6 +96,29 @@ extension UIApplication {
         }else{
             return UIApplication.shared.windows.first
         }
+    }
+    
+    /// 找到keyWindow
+    func getKeyWindow() -> UIWindow? {
+        var keyWindow: UIWindow? = nil
+        
+        if #available(iOS 13.0, *) {
+            let connectedScenes = UIApplication.shared.connectedScenes
+            for scene in connectedScenes {
+                if let windowScene = scene as? UIWindowScene, scene.activationState == .foregroundActive {
+                    for window in windowScene.windows {
+                        if window.isKeyWindow {
+                            keyWindow = window
+                            break
+                        }
+                    }
+                }
+            }
+        } else {
+            keyWindow = UIApplication.shared.keyWindow
+        }
+        
+        return keyWindow
     }
     
 //    func navBarHeight() -> CGFloat{ return 44 }
@@ -131,5 +155,27 @@ extension UIApplication {
         }else{
             return windows.first?.safeAreaInsets.bottom ?? 0 + tabbarH
         }
+    }
+}
+
+// 为适配屏幕做的简便写法
+extension Numeric {
+    func fitScale() -> Self {
+        let ratio = CGFloat(truncating: self as! NSNumber) * ScreenConst.ScreenRatio
+        return Self(integerLiteral: ratio as! Self.IntegerLiteralType)
+    }
+}
+
+extension Int {
+    func fitScale() -> Self {
+        let ratio = CGFloat(self) * ScreenConst.ScreenRatio
+        return Int(ratio)
+    }
+}
+
+extension Double {
+    func fitScale() -> Self {
+        let ratio = CGFloat(self) * ScreenConst.ScreenRatio
+        return Double(ratio)
     }
 }

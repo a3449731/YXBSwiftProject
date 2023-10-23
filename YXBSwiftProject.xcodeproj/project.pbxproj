@@ -182,9 +182,30 @@
 		68A7EC6D2AD7834D0094BDA6 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC6C2AD7834D0094BDA6 /* ImageCache.swift */; };
 		68A7EC732AD8E5350094BDA6 /* Screen+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC722AD8E5350094BDA6 /* Screen+Const.swift */; };
 		68A7EC7C2AD8F5B20094BDA6 /* MBProgressHUD+NH.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EC7B2AD8F5B20094BDA6 /* MBProgressHUD+NH.m */; };
+		68AC9B392AE6241100C1B5EF /* MyDressPreviewView+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC9B372AE6241100C1B5EF /* MyDressPreviewView+Protocol.swift */; };
+		68AC9B3A2AE6241100C1B5EF /* MSDressPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC9B382AE6241100C1B5EF /* MSDressPreviewView.swift */; };
+		68AC9B3D2AE6244B00C1B5EF /* PlayEffectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC9B3B2AE6244A00C1B5EF /* PlayEffectsView.swift */; };
+		68AC9B3E2AE6244B00C1B5EF /* HeaderStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC9B3C2AE6244A00C1B5EF /* HeaderStaticView.swift */; };
 		68E334F72AD9128C008F537E /* loadinging.gif in Resources */ = {isa = PBXBuildFile; fileRef = 68E334F62AD9128C008F537E /* loadinging.gif */; };
 		68E334F92ADA7999008F537E /* refeshIcon.gif in Resources */ = {isa = PBXBuildFile; fileRef = 68E334F82ADA7999008F537E /* refeshIcon.gif */; };
 		68E334FB2ADA7B7B008F537E /* YXBGifRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E334FA2ADA7B7B008F537E /* YXBGifRefreshHeader.swift */; };
+		68E335082ADE92C1008F537E /* IPNRSAUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E335062ADE92C1008F537E /* IPNRSAUtil.m */; };
+		68E3350A2ADF77E1008F537E /* RSAPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E335092ADF77E1008F537E /* RSAPlugin.swift */; };
+		68E3350D2ADFA306008F537E /* NetWorkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E3350C2ADFA306008F537E /* NetWorkEngine.m */; };
+		68E335102AE0DB69008F537E /* SPHornalCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E3350F2AE0DB69008F537E /* SPHornalCollectionViewController.m */; };
+		68E335192AE0EC55008F537E /* HLHorizontalPageLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E335182AE0EC55008F537E /* HLHorizontalPageLayout.m */; };
+		68E3352D2AE13AE8008F537E /* MSDressCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3352A2AE13AE8008F537E /* MSDressCenterVC.swift */; };
+		68E3352E2AE13AE8008F537E /* MSDressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3352B2AE13AE8008F537E /* MSDressModel.swift */; };
+		68E3352F2AE13AE8008F537E /* MSDressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3352C2AE13AE8008F537E /* MSDressViewModel.swift */; };
+		68E335312AE13AF3008F537E /* My+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E335302AE13AF3008F537E /* My+API.swift */; };
+		68E335332AE20823008F537E /* MSDressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E335322AE20823008F537E /* MSDressCell.swift */; };
+		68E335352AE23ECC008F537E /* MSDressSegmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E335342AE23ECC008F537E /* MSDressSegmentVC.swift */; };
+		68E335372AE256A6008F537E /* MSDressBuyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E335362AE256A6008F537E /* MSDressBuyVC.swift */; };
+		68E335392AE26117008F537E /* PopoverManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E335382AE26117008F537E /* PopoverManager.swift */; };
+		68E3353B2AE2615F008F537E /* PopoverBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3353A2AE2615F008F537E /* PopoverBaseView.swift */; };
+		68E3353D2AE271B6008F537E /* MSDressBuyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3353C2AE271B6008F537E /* MSDressBuyViewModel.swift */; };
+		68E3353F2AE276DA008F537E /* MSDressBuyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3353E2AE276DA008F537E /* MSDressBuyCell.swift */; };
+		68E3354D2AE37A03008F537E /* ToastPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3354C2AE37A03008F537E /* ToastPlugin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -469,9 +490,34 @@
 		68A7EC722AD8E5350094BDA6 /* Screen+Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Screen+Const.swift"; sourceTree = "<group>"; };
 		68A7EC7A2AD8F5B20094BDA6 /* MBProgressHUD+NH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NH.h"; sourceTree = "<group>"; };
 		68A7EC7B2AD8F5B20094BDA6 /* MBProgressHUD+NH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+NH.m"; sourceTree = "<group>"; };
+		68AC9B372AE6241100C1B5EF /* MyDressPreviewView+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyDressPreviewView+Protocol.swift"; sourceTree = "<group>"; };
+		68AC9B382AE6241100C1B5EF /* MSDressPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSDressPreviewView.swift; sourceTree = "<group>"; };
+		68AC9B3B2AE6244A00C1B5EF /* PlayEffectsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayEffectsView.swift; sourceTree = "<group>"; };
+		68AC9B3C2AE6244A00C1B5EF /* HeaderStaticView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderStaticView.swift; sourceTree = "<group>"; };
 		68E334F62AD9128C008F537E /* loadinging.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loadinging.gif; sourceTree = "<group>"; };
 		68E334F82ADA7999008F537E /* refeshIcon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = refeshIcon.gif; sourceTree = "<group>"; };
 		68E334FA2ADA7B7B008F537E /* YXBGifRefreshHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBGifRefreshHeader.swift; sourceTree = "<group>"; };
+		68E335062ADE92C1008F537E /* IPNRSAUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPNRSAUtil.m; sourceTree = "<group>"; };
+		68E335072ADE92C1008F537E /* IPNRSAUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPNRSAUtil.h; sourceTree = "<group>"; };
+		68E335092ADF77E1008F537E /* RSAPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAPlugin.swift; sourceTree = "<group>"; };
+		68E3350B2ADFA306008F537E /* NetWorkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkEngine.h; sourceTree = "<group>"; };
+		68E3350C2ADFA306008F537E /* NetWorkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkEngine.m; sourceTree = "<group>"; };
+		68E3350E2AE0DB69008F537E /* SPHornalCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHornalCollectionViewController.h; sourceTree = "<group>"; };
+		68E3350F2AE0DB69008F537E /* SPHornalCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHornalCollectionViewController.m; sourceTree = "<group>"; };
+		68E335172AE0EC55008F537E /* HLHorizontalPageLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLHorizontalPageLayout.h; sourceTree = "<group>"; };
+		68E335182AE0EC55008F537E /* HLHorizontalPageLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLHorizontalPageLayout.m; sourceTree = "<group>"; };
+		68E3352A2AE13AE8008F537E /* MSDressCenterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSDressCenterVC.swift; sourceTree = "<group>"; };
+		68E3352B2AE13AE8008F537E /* MSDressModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSDressModel.swift; sourceTree = "<group>"; };
+		68E3352C2AE13AE8008F537E /* MSDressViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSDressViewModel.swift; sourceTree = "<group>"; };
+		68E335302AE13AF3008F537E /* My+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "My+API.swift"; sourceTree = "<group>"; };
+		68E335322AE20823008F537E /* MSDressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSDressCell.swift; sourceTree = "<group>"; };
+		68E335342AE23ECC008F537E /* MSDressSegmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSDressSegmentVC.swift; sourceTree = "<group>"; };
+		68E335362AE256A6008F537E /* MSDressBuyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSDressBuyVC.swift; sourceTree = "<group>"; };
+		68E335382AE26117008F537E /* PopoverManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverManager.swift; sourceTree = "<group>"; };
+		68E3353A2AE2615F008F537E /* PopoverBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverBaseView.swift; sourceTree = "<group>"; };
+		68E3353C2AE271B6008F537E /* MSDressBuyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSDressBuyViewModel.swift; sourceTree = "<group>"; };
+		68E3353E2AE276DA008F537E /* MSDressBuyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSDressBuyCell.swift; sourceTree = "<group>"; };
+		68E3354C2AE37A03008F537E /* ToastPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastPlugin.swift; sourceTree = "<group>"; };
 		82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXBSwiftProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -672,13 +718,22 @@
 		0C14A0BC249B65C0005FE48A /* 主页 */ = {
 			isa = PBXGroup;
 			children = (
+				68E335282AE13AC0008F537E /* MVVM装扮中心示例 */,
 				68A7EC692AD77FD30094BDA6 /* 播放礼物特效示例 */,
 				68A7EC5C2AD66B500094BDA6 /* MVVM示例 */,
 				68A7EBF72AD410B30094BDA6 /* MVVM的简单示例 */,
 				0C14A0BD249B65EA005FE48A /* SPHomeViewController.h */,
 				0C14A0BE249B65EA005FE48A /* SPHomeViewController.m */,
+				68E335172AE0EC55008F537E /* HLHorizontalPageLayout.h */,
+				68E335182AE0EC55008F537E /* HLHorizontalPageLayout.m */,
+				68E3350E2AE0DB69008F537E /* SPHornalCollectionViewController.h */,
+				68E3350F2AE0DB69008F537E /* SPHornalCollectionViewController.m */,
 				68A7EC7A2AD8F5B20094BDA6 /* MBProgressHUD+NH.h */,
 				68A7EC7B2AD8F5B20094BDA6 /* MBProgressHUD+NH.m */,
+				68E335072ADE92C1008F537E /* IPNRSAUtil.h */,
+				68E335062ADE92C1008F537E /* IPNRSAUtil.m */,
+				68E3350B2ADFA306008F537E /* NetWorkEngine.h */,
+				68E3350C2ADFA306008F537E /* NetWorkEngine.m */,
 				68E334FA2ADA7B7B008F537E /* YXBGifRefreshHeader.swift */,
 				689BE4882AC451EB0024F4CE /* MyUIFactory.swift */,
 				689BE48D2AC472F10024F4CE /* UIColor+Const.swift */,
@@ -691,6 +746,10 @@
 				689BE4952AC5AE300024F4CE /* YXBCountDownButton.swift */,
 				68A7EC6C2AD7834D0094BDA6 /* ImageCache.swift */,
 				68A7EBE32AD1538D0094BDA6 /* UIFont+PingFang.swift */,
+				68E335382AE26117008F537E /* PopoverManager.swift */,
+				68E3353A2AE2615F008F537E /* PopoverBaseView.swift */,
+				68AC9B3C2AE6244A00C1B5EF /* HeaderStaticView.swift */,
+				68AC9B3B2AE6244A00C1B5EF /* PlayEffectsView.swift */,
 			);
 			path = "主页";
 			sourceTree = "<group>";
@@ -1063,6 +1122,8 @@
 				68A7EBD32AD13C1E0094BDA6 /* AuthPlugin.swift */,
 				68A7EBD42AD13C1E0094BDA6 /* ProgressPlugin.swift */,
 				68A7EBE92AD290590094BDA6 /* LogCustomPlugin.swift */,
+				68E3354C2AE37A03008F537E /* ToastPlugin.swift */,
+				68E335092ADF77E1008F537E /* RSAPlugin.swift */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -1113,6 +1174,40 @@
 				68A7EC6A2AD780190094BDA6 /* PlayEffectsViewController.swift */,
 			);
 			path = "播放礼物特效示例";
+			sourceTree = "<group>";
+		};
+		68AC9B362AE6241100C1B5EF /* 预览 */ = {
+			isa = PBXGroup;
+			children = (
+				68AC9B372AE6241100C1B5EF /* MyDressPreviewView+Protocol.swift */,
+				68AC9B382AE6241100C1B5EF /* MSDressPreviewView.swift */,
+			);
+			path = "预览";
+			sourceTree = "<group>";
+		};
+		68E335282AE13AC0008F537E /* MVVM装扮中心示例 */ = {
+			isa = PBXGroup;
+			children = (
+				68E335302AE13AF3008F537E /* My+API.swift */,
+				68E335292AE13AD3008F537E /* 装扮中心 */,
+			);
+			path = "MVVM装扮中心示例";
+			sourceTree = "<group>";
+		};
+		68E335292AE13AD3008F537E /* 装扮中心 */ = {
+			isa = PBXGroup;
+			children = (
+				68AC9B362AE6241100C1B5EF /* 预览 */,
+				68E335342AE23ECC008F537E /* MSDressSegmentVC.swift */,
+				68E3352A2AE13AE8008F537E /* MSDressCenterVC.swift */,
+				68E3352B2AE13AE8008F537E /* MSDressModel.swift */,
+				68E3352C2AE13AE8008F537E /* MSDressViewModel.swift */,
+				68E335322AE20823008F537E /* MSDressCell.swift */,
+				68E335362AE256A6008F537E /* MSDressBuyVC.swift */,
+				68E3353C2AE271B6008F537E /* MSDressBuyViewModel.swift */,
+				68E3353E2AE276DA008F537E /* MSDressBuyCell.swift */,
+			);
+			path = "装扮中心";
 			sourceTree = "<group>";
 		};
 		8CA9B65AF3EBC4F7A0A60761 /* Pods */ = {
@@ -1278,7 +1373,9 @@
 				68A7EBD92AD13C1E0094BDA6 /* LogPlugin.swift in Sources */,
 				68A7EBD52AD13C1E0094BDA6 /* MyMoyaExmple.swift in Sources */,
 				2F8A3330265C99AB00A8639C /* YXBSocketCenter.m in Sources */,
+				68E3350A2ADF77E1008F537E /* RSAPlugin.swift in Sources */,
 				68A7EC732AD8E5350094BDA6 /* Screen+Const.swift in Sources */,
+				68E3350D2ADFA306008F537E /* NetWorkEngine.m in Sources */,
 				0CC0C78724E3DE6E001AE32D /* AcountModel.m in Sources */,
 				0CC0C77B24E3DE6E001AE32D /* MessageAPI.m in Sources */,
 				0C14A0B5249B652D005FE48A /* YXBLanchManager.m in Sources */,
@@ -1306,6 +1403,8 @@
 				0CC0C78324E3DE6E001AE32D /* MemberModel.m in Sources */,
 				689BE4902AC48BDC0024F4CE /* UIView+YXB.swift in Sources */,
 				0C14A097249B648D005FE48A /* YXBCheckRegular.m in Sources */,
+				68AC9B3E2AE6244B00C1B5EF /* HeaderStaticView.swift in Sources */,
+				68E3353B2AE2615F008F537E /* PopoverBaseView.swift in Sources */,
 				0C14A096249B648D005FE48A /* ChineseToPinyin.m in Sources */,
 				0C14A0EA249B69C2005FE48A /* YXBFormLabelCell.m in Sources */,
 				689BE4922AC572A70024F4CE /* UIView+Gradient.swift in Sources */,
@@ -1314,15 +1413,21 @@
 				0C14A0A6249B648D005FE48A /* UserManager.m in Sources */,
 				0C14A0E5249B69C2005FE48A /* YXBPageTableViewController.m in Sources */,
 				0C14A0DF249B69C2005FE48A /* YXBPageViewController.m in Sources */,
+				68E335332AE20823008F537E /* MSDressCell.swift in Sources */,
+				68AC9B392AE6241100C1B5EF /* MyDressPreviewView+Protocol.swift in Sources */,
+				68E335352AE23ECC008F537E /* MSDressSegmentVC.swift in Sources */,
+				68E3353D2AE271B6008F537E /* MSDressBuyViewModel.swift in Sources */,
 				0C14A0BF249B65EA005FE48A /* SPHomeViewController.m in Sources */,
 				0C47C7B724E54A81006945B9 /* YXBPaymentModel.m in Sources */,
 				68A7EBE62AD153A40094BDA6 /* UIFont+Const.swift in Sources */,
 				0C14A084249B648D005FE48A /* YXBBaseModel.m in Sources */,
 				689BE4892AC451EB0024F4CE /* MyUIFactory.swift in Sources */,
 				68A7EBD82AD13C1E0094BDA6 /* APIServer.swift in Sources */,
+				68E335192AE0EC55008F537E /* HLHorizontalPageLayout.m in Sources */,
 				0C47C7AC24E52477006945B9 /* GlobalFuncs.swift in Sources */,
 				0C47C7A424E52242006945B9 /* PaymentkeyboardView.swift in Sources */,
 				0CC0C75D24E3DE2F001AE32D /* ForceUpdateView.m in Sources */,
+				68E3352E2AE13AE8008F537E /* MSDressModel.swift in Sources */,
 				0C14A0B7249B652D005FE48A /* LanchPageModel.m in Sources */,
 				68A7EC5A2AD65C390094BDA6 /* IM+API.swift in Sources */,
 				68A7EBE12AD13C2F0094BDA6 /* NetworkManager.swift in Sources */,
@@ -1331,10 +1436,12 @@
 				0C76C1B026312467005580D8 /* ModifyLoginPassAPI.m in Sources */,
 				2F0C906B27C48B520057108B /* YXBVerificationCodeView.m in Sources */,
 				0C76C1B726312467005580D8 /* ForgetSecretViewController.m in Sources */,
+				68E3353F2AE276DA008F537E /* MSDressBuyCell.swift in Sources */,
 				68A7EBF42AD3E4D10094BDA6 /* BindBankHandyJsonModel.swift in Sources */,
 				0C14A095249B648D005FE48A /* CDDetailHeaderView.m in Sources */,
 				68A7EBD72AD13C1E0094BDA6 /* APIRouter.swift in Sources */,
 				0C14A0EC249B69C2005FE48A /* YXBFormLeftRightBgCell.m in Sources */,
+				68E3352D2AE13AE8008F537E /* MSDressCenterVC.swift in Sources */,
 				0C14A089249B648D005FE48A /* YXBCollectionCell.m in Sources */,
 				0CDB809B25B0444600B62976 /* TwoLineButton.swift in Sources */,
 				0CDF01EC25EF841100EE10C1 /* UIColor+YXBGradient.m in Sources */,
@@ -1348,6 +1455,7 @@
 				0C76C1B626312467005580D8 /* YXBCaptchaView.m in Sources */,
 				0CDB809D25B0489300B62976 /* TwoLineLabel.swift in Sources */,
 				68A7EBE02AD13C2F0094BDA6 /* Env.swift in Sources */,
+				68E3352F2AE13AE8008F537E /* MSDressViewModel.swift in Sources */,
 				0CC0C78A24E3DEAC001AE32D /* NoticeModel.m in Sources */,
 				0C14A0A1249B648D005FE48A /* QMUIConfigurationTemplateDark.m in Sources */,
 				0CC0C79324E3EDD7001AE32D /* YXBInputView.m in Sources */,
@@ -1366,6 +1474,7 @@
 				0C14A0A4249B648D005FE48A /* QMUIConfigurationTemplateWhite.m in Sources */,
 				689BE4962AC5AE300024F4CE /* YXBCountDownButton.swift in Sources */,
 				0C14A0E4249B69C2005FE48A /* YXBPageContentTableViewController.m in Sources */,
+				68E335372AE256A6008F537E /* MSDressBuyVC.swift in Sources */,
 				68E334FB2ADA7B7B008F537E /* YXBGifRefreshHeader.swift in Sources */,
 				0C76C1B326312467005580D8 /* PSSPayPassViewController.m in Sources */,
 				0C14A09F249B648D005FE48A /* NSObject+YXBAdd.m in Sources */,
@@ -1375,11 +1484,13 @@
 				0CC0C77C24E3DE6E001AE32D /* GetConfigAPI.m in Sources */,
 				68A7EC632AD66C130094BDA6 /* MSSystemNoticeVC.swift in Sources */,
 				0C47C79E24E517C8006945B9 /* String+Subscript.swift in Sources */,
+				68AC9B3D2AE6244B00C1B5EF /* PlayEffectsView.swift in Sources */,
 				0CC0C78224E3DE6E001AE32D /* PersonalModel.m in Sources */,
 				0C14A0EB249B69C2005FE48A /* YXBFormButtonValueCell.m in Sources */,
 				0C47C7A324E52230006945B9 /* DigitalKeyboard.swift in Sources */,
 				0C14A08B249B648D005FE48A /* YXBSection.m in Sources */,
 				0C14A08A249B648D005FE48A /* YXBHeaderView.m in Sources */,
+				68E335102AE0DB69008F537E /* SPHornalCollectionViewController.m in Sources */,
 				0C14A08F249B648D005FE48A /* YXBConstDefine.m in Sources */,
 				0C14A086249B648D005FE48A /* YXBButtonCell.m in Sources */,
 				0CC0C79024E3DF60001AE32D /* JYDTPriceNuberButton.m in Sources */,
@@ -1400,10 +1511,12 @@
 				68A7EBD62AD13C1E0094BDA6 /* APIParameters.swift in Sources */,
 				68A7EBE22AD13C2F0094BDA6 /* NetworkError.swift in Sources */,
 				0CC0C77D24E3DE6E001AE32D /* MyRankAPI.m in Sources */,
+				68AC9B3A2AE6241100C1B5EF /* MSDressPreviewView.swift in Sources */,
 				0CC0C77E24E3DE6E001AE32D /* GetVersionAPI.m in Sources */,
 				0C14A08E249B648D005FE48A /* YXBNetConfiger.m in Sources */,
 				0C14A0A0249B648D005FE48A /* UIButton+YXBAdd.m in Sources */,
 				68A7EBEA2AD290590094BDA6 /* LogCustomPlugin.swift in Sources */,
+				68E335392AE26117008F537E /* PopoverManager.swift in Sources */,
 				0C14A0E7249B69C2005FE48A /* YXBFormLeftRightCell.m in Sources */,
 				68A7EBF22AD3E3270094BDA6 /* NetworkBasicResponse.swift in Sources */,
 				0CB9CF05260DDCFC00E82B13 /* PaymentService.swift in Sources */,
@@ -1412,6 +1525,8 @@
 				0CE5358A249B74F100FE14FB /* AppDelegate+YXBTheme.swift in Sources */,
 				0C47C7A924E523A0006945B9 /* PaymentSureInfoView.swift in Sources */,
 				689BE48E2AC472F10024F4CE /* UIColor+Const.swift in Sources */,
+				68E335312AE13AF3008F537E /* My+API.swift in Sources */,
+				68E335082ADE92C1008F537E /* IPNRSAUtil.m in Sources */,
 				0C14A09E249B648D005FE48A /* NSLayoutConstraint+AutoScale.m in Sources */,
 				68A7EBE82AD279CD0094BDA6 /* WithDrawAPI.swift in Sources */,
 				0C14A09A249B648D005FE48A /* UIView+Xib.m in Sources */,
@@ -1419,6 +1534,7 @@
 				0C14A0EF249B6A0D005FE48A /* YXBBaseViewController.m in Sources */,
 				0C76C1B126312467005580D8 /* ModifyPayPassAPI.m in Sources */,
 				0C14A098249B648D005FE48A /* YXBTapAreaButton.m in Sources */,
+				68E3354D2AE37A03008F537E /* ToastPlugin.swift in Sources */,
 				0C14A088249B648D005FE48A /* YXBImageCell.m in Sources */,
 				0C76C14826312163005580D8 /* NTVLocalized.m in Sources */,
 			);
@@ -1563,7 +1679,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"YXBSwiftProject/Preview Content\"";
-				DEVELOPMENT_TEAM = AP82MJSP3G;
+				DEVELOPMENT_TEAM = ZLTU3693N2;
 				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1594,7 +1710,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"YXBSwiftProject/Preview Content\"";
-				DEVELOPMENT_TEAM = AP82MJSP3G;
+				DEVELOPMENT_TEAM = ZLTU3693N2;
 				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (

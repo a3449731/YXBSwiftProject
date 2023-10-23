@@ -37,7 +37,7 @@ class NetworkManager<T: APIService> {
                                     success: @escaping (_ objc: Any) -> Void,
                                     failure: ((Error) -> Void)?) {
         // 将插件合起来，去创建新的provider
-        var plugins = (defaultPlugins + hotPlugins + [.auth]).map { $0 }
+        var plugins = ([.rsa] + defaultPlugins + hotPlugins + [.auth]).map { $0 }
 #if DEBUG
         plugins.append(.logCustom)
 #endif

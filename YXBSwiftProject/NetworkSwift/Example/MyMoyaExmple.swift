@@ -43,25 +43,30 @@ extension CatAPI: APIService {
     }
     
     var parameters: APIParameters? {
-        // 需要的参数和，解析方法，解析方式可以为空。
-        typealias PE = (parameters: [String: Any], encoding: ParameterEncoding?)
-        var result: PE = ([:], nil)
-        
-        switch self {
-        case .getTenCats(let limit):
-            result.parameters = ["limit": limit]
+        get {
+            // 需要的参数和，解析方法，解析方式可以为空。
+            typealias PE = (parameters: [String: Any], encoding: ParameterEncoding?)
+            var result: PE = ([:], nil)
             
-        case let .voteImage(image_id, value):
-            result.parameters = ["image_id": image_id, "value": value]
-        
-        case .favourites(let image_id):
-            result.parameters = ["image_id": image_id]
-        
-        default:
-            return nil
-        }
+            switch self {
+            case .getTenCats(let limit):
+                result.parameters = ["limit": limit]
                 
-        return APIParameters(values: result.parameters, encoding: result.encoding)
+            case let .voteImage(image_id, value):
+                result.parameters = ["image_id": image_id, "value": value]
+            
+            case .favourites(let image_id):
+                result.parameters = ["image_id": image_id]
+            
+            default:
+                return nil
+            }
+                    
+            return APIParameters(values: result.parameters, encoding: result.encoding)
+        }
+        set {
+            
+        }
     }
     
     var headers: [String : String]? {
