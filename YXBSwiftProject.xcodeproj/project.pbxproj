@@ -155,6 +155,10 @@
 		689BE4942AC581780024F4CE /* YXBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689BE4932AC581780024F4CE /* YXBButton.swift */; };
 		689BE4962AC5AE300024F4CE /* YXBCountDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689BE4952AC5AE300024F4CE /* YXBCountDownButton.swift */; };
 		689BE4982AC5C4A00024F4CE /* UIButton+YXB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689BE4972AC5C4A00024F4CE /* UIButton+YXB.swift */; };
+		68A37F672AE6514C0060421E /* PlayMP4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37F662AE6514C0060421E /* PlayMP4View.swift */; };
+		68A37F6E2AE7770A0060421E /* SPPlayMP4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A37F6D2AE7770A0060421E /* SPPlayMP4ViewController.m */; };
+		68A37F752AE7BF0C0060421E /* PlayVapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37F742AE7BF0C0060421E /* PlayVapView.swift */; };
+		68A37F7C2AE8E2AF0060421E /* RoomPlayMP4Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A37F7B2AE8E2AF0060421E /* RoomPlayMP4Manager.m */; };
 		68A7EBD52AD13C1E0094BDA6 /* MyMoyaExmple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBCB2AD13C1E0094BDA6 /* MyMoyaExmple.swift */; };
 		68A7EBD62AD13C1E0094BDA6 /* APIParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBCD2AD13C1E0094BDA6 /* APIParameters.swift */; };
 		68A7EBD72AD13C1E0094BDA6 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBCE2AD13C1E0094BDA6 /* APIRouter.swift */; };
@@ -186,6 +190,7 @@
 		68AC9B3A2AE6241100C1B5EF /* MSDressPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC9B382AE6241100C1B5EF /* MSDressPreviewView.swift */; };
 		68AC9B3D2AE6244B00C1B5EF /* PlayEffectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC9B3B2AE6244A00C1B5EF /* PlayEffectsView.swift */; };
 		68AC9B3E2AE6244B00C1B5EF /* HeaderStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AC9B3C2AE6244A00C1B5EF /* HeaderStaticView.swift */; };
+		68AC9B412AE6267700C1B5EF /* UserOnLineMp4View.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AC9B3F2AE6267700C1B5EF /* UserOnLineMp4View.m */; };
 		68E334F72AD9128C008F537E /* loadinging.gif in Resources */ = {isa = PBXBuildFile; fileRef = 68E334F62AD9128C008F537E /* loadinging.gif */; };
 		68E334F92ADA7999008F537E /* refeshIcon.gif in Resources */ = {isa = PBXBuildFile; fileRef = 68E334F82ADA7999008F537E /* refeshIcon.gif */; };
 		68E334FB2ADA7B7B008F537E /* YXBGifRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E334FA2ADA7B7B008F537E /* YXBGifRefreshHeader.swift */; };
@@ -462,6 +467,12 @@
 		689BE4932AC581780024F4CE /* YXBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBButton.swift; sourceTree = "<group>"; };
 		689BE4952AC5AE300024F4CE /* YXBCountDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBCountDownButton.swift; sourceTree = "<group>"; };
 		689BE4972AC5C4A00024F4CE /* UIButton+YXB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+YXB.swift"; sourceTree = "<group>"; };
+		68A37F662AE6514C0060421E /* PlayMP4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMP4View.swift; sourceTree = "<group>"; };
+		68A37F6C2AE7770A0060421E /* SPPlayMP4ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPlayMP4ViewController.h; sourceTree = "<group>"; };
+		68A37F6D2AE7770A0060421E /* SPPlayMP4ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPlayMP4ViewController.m; sourceTree = "<group>"; };
+		68A37F742AE7BF0C0060421E /* PlayVapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVapView.swift; sourceTree = "<group>"; };
+		68A37F7A2AE8E2AF0060421E /* RoomPlayMP4Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomPlayMP4Manager.h; sourceTree = "<group>"; };
+		68A37F7B2AE8E2AF0060421E /* RoomPlayMP4Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomPlayMP4Manager.m; sourceTree = "<group>"; };
 		68A7EBCB2AD13C1E0094BDA6 /* MyMoyaExmple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMoyaExmple.swift; sourceTree = "<group>"; };
 		68A7EBCD2AD13C1E0094BDA6 /* APIParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIParameters.swift; sourceTree = "<group>"; };
 		68A7EBCE2AD13C1E0094BDA6 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
@@ -494,6 +505,8 @@
 		68AC9B382AE6241100C1B5EF /* MSDressPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSDressPreviewView.swift; sourceTree = "<group>"; };
 		68AC9B3B2AE6244A00C1B5EF /* PlayEffectsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayEffectsView.swift; sourceTree = "<group>"; };
 		68AC9B3C2AE6244A00C1B5EF /* HeaderStaticView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderStaticView.swift; sourceTree = "<group>"; };
+		68AC9B3F2AE6267700C1B5EF /* UserOnLineMp4View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserOnLineMp4View.m; sourceTree = "<group>"; };
+		68AC9B402AE6267700C1B5EF /* UserOnLineMp4View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserOnLineMp4View.h; sourceTree = "<group>"; };
 		68E334F62AD9128C008F537E /* loadinging.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loadinging.gif; sourceTree = "<group>"; };
 		68E334F82ADA7999008F537E /* refeshIcon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = refeshIcon.gif; sourceTree = "<group>"; };
 		68E334FA2ADA7B7B008F537E /* YXBGifRefreshHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXBGifRefreshHeader.swift; sourceTree = "<group>"; };
@@ -734,6 +747,10 @@
 				68E335062ADE92C1008F537E /* IPNRSAUtil.m */,
 				68E3350B2ADFA306008F537E /* NetWorkEngine.h */,
 				68E3350C2ADFA306008F537E /* NetWorkEngine.m */,
+				68A37F6C2AE7770A0060421E /* SPPlayMP4ViewController.h */,
+				68A37F6D2AE7770A0060421E /* SPPlayMP4ViewController.m */,
+				68A37F7A2AE8E2AF0060421E /* RoomPlayMP4Manager.h */,
+				68A37F7B2AE8E2AF0060421E /* RoomPlayMP4Manager.m */,
 				68E334FA2ADA7B7B008F537E /* YXBGifRefreshHeader.swift */,
 				689BE4882AC451EB0024F4CE /* MyUIFactory.swift */,
 				689BE48D2AC472F10024F4CE /* UIColor+Const.swift */,
@@ -750,6 +767,8 @@
 				68E3353A2AE2615F008F537E /* PopoverBaseView.swift */,
 				68AC9B3C2AE6244A00C1B5EF /* HeaderStaticView.swift */,
 				68AC9B3B2AE6244A00C1B5EF /* PlayEffectsView.swift */,
+				68A37F662AE6514C0060421E /* PlayMP4View.swift */,
+				68A37F742AE7BF0C0060421E /* PlayVapView.swift */,
 			);
 			path = "主页";
 			sourceTree = "<group>";
@@ -1172,6 +1191,8 @@
 			isa = PBXGroup;
 			children = (
 				68A7EC6A2AD780190094BDA6 /* PlayEffectsViewController.swift */,
+				68AC9B402AE6267700C1B5EF /* UserOnLineMp4View.h */,
+				68AC9B3F2AE6267700C1B5EF /* UserOnLineMp4View.m */,
 			);
 			path = "播放礼物特效示例";
 			sourceTree = "<group>";
@@ -1377,8 +1398,10 @@
 				68A7EC732AD8E5350094BDA6 /* Screen+Const.swift in Sources */,
 				68E3350D2ADFA306008F537E /* NetWorkEngine.m in Sources */,
 				0CC0C78724E3DE6E001AE32D /* AcountModel.m in Sources */,
+				68A37F752AE7BF0C0060421E /* PlayVapView.swift in Sources */,
 				0CC0C77B24E3DE6E001AE32D /* MessageAPI.m in Sources */,
 				0C14A0B5249B652D005FE48A /* YXBLanchManager.m in Sources */,
+				68A37F7C2AE8E2AF0060421E /* RoomPlayMP4Manager.m in Sources */,
 				68A7EBDA2AD13C1E0094BDA6 /* NetowrkPluginManager.swift in Sources */,
 				0C47C7BB24E55074006945B9 /* BaseCellItem.swift in Sources */,
 				0C14A08D249B648D005FE48A /* MyRequst.m in Sources */,
@@ -1451,7 +1474,9 @@
 				0C47C7A624E52397006945B9 /* TableViewCellItem.swift in Sources */,
 				0C14A091249B648D005FE48A /* WCQRCodeVC.m in Sources */,
 				0C76C14926312163005580D8 /* NSBundle+language.m in Sources */,
+				68A37F672AE6514C0060421E /* PlayMP4View.swift in Sources */,
 				68A7EBDB2AD13C1E0094BDA6 /* AuthPlugin.swift in Sources */,
+				68A37F6E2AE7770A0060421E /* SPPlayMP4ViewController.m in Sources */,
 				0C76C1B626312467005580D8 /* YXBCaptchaView.m in Sources */,
 				0CDB809D25B0489300B62976 /* TwoLineLabel.swift in Sources */,
 				68A7EBE02AD13C2F0094BDA6 /* Env.swift in Sources */,
@@ -1476,6 +1501,7 @@
 				0C14A0E4249B69C2005FE48A /* YXBPageContentTableViewController.m in Sources */,
 				68E335372AE256A6008F537E /* MSDressBuyVC.swift in Sources */,
 				68E334FB2ADA7B7B008F537E /* YXBGifRefreshHeader.swift in Sources */,
+				68AC9B412AE6267700C1B5EF /* UserOnLineMp4View.m in Sources */,
 				0C76C1B326312467005580D8 /* PSSPayPassViewController.m in Sources */,
 				0C14A09F249B648D005FE48A /* NSObject+YXBAdd.m in Sources */,
 				687608A42AC2A376000EED59 /* GJNetWorkHostUrl.m in Sources */,

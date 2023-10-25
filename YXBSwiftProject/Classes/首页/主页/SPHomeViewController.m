@@ -10,6 +10,7 @@
 #import "YXBSwiftProject-Swift.h"
 #import "MBProgressHUD+NH.h"
 #import "SPHornalCollectionViewController.h"
+#import "SPPlayMP4ViewController.h"
 
 @interface SPHomeViewController ()
 
@@ -124,7 +125,7 @@
 }
 
 - (void)playAction:(UIButton *)button {
-    PlayEffectsViewController *vc = [[PlayEffectsViewController alloc] init];
+    SPPlayMP4ViewController *vc = [[SPPlayMP4ViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 //    [YXBThemeManager sharedInstance].currentThemeIdentifier = YXBThemeIndetifierWhite;
 }

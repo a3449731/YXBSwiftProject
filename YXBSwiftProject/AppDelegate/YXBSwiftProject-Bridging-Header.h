@@ -47,3 +47,4 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 
 #import "DebugToolSwiftBridge.h"
+#import "UserOnLineMp4View.h"
