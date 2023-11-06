@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Tiercel
 
 enum MSDressType: Int, CaseIterable {
     /// 座驾
@@ -48,6 +49,8 @@ class MSDressViewModel {
     // 是否被全选了
     var isAllSelected: BehaviorRelay<Bool> = BehaviorRelay(value: false)
     
+//    let downloadManageWebp = SessionManager("downLoadWebp\((0...1000).randomElement())", configuration: SessionConfiguration())
+    
     private let disposeBag = DisposeBag()
     
     func fetchData(type: MSDressType, closure: @escaping () -> ()) {
@@ -55,6 +58,11 @@ class MSDressViewModel {
         network.sendRequest(.findZhuangbanProdList(type: type.rawValue)) { [weak self] obj in
             guard let self = self else { return }
             let array: [MSDressModel] = jsonToArray(jsonData: obj)
+//            let urlArray = array.flatMap { $0.texiao } + array.flatMap { $0.img }
+//            let diffArray = Array(Set(urlArray))
+//            let webpArray = diffArray.filter { $0.hasSuffix("webp") }
+//            downloadManageWebp.multiDownload(webpArray)
+
             self.modelArray.accept(array)
             self.seletArray.accept(Array(repeating: false, count: array.count))
             closure()

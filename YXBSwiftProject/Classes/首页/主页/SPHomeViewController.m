@@ -113,7 +113,7 @@
 }
 
 - (void)butonAction:(UIButton *)button {
-    LQWithdrawVC *vc = [[LQWithdrawVC alloc] init];
+    HonourRankSegmentVC *vc = [[HonourRankSegmentVC alloc] init];
     [self.navigationController pushViewController:vc animated:YES];    
 //    [YXBThemeManager sharedInstance].currentThemeIdentifier = YXBThemeIndetifierDark;
 }

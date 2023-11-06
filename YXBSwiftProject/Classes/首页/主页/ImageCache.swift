@@ -7,7 +7,6 @@
 
 import UIKit
 import SDWebImage
-import Kingfisher
 import CommonCrypto
 
 
@@ -153,49 +152,6 @@ import CommonCrypto
         }
     }
     
-    /// 使用Kingfisher去下载缓存资源，比SDWebImage优势是能下载其他资源
-//    static func getResorcePath(urlString: String, completion: @escaping (_ url: String, _ path: String?) -> Void) {
-//        // 先看看本地缓存是否存在
-////        let path = ImageCache.default.cachePath(forKey: urlString)
-////        if path.isEmpty == false {
-////            debugPrint("本地已缓存图片：", path)
-////            completion(urlString, path)
-////        } else {
-//
-//
-//
-//        let url = URL(string: urlString)!
-//        ImageDownloader.default.downloadImage(with: url, progressBlock: { receivedSize, totalSize in
-//            // 进度回调
-//            let progress = Float(receivedSize) / Float(totalSize)
-//            print("下载进度：\(progress * 100)%")
-//        }, completionHandler: { result in
-//            // 完成回调
-//            switch result {
-//            case .success(let value):
-//                print("下载成功，可以在这里处理下载的图片")
-//                let image = value.image
-//                // ...
-//            case .failure(let error):
-//                // 下载失败，可以在这里处理错误
-//                print("下载失败：\(error)")
-//            }
-//        })
-////            let resource = KF.ImageResource(downloadURL: url)
-//
-////            KingfisherManager.shared.retrieveImage(with: resource) { result in
-////                switch result {
-////                case .success(let value):
-////                    debugPrint("Kingfisher下载图片成功")
-////                    completion(urlString, value.source.cacheKey)
-////                case .failure(let error):
-////                    debugPrint("Image download failed: \(error)")
-////                    completion(urlString, nil)
-////                }
-////            }
-////        }
-//    }
-    
     static func getResourceLocalPath(for urlString: String) -> String? {
         guard let url = URL(string: urlString) else {
             return nil
@@ -208,7 +164,7 @@ import CommonCrypto
         return fileURL.path
     }
     
-    static func getResourcePath(urlString: String, completion: @escaping (_ url: String, _ path: String?) -> Void) {
+    static func getResourcePath(urlString: String, completion: @escaping (_ url: String, _ path: String?) -> Void, fail: @escaping (_ url: String, _ error: Error) -> Void) {
         let cacheDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
         let effectsDirectory = cacheDirectory.appendingPathComponent("effects")
         let fileExtension = URL(string: urlString)?.pathExtension ?? "unknown"
@@ -221,45 +177,49 @@ import CommonCrypto
             completion(urlString, fileURL.path)
         } else {
             // 文件不存在，进行下载
-            let url = URL(string: urlString)!
-            let downloadTask = URLSession.shared.downloadTask(with: url) { (location, response, error) in
-                if let error = error {
-                    // 下载失败，可以在这里处理错误
-                    debugPrint("下载失败：\(error)")
-                    DispatchQueue.main.async {
-                        completion(urlString, nil)
+            if let url = URL(string: urlString) {
+                let downloadTask = URLSession.shared.downloadTask(with: url) { (location, response, error) in
+                    if let error = error {
+                        // 下载失败，可以在这里处理错误
+                        debugPrint("下载失败：\(error)")
+                        DispatchQueue.main.async {
+                            fail(urlString, error)
+                        }
+                        return
                     }
-                    return
+                    
+                    guard let location = location else {
+                        // 下载失败，未能获取到临时文件的位置
+                        debugPrint("下载失败：未能获取到临时文件的位置")
+                        DispatchQueue.main.async {
+                            completion(urlString, nil)
+                        }
+                        return
+                    }
+                    
+                    do {
+                        // 创建 effects 文件夹
+                        try FileManager.default.createDirectory(at: effectsDirectory, withIntermediateDirectories: true, attributes: nil)
+                        // 将临时文件移动到缓存目录
+                        try FileManager.default.moveItem(at: location, to: fileURL)
+                        debugPrint("下载成功，文件保存在：\(fileURL)")
+                        DispatchQueue.main.async {
+                            completion(urlString, fileURL.path)
+                        }
+                    } catch {
+                        // 移动文件失败
+                        debugPrint("下载成功，但移动文件失败：\(error)")
+                        DispatchQueue.main.async {
+                            fail(urlString, error)
+                        }
+                    }
                 }
                 
-                guard let location = location else {
-                    // 下载失败，未能获取到临时文件的位置
-                    debugPrint("下载失败：未能获取到临时文件的位置")
-                    DispatchQueue.main.async {
-                        completion(urlString, nil)
-                    }
-                    return
-                }
-                
-                do {
-                    // 创建 effects 文件夹
-                    try FileManager.default.createDirectory(at: effectsDirectory, withIntermediateDirectories: true, attributes: nil)
-                    // 将临时文件移动到缓存目录
-                    try FileManager.default.moveItem(at: location, to: fileURL)
-                    debugPrint("下载成功，文件保存在：\(fileURL)")
-                    DispatchQueue.main.async {
-                        completion(urlString, fileURL.path)
-                    }
-                } catch {
-                    // 移动文件失败
-                    debugPrint("下载成功，但移动文件失败：\(error)")
-                    DispatchQueue.main.async {
-                        completion(urlString, nil)
-                    }
-                }
+                downloadTask.resume()
+            } else {
+                debugPrint("下个毛啊：给的什么url", urlString)
+                completion(urlString, nil)
             }
-            
-            downloadTask.resume()
         }
     }
 

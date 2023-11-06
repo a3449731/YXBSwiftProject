@@ -246,4 +246,93 @@
     [self hideGifHUDForView:nil];
 }
 
++ (void)showCustomTipTitle:(NSString *)title titleColr:(UIColor *)color imageNamed:(NSString *)imageNamed content:(NSString *)content {
+    //这里最好加个判断，让这个加载动画添加到window上，调用的时候，这个view传个nil就行了！
+    UIView *view = (UIView*)[UIApplication sharedApplication].delegate.window;
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+            
+    UIView *myView = [[UIView alloc] init];
+    myView.backgroundColor = [UIColor clearColor];
+    
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.image = [UIImage imageNamed:imageNamed];
+    [myView addSubview:imageView];
+    
+//    UILabel *titleLabel = [[[my commonLabelWithFrame:CGRectZero text:title color:color font:[UIFont boldSystemFontOfSize:16] lines:1 textAlignment:(NSTextAlignmentCenter)]]];
+    UILabel *titleLabel = [[UILabel alloc] init];
+    [myView addSubview:titleLabel];
+        
+//    UILabel *contentLabel = [MyTool commonLabelWithFrame:CGRectZero text:content color:rgba(51, 51, 51, 1) font:[UIFont boldSystemFontOfSize:12] lines:0 textAlignment:(NSTextAlignmentCenter)];
+    UILabel *contentLabel = [[UILabel alloc] init];
+    [myView addSubview:contentLabel];
+    
+    UIButton *closeButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [closeButton setImage:[UIImage imageNamed:@"rank_tip_close"] forState:(UIControlStateNormal)];
+    [myView addSubview:closeButton];
+    [closeButton addTarget:self action:@selector(closeButtonAction) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(0);
+    }];
+    
+    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(20);
+        make.centerX.mas_equalTo(0);
+    }];
+    
+    [closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(5);
+        make.right.mas_equalTo(-20);
+        make.width.height.mas_equalTo(32);
+    }];
+    
+    [contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(titleLabel.mas_bottom).mas_offset(15);
+        make.left.mas_equalTo(10);
+        make.right.mas_equalTo(-10);
+        make.bottom.mas_equalTo(-30);
+    }];
+    
+    //设置hud模式
+    hud.mode = MBProgressHUDModeCustomView;
+    
+    //设置在hud影藏时将其从SuperView上移除,自定义情况下默认为NO
+    hud.removeFromSuperViewOnHide = YES;
+    
+    /*
+    //设置提示性文字
+    hud.label.text = @"正在加载中";
+    
+    // 设置文字大小
+    hud.label.font = [UIFont systemFontOfSize:20];
+    
+    //设置文字的背景颜色
+    hud.label.backgroundColor = [UIColor redColor];
+    */
+        
+    //设置方框view为该模式后修改颜色才有效果
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    
+    //设置方框view背景色
+    hud.bezelView.backgroundColor = [UIColor clearColor];
+    
+    //设置总背景view的背景色，并带有透明效果
+//    hud.backgroundColor = rgba(0, 0, 0, 0.5);
+    hud.customView = myView;
+    
+    // 设置这个可以让其穿透，响应底下的按钮
+    // * @note To still allow touches to pass through the HUD, you can set hud.userInteractionEnabled = NO.
+    // * @attention MBProgressHUD is a UI class and should therefore only be accessed on the main thread.
+//    hud.userInteractionEnabled = NO;
+    
+    // 加一个点击消失的点击事件, 这样加手势会有问题，不能加
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGifBackGround:)];
+//    [view addGestureRecognizer:tap];
+}
+
++ (void)closeButtonAction {
+    UIView *view = (UIView*)[UIApplication sharedApplication].delegate.window;
+    [self hideHUDForView:view animated:YES];
+}
+
 @end

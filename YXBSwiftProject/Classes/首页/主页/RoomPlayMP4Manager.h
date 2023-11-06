@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "蓝鱼语音-Swift.h"
+#import "YXBSwiftProject-Swift.h"
 
 @protocol RoomPlayMP4ManagerDelegate <NSObject>
 

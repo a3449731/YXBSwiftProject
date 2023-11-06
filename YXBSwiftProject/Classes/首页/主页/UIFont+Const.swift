@@ -21,6 +21,10 @@ extension UIFont {
         UIFont.pingFang(fontSize: 18, style: .medium)
     }
     
+    public class var titleFont_12: UIFont {
+        UIFont.pingFang(fontSize: 12, style: .medium)
+    }
+    
     public class var titleFont_10: UIFont {
         UIFont.pingFang(fontSize: 10, style: .medium)
     }

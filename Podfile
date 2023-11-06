@@ -43,10 +43,16 @@ pod 'JXPagingView/Pager', '~> 2.0.0.0'
 pod 'XLForm', '~> 4.1.0'
 pod 'IQKeyboardManager', '~> 6.5.4'
 pod 'SocketRocket', '~> 0.5.1'
+pod 'JXPhotoBrowser'
+
+pod "PYPhotoBrowser"
 
 pod 'SVGAPlayer'
 # 腾讯的VAP，用于播放礼物特效，支持lottie，gif,apng,webp,mp4,vap
 pod 'QGVAPlayer'
+
+pod 'SudMGPWrapper','~> 1.3.5'
+pod 'MicrosoftCognitiveServicesSpeech-iOS'
 
 # 友盟
 pod 'UMCommon'

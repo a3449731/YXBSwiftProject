@@ -45,6 +45,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)hideGifHUD;
 + (void)hideGifHUDForView:(UIView * _Nullable)view;
 
++ (void)showCustomTipTitle:(NSString *  _Nullable)title titleColr:(UIColor *)color imageNamed:(NSString * _Nullable)imageNamed content:(NSString *  _Nullable)content;
+
 @end
 
 NS_ASSUME_NONNULL_END

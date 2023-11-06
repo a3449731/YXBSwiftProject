@@ -18,6 +18,7 @@ PODS:
   - CYLTabBarController (1.28.5):
     - CYLTabBarController/Core (= 1.28.5)
   - CYLTabBarController/Core (1.28.5)
+  - DACircularProgress (2.3.1)
   - DateTools (2.0.0)
   - DBDebugToolkit (0.4.0)
   - DZNEmptyDataSet (1.8.1)
@@ -34,10 +35,12 @@ PODS:
   - IQKeyboardManager (6.5.5)
   - JXCategoryView (1.5.5)
   - JXPagingView/Pager (2.0.0)
+  - JXPhotoBrowser (3.1.4)
   - JXSegmentedView (1.3.0)
   - Kingfisher (7.9.1)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
+  - MicrosoftCognitiveServicesSpeech-iOS (1.33.0)
   - MJExtension (3.4.1)
   - MJRefresh (3.1.17)
   - Moya (15.0.0):
@@ -50,6 +53,10 @@ PODS:
   - ObjectMapper (4.2.0)
   - PPNumberButton (0.8.0)
   - Protobuf (3.24.4)
+  - PYPhotoBrowser (1.2.5):
+    - DACircularProgress
+    - MBProgressHUD
+    - SDWebImage
   - QGVAPlayer (1.0.19)
   - QMUIKit (4.3.0):
     - QMUIKit/QMUIComponents (= 4.3.0)
@@ -477,6 +484,10 @@ PODS:
   - SnapKit (5.0.1)
   - SocketRocket (0.5.1)
   - SSZipArchive (2.4.3)
+  - SudMGP (1.3.5)
+  - SudMGPWrapper (1.3.5):
+    - MJExtension (~> 3.4.1)
+    - SudMGP (~> 1.3.5)
   - SVGAPlayer (2.5.7):
     - SVGAPlayer/Core (= 2.5.7)
     - SVGAPlayer/ProtoFiles (= 2.5.7)
@@ -577,16 +588,19 @@ DEPENDENCIES:
   - IQKeyboardManager (~> 6.5.4)
   - JXCategoryView (~> 1.5.5)
   - JXPagingView/Pager (~> 2.0.0.0)
+  - JXPhotoBrowser
   - JXSegmentedView
   - Kingfisher
   - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.1.0)
+  - MicrosoftCognitiveServicesSpeech-iOS
   - MJExtension
   - MJRefresh (~> 3.1.12)
   - Moya
   - MZFormSheetPresentationController (~> 2.4.3)
   - ObjectMapper
   - PPNumberButton (~> 0.8.0)
+  - PYPhotoBrowser
   - QGVAPlayer
   - QMUIKit
   - R.swift
@@ -601,6 +615,7 @@ DEPENDENCIES:
   - SJVideoPlayer (from `./LocalPods/SJVideo/SJVideoPlayer`)
   - SnapKit
   - SocketRocket (~> 0.5.1)
+  - SudMGPWrapper (~> 1.3.5)
   - SVGAPlayer
   - SVProgressHUD (~> 2.1.2)
   - SwifterSwift
@@ -637,6 +652,7 @@ SPEC REPOS:
     - BGFMDB
     - BiometricAuthentication
     - CYLTabBarController
+    - DACircularProgress
     - DateTools
     - DZNEmptyDataSet
     - EAIntroView
@@ -650,10 +666,12 @@ SPEC REPOS:
     - IQKeyboardManager
     - JXCategoryView
     - JXPagingView
+    - JXPhotoBrowser
     - JXSegmentedView
     - Kingfisher
     - Masonry
     - MBProgressHUD
+    - MicrosoftCognitiveServicesSpeech-iOS
     - MJExtension
     - MJRefresh
     - Moya
@@ -662,6 +680,7 @@ SPEC REPOS:
     - ObjectMapper
     - PPNumberButton
     - Protobuf
+    - PYPhotoBrowser
     - QGVAPlayer
     - QMUIKit
     - R.swift
@@ -677,6 +696,8 @@ SPEC REPOS:
     - SnapKit
     - SocketRocket
     - SSZipArchive
+    - SudMGP
+    - SudMGPWrapper
     - SVGAPlayer
     - SVProgressHUD
     - SwifterSwift
@@ -728,6 +749,7 @@ SPEC CHECKSUMS:
   BGFMDB: 48e6823027232402a678acc7f71484b1fc9171d0
   BiometricAuthentication: 36445f3ab77699489f91995bed887be89890afac
   CYLTabBarController: edd9fecba9afa3f2e9e44ed50ca6dde69941f25f
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
   DBDebugToolkit: 8f2b2a4f0a5d0a5279071dd462f5238941ccb32d
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
@@ -742,10 +764,12 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JXCategoryView: 0293fcb356f10a5c2e679dac0a1a5f1899ee0c87
   JXPagingView: da30adb74743852f7ef95fa894041953894ebd09
+  JXPhotoBrowser: 41ffa41252c8d5264f97ab3c1936a5cf935a58d7
   JXSegmentedView: fec0d335355b6e019c494fe2e030bde8a36d2df6
   Kingfisher: 1d14e9f59cbe19389f591c929000332bf70efd32
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MicrosoftCognitiveServicesSpeech-iOS: 6d5eb1887c84ea73483e89b285cd72d5be2f5d7e
   MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
   MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
@@ -754,6 +778,7 @@ SPEC CHECKSUMS:
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
   Protobuf: 351e9022fe13a6e2af00e9aefc22077cb88520f8
+  PYPhotoBrowser: 832154ec5e61c2c321d9be0e69af1fda8731e5ac
   QGVAPlayer: a0bca68c9bd6f1c8de5ac2d10ddf98be6038cce9
   QMUIKit: 67888be9aa0ee0b12b8a219fcea2eec900afd841
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
@@ -772,6 +797,8 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
+  SudMGP: 7ab2d4b484cd32009cc2933b3350aeccd3ec9b57
+  SudMGPWrapper: 09b80e637ab830963e3894aa7a99ebb1c00dc0de
   SVGAPlayer: 318b85a78b61292d6ae9dfcd651f3f0d1cdadd86
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
@@ -800,6 +827,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: e5a18f8d334807d86bae253e98547798f005e192
+PODFILE CHECKSUM: 3fb61f7573d1fb0d4bbf922de69a7c83ec568769
 
 COCOAPODS: 1.12.1

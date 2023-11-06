@@ -10,15 +10,19 @@
 import UIKit
 import QGVAPlayer
 import Tiercel
+import SDWebImage
 
 @objc protocol PlayVapViewViewDelegate: NSObjectProtocol {
     func effects(startAnimation: PlayVapView, container: UIView)
     func effects(stopAnimation: PlayVapView, container: UIView)
+    
+    @objc optional func effects(didFinishAnimation: PlayVapView, container: UIView)
+    @objc optional func effects(didFail: PlayVapView, error: Error)
 }
 
 @objcMembers class PlayVapView: UIView {
     
-    let mananger = SessionManager("downLoadVap", configuration: SessionConfiguration())
+//    let mananger = SessionManager("downLoadVap", configuration: SessionConfiguration())
     
     @objc weak var delegate: PlayVapViewViewDelegate?
     
@@ -32,11 +36,14 @@ import Tiercel
         vapView.hwd_enterBackgroundOP = HWDMP4EBOperationType.stop
 //        vapView.enableOldVersion(true)
         
+        // 关闭交互，为了能穿透，响应到下层事件
+        vapView.isUserInteractionEnabled = false
+        
         // 这个是QGVAPWrapView才支持的
 //        vapView.contentMode = .aspectFit
 
         // 这个好像是静音
-        vapView.setMute(true)
+//        vapView.setMute(true)
         return vapView
     }()
     
@@ -45,12 +52,14 @@ import Tiercel
     let repeatCount = 0
     
     // 记录要展示的字符串
-    var nickName: String?
+    var userInfo: [String: String]?
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .backgroundColor_white
+//        self.backgroundColor = .backgroundColor_white
+        // 关闭交互，为了能穿透，响应到下层事件
+        self.isUserInteractionEnabled = false
         
         self.creatUI()
         
@@ -60,8 +69,8 @@ import Tiercel
     }
     
     private func creatUI() {
-        self.addSubview(vapView)
-        vapView.snp.makeConstraints { make in
+        self.addSubview(self.vapView)
+        self.vapView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
@@ -74,24 +83,36 @@ import Tiercel
 //    }
     
     /// VAP只能做本地播放，所以一定是下载好的资源路径
-    @objc func startVap(urlString: String, nickName: String) {
-        self.nickName = nickName
+    @objc func startVap(urlString: String, userInfo: [String: String]) {
+        self.userInfo = userInfo
         
-        let task = self.mananger.download(urlString)
-        
-        task?.progress(onMainQueue: true) { (task) in
-            let progress = task.progress.fractionCompleted
-            debugPrint("下载中, 进度：\(progress)")
-        }.success { [weak self] (task) in
+        YXBImageCache.getResourcePath(urlString: urlString) { [weak self] url, path in
             guard let self = self else { return }
-            debugPrint("文件路径:", task.filePath)
-            // 这是用的废弃的方法，因为要指定了blendMode模式，才能适配蓝鱼语音的MP4特效
-//            self.vapView.playHWDMP4(task.filePath, blendMode: self.blendMode, repeatCount: self.repeatCount, delegate: self)
-            self.vapView.playHWDMP4(task.filePath, repeatCount: repeatCount, delegate: self)
-            
-        }.failure { (task) in
-            debugPrint("下载失败")
+            if let path = path {
+                debugPrint("文件路径:", path)
+                self.vapView.playHWDMP4(path, repeatCount: repeatCount, delegate: self)
+            } else {
+                self.delegate?.effects(stopAnimation: self, container: UIView())
+            }
+        } fail: { url, error in
+            self.delegate?.effects?(didFail: self, error:  error)
         }
+        
+        
+//        let task = self.mananger.download(urlString)
+//
+//        task?.progress(onMainQueue: true) { (task) in
+//            let progress = task.progress.fractionCompleted
+//            debugPrint("下载中, 进度：\(progress)")
+//        }.success { [weak self] (task) in
+//            guard let self = self else { return }
+//            debugPrint("文件路径:", task.filePath)
+////            self.vapView.playHWDMP4(task.filePath, blendMode: self.blendMode, repeatCount: self.repeatCount, delegate: self)
+//            self.vapView.playHWDMP4(task.filePath, repeatCount: repeatCount, delegate: self)
+//
+//        }.failure { (task) in
+//            debugPrint("下载失败")
+//        }
     }
     
     /// 停止播放
@@ -126,13 +147,33 @@ extension PlayVapView: VAPWrapViewDelegate {
     func vapWrapview_content(forVapTag tag: String, resource info: QGVAPSourceInfo) -> String {
         var result: String = ""
         if tag == "come_in_text" {
-            result = self.nickName ?? ""
+            result = self.userInfo?["nickname"] ?? ""
+        } else if tag == "come_in_img" {
+            return tag
         }
         return result
     }
     
     // 由于组件内不包含网络图片加载的模块，因此需要外部支持图片加载。
     func vapWrapView_loadVapImage(withURL urlStr: String, context: [AnyHashable : Any], completion completionBlock: @escaping VAPImageCompletionBlock) {
+        // 加载头像
+        if urlStr == "come_in_img" {
+//            self.userInfo?["headerImg"]
+            // SDWebImage取图
+            SDWebImageManager.shared.loadImage(with: URL(string: self.userInfo?["headImg"] ?? ""), progress: nil) { image, data, error, type, result, url1 in
+                if error != nil {
+                    debugPrint("图片下载失败：\(String(describing: url1 ?? URL(string: "")))")
+                } else {
+                    debugPrint("图片下载/加载成功")
+                    completionBlock(image, nil, urlStr)
+                }
+            }
+        } else {
+            DispatchQueue.main.async {
+                completionBlock(nil, nil, urlStr)
+            }
+        }
+        
         /*
         //call completionBlock as you get the image, both sync or asyn are ok.
         //usually we'd like to make a net request
@@ -148,8 +189,8 @@ extension PlayVapView: VAPWrapViewDelegate {
     func vapWrap_viewDidStartPlayMP4(_ container: UIView) {
         DispatchQueue.main.async {
 //            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.isHidden = false
-                NotificationCenter.default.post(name: NSNotification.Name("MP4DidStart_Notification"), object: nil)
+//                self.isHidden = false
+//                NotificationCenter.default.post(name: NSNotification.Name("MP4DidStart_Notification"), object: nil)
             self.delegate?.effects(startAnimation: self, container: container)
 //            }
         }
@@ -157,9 +198,21 @@ extension PlayVapView: VAPWrapViewDelegate {
  
     func vapWrap_viewDidStopPlayMP4(_ lastFrameIndex: Int, view container: UIView) {
         DispatchQueue.main.async {
-            NotificationCenter.default.post(name: NSNotification.Name("MP4DidStop_Notification"), object: nil)
-            self.isHidden = true
+//            NotificationCenter.default.post(name: NSNotification.Name("MP4DidStop_Notification"), object: nil)
+//            self.isHidden = true
             self.delegate?.effects(stopAnimation: self, container: container)
+        }
+    }
+    
+    func vapWrap_viewDidFinishPlayMP4(_ totalFrameCount: Int, view container: UIView) {
+        DispatchQueue.main.async {
+            self.delegate?.effects?(didFinishAnimation: self, container: container)
+        }
+    }
+    
+    func vapWrap_viewDidFailPlayMP4(_ error: Error) {
+        DispatchQueue.main.async {
+            self.delegate?.effects?(didFail: self, error: error)
         }
     }
 }

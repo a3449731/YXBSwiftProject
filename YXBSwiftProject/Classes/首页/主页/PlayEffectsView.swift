@@ -10,6 +10,11 @@ import Foundation
 import SDWebImage
 import SVGAPlayer
 
+@objc protocol PlayEffectsViewDelegate: NSObjectProtocol {
+    func effects(startAnimation: PlayEffectsView)
+    func effects(stopAnimation: PlayEffectsView)
+}
+
 /// 对播放特效的封装
 class PlayEffectsView : UIView {
     /// 播放gif的view
@@ -24,10 +29,27 @@ class PlayEffectsView : UIView {
     /// 播放vap特效
     var vapPlayerView: PlayVapView = PlayVapView()
     
+    weak var delegate: PlayEffectsViewDelegate?
+    
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.creatNotification()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     public func stopAnimating() {
+        self.mp4PlayerView.stopMP4()
+        self.vapPlayerView.stopVap()
         self.svgaPlayerView.stopAnimation()
         self.gifPlayerView.image = nil
         
+        self.vapPlayerView.removeFromSuperview()
+        self.mp4PlayerView.removeFromSuperview()
         self.svgaPlayerView.removeFromSuperview()
         self.gifPlayerView.removeFromSuperview()
         
@@ -78,13 +100,44 @@ class PlayEffectsView : UIView {
                 self.vapPlayerView.snp.remakeConstraints { make in
                     make.edges.equalToSuperview()
                 }
-                self.vapPlayerView.startVap(urlString: url, nickName: nickName!)
+                
+                self.vapPlayerView.startVap(urlString: url, userInfo: ["nickname": "", "headImg": ""])
             }
             
         } else {
             debugPrint("🚀 头像框的这种格式未解析，",headerUrl.pathExtension)
         }
-
     }
 
+    deinit {
+        self.removeNotication()
+        debugPrint(self.className + " deinit 🍺")
+    }
 }
+
+
+private extension PlayEffectsView {
+    private func creatNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(mp4DidStartNotification), name: Notification.Name("MP4DidStart_Notification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(mp4DidStopNotification), name: Notification.Name("MP4DidStop_Notification"), object: nil)
+    }
+    
+    @objc private func mp4DidStartNotification() {
+        self.delegate?.effects(startAnimation: self)
+    }
+    
+    @objc private func mp4DidStopNotification() {
+        self.delegate?.effects(stopAnimation: self)
+    }
+    
+    private func removeNotication() {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("MP4DidStart_Notification"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("MP4DidStop_Notification"), object: nil)
+    }
+}
+
+//extension PlayEffectsView: SVGAPlayerDelegate {
+//    func svgaPlayerDidFinishedAnimation(_ player: SVGAPlayer!) {
+//        self.delegate?.effects(stopAnimation: self)
+//    }
+//}

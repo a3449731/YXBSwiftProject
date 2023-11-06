@@ -143,6 +143,16 @@
 		2F8A332F265C99AB00A8639C /* XXGCDTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A332C265C99AB00A8639C /* XXGCDTimerManager.m */; };
 		2F8A3330265C99AB00A8639C /* YXBSocketCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A332D265C99AB00A8639C /* YXBSocketCenter.m */; };
 		47B916A06310008C757E1B7A /* libPods-YXBSwiftProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */; };
+		68289EF52AEBCA12004BA0CE /* HonourCharmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68289EF42AEBCA12004BA0CE /* HonourCharmCell.swift */; };
+		68289EF72AEBCB95004BA0CE /* HonourRankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68289EF62AEBCB95004BA0CE /* HonourRankViewModel.swift */; };
+		68289EF92AEBE9E7004BA0CE /* HonourLoveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68289EF82AEBE9E7004BA0CE /* HonourLoveVC.swift */; };
+		68289EFB2AEBEE7C004BA0CE /* HonourLoveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68289EFA2AEBEE7C004BA0CE /* HonourLoveViewModel.swift */; };
+		68289EFD2AECA5F0004BA0CE /* HonourLoveHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68289EFC2AECA5F0004BA0CE /* HonourLoveHeaderView.swift */; };
+		68289EFF2AECBA16004BA0CE /* HonourLoveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68289EFE2AECBA16004BA0CE /* HonourLoveCell.swift */; };
+		68289F012AECCFF2004BA0CE /* HonourLoveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68289F002AECCFF2004BA0CE /* HonourLoveModel.swift */; };
+		68289F042AECDB54004BA0CE /* NSString+MDCNHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68289F022AECDB53004BA0CE /* NSString+MDCNHelper.m */; };
+		68289F322AF08697004BA0CE /* RoomPlayJoinEffectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68289F312AF08697004BA0CE /* RoomPlayJoinEffectManager.m */; };
+		685BC4562AF274BF00201A5E /* LQPhotoBroswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685BC4552AF274BF00201A5E /* LQPhotoBroswer.swift */; };
 		687608A32AC2A376000EED59 /* AppDelegate+DebugTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 687608A02AC2A376000EED59 /* AppDelegate+DebugTool.m */; };
 		687608A42AC2A376000EED59 /* GJNetWorkHostUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 687608A12AC2A376000EED59 /* GJNetWorkHostUrl.m */; };
 		687608A72AC2BFCD000EED59 /* DebugToolSwiftBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 687608A62AC2BFCD000EED59 /* DebugToolSwiftBridge.m */; };
@@ -159,6 +169,21 @@
 		68A37F6E2AE7770A0060421E /* SPPlayMP4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A37F6D2AE7770A0060421E /* SPPlayMP4ViewController.m */; };
 		68A37F752AE7BF0C0060421E /* PlayVapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37F742AE7BF0C0060421E /* PlayVapView.swift */; };
 		68A37F7C2AE8E2AF0060421E /* RoomPlayMP4Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A37F7B2AE8E2AF0060421E /* RoomPlayMP4Manager.m */; };
+		68A37F9A2AEB91530060421E /* HonourRankSegmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37F992AEB91530060421E /* HonourRankSegmentVC.swift */; };
+		68A37FA62AEB91EA0060421E /* Home+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37F9C2AEB91EA0060421E /* Home+API.swift */; };
+		68A37FA72AEB91EA0060421E /* RoomListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37F9E2AEB91EA0060421E /* RoomListViewModel.swift */; };
+		68A37FA82AEB91EA0060421E /* RankListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37F9F2AEB91EA0060421E /* RankListCell.swift */; };
+		68A37FA92AEB91EA0060421E /* RankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37FA02AEB91EA0060421E /* RankModel.swift */; };
+		68A37FAA2AEB91EA0060421E /* OnlineUserLikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37FA12AEB91EA0060421E /* OnlineUserLikeView.swift */; };
+		68A37FAB2AEB91EA0060421E /* UserSexAgeTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37FA22AEB91EA0060421E /* UserSexAgeTagView.swift */; };
+		68A37FAC2AEB91EA0060421E /* RankListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37FA32AEB91EA0060421E /* RankListHeader.swift */; };
+		68A37FAD2AEB91EA0060421E /* RankListCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37FA42AEB91EA0060421E /* RankListCategoryViewController.swift */; };
+		68A37FAE2AEB91EA0060421E /* RankListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37FA52AEB91EA0060421E /* RankListViewController.swift */; };
+		68A37FB02AEB944D0060421E /* HonourRankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37FAF2AEB944D0060421E /* HonourRankModel.swift */; };
+		68A37FB22AEBAC010060421E /* HonourRankWeekSegmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37FB12AEBAC010060421E /* HonourRankWeekSegmentVC.swift */; };
+		68A37FB42AEBAE7D0060421E /* HonourRankVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37FB32AEBAE7D0060421E /* HonourRankVC.swift */; };
+		68A37FB62AEBB41D0060421E /* HonoruRankCharmHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37FB52AEBB41D0060421E /* HonoruRankCharmHeader.swift */; };
+		68A37FB82AEBB4DB0060421E /* HonourRankUserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A37FB72AEBB4DB0060421E /* HonourRankUserHeaderView.swift */; };
 		68A7EBD52AD13C1E0094BDA6 /* MyMoyaExmple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBCB2AD13C1E0094BDA6 /* MyMoyaExmple.swift */; };
 		68A7EBD62AD13C1E0094BDA6 /* APIParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBCD2AD13C1E0094BDA6 /* APIParameters.swift */; };
 		68A7EBD72AD13C1E0094BDA6 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7EBCE2AD13C1E0094BDA6 /* APIRouter.swift */; };
@@ -452,6 +477,18 @@
 		2F8A332C265C99AB00A8639C /* XXGCDTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXGCDTimerManager.m; sourceTree = "<group>"; };
 		2F8A332D265C99AB00A8639C /* YXBSocketCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBSocketCenter.m; sourceTree = "<group>"; };
 		4F245EC0B5961F5373ECB312 /* Pods-YXBSwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXBSwiftProject.release.xcconfig"; path = "Target Support Files/Pods-YXBSwiftProject/Pods-YXBSwiftProject.release.xcconfig"; sourceTree = "<group>"; };
+		68289EF42AEBCA12004BA0CE /* HonourCharmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourCharmCell.swift; sourceTree = "<group>"; };
+		68289EF62AEBCB95004BA0CE /* HonourRankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourRankViewModel.swift; sourceTree = "<group>"; };
+		68289EF82AEBE9E7004BA0CE /* HonourLoveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourLoveVC.swift; sourceTree = "<group>"; };
+		68289EFA2AEBEE7C004BA0CE /* HonourLoveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourLoveViewModel.swift; sourceTree = "<group>"; };
+		68289EFC2AECA5F0004BA0CE /* HonourLoveHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourLoveHeaderView.swift; sourceTree = "<group>"; };
+		68289EFE2AECBA16004BA0CE /* HonourLoveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourLoveCell.swift; sourceTree = "<group>"; };
+		68289F002AECCFF2004BA0CE /* HonourLoveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourLoveModel.swift; sourceTree = "<group>"; };
+		68289F022AECDB53004BA0CE /* NSString+MDCNHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MDCNHelper.m"; sourceTree = "<group>"; };
+		68289F032AECDB53004BA0CE /* NSString+MDCNHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MDCNHelper.h"; sourceTree = "<group>"; };
+		68289F302AF08697004BA0CE /* RoomPlayJoinEffectManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoomPlayJoinEffectManager.h; sourceTree = "<group>"; };
+		68289F312AF08697004BA0CE /* RoomPlayJoinEffectManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoomPlayJoinEffectManager.m; sourceTree = "<group>"; };
+		685BC4552AF274BF00201A5E /* LQPhotoBroswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQPhotoBroswer.swift; sourceTree = "<group>"; };
 		6876089F2AC2A376000EED59 /* GJNetWorkHostUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJNetWorkHostUrl.h; sourceTree = "<group>"; };
 		687608A02AC2A376000EED59 /* AppDelegate+DebugTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+DebugTool.m"; sourceTree = "<group>"; };
 		687608A12AC2A376000EED59 /* GJNetWorkHostUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJNetWorkHostUrl.m; sourceTree = "<group>"; };
@@ -473,6 +510,21 @@
 		68A37F742AE7BF0C0060421E /* PlayVapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVapView.swift; sourceTree = "<group>"; };
 		68A37F7A2AE8E2AF0060421E /* RoomPlayMP4Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomPlayMP4Manager.h; sourceTree = "<group>"; };
 		68A37F7B2AE8E2AF0060421E /* RoomPlayMP4Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomPlayMP4Manager.m; sourceTree = "<group>"; };
+		68A37F992AEB91530060421E /* HonourRankSegmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourRankSegmentVC.swift; sourceTree = "<group>"; };
+		68A37F9C2AEB91EA0060421E /* Home+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Home+API.swift"; sourceTree = "<group>"; };
+		68A37F9E2AEB91EA0060421E /* RoomListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomListViewModel.swift; sourceTree = "<group>"; };
+		68A37F9F2AEB91EA0060421E /* RankListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankListCell.swift; sourceTree = "<group>"; };
+		68A37FA02AEB91EA0060421E /* RankModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankModel.swift; sourceTree = "<group>"; };
+		68A37FA12AEB91EA0060421E /* OnlineUserLikeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineUserLikeView.swift; sourceTree = "<group>"; };
+		68A37FA22AEB91EA0060421E /* UserSexAgeTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSexAgeTagView.swift; sourceTree = "<group>"; };
+		68A37FA32AEB91EA0060421E /* RankListHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankListHeader.swift; sourceTree = "<group>"; };
+		68A37FA42AEB91EA0060421E /* RankListCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankListCategoryViewController.swift; sourceTree = "<group>"; };
+		68A37FA52AEB91EA0060421E /* RankListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankListViewController.swift; sourceTree = "<group>"; };
+		68A37FAF2AEB944D0060421E /* HonourRankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourRankModel.swift; sourceTree = "<group>"; };
+		68A37FB12AEBAC010060421E /* HonourRankWeekSegmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourRankWeekSegmentVC.swift; sourceTree = "<group>"; };
+		68A37FB32AEBAE7D0060421E /* HonourRankVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourRankVC.swift; sourceTree = "<group>"; };
+		68A37FB52AEBB41D0060421E /* HonoruRankCharmHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonoruRankCharmHeader.swift; sourceTree = "<group>"; };
+		68A37FB72AEBB4DB0060421E /* HonourRankUserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourRankUserHeaderView.swift; sourceTree = "<group>"; };
 		68A7EBCB2AD13C1E0094BDA6 /* MyMoyaExmple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMoyaExmple.swift; sourceTree = "<group>"; };
 		68A7EBCD2AD13C1E0094BDA6 /* APIParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIParameters.swift; sourceTree = "<group>"; };
 		68A7EBCE2AD13C1E0094BDA6 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
@@ -658,6 +710,8 @@
 		0C14A064249B648D005FE48A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				68289F032AECDB53004BA0CE /* NSString+MDCNHelper.h */,
+				68289F022AECDB53004BA0CE /* NSString+MDCNHelper.m */,
 				0C47C79724E51714006945B9 /* UIView+Utils.swift */,
 				0C47C79924E5175D006945B9 /* UIEdgeInsets+Convenience.swift */,
 				0C47C79D24E517C8006945B9 /* String+Subscript.swift */,
@@ -731,6 +785,8 @@
 		0C14A0BC249B65C0005FE48A /* 主页 */ = {
 			isa = PBXGroup;
 			children = (
+				68A37F9B2AEB91EA0060421E /* 首页 */,
+				68A37F982AEB90EF0060421E /* 荣耀殿堂排行榜 */,
 				68E335282AE13AC0008F537E /* MVVM装扮中心示例 */,
 				68A7EC692AD77FD30094BDA6 /* 播放礼物特效示例 */,
 				68A7EC5C2AD66B500094BDA6 /* MVVM示例 */,
@@ -751,6 +807,9 @@
 				68A37F6D2AE7770A0060421E /* SPPlayMP4ViewController.m */,
 				68A37F7A2AE8E2AF0060421E /* RoomPlayMP4Manager.h */,
 				68A37F7B2AE8E2AF0060421E /* RoomPlayMP4Manager.m */,
+				68289F302AF08697004BA0CE /* RoomPlayJoinEffectManager.h */,
+				68289F312AF08697004BA0CE /* RoomPlayJoinEffectManager.m */,
+				685BC4552AF274BF00201A5E /* LQPhotoBroswer.swift */,
 				68E334FA2ADA7B7B008F537E /* YXBGifRefreshHeader.swift */,
 				689BE4882AC451EB0024F4CE /* MyUIFactory.swift */,
 				689BE48D2AC472F10024F4CE /* UIColor+Const.swift */,
@@ -1102,6 +1161,66 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		68289F052AECE6AE004BA0CE /* 真爱榜 */ = {
+			isa = PBXGroup;
+			children = (
+				68289EF82AEBE9E7004BA0CE /* HonourLoveVC.swift */,
+				68289EFA2AEBEE7C004BA0CE /* HonourLoveViewModel.swift */,
+				68289EFC2AECA5F0004BA0CE /* HonourLoveHeaderView.swift */,
+				68289EFE2AECBA16004BA0CE /* HonourLoveCell.swift */,
+				68289F002AECCFF2004BA0CE /* HonourLoveModel.swift */,
+			);
+			path = "真爱榜";
+			sourceTree = "<group>";
+		};
+		68289F062AECE6BD004BA0CE /* 贡献榜魅力榜 */ = {
+			isa = PBXGroup;
+			children = (
+				68A37FB32AEBAE7D0060421E /* HonourRankVC.swift */,
+				68A37FB52AEBB41D0060421E /* HonoruRankCharmHeader.swift */,
+				68A37FB72AEBB4DB0060421E /* HonourRankUserHeaderView.swift */,
+				68A37FAF2AEB944D0060421E /* HonourRankModel.swift */,
+				68289EF42AEBCA12004BA0CE /* HonourCharmCell.swift */,
+				68289EF62AEBCB95004BA0CE /* HonourRankViewModel.swift */,
+			);
+			path = "贡献榜魅力榜";
+			sourceTree = "<group>";
+		};
+		68A37F982AEB90EF0060421E /* 荣耀殿堂排行榜 */ = {
+			isa = PBXGroup;
+			children = (
+				68A37F992AEB91530060421E /* HonourRankSegmentVC.swift */,
+				68A37FB12AEBAC010060421E /* HonourRankWeekSegmentVC.swift */,
+				68289F062AECE6BD004BA0CE /* 贡献榜魅力榜 */,
+				68289F052AECE6AE004BA0CE /* 真爱榜 */,
+			);
+			path = "荣耀殿堂排行榜";
+			sourceTree = "<group>";
+		};
+		68A37F9B2AEB91EA0060421E /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				68A37F9C2AEB91EA0060421E /* Home+API.swift */,
+				68A37F9D2AEB91EA0060421E /* 全局排行榜 */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		68A37F9D2AEB91EA0060421E /* 全局排行榜 */ = {
+			isa = PBXGroup;
+			children = (
+				68A37FA42AEB91EA0060421E /* RankListCategoryViewController.swift */,
+				68A37FA52AEB91EA0060421E /* RankListViewController.swift */,
+				68A37F9E2AEB91EA0060421E /* RoomListViewModel.swift */,
+				68A37F9F2AEB91EA0060421E /* RankListCell.swift */,
+				68A37FA02AEB91EA0060421E /* RankModel.swift */,
+				68A37FA12AEB91EA0060421E /* OnlineUserLikeView.swift */,
+				68A37FA22AEB91EA0060421E /* UserSexAgeTagView.swift */,
+				68A37FA32AEB91EA0060421E /* RankListHeader.swift */,
+			);
+			path = "全局排行榜";
+			sourceTree = "<group>";
+		};
 		68A7EBC92AD13B610094BDA6 /* NetworkSwift */ = {
 			isa = PBXGroup;
 			children = (
@@ -1409,11 +1528,13 @@
 				0C76C1AC26312467005580D8 /* RegisterAPI.m in Sources */,
 				68A7EC6B2AD780190094BDA6 /* PlayEffectsViewController.swift in Sources */,
 				689BE4982AC5C4A00024F4CE /* UIButton+YXB.swift in Sources */,
+				68289EF52AEBCA12004BA0CE /* HonourCharmCell.swift in Sources */,
 				0C14A085249B648D005FE48A /* YXBCell.m in Sources */,
 				0C14A0A2249B648D005FE48A /* YXBThemeManager.m in Sources */,
 				68A7EC612AD66C130094BDA6 /* MSSystemNoticeViewModel.swift in Sources */,
 				0C47C7B324E540D8006945B9 /* YXBPaymentManager.m in Sources */,
 				0C76C1AE26312467005580D8 /* LoginAPI.m in Sources */,
+				68A37FAA2AEB91EA0060421E /* OnlineUserLikeView.swift in Sources */,
 				0C14A09D249B648D005FE48A /* UIImage+YXBAdd.m in Sources */,
 				0C14A0E0249B69C2005FE48A /* YXBPageContentViewController.m in Sources */,
 				689BE4942AC581780024F4CE /* YXBButton.swift in Sources */,
@@ -1424,6 +1545,7 @@
 				689BE4852AC446030024F4CE /* LQWithdrawVC.swift in Sources */,
 				687608A72AC2BFCD000EED59 /* DebugToolSwiftBridge.m in Sources */,
 				0CC0C78324E3DE6E001AE32D /* MemberModel.m in Sources */,
+				68A37FB02AEB944D0060421E /* HonourRankModel.swift in Sources */,
 				689BE4902AC48BDC0024F4CE /* UIView+YXB.swift in Sources */,
 				0C14A097249B648D005FE48A /* YXBCheckRegular.m in Sources */,
 				68AC9B3E2AE6244B00C1B5EF /* HeaderStaticView.swift in Sources */,
@@ -1436,18 +1558,23 @@
 				0C14A0A6249B648D005FE48A /* UserManager.m in Sources */,
 				0C14A0E5249B69C2005FE48A /* YXBPageTableViewController.m in Sources */,
 				0C14A0DF249B69C2005FE48A /* YXBPageViewController.m in Sources */,
+				68A37FAE2AEB91EA0060421E /* RankListViewController.swift in Sources */,
 				68E335332AE20823008F537E /* MSDressCell.swift in Sources */,
 				68AC9B392AE6241100C1B5EF /* MyDressPreviewView+Protocol.swift in Sources */,
 				68E335352AE23ECC008F537E /* MSDressSegmentVC.swift in Sources */,
 				68E3353D2AE271B6008F537E /* MSDressBuyViewModel.swift in Sources */,
+				68289EFB2AEBEE7C004BA0CE /* HonourLoveViewModel.swift in Sources */,
 				0C14A0BF249B65EA005FE48A /* SPHomeViewController.m in Sources */,
 				0C47C7B724E54A81006945B9 /* YXBPaymentModel.m in Sources */,
 				68A7EBE62AD153A40094BDA6 /* UIFont+Const.swift in Sources */,
 				0C14A084249B648D005FE48A /* YXBBaseModel.m in Sources */,
 				689BE4892AC451EB0024F4CE /* MyUIFactory.swift in Sources */,
 				68A7EBD82AD13C1E0094BDA6 /* APIServer.swift in Sources */,
+				685BC4562AF274BF00201A5E /* LQPhotoBroswer.swift in Sources */,
 				68E335192AE0EC55008F537E /* HLHorizontalPageLayout.m in Sources */,
+				68A37FB22AEBAC010060421E /* HonourRankWeekSegmentVC.swift in Sources */,
 				0C47C7AC24E52477006945B9 /* GlobalFuncs.swift in Sources */,
+				68289F042AECDB54004BA0CE /* NSString+MDCNHelper.m in Sources */,
 				0C47C7A424E52242006945B9 /* PaymentkeyboardView.swift in Sources */,
 				0CC0C75D24E3DE2F001AE32D /* ForceUpdateView.m in Sources */,
 				68E3352E2AE13AE8008F537E /* MSDressModel.swift in Sources */,
@@ -1455,12 +1582,14 @@
 				68A7EC5A2AD65C390094BDA6 /* IM+API.swift in Sources */,
 				68A7EBE12AD13C2F0094BDA6 /* NetworkManager.swift in Sources */,
 				0C277EA2253E9A1D00C33F56 /* Base64.m in Sources */,
+				68289EF92AEBE9E7004BA0CE /* HonourLoveVC.swift in Sources */,
 				689BE4872AC4475E0024F4CE /* LQLabelTextFieldView.swift in Sources */,
 				0C76C1B026312467005580D8 /* ModifyLoginPassAPI.m in Sources */,
 				2F0C906B27C48B520057108B /* YXBVerificationCodeView.m in Sources */,
 				0C76C1B726312467005580D8 /* ForgetSecretViewController.m in Sources */,
 				68E3353F2AE276DA008F537E /* MSDressBuyCell.swift in Sources */,
 				68A7EBF42AD3E4D10094BDA6 /* BindBankHandyJsonModel.swift in Sources */,
+				68A37F9A2AEB91530060421E /* HonourRankSegmentVC.swift in Sources */,
 				0C14A095249B648D005FE48A /* CDDetailHeaderView.m in Sources */,
 				68A7EBD72AD13C1E0094BDA6 /* APIRouter.swift in Sources */,
 				0C14A0EC249B69C2005FE48A /* YXBFormLeftRightBgCell.m in Sources */,
@@ -1477,10 +1606,13 @@
 				68A37F672AE6514C0060421E /* PlayMP4View.swift in Sources */,
 				68A7EBDB2AD13C1E0094BDA6 /* AuthPlugin.swift in Sources */,
 				68A37F6E2AE7770A0060421E /* SPPlayMP4ViewController.m in Sources */,
+				68289F012AECCFF2004BA0CE /* HonourLoveModel.swift in Sources */,
 				0C76C1B626312467005580D8 /* YXBCaptchaView.m in Sources */,
 				0CDB809D25B0489300B62976 /* TwoLineLabel.swift in Sources */,
+				68A37FB62AEBB41D0060421E /* HonoruRankCharmHeader.swift in Sources */,
 				68A7EBE02AD13C2F0094BDA6 /* Env.swift in Sources */,
 				68E3352F2AE13AE8008F537E /* MSDressViewModel.swift in Sources */,
+				68289F322AF08697004BA0CE /* RoomPlayJoinEffectManager.m in Sources */,
 				0CC0C78A24E3DEAC001AE32D /* NoticeModel.m in Sources */,
 				0C14A0A1249B648D005FE48A /* QMUIConfigurationTemplateDark.m in Sources */,
 				0CC0C79324E3EDD7001AE32D /* YXBInputView.m in Sources */,
@@ -1492,14 +1624,19 @@
 				0C277E9F253E999D00C33F56 /* CocoaSecurity.m in Sources */,
 				0CC0C79A24E401D2001AE32D /* UIViewController+Navigation.swift in Sources */,
 				0C76C1C22631247D005580D8 /* PopDXCaptchaView.m in Sources */,
+				68A37FAB2AEB91EA0060421E /* UserSexAgeTagView.swift in Sources */,
 				0C47C7A224E51F1E006945B9 /* Toast.swift in Sources */,
 				0CC0C79C24E40216001AE32D /* CATransaction+Animation.swift in Sources */,
 				0CC0C78524E3DE6E001AE32D /* LevelModel.m in Sources */,
 				0C4387F0249B51DB008DBD78 /* AppDelegate.swift in Sources */,
 				0C14A0A4249B648D005FE48A /* QMUIConfigurationTemplateWhite.m in Sources */,
 				689BE4962AC5AE300024F4CE /* YXBCountDownButton.swift in Sources */,
+				68289EF72AEBCB95004BA0CE /* HonourRankViewModel.swift in Sources */,
 				0C14A0E4249B69C2005FE48A /* YXBPageContentTableViewController.m in Sources */,
+				68A37FA62AEB91EA0060421E /* Home+API.swift in Sources */,
+				68A37FA72AEB91EA0060421E /* RoomListViewModel.swift in Sources */,
 				68E335372AE256A6008F537E /* MSDressBuyVC.swift in Sources */,
+				68A37FB42AEBAE7D0060421E /* HonourRankVC.swift in Sources */,
 				68E334FB2ADA7B7B008F537E /* YXBGifRefreshHeader.swift in Sources */,
 				68AC9B412AE6267700C1B5EF /* UserOnLineMp4View.m in Sources */,
 				0C76C1B326312467005580D8 /* PSSPayPassViewController.m in Sources */,
@@ -1523,6 +1660,7 @@
 				68A7EC622AD66C130094BDA6 /* MSSystemNoticeModel.swift in Sources */,
 				0C14A0A5249B648D005FE48A /* QMUIConfigurationTemplate.m in Sources */,
 				0C14A0B6249B652D005FE48A /* YXBNavigationController.m in Sources */,
+				68A37FA92AEB91EA0060421E /* RankModel.swift in Sources */,
 				68A7EC7C2AD8F5B20094BDA6 /* MBProgressHUD+NH.m in Sources */,
 				0C76C1B526312467005580D8 /* LoginViewController.m in Sources */,
 				0C47C7B924E54D1C006945B9 /* PayPwdInput.swift in Sources */,
@@ -1530,19 +1668,24 @@
 				0C14A0B4249B652D005FE48A /* TabBarViewController.m in Sources */,
 				68A7EC6D2AD7834D0094BDA6 /* ImageCache.swift in Sources */,
 				68A7EBDC2AD13C1E0094BDA6 /* ProgressPlugin.swift in Sources */,
+				68289EFD2AECA5F0004BA0CE /* HonourLoveHeaderView.swift in Sources */,
 				0C14A093249B648D005FE48A /* YXBUnicode.m in Sources */,
 				0C14A0B3249B652D005FE48A /* LanchAPI.m in Sources */,
 				68A7EBE42AD1538D0094BDA6 /* UIFont+PingFang.swift in Sources */,
+				68A37FA82AEB91EA0060421E /* RankListCell.swift in Sources */,
 				68A7EBF02AD3D60D0094BDA6 /* BindBankOCModel.swift in Sources */,
+				68289EFF2AECBA16004BA0CE /* HonourLoveCell.swift in Sources */,
 				68A7EBD62AD13C1E0094BDA6 /* APIParameters.swift in Sources */,
 				68A7EBE22AD13C2F0094BDA6 /* NetworkError.swift in Sources */,
 				0CC0C77D24E3DE6E001AE32D /* MyRankAPI.m in Sources */,
 				68AC9B3A2AE6241100C1B5EF /* MSDressPreviewView.swift in Sources */,
 				0CC0C77E24E3DE6E001AE32D /* GetVersionAPI.m in Sources */,
 				0C14A08E249B648D005FE48A /* YXBNetConfiger.m in Sources */,
+				68A37FAC2AEB91EA0060421E /* RankListHeader.swift in Sources */,
 				0C14A0A0249B648D005FE48A /* UIButton+YXBAdd.m in Sources */,
 				68A7EBEA2AD290590094BDA6 /* LogCustomPlugin.swift in Sources */,
 				68E335392AE26117008F537E /* PopoverManager.swift in Sources */,
+				68A37FB82AEBB4DB0060421E /* HonourRankUserHeaderView.swift in Sources */,
 				0C14A0E7249B69C2005FE48A /* YXBFormLeftRightCell.m in Sources */,
 				68A7EBF22AD3E3270094BDA6 /* NetworkBasicResponse.swift in Sources */,
 				0CB9CF05260DDCFC00E82B13 /* PaymentService.swift in Sources */,
@@ -1560,6 +1703,7 @@
 				0C14A0EF249B6A0D005FE48A /* YXBBaseViewController.m in Sources */,
 				0C76C1B126312467005580D8 /* ModifyPayPassAPI.m in Sources */,
 				0C14A098249B648D005FE48A /* YXBTapAreaButton.m in Sources */,
+				68A37FAD2AEB91EA0060421E /* RankListCategoryViewController.swift in Sources */,
 				68E3354D2AE37A03008F537E /* ToastPlugin.swift in Sources */,
 				0C14A088249B648D005FE48A /* YXBImageCell.m in Sources */,
 				0C76C14826312163005580D8 /* NTVLocalized.m in Sources */,

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -97,11 +98,68 @@
                 <outlet property="lblTitle" destination="YCR-cI-IAX" id="gmk-At-aqq"/>
                 <outlet property="textContent" destination="ZSJ-xx-OkI" id="1uL-3M-UUE"/>
             </connections>
-            <point key="canvasLocation" x="34.782608695652179" y="44.866071428571423"/>
+            <point key="canvasLocation" x="-78" y="31"/>
+        </view>
+        <view contentMode="scaleToFill" id="sTR-7L-EyP">
+            <rect key="frame" x="0.0" y="0.0" width="473" height="925"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ow-rL-1ha">
+                    <rect key="frame" x="0.0" y="0.0" width="473" height="925"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="honour_background_cloud" translatesAutoresizingMaskIntoConstraints="NO" id="AyG-fR-hh6">
+                            <rect key="frame" x="49" y="222" width="375" height="481"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="honour_love_yun" translatesAutoresizingMaskIntoConstraints="NO" id="t6L-vD-yho">
+                            <rect key="frame" x="49" y="507" width="375" height="340"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="375" id="0uL-cF-u1r"/>
+                                <constraint firstAttribute="height" constant="340" id="gbe-f7-iNI"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="honour_love_chibang" translatesAutoresizingMaskIntoConstraints="NO" id="i6q-RK-ud6">
+                            <rect key="frame" x="60.5" y="378" width="352" height="169"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="169" id="W5m-t4-0l7"/>
+                                <constraint firstAttribute="width" constant="352" id="iOl-wZ-oDe"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="t6L-vD-yho" firstAttribute="centerX" secondItem="0Ow-rL-1ha" secondAttribute="centerX" id="2WF-fz-xHP"/>
+                        <constraint firstItem="t6L-vD-yho" firstAttribute="top" secondItem="i6q-RK-ud6" secondAttribute="bottom" constant="-40" id="6pK-tP-EPo"/>
+                        <constraint firstItem="AyG-fR-hh6" firstAttribute="centerX" secondItem="0Ow-rL-1ha" secondAttribute="centerX" id="DIX-Ja-vWG"/>
+                        <constraint firstItem="i6q-RK-ud6" firstAttribute="centerX" secondItem="0Ow-rL-1ha" secondAttribute="centerX" id="al7-gm-BzJ"/>
+                        <constraint firstItem="AyG-fR-hh6" firstAttribute="centerY" secondItem="0Ow-rL-1ha" secondAttribute="centerY" id="i1J-4V-DD3"/>
+                        <constraint firstItem="i6q-RK-ud6" firstAttribute="centerY" secondItem="0Ow-rL-1ha" secondAttribute="centerY" id="nsq-BS-PNR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0Ow-rL-1ha" secondAttribute="bottom" id="I4P-iF-keU"/>
+                <constraint firstItem="0Ow-rL-1ha" firstAttribute="top" secondItem="sTR-7L-EyP" secondAttribute="top" id="crn-Un-OEa"/>
+                <constraint firstItem="0Ow-rL-1ha" firstAttribute="leading" secondItem="sTR-7L-EyP" secondAttribute="leading" id="jbW-WN-u4t"/>
+                <constraint firstAttribute="trailing" secondItem="0Ow-rL-1ha" secondAttribute="trailing" id="rUS-LP-Jl4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="555.79710144927537" y="174.44196428571428"/>
         </view>
     </objects>
     <resources>
         <image name="NewVersion_background" width="537.5" height="297.5"/>
         <image name="common_close_white" width="20" height="20"/>
+        <image name="honour_background_cloud" width="375" height="481"/>
+        <image name="honour_love_chibang" width="352" height="169"/>
+        <image name="honour_love_yun" width="375" height="340"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
