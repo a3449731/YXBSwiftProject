@@ -8,11 +8,13 @@
 
 #import "DebugToolSwiftBridge.h"
 #import "AppDelegate+DebugTool.h"
+#import <SDWebImage/SDWebImage.h>
 
 @implementation DebugToolSwiftBridge
 
 + (void)setup {
     [(AppDelegate *)[UIApplication sharedApplication].delegate setupDebugTool];
+    [SDImageCodersManager.sharedManager addCoder:SDImageAWebPCoder.sharedCoder];
 }
 
 @end

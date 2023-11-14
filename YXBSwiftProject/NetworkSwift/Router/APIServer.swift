@@ -31,6 +31,8 @@ protocol APIService: TargetType {
     /// The headers to be used in the request.
     var headers: [String: String]? { get }
     
+    
+    // 这下面开始就是自定义的了
     var parameters: APIParameters? { get}
     /// API 路由和 HTTP 方法，不包含域名、服务名和版本号，
     ///
@@ -40,9 +42,10 @@ protocol APIService: TargetType {
     /// .get("/group/create")
     /// ```
     var route: APIRoute { get }
+    
+    // 添加缓存类型属性
+    var cacheConfig: CacheConfig { get }
 }
-
-
 
 extension APIService {
     var url: URL {
@@ -96,7 +99,11 @@ extension APIService {
     }
     
     var identifier: String {
-        route.method.rawValue + url.absoluteString
+        route.method.rawValue + "\(parameters?.values ?? [:])"
+    }
+    
+    var cacheConfig: CacheConfig {
+        CacheConfig()
     }
     
     func makeHeaders() -> [String: String]? {

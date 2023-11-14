@@ -27,7 +27,19 @@ extension UIColor {
     public class var titleColor_pink: UIColor {
         UIColor.init(light: UIColor(rgb: 0xFF4E73, alpha: 1), dark: UIColor(rgb: 0x121212, alpha: 1))
     }
-        
+    
+    public class var titleColor_yellow: UIColor {
+        UIColor.init(light: UIColor(rgb: 0xF5CE70, alpha: 1), dark: UIColor(rgb: 0xF5CE70, alpha: 1))
+    }
+    
+    public class var titleColor_cyan: UIColor {
+        UIColor.init(light: UIColor(rgb: 0xC1FEE3, alpha: 1), dark: UIColor(rgb: 0xC1FEE3, alpha: 1))
+    }
+    
+    public class var titleColor_red: UIColor {
+        UIColor.init(light: UIColor(rgb: 0xFF4F73, alpha: 1), dark: UIColor(rgb: 0xFF4F73, alpha: 1))
+    }
+            
     // 副标题颜色
     public class var subTitleColor: UIColor {
         UIColor.init(light: UIColor(rgb: 0x666666, alpha: 1), dark: UIColor(rgb: 0x121212, alpha: 1))

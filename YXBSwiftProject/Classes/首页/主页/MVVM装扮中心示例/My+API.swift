@@ -40,4 +40,9 @@ extension MyAPI: APIService {
         }
         return APIParameters(values: result.parameters, encoding: result.encoding)
     }
+    
+    var cacheConfig: CacheConfig {
+        let con = CacheConfig(type: .cacheElseNetwork, time: 10)
+        return con
+    }
 }

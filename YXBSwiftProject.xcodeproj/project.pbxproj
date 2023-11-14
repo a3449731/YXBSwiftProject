@@ -143,6 +143,30 @@
 		2F8A332F265C99AB00A8639C /* XXGCDTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A332C265C99AB00A8639C /* XXGCDTimerManager.m */; };
 		2F8A3330265C99AB00A8639C /* YXBSocketCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A332D265C99AB00A8639C /* YXBSocketCenter.m */; };
 		47B916A06310008C757E1B7A /* libPods-YXBSwiftProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82330328C877BE2C845D62A0 /* libPods-YXBSwiftProject.a */; };
+		681665102AF89C7C00313E25 /* CachePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6816650F2AF89C7C00313E25 /* CachePlugin.swift */; };
+		681665122AF9CB7A00313E25 /* NetworkCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681665112AF9CB7A00313E25 /* NetworkCode.swift */; };
+		681665152AFB512D00313E25 /* RoomMessageTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681665142AFB512D00313E25 /* RoomMessageTableView.swift */; };
+		681665172AFB52E600313E25 /* LQMessageBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681665162AFB52E600313E25 /* LQMessageBaseCell.swift */; };
+		681665192AFB567600313E25 /* LQMessageTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681665182AFB567600313E25 /* LQMessageTagsView.swift */; };
+		6816651C2AFB56C800313E25 /* HonourTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6816651B2AFB56C800313E25 /* HonourTagView.swift */; };
+		6816651E2AFB5C6000313E25 /* LQMessageBubbleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6816651D2AFB5C6000313E25 /* LQMessageBubbleCell.swift */; };
+		681665202AFB601600313E25 /* LQMessageTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6816651F2AFB601600313E25 /* LQMessageTextCell.swift */; };
+		681665222AFB655300313E25 /* LQMessageImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681665212AFB655300313E25 /* LQMessageImageCell.swift */; };
+		681665242AFB6A3200313E25 /* LQMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681665232AFB6A3200313E25 /* LQMessageModel.swift */; };
+		681665262AFB6D9C00313E25 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681665252AFB6D9C00313E25 /* MessageViewController.swift */; };
+		681665282AFC659100313E25 /* LQMessageGiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681665272AFC659100313E25 /* LQMessageGiftCell.swift */; };
+		6816652A2AFC65B100313E25 /* LQMessageAiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681665292AFC65B100313E25 /* LQMessageAiteCell.swift */; };
+		6816652E2AFCC26F00313E25 /* LQMessageNobbleJoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6816652D2AFCC26F00313E25 /* LQMessageNobbleJoinCell.swift */; };
+		681665302AFCD63800313E25 /* LQMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6816652F2AFCD63800313E25 /* LQMessageCell.swift */; };
+		681665322AFCEE4200313E25 /* LQMessageNormalJoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681665312AFCEE4200313E25 /* LQMessageNormalJoinCell.swift */; };
+		681665342AFE194800313E25 /* LQMeesageAnnouncCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681665332AFE194800313E25 /* LQMeesageAnnouncCell.swift */; };
+		681665362AFE1B7500313E25 /* LQMeesageRoomAnnouncCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681665352AFE1B7500313E25 /* LQMeesageRoomAnnouncCell.swift */; };
+		681665382AFE1E9400313E25 /* LQMeesageShangMaiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681665372AFE1E9400313E25 /* LQMeesageShangMaiCell.swift */; };
+		6816653A2AFE37E200313E25 /* LQMessageCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681665392AFE37E200313E25 /* LQMessageCellProtocol.swift */; };
+		6816656F2B01EAC000313E25 /* MaskAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6816656E2B01EAC000313E25 /* MaskAnimationViewController.m */; };
+		681665722B01F15B00313E25 /* LJKAudioCallAssistiveTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 681665712B01F15B00313E25 /* LJKAudioCallAssistiveTouchView.m */; };
+		681665752B0225AC00313E25 /* MaskAnimationViewController+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 681665742B0225AC00313E25 /* MaskAnimationViewController+Animation.m */; };
+		681665782B03091500313E25 /* LQCircleMaskAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 681665772B03091500313E25 /* LQCircleMaskAnimation.m */; };
 		68289EF52AEBCA12004BA0CE /* HonourCharmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68289EF42AEBCA12004BA0CE /* HonourCharmCell.swift */; };
 		68289EF72AEBCB95004BA0CE /* HonourRankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68289EF62AEBCB95004BA0CE /* HonourRankViewModel.swift */; };
 		68289EF92AEBE9E7004BA0CE /* HonourLoveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68289EF82AEBE9E7004BA0CE /* HonourLoveVC.swift */; };
@@ -477,6 +501,34 @@
 		2F8A332C265C99AB00A8639C /* XXGCDTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXGCDTimerManager.m; sourceTree = "<group>"; };
 		2F8A332D265C99AB00A8639C /* YXBSocketCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBSocketCenter.m; sourceTree = "<group>"; };
 		4F245EC0B5961F5373ECB312 /* Pods-YXBSwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXBSwiftProject.release.xcconfig"; path = "Target Support Files/Pods-YXBSwiftProject/Pods-YXBSwiftProject.release.xcconfig"; sourceTree = "<group>"; };
+		6816650F2AF89C7C00313E25 /* CachePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePlugin.swift; sourceTree = "<group>"; };
+		681665112AF9CB7A00313E25 /* NetworkCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCode.swift; sourceTree = "<group>"; };
+		681665142AFB512D00313E25 /* RoomMessageTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMessageTableView.swift; sourceTree = "<group>"; };
+		681665162AFB52E600313E25 /* LQMessageBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMessageBaseCell.swift; sourceTree = "<group>"; };
+		681665182AFB567600313E25 /* LQMessageTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMessageTagsView.swift; sourceTree = "<group>"; };
+		6816651B2AFB56C800313E25 /* HonourTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HonourTagView.swift; sourceTree = "<group>"; };
+		6816651D2AFB5C6000313E25 /* LQMessageBubbleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMessageBubbleCell.swift; sourceTree = "<group>"; };
+		6816651F2AFB601600313E25 /* LQMessageTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMessageTextCell.swift; sourceTree = "<group>"; };
+		681665212AFB655300313E25 /* LQMessageImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMessageImageCell.swift; sourceTree = "<group>"; };
+		681665232AFB6A3200313E25 /* LQMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMessageModel.swift; sourceTree = "<group>"; };
+		681665252AFB6D9C00313E25 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		681665272AFC659100313E25 /* LQMessageGiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMessageGiftCell.swift; sourceTree = "<group>"; };
+		681665292AFC65B100313E25 /* LQMessageAiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMessageAiteCell.swift; sourceTree = "<group>"; };
+		6816652D2AFCC26F00313E25 /* LQMessageNobbleJoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMessageNobbleJoinCell.swift; sourceTree = "<group>"; };
+		6816652F2AFCD63800313E25 /* LQMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMessageCell.swift; sourceTree = "<group>"; };
+		681665312AFCEE4200313E25 /* LQMessageNormalJoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMessageNormalJoinCell.swift; sourceTree = "<group>"; };
+		681665332AFE194800313E25 /* LQMeesageAnnouncCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMeesageAnnouncCell.swift; sourceTree = "<group>"; };
+		681665352AFE1B7500313E25 /* LQMeesageRoomAnnouncCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMeesageRoomAnnouncCell.swift; sourceTree = "<group>"; };
+		681665372AFE1E9400313E25 /* LQMeesageShangMaiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMeesageShangMaiCell.swift; sourceTree = "<group>"; };
+		681665392AFE37E200313E25 /* LQMessageCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQMessageCellProtocol.swift; sourceTree = "<group>"; };
+		6816656D2B01EAC000313E25 /* MaskAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaskAnimationViewController.h; sourceTree = "<group>"; };
+		6816656E2B01EAC000313E25 /* MaskAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaskAnimationViewController.m; sourceTree = "<group>"; };
+		681665702B01F15B00313E25 /* LJKAudioCallAssistiveTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJKAudioCallAssistiveTouchView.h; sourceTree = "<group>"; };
+		681665712B01F15B00313E25 /* LJKAudioCallAssistiveTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJKAudioCallAssistiveTouchView.m; sourceTree = "<group>"; };
+		681665732B0225AC00313E25 /* MaskAnimationViewController+Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MaskAnimationViewController+Animation.h"; sourceTree = "<group>"; };
+		681665742B0225AC00313E25 /* MaskAnimationViewController+Animation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MaskAnimationViewController+Animation.m"; sourceTree = "<group>"; };
+		681665762B03091500313E25 /* LQCircleMaskAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LQCircleMaskAnimation.h; sourceTree = "<group>"; };
+		681665772B03091500313E25 /* LQCircleMaskAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LQCircleMaskAnimation.m; sourceTree = "<group>"; };
 		68289EF42AEBCA12004BA0CE /* HonourCharmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourCharmCell.swift; sourceTree = "<group>"; };
 		68289EF62AEBCB95004BA0CE /* HonourRankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourRankViewModel.swift; sourceTree = "<group>"; };
 		68289EF82AEBE9E7004BA0CE /* HonourLoveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonourLoveVC.swift; sourceTree = "<group>"; };
@@ -777,6 +829,7 @@
 		0C14A0BB249B65B8005FE48A /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				681665132AFB50E900313E25 /* 直播间消息TableView */,
 				0C14A0BC249B65C0005FE48A /* 主页 */,
 			);
 			path = "首页";
@@ -793,6 +846,14 @@
 				68A7EBF72AD410B30094BDA6 /* MVVM的简单示例 */,
 				0C14A0BD249B65EA005FE48A /* SPHomeViewController.h */,
 				0C14A0BE249B65EA005FE48A /* SPHomeViewController.m */,
+				6816656D2B01EAC000313E25 /* MaskAnimationViewController.h */,
+				6816656E2B01EAC000313E25 /* MaskAnimationViewController.m */,
+				681665732B0225AC00313E25 /* MaskAnimationViewController+Animation.h */,
+				681665742B0225AC00313E25 /* MaskAnimationViewController+Animation.m */,
+				681665762B03091500313E25 /* LQCircleMaskAnimation.h */,
+				681665772B03091500313E25 /* LQCircleMaskAnimation.m */,
+				681665702B01F15B00313E25 /* LJKAudioCallAssistiveTouchView.h */,
+				681665712B01F15B00313E25 /* LJKAudioCallAssistiveTouchView.m */,
 				68E335172AE0EC55008F537E /* HLHorizontalPageLayout.h */,
 				68E335182AE0EC55008F537E /* HLHorizontalPageLayout.m */,
 				68E3350E2AE0DB69008F537E /* SPHornalCollectionViewController.h */,
@@ -1161,6 +1222,71 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		681665132AFB50E900313E25 /* 直播间消息TableView */ = {
+			isa = PBXGroup;
+			children = (
+				681665142AFB512D00313E25 /* RoomMessageTableView.swift */,
+				6816653B2AFE449C00313E25 /* Base */,
+				6816653E2AFE44DB00313E25 /* Model */,
+				6816653C2AFE44A800313E25 /* Cell */,
+				6816653D2AFE44C600313E25 /* Protocol */,
+				6816651A2AFB569E00313E25 /* 本来就有的 */,
+				681665252AFB6D9C00313E25 /* MessageViewController.swift */,
+			);
+			path = "直播间消息TableView";
+			sourceTree = "<group>";
+		};
+		6816651A2AFB569E00313E25 /* 本来就有的 */ = {
+			isa = PBXGroup;
+			children = (
+				6816651B2AFB56C800313E25 /* HonourTagView.swift */,
+			);
+			path = "本来就有的";
+			sourceTree = "<group>";
+		};
+		6816653B2AFE449C00313E25 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6816652F2AFCD63800313E25 /* LQMessageCell.swift */,
+				681665162AFB52E600313E25 /* LQMessageBaseCell.swift */,
+				681665182AFB567600313E25 /* LQMessageTagsView.swift */,
+				6816651D2AFB5C6000313E25 /* LQMessageBubbleCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6816653C2AFE44A800313E25 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6816651F2AFB601600313E25 /* LQMessageTextCell.swift */,
+				681665272AFC659100313E25 /* LQMessageGiftCell.swift */,
+				681665292AFC65B100313E25 /* LQMessageAiteCell.swift */,
+				681665212AFB655300313E25 /* LQMessageImageCell.swift */,
+				681665312AFCEE4200313E25 /* LQMessageNormalJoinCell.swift */,
+				6816652D2AFCC26F00313E25 /* LQMessageNobbleJoinCell.swift */,
+				681665332AFE194800313E25 /* LQMeesageAnnouncCell.swift */,
+				681665352AFE1B7500313E25 /* LQMeesageRoomAnnouncCell.swift */,
+				681665372AFE1E9400313E25 /* LQMeesageShangMaiCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6816653D2AFE44C600313E25 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				681665392AFE37E200313E25 /* LQMessageCellProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6816653E2AFE44DB00313E25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				681665232AFB6A3200313E25 /* LQMessageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		68289F052AECE6AE004BA0CE /* 真爱榜 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1227,6 +1353,7 @@
 				68A7EBDD2AD13C2F0094BDA6 /* Env.swift */,
 				68A7EBDE2AD13C2F0094BDA6 /* NetworkManager.swift */,
 				68A7EBDF2AD13C2F0094BDA6 /* NetworkError.swift */,
+				681665112AF9CB7A00313E25 /* NetworkCode.swift */,
 				68A7EBCA2AD13C1E0094BDA6 /* Example */,
 				68A7EBCC2AD13C1E0094BDA6 /* Router */,
 				68A7EBD02AD13C1E0094BDA6 /* Plugins */,
@@ -1262,6 +1389,7 @@
 				68A7EBE92AD290590094BDA6 /* LogCustomPlugin.swift */,
 				68E3354C2AE37A03008F537E /* ToastPlugin.swift */,
 				68E335092ADF77E1008F537E /* RSAPlugin.swift */,
+				6816650F2AF89C7C00313E25 /* CachePlugin.swift */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -1511,6 +1639,7 @@
 				68A7EBF62AD3F8050094BDA6 /* LQWithdrawViewModel.swift in Sources */,
 				0CC0C78124E3DE6E001AE32D /* UploadImageAPI.m in Sources */,
 				68A7EBD92AD13C1E0094BDA6 /* LogPlugin.swift in Sources */,
+				681665342AFE194800313E25 /* LQMeesageAnnouncCell.swift in Sources */,
 				68A7EBD52AD13C1E0094BDA6 /* MyMoyaExmple.swift in Sources */,
 				2F8A3330265C99AB00A8639C /* YXBSocketCenter.m in Sources */,
 				68E3350A2ADF77E1008F537E /* RSAPlugin.swift in Sources */,
@@ -1528,6 +1657,7 @@
 				0C76C1AC26312467005580D8 /* RegisterAPI.m in Sources */,
 				68A7EC6B2AD780190094BDA6 /* PlayEffectsViewController.swift in Sources */,
 				689BE4982AC5C4A00024F4CE /* UIButton+YXB.swift in Sources */,
+				681665782B03091500313E25 /* LQCircleMaskAnimation.m in Sources */,
 				68289EF52AEBCA12004BA0CE /* HonourCharmCell.swift in Sources */,
 				0C14A085249B648D005FE48A /* YXBCell.m in Sources */,
 				0C14A0A2249B648D005FE48A /* YXBThemeManager.m in Sources */,
@@ -1548,6 +1678,7 @@
 				68A37FB02AEB944D0060421E /* HonourRankModel.swift in Sources */,
 				689BE4902AC48BDC0024F4CE /* UIView+YXB.swift in Sources */,
 				0C14A097249B648D005FE48A /* YXBCheckRegular.m in Sources */,
+				6816656F2B01EAC000313E25 /* MaskAnimationViewController.m in Sources */,
 				68AC9B3E2AE6244B00C1B5EF /* HeaderStaticView.swift in Sources */,
 				68E3353B2AE2615F008F537E /* PopoverBaseView.swift in Sources */,
 				0C14A096249B648D005FE48A /* ChineseToPinyin.m in Sources */,
@@ -1562,6 +1693,7 @@
 				68E335332AE20823008F537E /* MSDressCell.swift in Sources */,
 				68AC9B392AE6241100C1B5EF /* MyDressPreviewView+Protocol.swift in Sources */,
 				68E335352AE23ECC008F537E /* MSDressSegmentVC.swift in Sources */,
+				681665172AFB52E600313E25 /* LQMessageBaseCell.swift in Sources */,
 				68E3353D2AE271B6008F537E /* MSDressBuyViewModel.swift in Sources */,
 				68289EFB2AEBEE7C004BA0CE /* HonourLoveViewModel.swift in Sources */,
 				0C14A0BF249B65EA005FE48A /* SPHomeViewController.m in Sources */,
@@ -1573,19 +1705,24 @@
 				685BC4562AF274BF00201A5E /* LQPhotoBroswer.swift in Sources */,
 				68E335192AE0EC55008F537E /* HLHorizontalPageLayout.m in Sources */,
 				68A37FB22AEBAC010060421E /* HonourRankWeekSegmentVC.swift in Sources */,
+				6816653A2AFE37E200313E25 /* LQMessageCellProtocol.swift in Sources */,
 				0C47C7AC24E52477006945B9 /* GlobalFuncs.swift in Sources */,
 				68289F042AECDB54004BA0CE /* NSString+MDCNHelper.m in Sources */,
+				6816651E2AFB5C6000313E25 /* LQMessageBubbleCell.swift in Sources */,
 				0C47C7A424E52242006945B9 /* PaymentkeyboardView.swift in Sources */,
 				0CC0C75D24E3DE2F001AE32D /* ForceUpdateView.m in Sources */,
 				68E3352E2AE13AE8008F537E /* MSDressModel.swift in Sources */,
 				0C14A0B7249B652D005FE48A /* LanchPageModel.m in Sources */,
+				6816652E2AFCC26F00313E25 /* LQMessageNobbleJoinCell.swift in Sources */,
 				68A7EC5A2AD65C390094BDA6 /* IM+API.swift in Sources */,
 				68A7EBE12AD13C2F0094BDA6 /* NetworkManager.swift in Sources */,
 				0C277EA2253E9A1D00C33F56 /* Base64.m in Sources */,
 				68289EF92AEBE9E7004BA0CE /* HonourLoveVC.swift in Sources */,
 				689BE4872AC4475E0024F4CE /* LQLabelTextFieldView.swift in Sources */,
+				681665362AFE1B7500313E25 /* LQMeesageRoomAnnouncCell.swift in Sources */,
 				0C76C1B026312467005580D8 /* ModifyLoginPassAPI.m in Sources */,
 				2F0C906B27C48B520057108B /* YXBVerificationCodeView.m in Sources */,
+				681665282AFC659100313E25 /* LQMessageGiftCell.swift in Sources */,
 				0C76C1B726312467005580D8 /* ForgetSecretViewController.m in Sources */,
 				68E3353F2AE276DA008F537E /* MSDressBuyCell.swift in Sources */,
 				68A7EBF42AD3E4D10094BDA6 /* BindBankHandyJsonModel.swift in Sources */,
@@ -1594,30 +1731,37 @@
 				68A7EBD72AD13C1E0094BDA6 /* APIRouter.swift in Sources */,
 				0C14A0EC249B69C2005FE48A /* YXBFormLeftRightBgCell.m in Sources */,
 				68E3352D2AE13AE8008F537E /* MSDressCenterVC.swift in Sources */,
+				681665222AFB655300313E25 /* LQMessageImageCell.swift in Sources */,
+				681665202AFB601600313E25 /* LQMessageTextCell.swift in Sources */,
 				0C14A089249B648D005FE48A /* YXBCollectionCell.m in Sources */,
 				0CDB809B25B0444600B62976 /* TwoLineButton.swift in Sources */,
+				681665322AFCEE4200313E25 /* LQMessageNormalJoinCell.swift in Sources */,
 				0CDF01EC25EF841100EE10C1 /* UIColor+YXBGradient.m in Sources */,
 				0C47C7A724E523A0006945B9 /* PaymentPasswordView.swift in Sources */,
 				0C47C79A24E5175D006945B9 /* UIEdgeInsets+Convenience.swift in Sources */,
 				0C76C1AF26312467005580D8 /* ForgetPassAPI.m in Sources */,
 				0C47C7A624E52397006945B9 /* TableViewCellItem.swift in Sources */,
+				681665242AFB6A3200313E25 /* LQMessageModel.swift in Sources */,
 				0C14A091249B648D005FE48A /* WCQRCodeVC.m in Sources */,
 				0C76C14926312163005580D8 /* NSBundle+language.m in Sources */,
 				68A37F672AE6514C0060421E /* PlayMP4View.swift in Sources */,
 				68A7EBDB2AD13C1E0094BDA6 /* AuthPlugin.swift in Sources */,
 				68A37F6E2AE7770A0060421E /* SPPlayMP4ViewController.m in Sources */,
 				68289F012AECCFF2004BA0CE /* HonourLoveModel.swift in Sources */,
+				681665122AF9CB7A00313E25 /* NetworkCode.swift in Sources */,
 				0C76C1B626312467005580D8 /* YXBCaptchaView.m in Sources */,
 				0CDB809D25B0489300B62976 /* TwoLineLabel.swift in Sources */,
 				68A37FB62AEBB41D0060421E /* HonoruRankCharmHeader.swift in Sources */,
 				68A7EBE02AD13C2F0094BDA6 /* Env.swift in Sources */,
 				68E3352F2AE13AE8008F537E /* MSDressViewModel.swift in Sources */,
 				68289F322AF08697004BA0CE /* RoomPlayJoinEffectManager.m in Sources */,
+				681665382AFE1E9400313E25 /* LQMeesageShangMaiCell.swift in Sources */,
 				0CC0C78A24E3DEAC001AE32D /* NoticeModel.m in Sources */,
 				0C14A0A1249B648D005FE48A /* QMUIConfigurationTemplateDark.m in Sources */,
 				0CC0C79324E3EDD7001AE32D /* YXBInputView.m in Sources */,
 				0C47C79824E51714006945B9 /* UIView+Utils.swift in Sources */,
 				687608A32AC2A376000EED59 /* AppDelegate+DebugTool.m in Sources */,
+				681665722B01F15B00313E25 /* LJKAudioCallAssistiveTouchView.m in Sources */,
 				0C76C1B426312467005580D8 /* RegistViewController.m in Sources */,
 				0C14A0E2249B69C2005FE48A /* PagingViewTableHeaderView.m in Sources */,
 				0C14A0E6249B69C2005FE48A /* YXBFormTopBottomCell.m in Sources */,
@@ -1642,11 +1786,14 @@
 				0C76C1B326312467005580D8 /* PSSPayPassViewController.m in Sources */,
 				0C14A09F249B648D005FE48A /* NSObject+YXBAdd.m in Sources */,
 				687608A42AC2A376000EED59 /* GJNetWorkHostUrl.m in Sources */,
+				6816652A2AFC65B100313E25 /* LQMessageAiteCell.swift in Sources */,
+				681665192AFB567600313E25 /* LQMessageTagsView.swift in Sources */,
 				0C14A0E8249B69C2005FE48A /* YXBFormImageCell.m in Sources */,
 				0C47C7BD24E5648E006945B9 /* Appdelegate+AliPay.swift in Sources */,
 				0CC0C77C24E3DE6E001AE32D /* GetConfigAPI.m in Sources */,
 				68A7EC632AD66C130094BDA6 /* MSSystemNoticeVC.swift in Sources */,
 				0C47C79E24E517C8006945B9 /* String+Subscript.swift in Sources */,
+				681665102AF89C7C00313E25 /* CachePlugin.swift in Sources */,
 				68AC9B3D2AE6244B00C1B5EF /* PlayEffectsView.swift in Sources */,
 				0CC0C78224E3DE6E001AE32D /* PersonalModel.m in Sources */,
 				0C14A0EB249B69C2005FE48A /* YXBFormButtonValueCell.m in Sources */,
@@ -1684,10 +1831,14 @@
 				68A37FAC2AEB91EA0060421E /* RankListHeader.swift in Sources */,
 				0C14A0A0249B648D005FE48A /* UIButton+YXBAdd.m in Sources */,
 				68A7EBEA2AD290590094BDA6 /* LogCustomPlugin.swift in Sources */,
+				681665262AFB6D9C00313E25 /* MessageViewController.swift in Sources */,
 				68E335392AE26117008F537E /* PopoverManager.swift in Sources */,
 				68A37FB82AEBB4DB0060421E /* HonourRankUserHeaderView.swift in Sources */,
+				681665152AFB512D00313E25 /* RoomMessageTableView.swift in Sources */,
 				0C14A0E7249B69C2005FE48A /* YXBFormLeftRightCell.m in Sources */,
 				68A7EBF22AD3E3270094BDA6 /* NetworkBasicResponse.swift in Sources */,
+				681665302AFCD63800313E25 /* LQMessageCell.swift in Sources */,
+				6816651C2AFB56C800313E25 /* HonourTagView.swift in Sources */,
 				0CB9CF05260DDCFC00E82B13 /* PaymentService.swift in Sources */,
 				0C76C1AD26312467005580D8 /* CaptchaAPI.m in Sources */,
 				0C14A099249B648D005FE48A /* LYLWKWebView.m in Sources */,
@@ -1700,6 +1851,7 @@
 				68A7EBE82AD279CD0094BDA6 /* WithDrawAPI.swift in Sources */,
 				0C14A09A249B648D005FE48A /* UIView+Xib.m in Sources */,
 				0C14A09B249B648D005FE48A /* NSArray+IGListDiffable.m in Sources */,
+				681665752B0225AC00313E25 /* MaskAnimationViewController+Animation.m in Sources */,
 				0C14A0EF249B6A0D005FE48A /* YXBBaseViewController.m in Sources */,
 				0C76C1B126312467005580D8 /* ModifyPayPassAPI.m in Sources */,
 				0C14A098249B648D005FE48A /* YXBTapAreaButton.m in Sources */,

@@ -11,16 +11,30 @@
 #import "MBProgressHUD+NH.h"
 #import "SPHornalCollectionViewController.h"
 #import "SPPlayMP4ViewController.h"
+#import "MaskAnimationViewController.h"
+#import "LQCircleMaskAnimation.h"
 
-@interface SPHomeViewController ()
+@interface SPHomeViewController () <UINavigationControllerDelegate>
 
 @end
 
 @implementation SPHomeViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.delegate = self;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.delegate = nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    self.navigationController.delegate = self;
+    
     [self setupUI];
     [self setupTool];
     [self setupData];
@@ -84,6 +98,31 @@
     [dressButton addTarget:self action:@selector(dressAction:) forControlEvents:(UIControlEventTouchUpInside)];
     
     
+    UIButton *messageButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [messageButton setTitle:@"发消息" forState:(UIControlStateNormal)];
+    [messageButton setTitleColor: [YXBThemeManager sharedInstance].titleTextColor forState:(UIControlStateNormal)];
+    [self.view addSubview:messageButton];
+    [messageButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(100);
+        make.top.mas_equalTo(400);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(50);
+    }];
+    [messageButton addTarget:self action:@selector(messageAction:) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    
+    UIButton *maskButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [maskButton setTitle:@"mask动画" forState:(UIControlStateNormal)];
+    [maskButton setTitleColor: [YXBThemeManager sharedInstance].titleTextColor forState:(UIControlStateNormal)];
+    [self.view addSubview:maskButton];
+    [maskButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(200);
+        make.top.mas_equalTo(400);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(50);
+    }];
+    [maskButton addTarget:self action:@selector(maskAction:) forControlEvents:(UIControlEventTouchUpInside)];
+    
     UIImageView *imageView = [[UIImageView alloc] init];
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"loading" withExtension:@"gif"];
 //    UIImage *image = [UIImage imageNamed:@"loading.gif"];
@@ -133,6 +172,29 @@
 - (void)dressAction:(UIButton *)button {
     MSDressSegmentVC *vc = [[MSDressSegmentVC alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)messageAction:(UIButton *)button {
+    MessageViewController *vc = [[MessageViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)maskAction:(UIButton *)button {
+    MaskAnimationViewController *vc = [MaskAnimationViewController sharedManager];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+//RoomMessageTableView
+
+#pragma mark ---- UINavigationControllerDelegate ----
+// 转场动画
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
+    if ([toVC isEqual:[MaskAnimationViewController sharedManager]] && operation == UINavigationControllerOperationPush) {
+        return [[LQCircleMaskAnimation alloc]init];
+    } else {
+        return nil;
+    }
 }
 
 @end

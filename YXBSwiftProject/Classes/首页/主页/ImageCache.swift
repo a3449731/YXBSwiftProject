@@ -12,8 +12,8 @@ import CommonCrypto
 
 @objc class YXBImageCache: NSObject {
     
-    /*
-    static func getImage(with url: URL , scale : CGFloat = 1) -> UIImage? {
+    ///  同步获取图片，注意是同步下载并缓存
+    static func getNetworkImage(with url: URL , scale : CGFloat = 1) -> UIImage? {
         
         if let image = SDImageCache.shared.imageFromCache(forKey: url.absoluteString) {
             return UIImage.init(data: image.sd_imageData()!, scale: scale)
@@ -29,7 +29,7 @@ import CommonCrypto
             return nil
         }
     }
-    */
+    
     
     /// 修改了取图的方法 ,，示例
     /// DispatchQueue.global().async() {

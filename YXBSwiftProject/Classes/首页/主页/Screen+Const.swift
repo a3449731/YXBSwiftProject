@@ -16,7 +16,7 @@ import Foundation
 
 import UIKit
 
-final class ScreenConst {
+@objc final class ScreenConst: NSObject {
     static let ScreenRatio: CGFloat = ScreenConst.width/375.0
     /// 屏宽
     static let width = UIScreen.main.bounds.size.width
@@ -76,12 +76,41 @@ final class ScreenConst {
     static let bottomSpaceHeight: CGFloat = {
         return hasNotch ? 34 : 0
     }()
+    
+    
+    // 获取当前控制器，尤其iOS版本不断升级，加上一些第三方可能乱加window，所以先获取到正确的window是第一步
+    @objc static func getCurrentUIController() -> UIViewController? {
+        guard let window = UIApplication.shared.getKeyWindow() else {
+            return nil
+        }
+        
+        guard let frontView = window.subviews.first else {
+            return nil
+        }
+
+        guard let nextResponder = frontView.next else {
+            return nil
+        }
+        
+        var result: UIViewController?
+        if let viewController = nextResponder as? UIViewController {
+            result = viewController
+        } else {
+            result = window.rootViewController
+
+            if let tabBarController = result as? UITabBarController,
+               let navigationController = tabBarController.selectedViewController as? UINavigationController {
+                result = navigationController.topViewController
+            }
+        }
+        return result
+    }
 }
 
 extension UIApplication {
     
     /// 找到当前展示的window
-    func currentUIWindow() -> UIWindow? {
+    @objc func currentUIWindow() -> UIWindow? {
         if #available(iOS 13.0, *){
             let connectedScenes = UIApplication.shared.connectedScenes
                 .filter({
@@ -99,7 +128,7 @@ extension UIApplication {
     }
     
     /// 找到keyWindow
-    func getKeyWindow() -> UIWindow? {
+    @objc func getKeyWindow() -> UIWindow? {
         var keyWindow: UIWindow? = nil
         
         if #available(iOS 13.0, *) {

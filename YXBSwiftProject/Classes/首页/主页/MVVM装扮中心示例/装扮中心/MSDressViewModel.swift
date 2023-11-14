@@ -55,7 +55,7 @@ class MSDressViewModel {
     
     func fetchData(type: MSDressType, closure: @escaping () -> ()) {
         let network = NetworkManager<MyAPI>()
-        network.sendRequest(.findZhuangbanProdList(type: type.rawValue)) { [weak self] obj in
+        network.sendRequest(.findZhuangbanProdList(type: type.rawValue), hotPlugins: [.cache, .rsa]) { [weak self] obj in
             guard let self = self else { return }
             let array: [MSDressModel] = jsonToArray(jsonData: obj)
 //            let urlArray = array.flatMap { $0.texiao } + array.flatMap { $0.img }

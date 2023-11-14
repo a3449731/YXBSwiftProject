@@ -24,6 +24,10 @@ class BlankContent: NSObject {
     
 }
 
+extension NetworkBasicResponse: HandyJSON {
+    
+}
+
 // 为HandyJson提供的泛型解析方法，用于解析遵循HandyJSON协议的模型。 不想把网络请求和解析糅合到一起，所以做了单独的。
 func jsonToModel<T: HandyJSON>(jsonData: Any) -> T {
     if let json = jsonData as? [String: Any],
