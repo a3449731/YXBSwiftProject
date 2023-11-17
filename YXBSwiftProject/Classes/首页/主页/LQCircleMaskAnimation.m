@@ -19,7 +19,7 @@
 
 // 动画时间
 - (NSTimeInterval)transitionDuration:(nullable id<UIViewControllerContextTransitioning>)transitionContext {
-    return 3.0;
+    return 0.28;
 }
 
 - (void)animateTransition:(nonnull id<UIViewControllerContextTransitioning>)transitionContext {
@@ -66,7 +66,7 @@
     NSLog(@"起始坐标%@", NSStringFromCGRect(startFrame));
     
     //创建动画
-    CABasicAnimation *maskLayerAnimation = [self creatMaskAnimation:@"path" startFrame:startFrame endFrame:endFrame duration:3];
+    CABasicAnimation *maskLayerAnimation = [self creatMaskAnimation:@"path" startFrame:startFrame endFrame:endFrame duration:0.28];
     maskLayerAnimation.delegate = self;
     
     //添加动画遮罩
@@ -92,7 +92,7 @@
     NSLog(@"结束坐标%@", NSStringFromCGRect(endFrame));
     
     //创建动画
-    CABasicAnimation *maskLayerAnimation = [self creatMaskAnimation:@"path" startFrame:startFrame endFrame:endFrame duration:3];
+    CABasicAnimation *maskLayerAnimation = [self creatMaskAnimation:@"path" startFrame:startFrame endFrame:endFrame duration:0.28];
     maskLayerAnimation.delegate = self;
     
     //添加动画遮罩

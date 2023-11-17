@@ -53,6 +53,16 @@ import HandyJSON
         tableview.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        
+        // 假数据
+        self.modelArray = self.jiashuju().map { dic in
+            let model = LQMessageModel.deserialize(from: dic) ?? LQMessageModel()
+            model.joinRoomAtt = model.adjustJoinRoomAtt(model: model)
+            model.sendGiftAtt = model.adjustSendGiftAtt(model: model)
+            model.bubbleImage = model.adjustBubbleImage(model: model)
+            return model
+        }
+        self.tableview.reloadData()
     }
     
     // 接收OC传来的数据，OC是dic数据，转成我要的模型
@@ -193,6 +203,29 @@ private extension RoomMessageTableView {
           "isFz" : "0"
         ]
         
+        let dic8_1: [String: Any] = [
+          "nickname1" : "华为4头华为4头华为4头",
+          "contentWidth" : "170.000000",
+          "passAction" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1698648911823.mp4",
+          "caiLevel" : "32",
+          "nickname" : "小米小米小米小米小米小米",
+          "headImg" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/lanqi/file/1698809513559.jpeg",
+          "uid1" : "8b6c7f81b9b94c7e806738df9fa43fcc",
+          "contentHeight" : "42.000000",
+          "type" : "34",
+          "isAdmin" : "0",
+          "cellHeight" : "42.000000",
+          "uid" : "58a3af31652c4ddaa4695dc1cac6784a",
+          "zuoj" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1698561685583.mp4",
+          "shenmiren_state" : "0",
+          "text" : "小米跟随华为4头进入房间",
+          "meiLevel" : "51",
+          "nichengbianse" : "0",
+          "headKuang" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1699241355638.webp",
+          "vipLevel" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1698310776853.png",
+          "isFz" : "0"
+        ]
+        
         let dic1: [String: Any] = [
           "mai" : 0,
           "vipLevel" : "",
@@ -223,7 +256,38 @@ private extension RoomMessageTableView {
           "isMute" : false,
           "isFz" : "0",
           "isSelect" : false,
-          "isGh": true
+        ]
+        
+        let dic1_1: [String: Any] = [
+          "mai" : 0,
+          "vipLevel" : "",
+          "contentWidth" : "100.000000",
+          "passAction" : "",
+          "caiLevel" : 30,
+          "nickname" : "唐禹哲哈哈哈哈哈哈哈哈哈",
+          "uname" : "唐禹哲水电费水电费手动蝶",
+          "headImg" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/36816_76574d3722784a2985a985d064a2c0dc_ios_1698902636.gif",
+          "isSpeaking" : false,
+          "contentHeight" : "42.000000",
+          "resId" : 0,
+          "type" : "11",
+          "qpKuang" : "",
+          "isAdmin" : "0",
+          "showMai" : 0,
+          "isAni" : false,
+          "uid" : "76574d3722784a2985a985d064a2c0dc",
+          "isGuest" : false,
+          "zuoj" : "",
+          "cellHeight" : "77.000000",
+          "mai1" : 0,
+          "uimg" : "https:\\lanqi123.oss-cn-beijing.aliyuncs.com/file/36816_76574d3722784a2985a985d064a2c0dc_ios_1698902636.gif",
+          "text" : "唐禹哲进入房间",
+          "meiLevel" : 54,
+          "headKuang" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1699241627225.webp",
+          "isLock" : false,
+          "isMute" : false,
+          "isFz" : "0",
+          "isSelect" : false,
         ]
         
         let dic2: [String: Any] = [
@@ -242,6 +306,26 @@ private extension RoomMessageTableView {
             "shenmiren_state" : "0",
             "contentWidth" : "43.000000",
             "nickname" : "哈哈大笑也没哈哈大笑哈",
+            "headKuang" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1699241580574.webp",
+            "headImg" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/14423_fd56a01b47f949f5bcb1690d62f4aa8e_ios_1698758120.gif?x-oss-process=image/format,png"
+          ]
+        
+        let dic2_1: [String: Any] = [
+            "caiLevel" : "101",
+            "meiLevel" : "43",
+            "isAdmin" : "0",
+            "uid" : "fd56a01b47f949f5bcb1690d62f4aa8e",
+            "contentHeight" : "42.000000",
+            "cellHeight" : "77.000000",
+            "type" : "1",
+            "vipLevel" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1698310776853.png",
+            "isFz" : "0",
+            "qpKuang" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1697867805878.png",
+            "nichengbianse" : "0",
+            "text" : "一个人",
+            "shenmiren_state" : "0",
+            "contentWidth" : "43.000000",
+            "nickname" : "哈",
             "headKuang" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1699241580574.webp",
             "headImg" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/14423_fd56a01b47f949f5bcb1690d62f4aa8e_ios_1698758120.gif?x-oss-process=image/format,png"
           ]
@@ -307,8 +391,32 @@ private extension RoomMessageTableView {
             "num" : 1,
             "price" : 100,
             "shenmiren_state": 0,
-            "showName" : "送给{\n    NSColor = \"UIExtendedGrayColorSpace 1 1\";\n    NSFont = \"<UICTFont: 0x10ec9da90> font-family: \\\".SFUI-Regular\\\"; font-weight: normal; font-style: normal; font-size: 14.00pt\";\n} 李维嘉1 {\n    NSColor = \"UIExtendedSRGBColorSpace 0.992157 0.843137 0.141176 1\";\n    NSFont = \"<UICTFont: 0x10ec9da90> font-family: \\\".SFUI-Regular\\\"; font-weight: normal; font-style: normal; font-size: 14.00pt\";\n}x1{\n    NSAttachment = \"<NSTextAttachment: 0x2864b8770>\";\n} x1{\n    NSColor = \"UIExtendedSRGBColorSpace 0.992157 0.843137 0.141176 1\";\n    NSFont = \"<UICTFont: 0x10ec9da90> font-family: \\\".SFUI-Regular\\\"; font-weight: normal; font-style: normal; font-size: 14.00pt\";\n}",
             "sname" : "哈哈哈哈哈哈哈哈哈哈哈哈",
+            "suid" : "453993a54af94e7b8c6fe184c4fb9eb5",
+            "type" : 5,
+            "uid" : "fd56a01b7f949f5bcb1690d62f4aa8e",
+            "vipLevel" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1698310776853.png",
+        ]
+        
+        let dic4_1: [String: Any] = [
+            "caiLevel": 101,
+            "cellHeight" : "80.000000",
+            "contentHeight" : "45.000000",
+            "contentWidth" : "122.890234",
+            "effect" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1698659728075.mp4",
+            "headImg" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/14423_fd56a01b47f949f5bcb1690d62f4aa8e_ios_1698758120.gif?x-oss-process=image/format,png",
+            "headKuang" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1699241580574.webp",
+            "img" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1695882013627.png",
+            "isAdmin" : 0,
+            "isFz" : 0,
+            "meiLevel" : 43,
+            "name" : "幸运手枪",
+            "nichengbianse" : 0,
+            "nickname": "你",
+            "num" : 1,
+            "price" : 100,
+            "shenmiren_state": 0,
+            "sname" : "哈",
             "suid" : "453993a54af94e7b8c6fe184c4fb9eb5",
             "type" : 5,
             "uid" : "fd56a01b7f949f5bcb1690d62f4aa8e",
@@ -382,6 +490,39 @@ private extension RoomMessageTableView {
           "isSelect" : false
         ]
         
+        let dic7_1: [String: Any] = [
+          "mai" : 0,
+          "vipLevel" : "",
+          "vipLevelInt" : 5,
+          "contentWidth" : "100.000000",
+          "passAction" : "",
+          "caiLevel" : 30,
+          "nickname" : "唐禹哲是你吧阿是安达啊才",
+          "uname" : "唐禹哲阿阿斯顿发的代发仓",
+          "headImg" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/36816_76574d3722784a2985a985d064a2c0dc_ios_1698902636.gif",
+          "isSpeaking" : false,
+          "contentHeight" : "42.000000",
+          "resId" : 0,
+          "type" : "11",
+          "qpKuang" : "",
+          "isAdmin" : "0",
+          "showMai" : 0,
+          "isAni" : false,
+          "uid" : "76574d3722784a2985a985d064a2c0dc",
+          "isGuest" : false,
+          "zuoj" : "",
+          "cellHeight" : "77.000000",
+          "mai1" : 0,
+          "uimg" : "https:\\lanqi123.oss-cn-beijing.aliyuncs.com/file/36816_76574d3722784a2985a985d064a2c0dc_ios_1698902636.gif",
+          "text" : "哈哈",
+          "meiLevel" : 54,
+          "headKuang" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1699241627225.webp",
+          "isLock" : false,
+          "isMute" : false,
+          "isFz" : "0",
+          "isSelect" : false
+        ]
+        
         let dic9: [String: Any] = [
           "mai" : 0,
           "vipLevel" : "",
@@ -414,8 +555,42 @@ private extension RoomMessageTableView {
           "isMute" : false,
           "isFz" : "0",
           "isSelect" : false,
-          "atText": "@活泼的天使 "
         ]
+        
+        let dic9_1: [String: Any] = [
+          "mai" : 0,
+          "vipLevel" : "",
+          "vipLevelInt" : 4,
+          "contentWidth" : "100.000000",
+          "passAction" : "",
+          "caiLevel" : 30,
+          "nickname" : "唐禹哲",
+          "uname" : "唐禹哲",
+          "headImg": "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1695295116821.gif?x-oss-process=image/format,png",
+//          "headImg" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/36816_76574d3722784a2985a985d064a2c0dc_ios_1698902636.gif",
+          "isSpeaking" : false,
+          "contentHeight" : "42.000000",
+          "resId" : 0,
+          "type" : "208",
+          "qpKuang" : "",
+          "isAdmin" : "0",
+          "showMai" : 0,
+          "isAni" : false,
+          "uid" : "76574d3722784a2985a985d064a2c0dc",
+          "isGuest" : false,
+          "zuoj" : "",
+          "cellHeight" : "77.000000",
+          "mai1" : 0,
+          "uimg" : "https:\\lanqi123.oss-cn-beijing.aliyuncs.com/file/36816_76574d3722784a2985a985d064a2c0dc_ios_1698902636.gif",
+          "text" : "我是被艾特欢迎的人啊啊啊啊",
+          "meiLevel" : 54,
+          "headKuang" : "https://lanqi123.oss-cn-beijing.aliyuncs.com/file/1699241627225.webp",
+          "isLock" : false,
+          "isMute" : false,
+          "isFz" : "0",
+          "isSelect" : false,
+        ]
+        
         
         let dic10: [String: Any] = [
           "shangxiatiao" : "1",
@@ -427,12 +602,22 @@ private extension RoomMessageTableView {
           "name" : "哈哈大笑也没哈哈大笑哈"
         ]
         
+        let dic10_1: [String: Any] = [
+          "shangxiatiao" : "1",
+          "cellHeight" : "74.000000",
+          "text" : "哈哈大笑也没哈哈大笑哈上麦了",
+          "contentWidth" : "186.000000",
+          "type" : "200",
+          "contentHeight" : "59.000000",
+          "name" : "哈"
+        ]
+        
         let dic11: [String: Any] = [
           "cellHeight" : "61.000000",
           "contentWidth" : "186.000000",
           "type" : "1001",
           "contentHeight" : "46.000000",
-          "text" : "官方公告：这样一个人真的可以接受自己不一样"
+          "text" : "官方公告：这样一个人真的可以接受自己不一样这样一个人真的可以接受自己不一样这样一个人真的可以接受自己不一样这样一个人真的可以接受自己不一样这样一个人真的可以接受自己不一样这样一个人真的可以接受自己不一样这样一个人真的可以接受自己不一样这样一个人真的可以接受自己不一样这样一个人真的可以接受自己不一样这样一个人真的可以接受自己不一样这样一个人真的可以接受自己不一样这样一个人真的可以接受自己不一样"
         ]
         
         let dic12: [String: Any] = [
@@ -462,7 +647,7 @@ private extension RoomMessageTableView {
         
 //        return [dic12, dic11, dic8, dic1, dic10, dic6, dic9, dic2, dic13, dic7, dic3, dic4, dic5]
 //        return [dic12, dic11, dic8, dic1, dic6, dic2, dic7, dic3, dic4, dic5, dic10, dic13]
-        return [dic12, dic11, dic8, dic1, dic6, dic2, dic7, dic3, dic4, dic5, dic10, dic13, dic9]
+        return [dic12, dic11, dic8, dic8_1, dic1, dic1_1, dic6, dic2, dic2_1, dic7, dic7_1, dic3, dic4, dic4_1, dic5, dic10, dic10_1, dic13, dic9, dic9_1]
 //        return [dic9]
         
 

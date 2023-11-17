@@ -32,7 +32,7 @@ class LQMessageNobbleJoinCell: LQOnlyBubbleCell {
 
     let titleLabel: YYLabel = {
         let yyLabel = YYLabel()
-        yyLabel.preferredMaxLayoutWidth = 150
+        yyLabel.preferredMaxLayoutWidth = 180
         yyLabel.numberOfLines = 0
         yyLabel.lineBreakMode = .byWordWrapping
         return yyLabel
@@ -163,7 +163,7 @@ class LQMessageNobbleJoinCell: LQOnlyBubbleCell {
         }
         
         // 修改气泡框的大小
-        self.bubbleImageView.frame = CGRectMake(0, 0, self.titleLabel.width + titleInset.left + titleInset.right, self.bubbleBG.height)
+        self.bubbleImageView.frame = CGRectMake(0, 0, self.titleLabel.width + titleInset.left + titleInset.right + 40, self.bubbleBG.height)
     }
     
     required init?(coder: NSCoder) {

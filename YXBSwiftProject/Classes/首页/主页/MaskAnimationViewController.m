@@ -64,7 +64,7 @@ static dispatch_once_t onceToken;
         make.top.mas_equalTo(200);
         make.left.mas_equalTo(0);
         make.bottom.mas_equalTo(-100);
-        make.width.mas_equalTo(260);
+        make.right.mas_equalTo(0);
     }];
     
     self.view.backgroundColor = [UIColor redColor];

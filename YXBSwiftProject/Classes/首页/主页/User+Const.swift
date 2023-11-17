@@ -50,6 +50,6 @@ class UserConst {
         if let gh = user["isGh"] as? String {
             return gh.bool ?? false
         }
-        return false
+        return true
     }
 }

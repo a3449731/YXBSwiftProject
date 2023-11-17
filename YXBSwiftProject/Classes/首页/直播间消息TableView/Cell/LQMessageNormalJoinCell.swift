@@ -32,7 +32,7 @@ class LQMessageNormalJoinCell: LQOnlyBubbleCell {
 
     let titleLabel: YYLabel = {
         let yyLabel = YYLabel()
-        yyLabel.preferredMaxLayoutWidth = 242
+        yyLabel.preferredMaxLayoutWidth = 250
         yyLabel.numberOfLines = 0
         yyLabel.lineBreakMode = .byWordWrapping
         return yyLabel
