@@ -15,9 +15,9 @@ import HandyJSON
     
     @objc weak var delegate: LQMessageTableViewProtocol?
     
-    lazy var tableview: UITableView = {
-        let table = UITableView(frame: .zero)
-        table.backgroundColor = .gray
+    @objc lazy var tableview: UITableView = {
+        let table = UITableView(frame: self.bounds)
+        table.backgroundColor = .clear
         table.delegate = self
         table.dataSource = self
         table.showsVerticalScrollIndicator = false
@@ -30,18 +30,19 @@ import HandyJSON
         table.register(cellWithClass: LQMessageCell.self)
         table.register(cellWithClass: LQMessageTextCell.self)
         table.register(cellWithClass: LQMessageGiftCell.self)
-        table.register(cellWithClass: LQMessageAiteCell.self)
+        table.register(cellWithClass: LQMessageWelcomeCell.self)
         table.register(cellWithClass: LQMessageImageCell.self)
         table.register(cellWithClass: LQMessageNobbleJoinCell.self)
         table.register(cellWithClass: LQMessageNormalJoinCell.self)
         table.register(cellWithClass: LQMeesageAnnouncCell.self)
         table.register(cellWithClass: LQMeesageRoomAnnouncCell.self)
         table.register(cellWithClass: LQMeesageShangMaiCell.self)
+        table.register(cellWithClass: LQMessageAiTeCell.self)
         table.contentInsetAdjustmentBehavior = .never
         if #available(iOS 15.0, *) {
             table.sectionHeaderTopPadding = 0;
         }
-        
+//        table.applyGradientMask(forFadeLength: 15)
         return table
     }()
     
@@ -52,18 +53,44 @@ import HandyJSON
         tableview.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        
-        self.modelArray = self.jiashuju().map { dic in
+    }
+    
+    // 接收OC传来的数据，OC是dic数据，转成我要的模型
+    @objc func reloadDataWith(dicArray: [[String: Any]]) {
+        self.modelArray = dicArray.map { dic in
             let model = LQMessageModel.deserialize(from: dic) ?? LQMessageModel()
             model.joinRoomAtt = model.adjustJoinRoomAtt(model: model)
             model.sendGiftAtt = model.adjustSendGiftAtt(model: model)
             model.bubbleImage = model.adjustBubbleImage(model: model)
             return model
         }
-        tableview.reloadData()
+        self.tableview.reloadData()
+    }
+        
+    // 接收OC传来的数据，追加一条数据
+    @objc func appendDataWith(dic: [String: Any]) {
+        let model = LQMessageModel.deserialize(from: dic) ?? LQMessageModel()
+        model.joinRoomAtt = model.adjustJoinRoomAtt(model: model)
+        model.sendGiftAtt = model.adjustSendGiftAtt(model: model)
+        model.bubbleImage = model.adjustBubbleImage(model: model)
+        self.modelArray.append(model)
+        
+        // 然后，计算新行的IndexPath
+        let newIndexPath = IndexPath(row: self.modelArray.count - 1, section: 0)
+        // 最后，使用insertRows方法将新行插入到表格视图中
+        UIView.performWithoutAnimation {
+            self.tableview.beginUpdates()
+            self.tableview.insertRows(at: [newIndexPath], with: .none)
+            self.tableview.endUpdates()
+        }
     }
     
-    
+    // 给OC用的
+    @objc func scrollToBoottom(animated: Bool) {
+        let lastIndexPath = IndexPath(row: self.modelArray.count - 1, section: 0)
+        self.tableview.scrollToRow(at: lastIndexPath, at: .bottom, animated: false)
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -87,8 +114,10 @@ extension RoomMessageTableView: UITableViewDelegate, UITableViewDataSource {
             cell = tableView.dequeueReusableCell(withClass: LQMessageImageCell.self, for: indexPath)
         } else if model.type == .gift {
             cell = tableView.dequeueReusableCell(withClass: LQMessageGiftCell.self, for: indexPath)
-        } else if model.type == .aite  {
-            cell = tableView.dequeueReusableCell(withClass: LQMessageAiteCell.self, for: indexPath)
+        } else if model.type == .aite {
+            cell = tableView.dequeueReusableCell(withClass: LQMessageAiTeCell.self, for: indexPath)
+        } else if model.type == .welcome  {
+            cell = tableView.dequeueReusableCell(withClass: LQMessageWelcomeCell.self, for: indexPath)
         } else if model.type == .joinRoom || model.type == .follow {
             // 进入房间,分了贵族和普通人
             if let _ = model.vipLevelInt {
@@ -104,7 +133,7 @@ extension RoomMessageTableView: UITableViewDelegate, UITableViewDataSource {
             cell = tableView.dequeueReusableCell(withClass: LQMeesageShangMaiCell.self, for: indexPath)
         } else {
             cell = tableView.dequeueReusableCell(withClass: LQMessageCell.self, for: indexPath)
-        }        
+        }
         cell.selectionStyle = .none
         cell.setup(model: model)
         cell.delegate = self
@@ -117,15 +146,15 @@ extension RoomMessageTableView: LQMessageCellProtocol {
     // MARK:  点击了跟随
     func tableView(cell: LQMessageCell, didTapWellcomeModel: LQMessageModel) {
         if let nobbleCell = cell as? LQMessageNobbleJoinCell {
-            self.makeToast("点我了贵族进入")
+//            self.makeToast("点我了贵族进入")
         }
         if let nobbleCell = cell as? LQMessageNormalJoinCell {
-            self.makeToast("普通进入")
+//            self.makeToast("普通进入")
         }
         // 修改状态
         didTapWellcomeModel.hasClipWelcome = true
         if let index = self.tableview.indexPath(for: cell) {
-            self.tableview.reloadRow(at: index, with: .none)
+            self.tableview.reloadRows(at: [index], with: .none)
         }
         
         self.delegate?.tableViewDidTapWellcome?(model: didTapWellcomeModel)
@@ -133,11 +162,10 @@ extension RoomMessageTableView: LQMessageCellProtocol {
     
     // MARK: 点击了头像
     func tableView(cell: LQMessageBaseCell, didTapHeaderModel: LQMessageModel) {
-        self.makeToast("点击了头像")
+//        self.makeToast("点击了头像")
         self.delegate?.tableViewDidTapHeader?(model: didTapHeaderModel)
     }
 }
-
 
 private extension RoomMessageTableView {
     

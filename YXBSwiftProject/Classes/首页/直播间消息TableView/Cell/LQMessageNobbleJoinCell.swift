@@ -10,56 +10,56 @@ import UIKit
 import YYText
 
 /// 贵族进入，比较特殊的cell
-class LQMessageNobbleJoinCell: LQMessageCell {
+class LQMessageNobbleJoinCell: LQOnlyBubbleCell {
     
     var model: LQMessageModel?
-    
-    let gradientView = GradientView()
+        
+    // 调整文字的边距
+    var titleInset: UIEdgeInsets = UIEdgeInsets(top: 5, left: 9, bottom: 5, right: 4) {
+        didSet {
+            titleLabel.snp.remakeConstraints { make in
+                make.top.equalTo(titleInset.top)
+                make.left.equalTo(titleInset.left)
+                make.bottom.equalTo(-titleInset.bottom)
+            }
+        }
+    }
     
     let iconImageView: UIImageView = {
         let imageView = MyUIFactory.commonImageView(placeholderImage: nil)
         return imageView
     }()
 
-    let titleLbael: YYLabel = {
+    let titleLabel: YYLabel = {
         let yyLabel = YYLabel()
-        yyLabel.preferredMaxLayoutWidth = 200
+        yyLabel.preferredMaxLayoutWidth = 150
         yyLabel.numberOfLines = 0
-        yyLabel.lineBreakMode = .byTruncatingTail
+        yyLabel.lineBreakMode = .byWordWrapping
         return yyLabel
     }()
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.backgroundColor = .clear
-        
-        self.edgesInset = UIEdgeInsets(top: 0, left: 6, bottom: 0, right: 40)
         creatUI()
     }
     
     private func creatUI() {
         self.contentView.addSubview(contentBG)
-        contentBG.addSubviews([gradientView, iconImageView, titleLbael])
+        bubbleBG.addSubviews([iconImageView, titleLabel])
         
-        gradientView.cornerRadius(corners: [.allCorners], radius: 15)
-        gradientView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(10)
-            make.left.equalToSuperview().offset(10)
-            make.bottom.right.equalToSuperview()
-        }
+        self.bubbleImageView.cornerRadius = 15
         
         iconImageView.snp.makeConstraints { make in
-            make.top.equalTo(gradientView).offset(-17)
-            make.left.equalTo(gradientView).offset(-10)
-            make.width.height.equalTo(54)
+            make.centerY.equalTo(bubbleBG)
+            make.left.equalTo(bubbleBG).offset(9)
+            make.width.height.equalTo(26)
         }
         
-        titleLbael.snp.makeConstraints { make in
-            make.top.equalTo(gradientView.snp.top).offset(5)
-            make.left.equalTo(iconImageView.snp.right).offset(4)
-            make.right.equalTo(gradientView.snp.right).offset(-10)
-            make.bottom.equalTo(gradientView.snp.bottom).offset(-5)
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(titleInset.top)
+            make.left.equalTo(iconImageView.snp.right).offset(titleInset.left)
+            make.bottom.equalToSuperview().offset(-titleInset.bottom)
         }
     }
     
@@ -71,21 +71,21 @@ class LQMessageNobbleJoinCell: LQMessageCell {
            let type = NobbleType(rawValue: vipLevelInt) {
             
             iconImageView.image = UIImage(named: type.iconName)
-            gradientView.makeGradient([type.endColor, type.startColor], direction: .fromLeftToRight)
+            bubbleImageView.makeGradient([type.endColor, type.startColor], direction: .fromLeftToRight)
             
             // 下面都是富文本
             let att: NSMutableAttributedString = NSMutableAttributedString()
             
-            let nickAtt = NSMutableAttributedString(string: model.text ?? "")
+            let nickAtt = NSMutableAttributedString(string: model.nickname ?? "")
             nickAtt.yy_font = .titleFont_14
             nickAtt.yy_color = type.nickColor
             att.append(nickAtt)
             
-            let tipAtt = NSMutableAttributedString(string: " 进入了房间 ")
+            let tipAtt = NSMutableAttributedString(string: " 进入了房间")
             tipAtt.yy_font = .titleFont_14
             tipAtt.yy_color = .titleColor_white
             att.append(tipAtt)
-            
+                        
             /*
             var welcomeAtt = NSMutableAttributedString(string: "《欢迎》")
             welcomeAtt.yy_font = .titleFont_14
@@ -106,11 +106,12 @@ class LQMessageNobbleJoinCell: LQMessageCell {
             att.append(welcomeAtt)
              */
             
-            if model.hasClipWelcome || model.isGh == false {
+            if model.hasClipWelcome || UserConst.isGh == false || UserConst.uid == model.uid {
                 
             } else {
-                // 创建一个NSMutableAttributedString
+                // 创建一个NSMutableAttributedStringc
                 let welcomeImageAtt = NSMutableAttributedString()
+                welcomeImageAtt.yy_appendString(" ")
                 // 创建一个UIImage对象
                 let image = UIImage(named: "CUYuYinFang_guizu_join_welcome")
                 // 创建一个YYTextAttachment对象，并将UIImage对象添加到YYTextAttachment中
@@ -127,7 +128,7 @@ class LQMessageNobbleJoinCell: LQMessageCell {
                 att.append(welcomeImageAtt)
             }
             
-            titleLbael.attributedText = att
+            titleLabel.attributedText = att
         }
         
     }
@@ -137,6 +138,32 @@ class LQMessageNobbleJoinCell: LQMessageCell {
         if let safeModel = self.model {
             self.delegate?.tableView?(cell: self, didTapWellcomeModel: safeModel)
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        // MARK: 重要，强制刷新， 这样才能在layoutSubviews拿到titleLabel正确的宽度. 这个地方可以优化一下，只在可见的时候去刷新不可以吗 https://www.jianshu.com/p/9fa58c5febd3
+        // 注意是self.contentView，不要写self.setNeedsLayout()，会循环
+        self.contentView.setNeedsLayout()
+        self.contentView.layoutIfNeeded()
+  
+//        debugPrint("告诉我这到底执行了多少次", self.titleLabel.frame.size)
+        if self.titleLabel.height > 30 {
+            iconImageView.snp.remakeConstraints { make in
+                make.top.equalTo(bubbleBG).offset(5)
+                make.left.equalTo(bubbleBG).offset(9)
+                make.width.height.equalTo(26)
+            }
+        } else {
+            iconImageView.snp.remakeConstraints { make in
+                make.centerY.equalTo(bubbleBG)
+                make.left.equalTo(bubbleBG).offset(9)
+                make.width.height.equalTo(26)
+            }
+        }
+        
+        // 修改气泡框的大小
+        self.bubbleImageView.frame = CGRectMake(0, 0, self.titleLabel.width + titleInset.left + titleInset.right, self.bubbleBG.height)
     }
     
     required init?(coder: NSCoder) {
@@ -157,52 +184,46 @@ private extension LQMessageNobbleJoinCell {
         
         var iconName: String {
             switch self {
-            case .one: return "CUYuYinFang_guizu_join_1"
-            case .two: return "CUYuYinFang_guizu_join_2"
-            case .three: return "CUYuYinFang_guizu_join_3"
-            case .four: return "CUYuYinFang_guizu_join_4"
-            case .five: return "CUYuYinFang_guizu_join_5"
-            case .six: return "CUYuYinFang_guizu_join_6"
-            case .seven: return "CUYuYinFang_guizu_join_7"
+            case .one, .two, .three, .four, .five, .six, .seven: return VipPictureConfig.nobleIcon(level: self.rawValue)!
             }
         }
         
         // 渐变起始色
         var startColor: UIColor {
             switch self {
-            case .one: return UIColor(hex: 0x89EAE4)!
-            case .two: return UIColor(hex: 0xFFC455)!
-            case .three: return UIColor(hex: 0x50E1EA)!
-            case .four: return UIColor(hex: 0xB7B7FF)!
-            case .five: return UIColor(hex: 0x66D4FF)!
-            case .six: return UIColor(hex: 0xFF89DD)!
-            case .seven: return UIColor(hex: 0xF8A38D)!
+            case .one: return UIColor(hex: 0x95F9AB)!
+            case .two: return UIColor(hex: 0x66D4FF)!
+            case .three: return UIColor(hex: 0xFFA26C)!
+            case .four: return UIColor(hex: 0xFF81DC)!
+            case .five: return UIColor(hex: 0x7AB2FF)!
+            case .six: return UIColor(hex: 0xC485F6)!
+            case .seven: return UIColor(hex: 0xFB923C)!
             }
         }
         
         // 渐变终止色
         var endColor: UIColor {
             switch self {
-            case .one: return UIColor(hex: 0xE5FDFF)!
-            case .two: return UIColor(hex: 0xFFF7F5)!
-            case .three: return UIColor(hex: 0xECF5FF)!
-            case .four: return UIColor(hex: 0xF9F9FF)!
-            case .five: return UIColor(hex: 0xD4F3FF)!
-            case .six: return UIColor(hex: 0xFFF3FF)!
-            case .seven: return UIColor(hex: 0xFFF3F0)!
+            case .one: return UIColor(hex: 0xE9FFEE)!
+            case .two: return UIColor(hex: 0xD4F3FF)!
+            case .three: return UIColor(hex: 0xFFE6DE)!
+            case .four: return UIColor(hex: 0xFFF3FF)!
+            case .five: return UIColor(hex: 0xECF4FF)!
+            case .six: return UIColor(hex:0xF5EAFF)!
+            case .seven: return UIColor(hex: 0xFEDABF)!
             }
         }
         
-        // 渐变终止色
+        // 昵称颜色
         var nickColor: UIColor {
             switch self {
-            case .one: return UIColor(hex: 0x17A2D0)!
-            case .two: return UIColor(hex: 0xFF935C)!
-            case .three: return UIColor(hex: 0x269BFC)!
-            case .four: return UIColor(hex: 0x8E8EF3)!
-            case .five: return UIColor(hex: 0x1CA7DD)!
-            case .six: return UIColor(hex: 0xFA45C9)!
-            case .seven: return UIColor(hex: 0xEB7556)!
+            case .one: return UIColor(hex: 0x4CD569)!
+            case .two: return UIColor(hex: 0x1CA7DD)!
+            case .three: return UIColor(hex: 0xDE753F)!
+            case .four: return UIColor(hex: 0xFF6AD7)!
+            case .five: return UIColor(hex: 0x4289ED)!
+            case .six: return UIColor(hex: 0xAE61ED)!
+            case .seven: return UIColor(hex: 0xE47035)!
             }
         }
     }

@@ -17,7 +17,6 @@ class LQMessageGiftCell: LQMessageBubbleCell {
                 make.top.equalToSuperview().offset(titleInset.top)
                 make.left.equalToSuperview().offset(titleInset.left)
                 make.bottom.equalToSuperview().offset(-titleInset.bottom)
-                make.right.lessThanOrEqualTo(-titleInset.right)
             }
         }
     }
@@ -25,9 +24,9 @@ class LQMessageGiftCell: LQMessageBubbleCell {
     // 内容, 内容的约束也通过实际去调整好了
     let titleLabel: YYLabel = {
         let yyLabel = YYLabel()
-        yyLabel.preferredMaxLayoutWidth = 200
+        yyLabel.preferredMaxLayoutWidth = 180
         yyLabel.numberOfLines = 0
-        yyLabel.lineBreakMode = .byTruncatingTail
+        yyLabel.lineBreakMode = .byWordWrapping
         return yyLabel
     }()
     
@@ -40,7 +39,6 @@ class LQMessageGiftCell: LQMessageBubbleCell {
             make.top.equalToSuperview().offset(titleInset.top)
             make.left.equalToSuperview().offset(titleInset.left)
             make.bottom.equalToSuperview().offset(-titleInset.bottom)
-            make.right.lessThanOrEqualTo(-titleInset.right)
         }
     }
     
@@ -48,11 +46,6 @@ class LQMessageGiftCell: LQMessageBubbleCell {
         super.setup(model: model)
         
         self.titleLabel.attributedText = model.sendGiftAtt
-        
-        // 清空气泡框
-        self.bubbleImageView.image = nil
-        self.bubbleImageView.cornerRadius = 10
-        self.bubbleImageView.backgroundColor = UIColor(hex: 0x000000, transparency: 0.2)
     }
     
     override func layoutSubviews() {

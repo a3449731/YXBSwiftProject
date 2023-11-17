@@ -10,68 +10,63 @@ import UIKit
 import YYText
 
 /// 普通用户进入，当没有贵族等级时
-class LQMessageNormalJoinCell: LQMessageCell {
+class LQMessageNormalJoinCell: LQOnlyBubbleCell {
     
     var model: LQMessageModel?
     
-    let gradientView = GradientView()
-    
+    // 调整文字的边距
+    var titleInset: UIEdgeInsets = UIEdgeInsets(top: 5, left: 12, bottom: 5, right: 12) {
+        didSet {
+            titleLabel.snp.remakeConstraints { make in
+                make.top.equalTo(titleInset.top)
+                make.left.equalTo(titleInset.left)
+                make.bottom.equalTo(-titleInset.bottom)
+            }
+        }
+    }
+        
     let iconImageView: UIImageView = {
         let imageView = MyUIFactory.commonImageView(placeholderImage: nil)
         return imageView
     }()
 
-    let titleLbael: YYLabel = {
+    let titleLabel: YYLabel = {
         let yyLabel = YYLabel()
-        yyLabel.preferredMaxLayoutWidth = 200
+        yyLabel.preferredMaxLayoutWidth = 242
         yyLabel.numberOfLines = 0
-        yyLabel.lineBreakMode = .byTruncatingTail
+        yyLabel.lineBreakMode = .byWordWrapping
         return yyLabel
     }()
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.backgroundColor = .clear
-        creatUI()
-    }
-    
-    private func creatUI() {
-        contentBG.addSubviews([gradientView, titleLbael])
-
-        gradientView.cornerRadius(corners: [.allCorners], radius: 15)
-        gradientView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(10)
-            make.left.equalToSuperview().offset(10)
-            make.bottom.right.equalToSuperview()
-        }
         
-        titleLbael.snp.makeConstraints { make in
-            make.top.equalTo(gradientView.snp.top).offset(9)
-            make.left.equalTo(gradientView.snp.left).offset(9)
-            make.bottom.equalTo(gradientView.snp.bottom).offset(-9)
-            make.right.equalTo(gradientView.snp.right).offset(-9)
-        }        
+        self.bubbleImageView.backgroundColor = UIColor(hex: 0x000000, transparency: 0.2)
+        
+        bubbleBG.addSubview(titleLabel)
+                
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(titleInset.top)
+            make.left.equalToSuperview().offset(titleInset.left)
+            make.bottom.equalToSuperview().offset(-titleInset.bottom)
+        }
+     
     }
     
     override func setup(model: LQMessageModel) {
         self.model = model
         
         if model.type == .joinRoom || model.type == .follow {
-            
-//            iconImageView.image = UIImage(named: type.iconName)
-//            gradientView.makeGradient([type.endColor, type.startColor], direction: .fromLeftToRight)
-                        
-            gradientView.backgroundColor = UIColor(hex: 0x000000, transparency: 0.2)
-            
+                                    
             guard let joinRoomAtt = model.joinRoomAtt else {
                 return
             }
             
-            let att = NSMutableAttributedString(attributedString: joinRoomAtt)                        
+            let att = NSMutableAttributedString(attributedString: joinRoomAtt)
             
             // 欢迎按钮，只在加入公会，且没点过欢迎的时候展示
-            if model.hasClipWelcome || model.isGh == false {
+            if model.hasClipWelcome || UserConst.isGh == false || UserConst.uid == model.uid {
                 
             } else {
                 // 创建一个NSMutableAttributedString
@@ -92,7 +87,7 @@ class LQMessageNormalJoinCell: LQMessageCell {
                 att.append(welcomeImageAtt)
             }
             
-            titleLbael.attributedText = att
+            titleLabel.attributedText = att
         }
         
     }
@@ -102,6 +97,19 @@ class LQMessageNormalJoinCell: LQMessageCell {
         if let safeModel = self.model {
             self.delegate?.tableView?(cell: self, didTapWellcomeModel: safeModel)
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        // MARK: 重要，强制刷新， 这样才能在layoutSubviews拿到titleLabel正确的宽度. 这个地方可以优化一下，只在可见的时候去刷新不可以吗 https://www.jianshu.com/p/9fa58c5febd3
+        // 注意是self.contentView，不要写self.setNeedsLayout()，会循环
+        self.contentView.setNeedsLayout()
+        self.contentView.layoutIfNeeded()
+  
+//        debugPrint("告诉我这到底执行了多少次", self.titleLabel.frame.size)
+        // 修改气泡框的大小
+        self.bubbleImageView.frame = CGRectMake(0, 0, self.titleLabel.width + titleInset.left + titleInset.right, self.bubbleBG.height)
+        self.bubbleImageView.cornerRadius = self.bubbleImageView.height / 2
     }
     
     required init?(coder: NSCoder) {

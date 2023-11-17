@@ -34,18 +34,17 @@ class LQMessageBaseCell: LQMessageCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.backgroundColor = .clear
         creatUI()
     }
     
     private func creatUI() {
         
-        contentBG.addSubviews([headerView, nameLabel, tagsView])        
+        contentBG.addSubviews([headerView, nameLabel, tagsView])
         
         headerView.headerImageView.cornerRadius = 16
         headerView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(10)
-            make.left.equalToSuperview().offset(10)
+            make.top.equalToSuperview().offset(4)
+            make.left.equalToSuperview()
             make.width.height.equalTo(32)
         }
         
@@ -57,7 +56,7 @@ class LQMessageBaseCell: LQMessageCell {
         
         tagsView.snp.makeConstraints { make in
             make.centerY.equalTo(nameLabel)
-            make.left.equalTo(nameLabel.snp.right).offset(6)            
+            make.left.equalTo(nameLabel.snp.right).offset(6)
             // 不用设置右，让内部元素自动撑起来
 //            make.right.equalTo(-100)
             make.height.equalTo(16)
@@ -85,38 +84,39 @@ class LQMessageBaseCell: LQMessageCell {
         }
         
         // 几个图标，讲道理我应该在viewModel中取整齐这些的。
+        var host: String?
         var house: String?
         var assistant: String?
         var rich: String?
         var charm: String?
         var noble: String?
+        if model.isHost == "1" {
+            host = "CUYuYinFang_fanzhuHead"
+        }
         if model.isFz == "1" {
-            house = "lqRoomHostIcon"
+            house = "lqRoomHostIcon_new"
         }
         if model.isAdmin == "1" {
-            assistant = "lqRoomGuanIcon"
+            assistant = "lqRoomGuanIcon_new"
         }
         if let caiLevel = model.caiLevel {
-            let level = (Int(caiLevel) ?? -1) > 10 ? 10 : (Int(caiLevel) ?? 0)
-            rich = "CUYuYinFang_caifu_level_\(level)"
+            rich = VipPictureConfig.richBubble(level: caiLevel)
         }
         if let meiLevel = model.meiLevel {
-            let level = (Int(meiLevel) ?? -1) > 10 ? 10 : (Int(meiLevel) ?? 0)
-            charm = "CUYuYinFang_renqi_level_\(level)"
+            charm = VipPictureConfig.charmBubble(level: meiLevel)
         }
-        if let vipLevel = model.vipLevel,
-           !vipLevel.isEmpty {
-            noble = vipLevel
+        if let vipLevel = model.vipLevelInt {
+            noble = VipPictureConfig.nobleBubble(level: vipLevel)
         }
         self.tagsView.richView.title = model.caiLevel ?? ""
         self.tagsView.charmView.title = model.meiLevel ?? ""
-        self.tagsView.setPicturs(houseImageUrl: house, assistantImageUrl: assistant, nobleImageUrl: noble, richImageUrl: rich, charmImageUrl: charm)
+        self.tagsView.setPicturs(hostImageUrl: host, houseImageUrl: house, assistantImageUrl: assistant, nobleImageUrl: noble, richImageUrl: rich, charmImageUrl: charm)
     }
         
     @objc private func tapHeaderAction() {
         if let model = self.tempModel {
             self.delegate?.tableView?(cell: self, didTapHeaderModel: model)
-        }        
+        }
     }
     
     required init?(coder: NSCoder) {

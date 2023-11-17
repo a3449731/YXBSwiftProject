@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YYText
 
 /// 文字cell
 class LQMessageTextCell: LQMessageBubbleCell {
@@ -20,27 +21,30 @@ class LQMessageTextCell: LQMessageBubbleCell {
                 make.top.equalTo(titleInset.top)
                 make.left.equalTo(titleInset.left)
                 make.bottom.equalTo(-titleInset.bottom)
-                make.right.lessThanOrEqualTo(-titleInset.right)
             }
         }
     }
     
     // 内容, 内容的约束也通过实际去调整好了
-    var titleLabel: UILabel = {
-        let label = MyUIFactory.commonLabel(text: nil, textColor: .titleColor_white, font: .titleFont_15, lines: 0)
-        return label
+    lazy var titleLabel: YYLabel = {
+        let yyLabel = YYLabel()
+        yyLabel.font = .titleFont_15
+        yyLabel.textColor = .titleColor_white
+        yyLabel.preferredMaxLayoutWidth = 182
+        yyLabel.numberOfLines = 0
+        yyLabel.lineBreakMode = .byWordWrapping
+        return yyLabel
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+
         bubbleBG.addSubview(titleLabel)
         
         titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(titleInset.top)
             make.left.equalToSuperview().offset(titleInset.left)
             make.bottom.equalToSuperview().offset(-titleInset.bottom)
-            make.right.lessThanOrEqualTo(-titleInset.right)
         }
     }
     
@@ -48,9 +52,16 @@ class LQMessageTextCell: LQMessageBubbleCell {
     override func setup(model: LQMessageModel) {
         super.setup(model: model)
         self.model = model
+        
+        if let qpKuange = model.qpKuang,
+           !qpKuange.isEmpty {
+            titleInset = UIEdgeInsets(top: 15.fitScale(), left: 22.5.fitScale(), bottom: 15.fitScale(), right: 22.5.fitScale())
+        } else {
+            titleInset = UIEdgeInsets(top: 5, left: 9, bottom: 5, right: 9)
+        }
                 
         // 文本内容
-        self.titleLabel.text = model.text ?? "" + "     "
+        self.titleLabel.text = model.text
     }
     
     override func layoutSubviews() {

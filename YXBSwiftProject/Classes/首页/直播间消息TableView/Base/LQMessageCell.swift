@@ -16,7 +16,7 @@ class LQMessageCell: UITableViewCell {
     let contentBG = UIView()
     
     // 调整容器的边距
-    var edgesInset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 6, bottom: 0, right: 10) {
+    var edgesInset: UIEdgeInsets = UIEdgeInsets(top: 6, left: 16, bottom: 6, right: 16) {
         didSet {
             contentBG.snp.remakeConstraints { make in
                 make.top.equalTo(edgesInset.top)

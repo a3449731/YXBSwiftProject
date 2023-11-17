@@ -28,6 +28,12 @@ import UIKit
         }
     }
     
+    // 主持
+    @objc let hostImageView: UIImageView = {
+        let imgView = MyUIFactory.commonImageView(placeholderImage: nil)
+        return imgView
+    }()
+    
     // 房
     @objc let houseImageView: UIImageView = {
         let imgView = MyUIFactory.commonImageView(placeholderImage: nil)
@@ -64,10 +70,14 @@ import UIKit
         super.init(frame: frame)
         
         addSubview(hStack)
-        hStack.addArrangedSubviews([houseImageView, assistantImageView, nobleImageView, richView, charmView])
+        hStack.addArrangedSubviews([hostImageView, houseImageView, assistantImageView, nobleImageView, richView, charmView])
         
         hStack.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+        
+        hostImageView.snp.makeConstraints { make in
+            make.width.equalTo(30)
         }
         
         houseImageView.snp.makeConstraints { make in
@@ -87,22 +97,32 @@ import UIKit
         }
         
         nobleImageView.snp.makeConstraints { make in
-            make.width.equalTo(16)
+            make.width.equalTo(38)
         }
     }
 
     // 设置图片
-    @objc func setPicturs(houseImageUrl: String?,
+    @objc func setPicturs(hostImageUrl: String?,
+                          houseImageUrl: String?,
                           assistantImageUrl: String?,
                           nobleImageUrl: String?,
                           richImageUrl: String?,
                           charmImageUrl: String?) {
+        hostImageView.isHidden = (hostImageUrl == nil || hostImageUrl!.isEmpty)
         houseImageView.isHidden = (houseImageUrl == nil || houseImageUrl!.isEmpty)
         assistantImageView.isHidden = (assistantImageUrl == nil || assistantImageUrl!.isEmpty)
         nobleImageView.isHidden = (nobleImageUrl == nil || nobleImageUrl!.isEmpty)
         richView.isHidden = (richImageUrl == nil || richImageUrl!.isEmpty)
         charmView.isHidden = (charmImageUrl == nil || charmImageUrl!.isEmpty)
         
+        if let hostImageUrl = hostImageUrl {
+            if hostImageUrl.hasPrefix("http") {
+                hostImageView.sd_setImage(with: URL(string: hostImageUrl))
+            } else {
+                hostImageView.image = UIImage(named: hostImageUrl)
+            }
+        }
+                              
         if let houseImageUrl = houseImageUrl {
             if houseImageUrl.hasPrefix("http") {
                 houseImageView.sd_setImage(with: URL(string: houseImageUrl))

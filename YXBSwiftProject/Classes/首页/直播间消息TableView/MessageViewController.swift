@@ -12,7 +12,7 @@ class MessageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tableView = RoomMessageTableView()
+        let tableView = RoomMessageTableView(frame: .zero)
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.top.equalTo(200)

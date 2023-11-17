@@ -1,33 +1,33 @@
 //
-//  LQMessageAiteCell.swift
-//  YXBSwiftProject
+//  LQMessageAiTeCell.swift
+//  CUYuYinFang
 //
-//  Created by 蓝鳍互娱 on 2023/11/9.
-//  Copyright © 2023 ShengChang. All rights reserved.
+//  Created by 蓝鳍互娱 on 2023/11/11.
+//  Copyright © 2023 lixinkeji. All rights reserved.
 //
+
 
 import UIKit
 import YYText
 
-class LQMessageAiteCell: LQMessageBubbleCell {
+class LQMessageAiTeCell: LQMessageBubbleCell {
     // 调整文字的边距
-    var titleInset: UIEdgeInsets = UIEdgeInsets(top: 5, left: 9, bottom: 5, right: 9) {
+    var titleInset: UIEdgeInsets = UIEdgeInsets(top: 15.fitScale(), left: 22.5.fitScale(), bottom: 15.fitScale(), right: 22.5.fitScale()) {
         didSet {
             titleLabel.snp.remakeConstraints { make in
                 make.top.equalToSuperview().offset(titleInset.top)
                 make.left.equalToSuperview().offset(titleInset.left)
                 make.bottom.equalToSuperview().offset(-titleInset.bottom)
-                make.right.lessThanOrEqualTo(-titleInset.right)
             }
         }
     }
     
     // 内容, 内容的约束也通过实际去调整好了
-    let titleLabel: YYLabel = {
+    lazy var titleLabel: YYLabel = {
         let yyLabel = YYLabel()
-        yyLabel.preferredMaxLayoutWidth = 180
+        yyLabel.preferredMaxLayoutWidth = 200
         yyLabel.numberOfLines = 0
-        yyLabel.lineBreakMode = .byTruncatingTail
+        yyLabel.lineBreakMode = .byWordWrapping
         return yyLabel
     }()
     
@@ -47,6 +47,13 @@ class LQMessageAiteCell: LQMessageBubbleCell {
     override func setup(model: LQMessageModel) {
         super.setup(model: model)
         
+        if let qpKuange = model.qpKuang,
+           !qpKuange.isEmpty {
+            titleInset = UIEdgeInsets(top: 15.fitScale(), left: 22.5.fitScale(), bottom: 15.fitScale(), right: 22.5.fitScale())
+        } else {
+            titleInset = UIEdgeInsets(top: 5, left: 9, bottom: 5, right: 9)
+        }
+        
         // 下面都是富文本
         let att: NSMutableAttributedString = NSMutableAttributedString()
         
@@ -55,17 +62,12 @@ class LQMessageAiteCell: LQMessageBubbleCell {
         nickAtt.yy_color = .titleColor_yellow
         att.append(nickAtt)
         
-        let tipAtt = NSMutableAttributedString(string: "欢迎进入直播间 ")
+        let tipAtt = NSMutableAttributedString(string: " \(model.text ?? "")")
         tipAtt.yy_font = .titleFont_14
         tipAtt.yy_color = .titleColor_white
         att.append(tipAtt)
         
         self.titleLabel.attributedText = att
-        
-        // 清空气泡框
-        self.bubbleImageView.image = nil
-        self.bubbleImageView.cornerRadius = 10
-        self.bubbleImageView.backgroundColor = UIColor(hex: 0x000000, transparency: 0.2)
     }
     
     override func layoutSubviews() {

@@ -10,64 +10,74 @@ import UIKit
 import YYText
 
 /// 上麦
-class LQMeesageShangMaiCell: LQMessageCell {
-        
-    let gradientView = {
-        let view = GradientView()
-        view.backgroundColor = UIColor(hex: 0x000000, transparency: 0.2)
-        view.cornerRadius = 7
-        return view
-    }()
+class LQMeesageShangMaiCell: LQOnlyBubbleCell {
+    
+    // 调整文字的边距
+    var titleInset: UIEdgeInsets = UIEdgeInsets(top: 5, left: 12, bottom: 5, right: 12) {
+        didSet {
+            titleLabel.snp.remakeConstraints { make in
+                make.top.equalTo(titleInset.top)
+                make.left.equalTo(titleInset.left)
+                make.bottom.equalTo(-titleInset.bottom)
+            }
+        }
+    }
     
     // 内容, 内容的约束也通过实际去调整好了
     let titleLabel: YYLabel = {
         let yyLabel = YYLabel()
-        yyLabel.preferredMaxLayoutWidth = 200
+        yyLabel.preferredMaxLayoutWidth = 242
         yyLabel.numberOfLines = 0
-        yyLabel.lineBreakMode = .byTruncatingTail
+        yyLabel.lineBreakMode = .byWordWrapping
         return yyLabel
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = .clear
-        self.edgesInset = UIEdgeInsets(top: 10, left: 15, bottom: 2, right: 10)
+        self.bubbleImageView.backgroundColor = UIColor(hex: 0x000000, transparency: 0.2)
+
         creatUI()
     }
     
     private func creatUI() {
-        contentBG.addSubviews([gradientView, titleLabel])
-
-        gradientView.cornerRadius(corners: [.allCorners], radius: 7)
-        gradientView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.left.equalToSuperview()
-            make.bottom.right.equalToSuperview()
-        }
+        contentBG.addSubviews([titleLabel])
         
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(gradientView.snp.top).offset(5)
-            make.left.equalTo(gradientView.snp.left).offset(9)
-            make.bottom.equalTo(gradientView.snp.bottom).offset(-5)
-            make.right.equalTo(gradientView.snp.right).offset(-9)
+            make.top.equalToSuperview().offset(titleInset.top)
+            make.left.equalToSuperview().offset(titleInset.left)
+            make.bottom.equalToSuperview().offset(-titleInset.bottom)
         }
     }
     
-    override func setup(model: LQMessageModel) {        
+    override func setup(model: LQMessageModel) {
         // 下面都是富文本
         let att: NSMutableAttributedString = NSMutableAttributedString()
         
         let nickAtt = NSMutableAttributedString(string: model.name ?? "")
         nickAtt.yy_font = .titleFont_14
-        nickAtt.yy_color = .titleColor_red
+        nickAtt.yy_color = .titleColor_yellow
         att.append(nickAtt)
         
-        let tipAtt = NSMutableAttributedString(string: "上麦了")
+        let tipAtt = NSMutableAttributedString(string: " 上麦了")
         tipAtt.yy_font = .titleFont_14
         tipAtt.yy_color = .titleColor_white
         att.append(tipAtt)
         
         self.titleLabel.attributedText = att
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        // MARK: 重要，强制刷新， 这样才能在layoutSubviews拿到titleLabel正确的宽度. 这个地方可以优化一下，只在可见的时候去刷新不可以吗 https://www.jianshu.com/p/9fa58c5febd3
+        // 注意是self.contentView，不要写self.setNeedsLayout()，会循环
+        self.contentView.setNeedsLayout()
+        self.contentView.layoutIfNeeded()
+  
+//        debugPrint("告诉我这到底执行了多少次", self.titleLabel.frame.size)
+        // 修改气泡框的大小
+        self.bubbleImageView.frame = CGRectMake(0, 0, self.titleLabel.width + titleInset.left + titleInset.right, self.bubbleBG.height)
+        self.bubbleImageView.cornerRadius = self.bubbleImageView.height / 2
     }
     
     required init?(coder: NSCoder) {

@@ -13,7 +13,7 @@ class LQMessageBubbleCell: LQMessageBaseCell {
     let bubbleBG = UIView()
     
     // 调整容器的边距
-    var bubbleInset: UIEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 5, right: 0) {
+    var bubbleInset: UIEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0) {
         didSet {
             bubbleBG.snp.remakeConstraints { make in
                 make.top.equalTo(nameLabel.snp.bottom).offset(bubbleInset.top)
@@ -28,13 +28,13 @@ class LQMessageBubbleCell: LQMessageBaseCell {
     let bubbleImageView: UIImageView = {
         let imgView = MyUIFactory.commonImageView(placeholderImage: nil)
         return imgView
-    }()    
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         bubbleBG.addSubview(bubbleImageView)
-        contentBG.addSubview(bubbleBG)        
+        contentBG.addSubview(bubbleBG)
         
         bubbleBG.snp.makeConstraints { make in
 //            debugPrint("我要看看这是咋回事", bubbleInset)

@@ -20,11 +20,11 @@ class LQMessageImageCell: LQMessageBaseCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+                
         contentBG.addSubview(emojiImageView)
         
         emojiImageView.snp.makeConstraints { make in
-            make.top.equalTo(nameLabel).offset(10)
+            make.top.equalTo(nameLabel.snp.bottom).offset(10)
             make.left.equalTo(nameLabel)
             make.width.height.equalTo(70)
             // 为了撑起来cell

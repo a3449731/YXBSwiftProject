@@ -16,9 +16,11 @@ enum LQMessageType: String, HandyJSONEnum {
     /// 礼物
     case gift = "5"
     /// 艾特欢迎进房
-    case aite = "208"
+    case welcome = "208"
     /// 互动 -- （暂时隐藏了）
     case hudong = "15"
+    /// 跟随进房
+    case aite = "32"
     /// 跟随进房
     case follow = "34"
     /// 表情
@@ -40,6 +42,7 @@ enum LQMessageType: String, HandyJSONEnum {
     var type: LQMessageType?
     var contentHeight: String?
     var contentWidth: String?
+    var uid: String?
     var headImg: String?
     var nickname: String?
     var text: String?
@@ -55,6 +58,8 @@ enum LQMessageType: String, HandyJSONEnum {
     var isAdmin: String?
     /// 房主
     var isFz: String?
+    /// 主持吗
+    var isHost: String?
     var nichengbianse: String?
     /// 神秘人， 1:表示神秘人
     var shenmiren_state: String?
@@ -84,7 +89,7 @@ enum LQMessageType: String, HandyJSONEnum {
     /// 这是用于本地操作的，标记是否点击过欢迎按钮，点击之后就要隐藏了
     var hasClipWelcome: Bool = false
     /// 是否加入公会了，加入公会才会有欢迎按钮
-    var isGh: Bool = false
+//    var isGh: Bool = false
     /// 通过模型自己调整的富文本，避免cell在刷新的时候反复拼接富文本。主要服务于进入房间，跟随进房
     var joinRoomAtt: NSAttributedString?
     /// 通过模型自己调整的富文本，避免cell在刷新的时候反复拼接富文本。主要服务于送礼的富文本
@@ -101,19 +106,16 @@ enum LQMessageType: String, HandyJSONEnum {
         // 气泡还是很占位置的，过滤掉不需要气泡的类型。
         if let type = model.type {
             switch type {
-            case .text, .joinRoom:
+            case .text, .welcome, .aite, .gift:
                 break
-            case .picture, .gift, .aite, .hudong, .follow, .emoji, .shangMai, .officialAnnouncement, .houseAnnouncement:
+            case .joinRoom, .picture, .hudong, .follow, .emoji, .shangMai, .officialAnnouncement, .houseAnnouncement:
                 return nil
             }
         }
         
         // 制作气泡框
-        var bublleName = "CUYuYinFang_roomDetail_hudong_bg"
-//        var bublleName = ""
-        if model.type == .gift {
-            bublleName = "CUYuYinFang_roomDetail_hudong_bg2"
-        } else if let qpKuang = model.qpKuang,
+        var bublleName = "CUYuYinFang_roomchat_text_bg"
+        if let qpKuang = model.qpKuang,
                   !qpKuang.isEmpty {
             bublleName = qpKuang
         }
@@ -157,15 +159,11 @@ enum LQMessageType: String, HandyJSONEnum {
            let richLevel = Int(rich) {
             // 选择制作截图添加图片。如果是制作背景图，会因为字体宽度不一样，很难占位置。
             let richView: HonourTagView = HonourTagView(frame: CGRectMake(0, 0, 36, 16))
-            if let caiLevel = model.caiLevel {
-                let level = richLevel > 10 ? 10 : richLevel
-                richView.imageName = "CUYuYinFang_caifu_level_\(level)"
-            }
-//            richView.imageName = "CUYuYinFang_caifu_level_1"
+            richView.imageName = VipPictureConfig.richBubble(level: richLevel) ?? ""
             richView.title = rich
             richView.isOpaque = false
             UIApplication.shared.currentUIWindow()?.addSubview(richView)
-            let shotImage = richView.snapshotImage()
+            let shotImage = richView.yxb_snapshotImage()
             richView.removeFromSuperview()
                                                        
             let richAtt = NSMutableAttributedString()
@@ -181,16 +179,12 @@ enum LQMessageType: String, HandyJSONEnum {
            let charmLevel = Int(charm) {
             // 选择制作截图添加图片。如果是制作背景图，会因为字体宽度不一样，很难占位置。
             let charmView: HonourTagView = HonourTagView(frame: CGRectMake(0, 0, 36, 16))
-            if let meiLevel = model.meiLevel {
-                let level = charmLevel > 10 ? 10 : charmLevel
-                charmView.imageName = "CUYuYinFang_renqi_level_\(level)"
-            }
-            charmView.imageName = "CUYuYinFang_renqi_level_2"
+            charmView.imageName = VipPictureConfig.charmBubble(level: charmLevel) ?? ""
             charmView.title = charm
             // 不写这个的话，绘制出来会多一层黑色的背景
             charmView.isOpaque = false
             UIApplication.shared.currentUIWindow()?.addSubview(charmView)
-            let shotImage = charmView.snapshotImage()
+            let shotImage = charmView.yxb_snapshotImage()
             charmView.removeFromSuperview()
                                                        
             let richAtt = NSMutableAttributedString()
@@ -201,7 +195,7 @@ enum LQMessageType: String, HandyJSONEnum {
             att.yy_appendString("  ")
         }
         
-        let nickAtt = NSMutableAttributedString(string: model.text ?? "")
+        let nickAtt = NSMutableAttributedString(string: model.nickname ?? "")
         nickAtt.yy_font = .titleFont_14
         nickAtt.yy_color = .titleColor_yellow
         att.append(nickAtt)
